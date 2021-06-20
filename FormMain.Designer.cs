@@ -41,7 +41,7 @@ namespace Raecef
             this.btnIniciar = new System.Windows.Forms.Button();
             this.pg2 = new System.Windows.Forms.TabPage();
             this.tblPg2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlMainPg2 = new System.Windows.Forms.Panel();
+            this.pnlMainConvocacao = new System.Windows.Forms.Panel();
             this.pnlBottonPg2 = new System.Windows.Forms.Panel();
             this.btnProximoTab2 = new System.Windows.Forms.Button();
             this.pnlTopPg2 = new System.Windows.Forms.Panel();
@@ -53,7 +53,7 @@ namespace Raecef
             this.pnlTopPg3 = new System.Windows.Forms.Panel();
             this.btnImportarPfui = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
-            this.pnlMainPg3 = new System.Windows.Forms.Panel();
+            this.pnlMainPfui = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.txtParcela16 = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
@@ -183,11 +183,12 @@ namespace Raecef
             this.label2 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.pg4 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.BtnAppClose = new System.Windows.Forms.Button();
+            this.pnlAppTopPanel = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnAppClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -207,7 +208,6 @@ namespace Raecef
             this.panel8 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label64 = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -222,8 +222,8 @@ namespace Raecef
             this.pnlBottonPg3.SuspendLayout();
             this.pnlTopPg3.SuspendLayout();
             this.mainPg3.SuspendLayout();
-            this.pnlMainPg3.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlMainPfui.SuspendLayout();
+            this.pnlAppTopPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -366,7 +366,7 @@ namespace Raecef
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg2.Controls.Add(this.pnlMainPg2, 1, 3);
+            this.tblPg2.Controls.Add(this.pnlMainConvocacao, 1, 3);
             this.tblPg2.Controls.Add(this.pnlBottonPg2, 1, 4);
             this.tblPg2.Controls.Add(this.pnlTopPg2, 1, 1);
             this.tblPg2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -382,16 +382,16 @@ namespace Raecef
             this.tblPg2.Size = new System.Drawing.Size(706, 386);
             this.tblPg2.TabIndex = 9;
             // 
-            // pnlMainPg2
+            // pnlMainConvocacao
             // 
-            this.pnlMainPg2.BackColor = System.Drawing.Color.White;
-            this.pnlMainPg2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainPg2.Location = new System.Drawing.Point(17, 74);
-            this.pnlMainPg2.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlMainPg2.Name = "pnlMainPg2";
-            this.pnlMainPg2.Size = new System.Drawing.Size(670, 262);
-            this.pnlMainPg2.TabIndex = 4;
-            this.pnlMainPg2.Visible = false;
+            this.pnlMainConvocacao.BackColor = System.Drawing.Color.White;
+            this.pnlMainConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainConvocacao.Location = new System.Drawing.Point(17, 74);
+            this.pnlMainConvocacao.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMainConvocacao.Name = "pnlMainConvocacao";
+            this.pnlMainConvocacao.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainConvocacao.TabIndex = 4;
+            this.pnlMainConvocacao.Visible = false;
             // 
             // pnlBottonPg2
             // 
@@ -416,7 +416,7 @@ namespace Raecef
             this.btnProximoTab2.Text = "Próximo";
             this.btnProximoTab2.UseVisualStyleBackColor = false;
             this.btnProximoTab2.Visible = false;
-            this.btnProximoTab2.Click += new System.EventHandler(this.btnProximoTab2_Click_2);
+            this.btnProximoTab2.Click += new System.EventHandler(this.btnProximoTab2_Click);
             // 
             // pnlTopPg2
             // 
@@ -501,7 +501,7 @@ namespace Raecef
             this.btnProximoTab3.Text = "Próximo";
             this.btnProximoTab3.UseVisualStyleBackColor = false;
             this.btnProximoTab3.Visible = false;
-            this.btnProximoTab3.Click += new System.EventHandler(this.btnProximoTab2_Click);
+            this.btnProximoTab3.Click += new System.EventHandler(this.btnProximoTab3_Click);
             // 
             // pnlTopPg3
             // 
@@ -527,12 +527,12 @@ namespace Raecef
             this.btnImportarPfui.TabIndex = 4;
             this.btnImportarPfui.Text = "Importar PFUI";
             this.btnImportarPfui.UseVisualStyleBackColor = false;
-            this.btnImportarPfui.Click += new System.EventHandler(this.BtnCarregarPfui_Click);
+            this.btnImportarPfui.Click += new System.EventHandler(this.btnImportarPfui_Click);
             // 
             // mainPg3
             // 
             this.mainPg3.BackColor = System.Drawing.Color.Gainsboro;
-            this.mainPg3.Controls.Add(this.pnlMainPg3);
+            this.mainPg3.Controls.Add(this.pnlMainPfui);
             this.mainPg3.Controls.Add(this.label63);
             this.mainPg3.Controls.Add(this.label62);
             this.mainPg3.Controls.Add(this.label64);
@@ -543,144 +543,144 @@ namespace Raecef
             this.mainPg3.Size = new System.Drawing.Size(670, 262);
             this.mainPg3.TabIndex = 5;
             // 
-            // pnlMainPg3
+            // pnlMainPfui
             // 
-            this.pnlMainPg3.AutoScroll = true;
-            this.pnlMainPg3.BackColor = System.Drawing.Color.White;
-            this.pnlMainPg3.Controls.Add(this.panel16);
-            this.pnlMainPg3.Controls.Add(this.txtParcela16);
-            this.pnlMainPg3.Controls.Add(this.label66);
-            this.pnlMainPg3.Controls.Add(this.txtParcela15);
-            this.pnlMainPg3.Controls.Add(this.label67);
-            this.pnlMainPg3.Controls.Add(this.txtParcela14);
-            this.pnlMainPg3.Controls.Add(this.label68);
-            this.pnlMainPg3.Controls.Add(this.txtParcela13);
-            this.pnlMainPg3.Controls.Add(this.label69);
-            this.pnlMainPg3.Controls.Add(this.txtParcela12);
-            this.pnlMainPg3.Controls.Add(this.label70);
-            this.pnlMainPg3.Controls.Add(this.txtParcela11);
-            this.pnlMainPg3.Controls.Add(this.label56);
-            this.pnlMainPg3.Controls.Add(this.txtParcela10);
-            this.pnlMainPg3.Controls.Add(this.label57);
-            this.pnlMainPg3.Controls.Add(this.txtParcela9);
-            this.pnlMainPg3.Controls.Add(this.label58);
-            this.pnlMainPg3.Controls.Add(this.txtParcela8);
-            this.pnlMainPg3.Controls.Add(this.label59);
-            this.pnlMainPg3.Controls.Add(this.txtParcela7);
-            this.pnlMainPg3.Controls.Add(this.label60);
-            this.pnlMainPg3.Controls.Add(this.txtParcela6);
-            this.pnlMainPg3.Controls.Add(this.label61);
-            this.pnlMainPg3.Controls.Add(this.txtParcela5);
-            this.pnlMainPg3.Controls.Add(this.label49);
-            this.pnlMainPg3.Controls.Add(this.txtParcela4);
-            this.pnlMainPg3.Controls.Add(this.label50);
-            this.pnlMainPg3.Controls.Add(this.txtParcela3);
-            this.pnlMainPg3.Controls.Add(this.label51);
-            this.pnlMainPg3.Controls.Add(this.txtParcela2);
-            this.pnlMainPg3.Controls.Add(this.label52);
-            this.pnlMainPg3.Controls.Add(this.txtParcela1);
-            this.pnlMainPg3.Controls.Add(this.label53);
-            this.pnlMainPg3.Controls.Add(this.txtExecutado);
-            this.pnlMainPg3.Controls.Add(this.label54);
-            this.pnlMainPg3.Controls.Add(this.panel15);
-            this.pnlMainPg3.Controls.Add(this.label55);
-            this.pnlMainPg3.Controls.Add(this.txt1720);
-            this.pnlMainPg3.Controls.Add(this.label48);
-            this.pnlMainPg3.Controls.Add(this.txt1719);
-            this.pnlMainPg3.Controls.Add(this.label47);
-            this.pnlMainPg3.Controls.Add(this.txt1718);
-            this.pnlMainPg3.Controls.Add(this.label46);
-            this.pnlMainPg3.Controls.Add(this.txt1717);
-            this.pnlMainPg3.Controls.Add(this.label45);
-            this.pnlMainPg3.Controls.Add(this.txt1716);
-            this.pnlMainPg3.Controls.Add(this.label44);
-            this.pnlMainPg3.Controls.Add(this.txt1715);
-            this.pnlMainPg3.Controls.Add(this.label43);
-            this.pnlMainPg3.Controls.Add(this.txt1714);
-            this.pnlMainPg3.Controls.Add(this.label42);
-            this.pnlMainPg3.Controls.Add(this.txt1713);
-            this.pnlMainPg3.Controls.Add(this.label41);
-            this.pnlMainPg3.Controls.Add(this.txt1712);
-            this.pnlMainPg3.Controls.Add(this.label40);
-            this.pnlMainPg3.Controls.Add(this.txt1711);
-            this.pnlMainPg3.Controls.Add(this.label39);
-            this.pnlMainPg3.Controls.Add(this.txt1710);
-            this.pnlMainPg3.Controls.Add(this.label38);
-            this.pnlMainPg3.Controls.Add(this.txt1709);
-            this.pnlMainPg3.Controls.Add(this.label37);
-            this.pnlMainPg3.Controls.Add(this.txt1708);
-            this.pnlMainPg3.Controls.Add(this.label36);
-            this.pnlMainPg3.Controls.Add(this.txt1707);
-            this.pnlMainPg3.Controls.Add(this.label35);
-            this.pnlMainPg3.Controls.Add(this.txt1706);
-            this.pnlMainPg3.Controls.Add(this.label34);
-            this.pnlMainPg3.Controls.Add(this.txt1705);
-            this.pnlMainPg3.Controls.Add(this.label33);
-            this.pnlMainPg3.Controls.Add(this.txt1704);
-            this.pnlMainPg3.Controls.Add(this.label32);
-            this.pnlMainPg3.Controls.Add(this.txt1703);
-            this.pnlMainPg3.Controls.Add(this.label31);
-            this.pnlMainPg3.Controls.Add(this.txt1702);
-            this.pnlMainPg3.Controls.Add(this.label30);
-            this.pnlMainPg3.Controls.Add(this.txt1701);
-            this.pnlMainPg3.Controls.Add(this.label28);
-            this.pnlMainPg3.Controls.Add(this.panel14);
-            this.pnlMainPg3.Controls.Add(this.label29);
-            this.pnlMainPg3.Controls.Add(this.txtTerrenoUF);
-            this.pnlMainPg3.Controls.Add(this.label27);
-            this.pnlMainPg3.Controls.Add(this.txtTerrenoComarca);
-            this.pnlMainPg3.Controls.Add(this.label26);
-            this.pnlMainPg3.Controls.Add(this.txtTerrenoOficio);
-            this.pnlMainPg3.Controls.Add(this.label25);
-            this.pnlMainPg3.Controls.Add(this.txtTerrenoMatricula);
-            this.pnlMainPg3.Controls.Add(this.label24);
-            this.pnlMainPg3.Controls.Add(this.txtTerrenoValorProposto);
-            this.pnlMainPg3.Controls.Add(this.label22);
-            this.pnlMainPg3.Controls.Add(this.panel12);
-            this.pnlMainPg3.Controls.Add(this.label23);
-            this.pnlMainPg3.Controls.Add(this.txtIdUF);
-            this.pnlMainPg3.Controls.Add(this.label21);
-            this.pnlMainPg3.Controls.Add(this.txtIdMunicipio);
-            this.pnlMainPg3.Controls.Add(this.label15);
-            this.pnlMainPg3.Controls.Add(this.txtIdBairro);
-            this.pnlMainPg3.Controls.Add(this.label16);
-            this.pnlMainPg3.Controls.Add(this.txtIdCEP);
-            this.pnlMainPg3.Controls.Add(this.label17);
-            this.pnlMainPg3.Controls.Add(this.txtIdComplemento);
-            this.pnlMainPg3.Controls.Add(this.label18);
-            this.pnlMainPg3.Controls.Add(this.txtIdEndereco);
-            this.pnlMainPg3.Controls.Add(this.label19);
-            this.pnlMainPg3.Controls.Add(this.panel11);
-            this.pnlMainPg3.Controls.Add(this.label20);
-            this.pnlMainPg3.Controls.Add(this.txtRTTelefone);
-            this.pnlMainPg3.Controls.Add(this.txtRTDDD);
-            this.pnlMainPg3.Controls.Add(this.label13);
-            this.pnlMainPg3.Controls.Add(this.txtRTCPF);
-            this.pnlMainPg3.Controls.Add(this.label14);
-            this.pnlMainPg3.Controls.Add(this.txtRTUF);
-            this.pnlMainPg3.Controls.Add(this.label10);
-            this.pnlMainPg3.Controls.Add(this.txtRTCauCrea);
-            this.pnlMainPg3.Controls.Add(this.label11);
-            this.pnlMainPg3.Controls.Add(this.txtRTNome);
-            this.pnlMainPg3.Controls.Add(this.label12);
-            this.pnlMainPg3.Controls.Add(this.panel10);
-            this.pnlMainPg3.Controls.Add(this.label9);
-            this.pnlMainPg3.Controls.Add(this.txtPropTelefone);
-            this.pnlMainPg3.Controls.Add(this.txtPropDDD);
-            this.pnlMainPg3.Controls.Add(this.label8);
-            this.pnlMainPg3.Controls.Add(this.txtPropCPF);
-            this.pnlMainPg3.Controls.Add(this.label7);
-            this.pnlMainPg3.Controls.Add(this.txtPropNome);
-            this.pnlMainPg3.Controls.Add(this.label1);
-            this.pnlMainPg3.Controls.Add(this.panel9);
-            this.pnlMainPg3.Controls.Add(this.label2);
-            this.pnlMainPg3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainPg3.Location = new System.Drawing.Point(0, 0);
-            this.pnlMainPg3.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlMainPg3.Name = "pnlMainPg3";
-            this.pnlMainPg3.Size = new System.Drawing.Size(670, 262);
-            this.pnlMainPg3.TabIndex = 4;
-            this.pnlMainPg3.Visible = false;
+            this.pnlMainPfui.AutoScroll = true;
+            this.pnlMainPfui.BackColor = System.Drawing.Color.White;
+            this.pnlMainPfui.Controls.Add(this.panel16);
+            this.pnlMainPfui.Controls.Add(this.txtParcela16);
+            this.pnlMainPfui.Controls.Add(this.label66);
+            this.pnlMainPfui.Controls.Add(this.txtParcela15);
+            this.pnlMainPfui.Controls.Add(this.label67);
+            this.pnlMainPfui.Controls.Add(this.txtParcela14);
+            this.pnlMainPfui.Controls.Add(this.label68);
+            this.pnlMainPfui.Controls.Add(this.txtParcela13);
+            this.pnlMainPfui.Controls.Add(this.label69);
+            this.pnlMainPfui.Controls.Add(this.txtParcela12);
+            this.pnlMainPfui.Controls.Add(this.label70);
+            this.pnlMainPfui.Controls.Add(this.txtParcela11);
+            this.pnlMainPfui.Controls.Add(this.label56);
+            this.pnlMainPfui.Controls.Add(this.txtParcela10);
+            this.pnlMainPfui.Controls.Add(this.label57);
+            this.pnlMainPfui.Controls.Add(this.txtParcela9);
+            this.pnlMainPfui.Controls.Add(this.label58);
+            this.pnlMainPfui.Controls.Add(this.txtParcela8);
+            this.pnlMainPfui.Controls.Add(this.label59);
+            this.pnlMainPfui.Controls.Add(this.txtParcela7);
+            this.pnlMainPfui.Controls.Add(this.label60);
+            this.pnlMainPfui.Controls.Add(this.txtParcela6);
+            this.pnlMainPfui.Controls.Add(this.label61);
+            this.pnlMainPfui.Controls.Add(this.txtParcela5);
+            this.pnlMainPfui.Controls.Add(this.label49);
+            this.pnlMainPfui.Controls.Add(this.txtParcela4);
+            this.pnlMainPfui.Controls.Add(this.label50);
+            this.pnlMainPfui.Controls.Add(this.txtParcela3);
+            this.pnlMainPfui.Controls.Add(this.label51);
+            this.pnlMainPfui.Controls.Add(this.txtParcela2);
+            this.pnlMainPfui.Controls.Add(this.label52);
+            this.pnlMainPfui.Controls.Add(this.txtParcela1);
+            this.pnlMainPfui.Controls.Add(this.label53);
+            this.pnlMainPfui.Controls.Add(this.txtExecutado);
+            this.pnlMainPfui.Controls.Add(this.label54);
+            this.pnlMainPfui.Controls.Add(this.panel15);
+            this.pnlMainPfui.Controls.Add(this.label55);
+            this.pnlMainPfui.Controls.Add(this.txt1720);
+            this.pnlMainPfui.Controls.Add(this.label48);
+            this.pnlMainPfui.Controls.Add(this.txt1719);
+            this.pnlMainPfui.Controls.Add(this.label47);
+            this.pnlMainPfui.Controls.Add(this.txt1718);
+            this.pnlMainPfui.Controls.Add(this.label46);
+            this.pnlMainPfui.Controls.Add(this.txt1717);
+            this.pnlMainPfui.Controls.Add(this.label45);
+            this.pnlMainPfui.Controls.Add(this.txt1716);
+            this.pnlMainPfui.Controls.Add(this.label44);
+            this.pnlMainPfui.Controls.Add(this.txt1715);
+            this.pnlMainPfui.Controls.Add(this.label43);
+            this.pnlMainPfui.Controls.Add(this.txt1714);
+            this.pnlMainPfui.Controls.Add(this.label42);
+            this.pnlMainPfui.Controls.Add(this.txt1713);
+            this.pnlMainPfui.Controls.Add(this.label41);
+            this.pnlMainPfui.Controls.Add(this.txt1712);
+            this.pnlMainPfui.Controls.Add(this.label40);
+            this.pnlMainPfui.Controls.Add(this.txt1711);
+            this.pnlMainPfui.Controls.Add(this.label39);
+            this.pnlMainPfui.Controls.Add(this.txt1710);
+            this.pnlMainPfui.Controls.Add(this.label38);
+            this.pnlMainPfui.Controls.Add(this.txt1709);
+            this.pnlMainPfui.Controls.Add(this.label37);
+            this.pnlMainPfui.Controls.Add(this.txt1708);
+            this.pnlMainPfui.Controls.Add(this.label36);
+            this.pnlMainPfui.Controls.Add(this.txt1707);
+            this.pnlMainPfui.Controls.Add(this.label35);
+            this.pnlMainPfui.Controls.Add(this.txt1706);
+            this.pnlMainPfui.Controls.Add(this.label34);
+            this.pnlMainPfui.Controls.Add(this.txt1705);
+            this.pnlMainPfui.Controls.Add(this.label33);
+            this.pnlMainPfui.Controls.Add(this.txt1704);
+            this.pnlMainPfui.Controls.Add(this.label32);
+            this.pnlMainPfui.Controls.Add(this.txt1703);
+            this.pnlMainPfui.Controls.Add(this.label31);
+            this.pnlMainPfui.Controls.Add(this.txt1702);
+            this.pnlMainPfui.Controls.Add(this.label30);
+            this.pnlMainPfui.Controls.Add(this.txt1701);
+            this.pnlMainPfui.Controls.Add(this.label28);
+            this.pnlMainPfui.Controls.Add(this.panel14);
+            this.pnlMainPfui.Controls.Add(this.label29);
+            this.pnlMainPfui.Controls.Add(this.txtTerrenoUF);
+            this.pnlMainPfui.Controls.Add(this.label27);
+            this.pnlMainPfui.Controls.Add(this.txtTerrenoComarca);
+            this.pnlMainPfui.Controls.Add(this.label26);
+            this.pnlMainPfui.Controls.Add(this.txtTerrenoOficio);
+            this.pnlMainPfui.Controls.Add(this.label25);
+            this.pnlMainPfui.Controls.Add(this.txtTerrenoMatricula);
+            this.pnlMainPfui.Controls.Add(this.label24);
+            this.pnlMainPfui.Controls.Add(this.txtTerrenoValorProposto);
+            this.pnlMainPfui.Controls.Add(this.label22);
+            this.pnlMainPfui.Controls.Add(this.panel12);
+            this.pnlMainPfui.Controls.Add(this.label23);
+            this.pnlMainPfui.Controls.Add(this.txtIdUF);
+            this.pnlMainPfui.Controls.Add(this.label21);
+            this.pnlMainPfui.Controls.Add(this.txtIdMunicipio);
+            this.pnlMainPfui.Controls.Add(this.label15);
+            this.pnlMainPfui.Controls.Add(this.txtIdBairro);
+            this.pnlMainPfui.Controls.Add(this.label16);
+            this.pnlMainPfui.Controls.Add(this.txtIdCEP);
+            this.pnlMainPfui.Controls.Add(this.label17);
+            this.pnlMainPfui.Controls.Add(this.txtIdComplemento);
+            this.pnlMainPfui.Controls.Add(this.label18);
+            this.pnlMainPfui.Controls.Add(this.txtIdEndereco);
+            this.pnlMainPfui.Controls.Add(this.label19);
+            this.pnlMainPfui.Controls.Add(this.panel11);
+            this.pnlMainPfui.Controls.Add(this.label20);
+            this.pnlMainPfui.Controls.Add(this.txtRTTelefone);
+            this.pnlMainPfui.Controls.Add(this.txtRTDDD);
+            this.pnlMainPfui.Controls.Add(this.label13);
+            this.pnlMainPfui.Controls.Add(this.txtRTCPF);
+            this.pnlMainPfui.Controls.Add(this.label14);
+            this.pnlMainPfui.Controls.Add(this.txtRTUF);
+            this.pnlMainPfui.Controls.Add(this.label10);
+            this.pnlMainPfui.Controls.Add(this.txtRTCauCrea);
+            this.pnlMainPfui.Controls.Add(this.label11);
+            this.pnlMainPfui.Controls.Add(this.txtRTNome);
+            this.pnlMainPfui.Controls.Add(this.label12);
+            this.pnlMainPfui.Controls.Add(this.panel10);
+            this.pnlMainPfui.Controls.Add(this.label9);
+            this.pnlMainPfui.Controls.Add(this.txtPropTelefone);
+            this.pnlMainPfui.Controls.Add(this.txtPropDDD);
+            this.pnlMainPfui.Controls.Add(this.label8);
+            this.pnlMainPfui.Controls.Add(this.txtPropCPF);
+            this.pnlMainPfui.Controls.Add(this.label7);
+            this.pnlMainPfui.Controls.Add(this.txtPropNome);
+            this.pnlMainPfui.Controls.Add(this.label1);
+            this.pnlMainPfui.Controls.Add(this.panel9);
+            this.pnlMainPfui.Controls.Add(this.label2);
+            this.pnlMainPfui.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainPfui.Location = new System.Drawing.Point(0, 0);
+            this.pnlMainPfui.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMainPfui.Name = "pnlMainPfui";
+            this.pnlMainPfui.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainPfui.TabIndex = 4;
+            this.pnlMainPfui.Visible = false;
             // 
             // panel16
             // 
@@ -1581,7 +1581,6 @@ namespace Raecef
             this.txtIdComplemento.Name = "txtIdComplemento";
             this.txtIdComplemento.Size = new System.Drawing.Size(350, 23);
             this.txtIdComplemento.TabIndex = 29;
-            this.txtIdComplemento.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // label18
             // 
@@ -1851,6 +1850,17 @@ namespace Raecef
     "bilizado através do SIOPI.";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label64
+            // 
+            this.label64.Location = new System.Drawing.Point(0, 144);
+            this.label64.Margin = new System.Windows.Forms.Padding(0);
+            this.label64.Name = "label64";
+            this.label64.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
+            this.label64.Size = new System.Drawing.Size(670, 33);
+            this.label64.TabIndex = 7;
+            this.label64.Text = "Prosseguir quando estiver satisfeito.";
+            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // pg4
             // 
             this.pg4.BackColor = System.Drawing.Color.Gainsboro;
@@ -1873,53 +1883,53 @@ namespace Raecef
             this.panel1.Size = new System.Drawing.Size(80, 410);
             this.panel1.TabIndex = 0;
             // 
-            // panel3
+            // pnlAppTopPanel
             // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.BtnAppClose);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 30);
-            this.panel3.TabIndex = 5;
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.pnlAppTopPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlAppTopPanel.BackgroundImage")));
+            this.pnlAppTopPanel.Controls.Add(this.btnBack);
+            this.pnlAppTopPanel.Controls.Add(this.btnAppClose);
+            this.pnlAppTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAppTopPanel.Location = new System.Drawing.Point(0, 0);
+            this.pnlAppTopPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAppTopPanel.Name = "pnlAppTopPanel";
+            this.pnlAppTopPanel.Size = new System.Drawing.Size(800, 30);
+            this.pnlAppTopPanel.TabIndex = 5;
+            this.pnlAppTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlAppTopPanel_MouseDown);
             // 
-            // button2
+            // btnBack
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 30);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(40, 30);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // BtnAppClose
+            // btnAppClose
             // 
-            this.BtnAppClose.BackColor = System.Drawing.Color.Transparent;
-            this.BtnAppClose.FlatAppearance.BorderSize = 0;
-            this.BtnAppClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.BtnAppClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BtnAppClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAppClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAppClose.ForeColor = System.Drawing.Color.White;
-            this.BtnAppClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAppClose.Image")));
-            this.BtnAppClose.Location = new System.Drawing.Point(760, 0);
-            this.BtnAppClose.Name = "BtnAppClose";
-            this.BtnAppClose.Size = new System.Drawing.Size(40, 30);
-            this.BtnAppClose.TabIndex = 0;
-            this.BtnAppClose.UseVisualStyleBackColor = false;
-            this.BtnAppClose.Click += new System.EventHandler(this.BtnAppClose_Click);
+            this.btnAppClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnAppClose.FlatAppearance.BorderSize = 0;
+            this.btnAppClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnAppClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnAppClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAppClose.ForeColor = System.Drawing.Color.White;
+            this.btnAppClose.Image = ((System.Drawing.Image)(resources.GetObject("btnAppClose.Image")));
+            this.btnAppClose.Location = new System.Drawing.Point(760, 0);
+            this.btnAppClose.Name = "btnAppClose";
+            this.btnAppClose.Size = new System.Drawing.Size(40, 30);
+            this.btnAppClose.TabIndex = 0;
+            this.btnAppClose.UseVisualStyleBackColor = false;
+            this.btnAppClose.Click += new System.EventHandler(this.btnAppClose_Click);
             // 
             // panel4
             // 
@@ -2005,7 +2015,6 @@ namespace Raecef
             this.button1.Text = "Próximo";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.btnProximoTab2_Click);
             // 
             // tabPage1
             // 
@@ -2146,17 +2155,6 @@ namespace Raecef
             this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // label64
-            // 
-            this.label64.Location = new System.Drawing.Point(0, 144);
-            this.label64.Margin = new System.Windows.Forms.Padding(0);
-            this.label64.Name = "label64";
-            this.label64.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
-            this.label64.Size = new System.Drawing.Size(670, 33);
-            this.label64.TabIndex = 7;
-            this.label64.Text = "Prosseguir quando estiver satisfeito.";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2166,7 +2164,7 @@ namespace Raecef
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlAppTopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -2190,9 +2188,9 @@ namespace Raecef
             this.pnlBottonPg3.ResumeLayout(false);
             this.pnlTopPg3.ResumeLayout(false);
             this.mainPg3.ResumeLayout(false);
-            this.pnlMainPg3.ResumeLayout(false);
-            this.pnlMainPg3.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.pnlMainPfui.ResumeLayout(false);
+            this.pnlMainPfui.PerformLayout();
+            this.pnlAppTopPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -2216,19 +2214,19 @@ namespace Raecef
         private System.Windows.Forms.Button btnImportarPfui;
         private System.Windows.Forms.TabPage pg4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button BtnAppClose;
+        private System.Windows.Forms.Panel pnlAppTopPanel;
+        private System.Windows.Forms.Button btnAppClose;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel pblPg3;
         private System.Windows.Forms.Panel pnlTopPg3;
-        private System.Windows.Forms.Panel pnlMainPg3;
+        private System.Windows.Forms.Panel pnlMainPfui;
         private System.Windows.Forms.Panel pnlBottonPg3;
         private System.Windows.Forms.TabPage pg2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnProximoTab3;
         private System.Windows.Forms.TableLayoutPanel tblPg2;
-        private System.Windows.Forms.Panel pnlMainPg2;
+        private System.Windows.Forms.Panel pnlMainConvocacao;
         private System.Windows.Forms.Panel pnlBottonPg2;
         private System.Windows.Forms.Button btnProximoTab2;
         private System.Windows.Forms.Panel pnlTopPg2;
