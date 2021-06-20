@@ -3,6 +3,8 @@ using System.Linq;
 using System.Windows.Forms;
 using ClosedXML.Excel;
 using System.Runtime.InteropServices;
+using System.IO;
+using System.Collections.Generic;
 
 namespace Raecef
 {
@@ -12,7 +14,6 @@ namespace Raecef
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
 
 
 
@@ -62,17 +63,47 @@ namespace Raecef
 
         private void btnImportarConvocacao_Click(object sender, EventArgs e)
         {
-            pnlMainConvocacao.Show();
-            btnProximoTab2.Show();
+            try
+            {
+                if (openText.ShowDialog() == DialogResult.OK)
+                {
+                    var convocacao = File.ReadAllLines(openText.FileName)
+                           .Where(l => l.StartsWith("REFERENCIA ........"))
+                           .Select(l => l.Substring(l.LastIndexOf(":") + 2))
+                           .ToList();
+
+                    string referencia = Util.CleanInput(convocacao[0]);
+                    
+                    if (referencia.Substring(0, 1) == "0")
+                        referencia = referencia.Substring(1);
+
+                    txtRef0.Text = referencia.Substring(0, 4);
+                    txtRef1.Text = referencia.Substring(4, 4);
+                    txtRef2.Text = Convert.ToInt32(referencia.Substring(8, 9)).ToString();
+                    txtRef3.Text = referencia.Substring(17, 4);
+                    txtRef4.Text = referencia.Substring(21, 2);
+                    txtRef5.Text = referencia.Substring(23, 2);
+                    txtRef6.Text = referencia.Substring(25, 2);
+
+                    pnlMainConvocacao.Show();
+                    btnProximoTab2.Show();
+                    txtRef0.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void btnImportarPfui_Click(object sender, EventArgs e)
         {
             try
             {
-                if (OpenDialog.ShowDialog() == DialogResult.OK)
+                if (openExcel.ShowDialog() == DialogResult.OK)
                 {
-                    var xls = new XLWorkbook(OpenDialog.FileName);
+                    var xls = new XLWorkbook(openExcel.FileName);
                     var planilha = xls.Worksheets.First(w => w.Name == "Proposta");
 
                     //CABEÇALHO

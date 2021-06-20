@@ -30,7 +30,7 @@ namespace Raecef
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.OpenDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openExcel = new System.Windows.Forms.OpenFileDialog();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.pg1 = new System.Windows.Forms.TabPage();
             this.tblPg1 = new System.Windows.Forms.TableLayoutPanel();
@@ -41,7 +41,27 @@ namespace Raecef
             this.btnIniciar = new System.Windows.Forms.Button();
             this.pg2 = new System.Windows.Forms.TabPage();
             this.tblPg2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlMainConvocacao = new System.Windows.Forms.Panel();
+            this.pnlReferencia = new System.Windows.Forms.Panel();
+            this.label80 = new System.Windows.Forms.Label();
+            this.txtRef0 = new System.Windows.Forms.TextBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.txtRef1 = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.txtRef2 = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.txtRef3 = new System.Windows.Forms.TextBox();
+            this.label76 = new System.Windows.Forms.Label();
+            this.txtRef4 = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.txtRef5 = new System.Windows.Forms.TextBox();
+            this.txtRef6 = new System.Windows.Forms.TextBox();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
             this.pnlBottonPg2 = new System.Windows.Forms.Panel();
             this.btnProximoTab2 = new System.Windows.Forms.Button();
             this.pnlTopPg2 = new System.Windows.Forms.Panel();
@@ -208,6 +228,7 @@ namespace Raecef
             this.panel8 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.openText = new System.Windows.Forms.OpenFileDialog();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -215,6 +236,9 @@ namespace Raecef
             this.pnlBottonPg1.SuspendLayout();
             this.pg2.SuspendLayout();
             this.tblPg2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.pnlMainConvocacao.SuspendLayout();
+            this.pnlReferencia.SuspendLayout();
             this.pnlBottonPg2.SuspendLayout();
             this.pnlTopPg2.SuspendLayout();
             this.pg3.SuspendLayout();
@@ -235,9 +259,9 @@ namespace Raecef
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // OpenDialog
+            // openExcel
             // 
-            this.OpenDialog.Filter = "Planilhas do Excel | *.xlsx";
+            this.openExcel.Filter = "Planilhas do Excel | *.xlsx";
             // 
             // TabControl
             // 
@@ -366,7 +390,7 @@ namespace Raecef
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg2.Controls.Add(this.pnlMainConvocacao, 1, 3);
+            this.tblPg2.Controls.Add(this.panel3, 1, 3);
             this.tblPg2.Controls.Add(this.pnlBottonPg2, 1, 4);
             this.tblPg2.Controls.Add(this.pnlTopPg2, 1, 1);
             this.tblPg2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -382,16 +406,262 @@ namespace Raecef
             this.tblPg2.Size = new System.Drawing.Size(706, 386);
             this.tblPg2.TabIndex = 9;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.pnlMainConvocacao);
+            this.panel3.Controls.Add(this.label65);
+            this.panel3.Controls.Add(this.label71);
+            this.panel3.Controls.Add(this.label72);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(17, 74);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(670, 262);
+            this.panel3.TabIndex = 7;
+            // 
             // pnlMainConvocacao
             // 
             this.pnlMainConvocacao.BackColor = System.Drawing.Color.White;
+            this.pnlMainConvocacao.Controls.Add(this.pnlReferencia);
+            this.pnlMainConvocacao.Controls.Add(this.label74);
+            this.pnlMainConvocacao.Controls.Add(this.label75);
             this.pnlMainConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainConvocacao.Location = new System.Drawing.Point(17, 74);
+            this.pnlMainConvocacao.Location = new System.Drawing.Point(0, 0);
             this.pnlMainConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainConvocacao.Name = "pnlMainConvocacao";
             this.pnlMainConvocacao.Size = new System.Drawing.Size(670, 262);
-            this.pnlMainConvocacao.TabIndex = 4;
+            this.pnlMainConvocacao.TabIndex = 0;
             this.pnlMainConvocacao.Visible = false;
+            // 
+            // pnlReferencia
+            // 
+            this.pnlReferencia.BackColor = System.Drawing.Color.White;
+            this.pnlReferencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlReferencia.Controls.Add(this.label80);
+            this.pnlReferencia.Controls.Add(this.txtRef0);
+            this.pnlReferencia.Controls.Add(this.label79);
+            this.pnlReferencia.Controls.Add(this.txtRef1);
+            this.pnlReferencia.Controls.Add(this.label78);
+            this.pnlReferencia.Controls.Add(this.txtRef2);
+            this.pnlReferencia.Controls.Add(this.label77);
+            this.pnlReferencia.Controls.Add(this.txtRef3);
+            this.pnlReferencia.Controls.Add(this.label76);
+            this.pnlReferencia.Controls.Add(this.txtRef4);
+            this.pnlReferencia.Controls.Add(this.label73);
+            this.pnlReferencia.Controls.Add(this.txtRef5);
+            this.pnlReferencia.Controls.Add(this.txtRef6);
+            this.pnlReferencia.Location = new System.Drawing.Point(246, 84);
+            this.pnlReferencia.Name = "pnlReferencia";
+            this.pnlReferencia.Size = new System.Drawing.Size(244, 23);
+            this.pnlReferencia.TabIndex = 0;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.BackColor = System.Drawing.Color.Transparent;
+            this.label80.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label80.ForeColor = System.Drawing.Color.Black;
+            this.label80.Location = new System.Drawing.Point(214, 3);
+            this.label80.Margin = new System.Windows.Forms.Padding(0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(10, 13);
+            this.label80.TabIndex = 31;
+            this.label80.Text = ".";
+            // 
+            // txtRef0
+            // 
+            this.txtRef0.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRef0.Location = new System.Drawing.Point(2, 3);
+            this.txtRef0.MaxLength = 50;
+            this.txtRef0.Name = "txtRef0";
+            this.txtRef0.Size = new System.Drawing.Size(25, 16);
+            this.txtRef0.TabIndex = 0;
+            this.txtRef0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.BackColor = System.Drawing.Color.Transparent;
+            this.label79.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label79.ForeColor = System.Drawing.Color.Black;
+            this.label79.Location = new System.Drawing.Point(189, 3);
+            this.label79.Margin = new System.Windows.Forms.Padding(0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(10, 13);
+            this.label79.TabIndex = 30;
+            this.label79.Text = ".";
+            // 
+            // txtRef1
+            // 
+            this.txtRef1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRef1.Location = new System.Drawing.Point(35, 3);
+            this.txtRef1.MaxLength = 50;
+            this.txtRef1.Name = "txtRef1";
+            this.txtRef1.Size = new System.Drawing.Size(25, 16);
+            this.txtRef1.TabIndex = 1;
+            this.txtRef1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.BackColor = System.Drawing.Color.Transparent;
+            this.label78.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label78.ForeColor = System.Drawing.Color.Black;
+            this.label78.Location = new System.Drawing.Point(164, 3);
+            this.label78.Margin = new System.Windows.Forms.Padding(0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(10, 13);
+            this.label78.TabIndex = 29;
+            this.label78.Text = ".";
+            // 
+            // txtRef2
+            // 
+            this.txtRef2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRef2.Location = new System.Drawing.Point(70, 3);
+            this.txtRef2.MaxLength = 50;
+            this.txtRef2.Name = "txtRef2";
+            this.txtRef2.Size = new System.Drawing.Size(55, 16);
+            this.txtRef2.TabIndex = 2;
+            this.txtRef2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.BackColor = System.Drawing.Color.Transparent;
+            this.label77.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label77.ForeColor = System.Drawing.Color.Black;
+            this.label77.Location = new System.Drawing.Point(128, 3);
+            this.label77.Margin = new System.Windows.Forms.Padding(0);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(12, 13);
+            this.label77.TabIndex = 28;
+            this.label77.Text = "/";
+            // 
+            // txtRef3
+            // 
+            this.txtRef3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRef3.Location = new System.Drawing.Point(139, 3);
+            this.txtRef3.MaxLength = 50;
+            this.txtRef3.Name = "txtRef3";
+            this.txtRef3.Size = new System.Drawing.Size(25, 16);
+            this.txtRef3.TabIndex = 3;
+            this.txtRef3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.BackColor = System.Drawing.Color.Transparent;
+            this.label76.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label76.ForeColor = System.Drawing.Color.Black;
+            this.label76.Location = new System.Drawing.Point(60, 3);
+            this.label76.Margin = new System.Windows.Forms.Padding(0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(10, 13);
+            this.label76.TabIndex = 27;
+            this.label76.Text = ".";
+            // 
+            // txtRef4
+            // 
+            this.txtRef4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRef4.Location = new System.Drawing.Point(174, 3);
+            this.txtRef4.MaxLength = 50;
+            this.txtRef4.Name = "txtRef4";
+            this.txtRef4.Size = new System.Drawing.Size(15, 16);
+            this.txtRef4.TabIndex = 4;
+            this.txtRef4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.BackColor = System.Drawing.Color.Transparent;
+            this.label73.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label73.ForeColor = System.Drawing.Color.Black;
+            this.label73.Location = new System.Drawing.Point(26, 3);
+            this.label73.Margin = new System.Windows.Forms.Padding(0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(10, 13);
+            this.label73.TabIndex = 26;
+            this.label73.Text = ".";
+            // 
+            // txtRef5
+            // 
+            this.txtRef5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRef5.Location = new System.Drawing.Point(199, 3);
+            this.txtRef5.MaxLength = 50;
+            this.txtRef5.Name = "txtRef5";
+            this.txtRef5.Size = new System.Drawing.Size(15, 16);
+            this.txtRef5.TabIndex = 5;
+            this.txtRef5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtRef6
+            // 
+            this.txtRef6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRef6.Location = new System.Drawing.Point(224, 3);
+            this.txtRef6.MaxLength = 50;
+            this.txtRef6.Name = "txtRef6";
+            this.txtRef6.Size = new System.Drawing.Size(15, 16);
+            this.txtRef6.TabIndex = 6;
+            this.txtRef6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label74.ForeColor = System.Drawing.Color.Black;
+            this.label74.Location = new System.Drawing.Point(160, 89);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(59, 12);
+            this.label74.TabIndex = 17;
+            this.label74.Text = "REFERÊNCIA";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label75.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label75.Location = new System.Drawing.Point(60, 37);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(229, 13);
+            this.label75.TabIndex = 15;
+            this.label75.Text = "Convocação - OS para Prestação de Serviço";
+            // 
+            // label65
+            // 
+            this.label65.Location = new System.Drawing.Point(0, 81);
+            this.label65.Margin = new System.Windows.Forms.Padding(0);
+            this.label65.Name = "label65";
+            this.label65.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
+            this.label65.Size = new System.Drawing.Size(670, 63);
+            this.label65.TabIndex = 9;
+            this.label65.Text = "O objetivo desta etapa é importar o número da Ordem de Serviço (Referência), sepa" +
+    "rá-lo e tratá-lo removendo os zeros à esquerda do número da GIHAB (quando existe" +
+    "nte) e do número da referência.";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label71
+            // 
+            this.label71.Location = new System.Drawing.Point(0, 0);
+            this.label71.Margin = new System.Windows.Forms.Padding(0);
+            this.label71.Name = "label71";
+            this.label71.Padding = new System.Windows.Forms.Padding(100, 30, 100, 0);
+            this.label71.Size = new System.Drawing.Size(670, 81);
+            this.label71.TabIndex = 8;
+            this.label71.Text = "Nesta etapa, deve-se selecionar o arquivo de texto (.txt) da convocação que foi e" +
+    "nviado pela agência demandante via email.";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label72
+            // 
+            this.label72.Location = new System.Drawing.Point(0, 144);
+            this.label72.Margin = new System.Windows.Forms.Padding(0);
+            this.label72.Name = "label72";
+            this.label72.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
+            this.label72.Size = new System.Drawing.Size(670, 40);
+            this.label72.TabIndex = 10;
+            this.label72.Text = "Esse processo é importante, pois na planilha RAE, esse número de referência é pre" +
+    "enchido em células diferentes.";
+            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlBottonPg2
             // 
@@ -693,9 +963,10 @@ namespace Raecef
             // txtParcela16
             // 
             this.txtParcela16.Location = new System.Drawing.Point(302, 2000);
+            this.txtParcela16.MaxLength = 50;
             this.txtParcela16.Name = "txtParcela16";
             this.txtParcela16.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela16.TabIndex = 127;
+            this.txtParcela16.TabIndex = 57;
             // 
             // label66
             // 
@@ -711,9 +982,10 @@ namespace Raecef
             // txtParcela15
             // 
             this.txtParcela15.Location = new System.Drawing.Point(302, 1971);
+            this.txtParcela15.MaxLength = 50;
             this.txtParcela15.Name = "txtParcela15";
             this.txtParcela15.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela15.TabIndex = 125;
+            this.txtParcela15.TabIndex = 56;
             // 
             // label67
             // 
@@ -729,9 +1001,10 @@ namespace Raecef
             // txtParcela14
             // 
             this.txtParcela14.Location = new System.Drawing.Point(302, 1942);
+            this.txtParcela14.MaxLength = 50;
             this.txtParcela14.Name = "txtParcela14";
             this.txtParcela14.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela14.TabIndex = 123;
+            this.txtParcela14.TabIndex = 55;
             // 
             // label68
             // 
@@ -747,9 +1020,10 @@ namespace Raecef
             // txtParcela13
             // 
             this.txtParcela13.Location = new System.Drawing.Point(302, 1913);
+            this.txtParcela13.MaxLength = 50;
             this.txtParcela13.Name = "txtParcela13";
             this.txtParcela13.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela13.TabIndex = 121;
+            this.txtParcela13.TabIndex = 54;
             // 
             // label69
             // 
@@ -765,9 +1039,10 @@ namespace Raecef
             // txtParcela12
             // 
             this.txtParcela12.Location = new System.Drawing.Point(302, 1884);
+            this.txtParcela12.MaxLength = 50;
             this.txtParcela12.Name = "txtParcela12";
             this.txtParcela12.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela12.TabIndex = 119;
+            this.txtParcela12.TabIndex = 53;
             // 
             // label70
             // 
@@ -783,6 +1058,7 @@ namespace Raecef
             // txtParcela11
             // 
             this.txtParcela11.Location = new System.Drawing.Point(302, 1855);
+            this.txtParcela11.MaxLength = 50;
             this.txtParcela11.Name = "txtParcela11";
             this.txtParcela11.Size = new System.Drawing.Size(130, 23);
             this.txtParcela11.TabIndex = 117;
@@ -801,9 +1077,10 @@ namespace Raecef
             // txtParcela10
             // 
             this.txtParcela10.Location = new System.Drawing.Point(302, 1826);
+            this.txtParcela10.MaxLength = 50;
             this.txtParcela10.Name = "txtParcela10";
             this.txtParcela10.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela10.TabIndex = 115;
+            this.txtParcela10.TabIndex = 52;
             // 
             // label57
             // 
@@ -819,9 +1096,10 @@ namespace Raecef
             // txtParcela9
             // 
             this.txtParcela9.Location = new System.Drawing.Point(302, 1797);
+            this.txtParcela9.MaxLength = 50;
             this.txtParcela9.Name = "txtParcela9";
             this.txtParcela9.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela9.TabIndex = 113;
+            this.txtParcela9.TabIndex = 50;
             // 
             // label58
             // 
@@ -837,9 +1115,10 @@ namespace Raecef
             // txtParcela8
             // 
             this.txtParcela8.Location = new System.Drawing.Point(302, 1768);
+            this.txtParcela8.MaxLength = 50;
             this.txtParcela8.Name = "txtParcela8";
             this.txtParcela8.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela8.TabIndex = 111;
+            this.txtParcela8.TabIndex = 49;
             // 
             // label59
             // 
@@ -855,9 +1134,10 @@ namespace Raecef
             // txtParcela7
             // 
             this.txtParcela7.Location = new System.Drawing.Point(302, 1739);
+            this.txtParcela7.MaxLength = 50;
             this.txtParcela7.Name = "txtParcela7";
             this.txtParcela7.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela7.TabIndex = 109;
+            this.txtParcela7.TabIndex = 48;
             // 
             // label60
             // 
@@ -873,9 +1153,10 @@ namespace Raecef
             // txtParcela6
             // 
             this.txtParcela6.Location = new System.Drawing.Point(302, 1710);
+            this.txtParcela6.MaxLength = 50;
             this.txtParcela6.Name = "txtParcela6";
             this.txtParcela6.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela6.TabIndex = 107;
+            this.txtParcela6.TabIndex = 47;
             // 
             // label61
             // 
@@ -891,9 +1172,10 @@ namespace Raecef
             // txtParcela5
             // 
             this.txtParcela5.Location = new System.Drawing.Point(302, 1681);
+            this.txtParcela5.MaxLength = 50;
             this.txtParcela5.Name = "txtParcela5";
             this.txtParcela5.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela5.TabIndex = 105;
+            this.txtParcela5.TabIndex = 46;
             // 
             // label49
             // 
@@ -909,9 +1191,10 @@ namespace Raecef
             // txtParcela4
             // 
             this.txtParcela4.Location = new System.Drawing.Point(302, 1652);
+            this.txtParcela4.MaxLength = 50;
             this.txtParcela4.Name = "txtParcela4";
             this.txtParcela4.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela4.TabIndex = 103;
+            this.txtParcela4.TabIndex = 45;
             // 
             // label50
             // 
@@ -927,9 +1210,10 @@ namespace Raecef
             // txtParcela3
             // 
             this.txtParcela3.Location = new System.Drawing.Point(302, 1623);
+            this.txtParcela3.MaxLength = 50;
             this.txtParcela3.Name = "txtParcela3";
             this.txtParcela3.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela3.TabIndex = 101;
+            this.txtParcela3.TabIndex = 44;
             // 
             // label51
             // 
@@ -945,9 +1229,10 @@ namespace Raecef
             // txtParcela2
             // 
             this.txtParcela2.Location = new System.Drawing.Point(302, 1594);
+            this.txtParcela2.MaxLength = 50;
             this.txtParcela2.Name = "txtParcela2";
             this.txtParcela2.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela2.TabIndex = 99;
+            this.txtParcela2.TabIndex = 43;
             // 
             // label52
             // 
@@ -963,9 +1248,10 @@ namespace Raecef
             // txtParcela1
             // 
             this.txtParcela1.Location = new System.Drawing.Point(302, 1565);
+            this.txtParcela1.MaxLength = 50;
             this.txtParcela1.Name = "txtParcela1";
             this.txtParcela1.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela1.TabIndex = 97;
+            this.txtParcela1.TabIndex = 42;
             // 
             // label53
             // 
@@ -981,9 +1267,10 @@ namespace Raecef
             // txtExecutado
             // 
             this.txtExecutado.Location = new System.Drawing.Point(302, 1536);
+            this.txtExecutado.MaxLength = 50;
             this.txtExecutado.Name = "txtExecutado";
             this.txtExecutado.Size = new System.Drawing.Size(130, 23);
-            this.txtExecutado.TabIndex = 95;
+            this.txtExecutado.TabIndex = 41;
             // 
             // label54
             // 
@@ -1018,9 +1305,10 @@ namespace Raecef
             // txt1720
             // 
             this.txt1720.Location = new System.Drawing.Point(390, 1438);
+            this.txt1720.MaxLength = 50;
             this.txt1720.Name = "txt1720";
             this.txt1720.Size = new System.Drawing.Size(130, 23);
-            this.txt1720.TabIndex = 91;
+            this.txt1720.TabIndex = 40;
             // 
             // label48
             // 
@@ -1036,9 +1324,10 @@ namespace Raecef
             // txt1719
             // 
             this.txt1719.Location = new System.Drawing.Point(390, 1409);
+            this.txt1719.MaxLength = 50;
             this.txt1719.Name = "txt1719";
             this.txt1719.Size = new System.Drawing.Size(130, 23);
-            this.txt1719.TabIndex = 89;
+            this.txt1719.TabIndex = 39;
             // 
             // label47
             // 
@@ -1054,9 +1343,10 @@ namespace Raecef
             // txt1718
             // 
             this.txt1718.Location = new System.Drawing.Point(390, 1380);
+            this.txt1718.MaxLength = 50;
             this.txt1718.Name = "txt1718";
             this.txt1718.Size = new System.Drawing.Size(130, 23);
-            this.txt1718.TabIndex = 87;
+            this.txt1718.TabIndex = 38;
             // 
             // label46
             // 
@@ -1072,9 +1362,10 @@ namespace Raecef
             // txt1717
             // 
             this.txt1717.Location = new System.Drawing.Point(390, 1351);
+            this.txt1717.MaxLength = 50;
             this.txt1717.Name = "txt1717";
             this.txt1717.Size = new System.Drawing.Size(130, 23);
-            this.txt1717.TabIndex = 85;
+            this.txt1717.TabIndex = 37;
             // 
             // label45
             // 
@@ -1090,9 +1381,10 @@ namespace Raecef
             // txt1716
             // 
             this.txt1716.Location = new System.Drawing.Point(390, 1322);
+            this.txt1716.MaxLength = 50;
             this.txt1716.Name = "txt1716";
             this.txt1716.Size = new System.Drawing.Size(130, 23);
-            this.txt1716.TabIndex = 83;
+            this.txt1716.TabIndex = 36;
             // 
             // label44
             // 
@@ -1108,9 +1400,10 @@ namespace Raecef
             // txt1715
             // 
             this.txt1715.Location = new System.Drawing.Point(390, 1293);
+            this.txt1715.MaxLength = 50;
             this.txt1715.Name = "txt1715";
             this.txt1715.Size = new System.Drawing.Size(130, 23);
-            this.txt1715.TabIndex = 81;
+            this.txt1715.TabIndex = 35;
             // 
             // label43
             // 
@@ -1126,9 +1419,10 @@ namespace Raecef
             // txt1714
             // 
             this.txt1714.Location = new System.Drawing.Point(390, 1264);
+            this.txt1714.MaxLength = 50;
             this.txt1714.Name = "txt1714";
             this.txt1714.Size = new System.Drawing.Size(130, 23);
-            this.txt1714.TabIndex = 79;
+            this.txt1714.TabIndex = 34;
             // 
             // label42
             // 
@@ -1144,9 +1438,10 @@ namespace Raecef
             // txt1713
             // 
             this.txt1713.Location = new System.Drawing.Point(390, 1235);
+            this.txt1713.MaxLength = 50;
             this.txt1713.Name = "txt1713";
             this.txt1713.Size = new System.Drawing.Size(130, 23);
-            this.txt1713.TabIndex = 77;
+            this.txt1713.TabIndex = 33;
             // 
             // label41
             // 
@@ -1162,9 +1457,10 @@ namespace Raecef
             // txt1712
             // 
             this.txt1712.Location = new System.Drawing.Point(390, 1206);
+            this.txt1712.MaxLength = 50;
             this.txt1712.Name = "txt1712";
             this.txt1712.Size = new System.Drawing.Size(130, 23);
-            this.txt1712.TabIndex = 75;
+            this.txt1712.TabIndex = 32;
             // 
             // label40
             // 
@@ -1180,9 +1476,10 @@ namespace Raecef
             // txt1711
             // 
             this.txt1711.Location = new System.Drawing.Point(390, 1177);
+            this.txt1711.MaxLength = 50;
             this.txt1711.Name = "txt1711";
             this.txt1711.Size = new System.Drawing.Size(130, 23);
-            this.txt1711.TabIndex = 73;
+            this.txt1711.TabIndex = 31;
             // 
             // label39
             // 
@@ -1198,9 +1495,10 @@ namespace Raecef
             // txt1710
             // 
             this.txt1710.Location = new System.Drawing.Point(390, 1148);
+            this.txt1710.MaxLength = 50;
             this.txt1710.Name = "txt1710";
             this.txt1710.Size = new System.Drawing.Size(130, 23);
-            this.txt1710.TabIndex = 71;
+            this.txt1710.TabIndex = 30;
             // 
             // label38
             // 
@@ -1216,9 +1514,10 @@ namespace Raecef
             // txt1709
             // 
             this.txt1709.Location = new System.Drawing.Point(390, 1119);
+            this.txt1709.MaxLength = 50;
             this.txt1709.Name = "txt1709";
             this.txt1709.Size = new System.Drawing.Size(130, 23);
-            this.txt1709.TabIndex = 69;
+            this.txt1709.TabIndex = 29;
             // 
             // label37
             // 
@@ -1234,9 +1533,10 @@ namespace Raecef
             // txt1708
             // 
             this.txt1708.Location = new System.Drawing.Point(390, 1090);
+            this.txt1708.MaxLength = 50;
             this.txt1708.Name = "txt1708";
             this.txt1708.Size = new System.Drawing.Size(130, 23);
-            this.txt1708.TabIndex = 67;
+            this.txt1708.TabIndex = 28;
             // 
             // label36
             // 
@@ -1252,9 +1552,10 @@ namespace Raecef
             // txt1707
             // 
             this.txt1707.Location = new System.Drawing.Point(390, 1061);
+            this.txt1707.MaxLength = 50;
             this.txt1707.Name = "txt1707";
             this.txt1707.Size = new System.Drawing.Size(130, 23);
-            this.txt1707.TabIndex = 65;
+            this.txt1707.TabIndex = 27;
             // 
             // label35
             // 
@@ -1270,9 +1571,10 @@ namespace Raecef
             // txt1706
             // 
             this.txt1706.Location = new System.Drawing.Point(390, 1032);
+            this.txt1706.MaxLength = 50;
             this.txt1706.Name = "txt1706";
             this.txt1706.Size = new System.Drawing.Size(130, 23);
-            this.txt1706.TabIndex = 63;
+            this.txt1706.TabIndex = 26;
             // 
             // label34
             // 
@@ -1288,6 +1590,7 @@ namespace Raecef
             // txt1705
             // 
             this.txt1705.Location = new System.Drawing.Point(390, 1003);
+            this.txt1705.MaxLength = 50;
             this.txt1705.Name = "txt1705";
             this.txt1705.Size = new System.Drawing.Size(130, 23);
             this.txt1705.TabIndex = 61;
@@ -1306,9 +1609,10 @@ namespace Raecef
             // txt1704
             // 
             this.txt1704.Location = new System.Drawing.Point(390, 974);
+            this.txt1704.MaxLength = 50;
             this.txt1704.Name = "txt1704";
             this.txt1704.Size = new System.Drawing.Size(130, 23);
-            this.txt1704.TabIndex = 59;
+            this.txt1704.TabIndex = 25;
             // 
             // label32
             // 
@@ -1324,9 +1628,10 @@ namespace Raecef
             // txt1703
             // 
             this.txt1703.Location = new System.Drawing.Point(390, 945);
+            this.txt1703.MaxLength = 50;
             this.txt1703.Name = "txt1703";
             this.txt1703.Size = new System.Drawing.Size(130, 23);
-            this.txt1703.TabIndex = 57;
+            this.txt1703.TabIndex = 23;
             // 
             // label31
             // 
@@ -1342,9 +1647,10 @@ namespace Raecef
             // txt1702
             // 
             this.txt1702.Location = new System.Drawing.Point(390, 916);
+            this.txt1702.MaxLength = 50;
             this.txt1702.Name = "txt1702";
             this.txt1702.Size = new System.Drawing.Size(130, 23);
-            this.txt1702.TabIndex = 55;
+            this.txt1702.TabIndex = 22;
             // 
             // label30
             // 
@@ -1360,9 +1666,10 @@ namespace Raecef
             // txt1701
             // 
             this.txt1701.Location = new System.Drawing.Point(390, 887);
+            this.txt1701.MaxLength = 50;
             this.txt1701.Name = "txt1701";
             this.txt1701.Size = new System.Drawing.Size(130, 23);
-            this.txt1701.TabIndex = 53;
+            this.txt1701.TabIndex = 21;
             // 
             // label28
             // 
@@ -1397,9 +1704,10 @@ namespace Raecef
             // txtTerrenoUF
             // 
             this.txtTerrenoUF.Location = new System.Drawing.Point(250, 794);
+            this.txtTerrenoUF.MaxLength = 2;
             this.txtTerrenoUF.Name = "txtTerrenoUF";
             this.txtTerrenoUF.Size = new System.Drawing.Size(50, 23);
-            this.txtTerrenoUF.TabIndex = 49;
+            this.txtTerrenoUF.TabIndex = 20;
             // 
             // label27
             // 
@@ -1415,9 +1723,10 @@ namespace Raecef
             // txtTerrenoComarca
             // 
             this.txtTerrenoComarca.Location = new System.Drawing.Point(250, 765);
+            this.txtTerrenoComarca.MaxLength = 300;
             this.txtTerrenoComarca.Name = "txtTerrenoComarca";
             this.txtTerrenoComarca.Size = new System.Drawing.Size(250, 23);
-            this.txtTerrenoComarca.TabIndex = 47;
+            this.txtTerrenoComarca.TabIndex = 19;
             // 
             // label26
             // 
@@ -1433,9 +1742,10 @@ namespace Raecef
             // txtTerrenoOficio
             // 
             this.txtTerrenoOficio.Location = new System.Drawing.Point(250, 736);
+            this.txtTerrenoOficio.MaxLength = 100;
             this.txtTerrenoOficio.Name = "txtTerrenoOficio";
             this.txtTerrenoOficio.Size = new System.Drawing.Size(250, 23);
-            this.txtTerrenoOficio.TabIndex = 45;
+            this.txtTerrenoOficio.TabIndex = 18;
             // 
             // label25
             // 
@@ -1451,9 +1761,10 @@ namespace Raecef
             // txtTerrenoMatricula
             // 
             this.txtTerrenoMatricula.Location = new System.Drawing.Point(250, 707);
+            this.txtTerrenoMatricula.MaxLength = 50;
             this.txtTerrenoMatricula.Name = "txtTerrenoMatricula";
             this.txtTerrenoMatricula.Size = new System.Drawing.Size(250, 23);
-            this.txtTerrenoMatricula.TabIndex = 43;
+            this.txtTerrenoMatricula.TabIndex = 17;
             // 
             // label24
             // 
@@ -1469,9 +1780,10 @@ namespace Raecef
             // txtTerrenoValorProposto
             // 
             this.txtTerrenoValorProposto.Location = new System.Drawing.Point(250, 678);
+            this.txtTerrenoValorProposto.MaxLength = 15;
             this.txtTerrenoValorProposto.Name = "txtTerrenoValorProposto";
             this.txtTerrenoValorProposto.Size = new System.Drawing.Size(250, 23);
-            this.txtTerrenoValorProposto.TabIndex = 41;
+            this.txtTerrenoValorProposto.TabIndex = 16;
             // 
             // label22
             // 
@@ -1506,9 +1818,10 @@ namespace Raecef
             // txtIdUF
             // 
             this.txtIdUF.Location = new System.Drawing.Point(200, 587);
+            this.txtIdUF.MaxLength = 2;
             this.txtIdUF.Name = "txtIdUF";
             this.txtIdUF.Size = new System.Drawing.Size(50, 23);
-            this.txtIdUF.TabIndex = 37;
+            this.txtIdUF.TabIndex = 15;
             // 
             // label21
             // 
@@ -1524,9 +1837,10 @@ namespace Raecef
             // txtIdMunicipio
             // 
             this.txtIdMunicipio.Location = new System.Drawing.Point(200, 558);
+            this.txtIdMunicipio.MaxLength = 300;
             this.txtIdMunicipio.Name = "txtIdMunicipio";
             this.txtIdMunicipio.Size = new System.Drawing.Size(350, 23);
-            this.txtIdMunicipio.TabIndex = 35;
+            this.txtIdMunicipio.TabIndex = 14;
             // 
             // label15
             // 
@@ -1542,9 +1856,10 @@ namespace Raecef
             // txtIdBairro
             // 
             this.txtIdBairro.Location = new System.Drawing.Point(200, 529);
+            this.txtIdBairro.MaxLength = 300;
             this.txtIdBairro.Name = "txtIdBairro";
             this.txtIdBairro.Size = new System.Drawing.Size(350, 23);
-            this.txtIdBairro.TabIndex = 33;
+            this.txtIdBairro.TabIndex = 13;
             // 
             // label16
             // 
@@ -1560,9 +1875,10 @@ namespace Raecef
             // txtIdCEP
             // 
             this.txtIdCEP.Location = new System.Drawing.Point(200, 500);
+            this.txtIdCEP.MaxLength = 9;
             this.txtIdCEP.Name = "txtIdCEP";
             this.txtIdCEP.Size = new System.Drawing.Size(350, 23);
-            this.txtIdCEP.TabIndex = 31;
+            this.txtIdCEP.TabIndex = 12;
             // 
             // label17
             // 
@@ -1578,9 +1894,10 @@ namespace Raecef
             // txtIdComplemento
             // 
             this.txtIdComplemento.Location = new System.Drawing.Point(200, 471);
+            this.txtIdComplemento.MaxLength = 300;
             this.txtIdComplemento.Name = "txtIdComplemento";
             this.txtIdComplemento.Size = new System.Drawing.Size(350, 23);
-            this.txtIdComplemento.TabIndex = 29;
+            this.txtIdComplemento.TabIndex = 11;
             // 
             // label18
             // 
@@ -1596,9 +1913,10 @@ namespace Raecef
             // txtIdEndereco
             // 
             this.txtIdEndereco.Location = new System.Drawing.Point(200, 442);
+            this.txtIdEndereco.MaxLength = 300;
             this.txtIdEndereco.Name = "txtIdEndereco";
             this.txtIdEndereco.Size = new System.Drawing.Size(350, 23);
-            this.txtIdEndereco.TabIndex = 27;
+            this.txtIdEndereco.TabIndex = 10;
             // 
             // label19
             // 
@@ -1633,16 +1951,18 @@ namespace Raecef
             // txtRTTelefone
             // 
             this.txtRTTelefone.Location = new System.Drawing.Point(276, 344);
+            this.txtRTTelefone.MaxLength = 10;
             this.txtRTTelefone.Name = "txtRTTelefone";
             this.txtRTTelefone.Size = new System.Drawing.Size(150, 23);
-            this.txtRTTelefone.TabIndex = 23;
+            this.txtRTTelefone.TabIndex = 9;
             // 
             // txtRTDDD
             // 
             this.txtRTDDD.Location = new System.Drawing.Point(220, 344);
+            this.txtRTDDD.MaxLength = 2;
             this.txtRTDDD.Name = "txtRTDDD";
             this.txtRTDDD.Size = new System.Drawing.Size(50, 23);
-            this.txtRTDDD.TabIndex = 22;
+            this.txtRTDDD.TabIndex = 8;
             // 
             // label13
             // 
@@ -1658,9 +1978,10 @@ namespace Raecef
             // txtRTCPF
             // 
             this.txtRTCPF.Location = new System.Drawing.Point(220, 315);
+            this.txtRTCPF.MaxLength = 14;
             this.txtRTCPF.Name = "txtRTCPF";
             this.txtRTCPF.Size = new System.Drawing.Size(350, 23);
-            this.txtRTCPF.TabIndex = 20;
+            this.txtRTCPF.TabIndex = 7;
             // 
             // label14
             // 
@@ -1676,9 +1997,10 @@ namespace Raecef
             // txtRTUF
             // 
             this.txtRTUF.Location = new System.Drawing.Point(220, 286);
+            this.txtRTUF.MaxLength = 2;
             this.txtRTUF.Name = "txtRTUF";
             this.txtRTUF.Size = new System.Drawing.Size(50, 23);
-            this.txtRTUF.TabIndex = 18;
+            this.txtRTUF.TabIndex = 6;
             // 
             // label10
             // 
@@ -1694,9 +2016,10 @@ namespace Raecef
             // txtRTCauCrea
             // 
             this.txtRTCauCrea.Location = new System.Drawing.Point(220, 257);
+            this.txtRTCauCrea.MaxLength = 300;
             this.txtRTCauCrea.Name = "txtRTCauCrea";
             this.txtRTCauCrea.Size = new System.Drawing.Size(350, 23);
-            this.txtRTCauCrea.TabIndex = 16;
+            this.txtRTCauCrea.TabIndex = 5;
             // 
             // label11
             // 
@@ -1712,9 +2035,10 @@ namespace Raecef
             // txtRTNome
             // 
             this.txtRTNome.Location = new System.Drawing.Point(220, 228);
+            this.txtRTNome.MaxLength = 300;
             this.txtRTNome.Name = "txtRTNome";
             this.txtRTNome.Size = new System.Drawing.Size(350, 23);
-            this.txtRTNome.TabIndex = 14;
+            this.txtRTNome.TabIndex = 4;
             // 
             // label12
             // 
@@ -1749,16 +2073,18 @@ namespace Raecef
             // txtPropTelefone
             // 
             this.txtPropTelefone.Location = new System.Drawing.Point(276, 130);
+            this.txtPropTelefone.MaxLength = 10;
             this.txtPropTelefone.Name = "txtPropTelefone";
             this.txtPropTelefone.Size = new System.Drawing.Size(150, 23);
-            this.txtPropTelefone.TabIndex = 10;
+            this.txtPropTelefone.TabIndex = 3;
             // 
             // txtPropDDD
             // 
             this.txtPropDDD.Location = new System.Drawing.Point(220, 130);
+            this.txtPropDDD.MaxLength = 2;
             this.txtPropDDD.Name = "txtPropDDD";
             this.txtPropDDD.Size = new System.Drawing.Size(50, 23);
-            this.txtPropDDD.TabIndex = 9;
+            this.txtPropDDD.TabIndex = 2;
             // 
             // label8
             // 
@@ -1774,9 +2100,10 @@ namespace Raecef
             // txtPropCPF
             // 
             this.txtPropCPF.Location = new System.Drawing.Point(220, 101);
+            this.txtPropCPF.MaxLength = 14;
             this.txtPropCPF.Name = "txtPropCPF";
             this.txtPropCPF.Size = new System.Drawing.Size(350, 23);
-            this.txtPropCPF.TabIndex = 7;
+            this.txtPropCPF.TabIndex = 1;
             // 
             // label7
             // 
@@ -1792,9 +2119,10 @@ namespace Raecef
             // txtPropNome
             // 
             this.txtPropNome.Location = new System.Drawing.Point(220, 72);
+            this.txtPropNome.MaxLength = 300;
             this.txtPropNome.Name = "txtPropNome";
             this.txtPropNome.Size = new System.Drawing.Size(350, 23);
-            this.txtPropNome.TabIndex = 5;
+            this.txtPropNome.TabIndex = 0;
             // 
             // label1
             // 
@@ -1846,8 +2174,8 @@ namespace Raecef
             this.label62.Size = new System.Drawing.Size(670, 81);
             this.label62.TabIndex = 5;
             this.label62.Text = "Nesta etapa, deve-se selecionar a planilha PFUI (Proposta de Financiamento de Uni" +
-    "dade Isolada) do proponente que foi fornecido pela agência demandante ou disponi" +
-    "bilizado através do SIOPI.";
+    "dade Isolada) do proponente que foi fornecida pela agência demandante ou disponi" +
+    "bilizada através do SIOPI.";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label64
@@ -2155,6 +2483,10 @@ namespace Raecef
             this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // openText
+            // 
+            this.openText.Filter = "Arquivo de texto | *.txt";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2181,6 +2513,11 @@ namespace Raecef
             this.pnlBottonPg1.ResumeLayout(false);
             this.pg2.ResumeLayout(false);
             this.tblPg2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.pnlMainConvocacao.ResumeLayout(false);
+            this.pnlMainConvocacao.PerformLayout();
+            this.pnlReferencia.ResumeLayout(false);
+            this.pnlReferencia.PerformLayout();
             this.pnlBottonPg2.ResumeLayout(false);
             this.pnlTopPg2.ResumeLayout(false);
             this.pg3.ResumeLayout(false);
@@ -2208,7 +2545,7 @@ namespace Raecef
         }
 
         #endregion
-        private System.Windows.Forms.OpenFileDialog OpenDialog;
+        private System.Windows.Forms.OpenFileDialog openExcel;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage pg3;
         private System.Windows.Forms.Button btnImportarPfui;
@@ -2226,7 +2563,6 @@ namespace Raecef
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnProximoTab3;
         private System.Windows.Forms.TableLayoutPanel tblPg2;
-        private System.Windows.Forms.Panel pnlMainConvocacao;
         private System.Windows.Forms.Panel pnlBottonPg2;
         private System.Windows.Forms.Button btnProximoTab2;
         private System.Windows.Forms.Panel pnlTopPg2;
@@ -2386,6 +2722,28 @@ namespace Raecef
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.OpenFileDialog openText;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlMainConvocacao;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Panel pnlReferencia;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.TextBox txtRef0;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.TextBox txtRef1;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.TextBox txtRef2;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.TextBox txtRef3;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.TextBox txtRef4;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.TextBox txtRef5;
+        private System.Windows.Forms.TextBox txtRef6;
     }
 }
 

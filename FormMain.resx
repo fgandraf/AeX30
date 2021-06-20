@@ -57,7 +57,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="OpenDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="openExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="lblPrimeiroParagrafo.Text" xml:space="preserve">
@@ -297,8 +297,8 @@
         RF/WBZnFQBrgSi4oKgHSf4DYKCW1OJmBgdEAyM4uLykAijPOAbJFkrLB7A0gdlFIkDOQfQTI5kuHsK+A
         2EkQ9hMQuwjoCSD7C0h9OpjNxAE2B8KWAbFLUitA9jI45xdUFmWmZ5QoGFpaWio4puQnpSoEVxaXpOYW
         K3jmJecXFeQXJZakpgDVQtwHBoIQhaAQ0wBqtNBkoDIAxQOE9TkQHL6MYmcQYgiQXFpUBmUyMhkT5iPM
-        mCPBwOC/lIGB5Q9CzKSXgWGBDgMD/1SEmJohA4OAPgPDvjkAwMZP/eeaqagAAAAJcEhZcwAACxIAAAsS
-        AdLdfvwAABEASURBVHhe7Z3rmhvVEUUhYGwDxviCISaPlpAQAg42twQSLklI3obWUyq1d1WdU93qMZoZ
+        mCPBwOC/lIGB5Q9CzKSXgWGBDgMD/1SEmJohA4OAPgPDvjkAwMZP/eeaqagAAAAJcEhZcwAACwwAAAsM
+        AT9AIsgAABEASURBVHhe7Z3rmhvVEUUhYGwDxviCISaPlpAQAg42twQSLklI3obWUyq1d1WdU93qMZoZ
         qUeX/WN9R+MffIxGLfXS3nXOK6/8frUWYlH+sFq/mny0Wv/mo6E99p+NP3Ze+1Ph49X6dfDn1fqWrbew
         fgKG9Rt/WY24/elqfeczW407nw3rO8+G9V3jzrPV+u5fV+s3Py88H9ZvBW+/WK3f/sJW8OVqfc94B3w1
         OF8P6/tfr5xvhvW7fwMr8uDvg7FaP7T14bfGd8P6UeUfq/Xjfw7kPazf2wp+GNZPkh+d98FPwb+G9QfB
@@ -380,4 +380,10 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Nulla pretium volutpat enim ac mattis. Nulla facilisi. Etiam ante nisl, imperdiet eu porta maximus, varius a est. In ut aliquet arcu. Proin venenatis sem sed aliquet volutpat. Phasellus viverra leo at scelerisque iaculis. Curabitur sollicitudin sed eros quis lacinia. Vestibulum eget metus pulvinar, efficitur dolor in, scelerisque est. Aliquam maximus eros dolor, ac luctus metus malesuada vel. Mauris sed imperdiet leo. Morbi rhoncus sagittis neque vel lobortis. Mauris at hendrerit lectus, at mollis diam. Quisque magna enim, porttitor vel convallis sit amet, ornare a felis. Proin id quam porta, aliquam sapien ultricies, vehicula lacus. Praesent lacinia sapien ut dolor. </value>
   </data>
+  <metadata name="openText.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>140</value>
+  </metadata>
 </root>
