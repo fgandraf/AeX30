@@ -86,7 +86,7 @@ namespace Raecef
                     txtRef6.Text = referencia.Substring(25, 2);
 
                     pnlMainConvocacao.Show();
-                    btnProximoTab2.Show();
+                    btnProximoConvocacao.Show();
                     txtRef0.Focus();
                 }
             }
@@ -208,7 +208,8 @@ namespace Raecef
                     //}
 
                     pnlMainPfui.Show();
-                    btnProximoTab3.Show();
+                    btnProximoPfui.Show();
+                    txtPropNome.Focus();
                 }
             }
             catch (Exception ex)
@@ -232,14 +233,20 @@ namespace Raecef
             btnBack.Show();
         }
 
-        private void btnProximoTab2_Click(object sender, EventArgs e)
+        private void btnProximoConvocacao_Click(object sender, EventArgs e)
         {
             TabControl.SelectTab(2);
         }
 
-        private void btnProximoTab3_Click(object sender, EventArgs e)
+        private void btnProximoPfui_Click(object sender, EventArgs e)
         {
             TabControl.SelectTab(3);
+            txtContratoInicio.Focus();
+        }
+
+        private void btnProximoAdicionais_Click(object sender, EventArgs e)
+        {
+            TabControl.SelectTab(4);
         }
     }
 }

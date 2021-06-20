@@ -43,6 +43,7 @@ namespace Raecef
             this.tblPg2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlMainConvocacao = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
             this.pnlReferencia = new System.Windows.Forms.Panel();
             this.label80 = new System.Windows.Forms.Label();
             this.txtRef0 = new System.Windows.Forms.TextBox();
@@ -62,15 +63,17 @@ namespace Raecef
             this.label65 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
-            this.pnlBottonPg2 = new System.Windows.Forms.Panel();
-            this.btnProximoTab2 = new System.Windows.Forms.Button();
-            this.pnlTopPg2 = new System.Windows.Forms.Panel();
+            this.pnlBottonConvocacao = new System.Windows.Forms.Panel();
+            this.btnProximoConvocacao = new System.Windows.Forms.Button();
+            this.pnlTopConvocacao = new System.Windows.Forms.Panel();
+            this.label84 = new System.Windows.Forms.Label();
             this.btnImportarConvocacao = new System.Windows.Forms.Button();
             this.pg3 = new System.Windows.Forms.TabPage();
-            this.pblPg3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlBottonPg3 = new System.Windows.Forms.Panel();
-            this.btnProximoTab3 = new System.Windows.Forms.Button();
-            this.pnlTopPg3 = new System.Windows.Forms.Panel();
+            this.tblPg3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlBottonPfui = new System.Windows.Forms.Panel();
+            this.btnProximoPfui = new System.Windows.Forms.Button();
+            this.pnlTopPfui = new System.Windows.Forms.Panel();
+            this.label85 = new System.Windows.Forms.Label();
             this.btnImportarPfui = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
             this.pnlMainPfui = new System.Windows.Forms.Panel();
@@ -205,6 +208,22 @@ namespace Raecef
             this.label62 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.pg4 = new System.Windows.Forms.TabPage();
+            this.tblPg4 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlMainAdicionais = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
+            this.label141 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label142 = new System.Windows.Forms.Label();
+            this.pnlBottonAdicionais = new System.Windows.Forms.Panel();
+            this.btnProximoAdicionais = new System.Windows.Forms.Button();
+            this.pnlTopAdicionais = new System.Windows.Forms.Panel();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label146 = new System.Windows.Forms.Label();
+            this.pg5 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAppTopPanel = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
@@ -229,6 +248,10 @@ namespace Raecef
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
+            this.txtContratoInicio = new System.Windows.Forms.MaskedTextBox();
+            this.txtContratoTermino = new System.Windows.Forms.MaskedTextBox();
+            this.txtEtapaPrevista = new System.Windows.Forms.MaskedTextBox();
+            this.txtMensuradoAcumulado = new System.Windows.Forms.MaskedTextBox();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -239,14 +262,19 @@ namespace Raecef
             this.panel3.SuspendLayout();
             this.pnlMainConvocacao.SuspendLayout();
             this.pnlReferencia.SuspendLayout();
-            this.pnlBottonPg2.SuspendLayout();
-            this.pnlTopPg2.SuspendLayout();
+            this.pnlBottonConvocacao.SuspendLayout();
+            this.pnlTopConvocacao.SuspendLayout();
             this.pg3.SuspendLayout();
-            this.pblPg3.SuspendLayout();
-            this.pnlBottonPg3.SuspendLayout();
-            this.pnlTopPg3.SuspendLayout();
+            this.tblPg3.SuspendLayout();
+            this.pnlBottonPfui.SuspendLayout();
+            this.pnlTopPfui.SuspendLayout();
             this.mainPg3.SuspendLayout();
             this.pnlMainPfui.SuspendLayout();
+            this.pg4.SuspendLayout();
+            this.tblPg4.SuspendLayout();
+            this.pnlMainAdicionais.SuspendLayout();
+            this.pnlBottonAdicionais.SuspendLayout();
+            this.pnlTopAdicionais.SuspendLayout();
             this.pnlAppTopPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -270,6 +298,7 @@ namespace Raecef
             this.TabControl.Controls.Add(this.pg2);
             this.TabControl.Controls.Add(this.pg3);
             this.TabControl.Controls.Add(this.pg4);
+            this.TabControl.Controls.Add(this.pg5);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.ItemSize = new System.Drawing.Size(60, 10);
             this.TabControl.Location = new System.Drawing.Point(80, 30);
@@ -280,7 +309,7 @@ namespace Raecef
             this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(720, 410);
             this.TabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.TabControl.TabIndex = 3;
+            this.TabControl.TabIndex = 0;
             this.TabControl.TabStop = false;
             // 
             // pg1
@@ -315,7 +344,7 @@ namespace Raecef
             this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblPg1.Size = new System.Drawing.Size(706, 382);
-            this.tblPg1.TabIndex = 10;
+            this.tblPg1.TabIndex = 0;
             // 
             // pnlMainPg1
             // 
@@ -356,7 +385,7 @@ namespace Raecef
             this.pnlBottonPg1.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPg1.Name = "pnlBottonPg1";
             this.pnlBottonPg1.Size = new System.Drawing.Size(670, 49);
-            this.pnlBottonPg1.TabIndex = 3;
+            this.pnlBottonPg1.TabIndex = 1;
             // 
             // btnIniciar
             // 
@@ -367,7 +396,7 @@ namespace Raecef
             this.btnIniciar.Location = new System.Drawing.Point(510, 13);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(160, 25);
-            this.btnIniciar.TabIndex = 5;
+            this.btnIniciar.TabIndex = 0;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -391,8 +420,8 @@ namespace Raecef
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tblPg2.Controls.Add(this.panel3, 1, 3);
-            this.tblPg2.Controls.Add(this.pnlBottonPg2, 1, 4);
-            this.tblPg2.Controls.Add(this.pnlTopPg2, 1, 1);
+            this.tblPg2.Controls.Add(this.pnlBottonConvocacao, 1, 4);
+            this.tblPg2.Controls.Add(this.pnlTopConvocacao, 1, 1);
             this.tblPg2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg2.Location = new System.Drawing.Point(3, 3);
             this.tblPg2.Margin = new System.Windows.Forms.Padding(0);
@@ -404,7 +433,7 @@ namespace Raecef
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tblPg2.Size = new System.Drawing.Size(706, 386);
-            this.tblPg2.TabIndex = 9;
+            this.tblPg2.TabIndex = 0;
             // 
             // panel3
             // 
@@ -423,6 +452,7 @@ namespace Raecef
             // pnlMainConvocacao
             // 
             this.pnlMainConvocacao.BackColor = System.Drawing.Color.White;
+            this.pnlMainConvocacao.Controls.Add(this.panel28);
             this.pnlMainConvocacao.Controls.Add(this.pnlReferencia);
             this.pnlMainConvocacao.Controls.Add(this.label74);
             this.pnlMainConvocacao.Controls.Add(this.label75);
@@ -433,6 +463,14 @@ namespace Raecef
             this.pnlMainConvocacao.Size = new System.Drawing.Size(670, 262);
             this.pnlMainConvocacao.TabIndex = 0;
             this.pnlMainConvocacao.Visible = false;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Black;
+            this.panel28.Location = new System.Drawing.Point(60, 60);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(550, 1);
+            this.panel28.TabIndex = 18;
             // 
             // pnlReferencia
             // 
@@ -451,7 +489,7 @@ namespace Raecef
             this.pnlReferencia.Controls.Add(this.label73);
             this.pnlReferencia.Controls.Add(this.txtRef5);
             this.pnlReferencia.Controls.Add(this.txtRef6);
-            this.pnlReferencia.Location = new System.Drawing.Point(246, 84);
+            this.pnlReferencia.Location = new System.Drawing.Point(246, 99);
             this.pnlReferencia.Name = "pnlReferencia";
             this.pnlReferencia.Size = new System.Drawing.Size(244, 23);
             this.pnlReferencia.TabIndex = 0;
@@ -609,7 +647,7 @@ namespace Raecef
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(160, 89);
+            this.label74.Location = new System.Drawing.Point(160, 104);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(59, 12);
             this.label74.TabIndex = 17;
@@ -619,7 +657,7 @@ namespace Raecef
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label75.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label75.ForeColor = System.Drawing.Color.Black;
             this.label75.Location = new System.Drawing.Point(60, 37);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(229, 13);
@@ -663,41 +701,56 @@ namespace Raecef
     "enchido em células diferentes.";
             this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pnlBottonPg2
+            // pnlBottonConvocacao
             // 
-            this.pnlBottonPg2.Controls.Add(this.btnProximoTab2);
-            this.pnlBottonPg2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPg2.Location = new System.Drawing.Point(17, 336);
-            this.pnlBottonPg2.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlBottonPg2.Name = "pnlBottonPg2";
-            this.pnlBottonPg2.Size = new System.Drawing.Size(670, 50);
-            this.pnlBottonPg2.TabIndex = 3;
+            this.pnlBottonConvocacao.Controls.Add(this.btnProximoConvocacao);
+            this.pnlBottonConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottonConvocacao.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonConvocacao.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBottonConvocacao.Name = "pnlBottonConvocacao";
+            this.pnlBottonConvocacao.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonConvocacao.TabIndex = 1;
             // 
-            // btnProximoTab2
+            // btnProximoConvocacao
             // 
-            this.btnProximoTab2.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnProximoTab2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProximoTab2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProximoTab2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoTab2.Location = new System.Drawing.Point(510, 13);
-            this.btnProximoTab2.Name = "btnProximoTab2";
-            this.btnProximoTab2.Size = new System.Drawing.Size(160, 25);
-            this.btnProximoTab2.TabIndex = 5;
-            this.btnProximoTab2.Text = "Próximo";
-            this.btnProximoTab2.UseVisualStyleBackColor = false;
-            this.btnProximoTab2.Visible = false;
-            this.btnProximoTab2.Click += new System.EventHandler(this.btnProximoTab2_Click);
+            this.btnProximoConvocacao.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnProximoConvocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProximoConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProximoConvocacao.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnProximoConvocacao.Location = new System.Drawing.Point(510, 13);
+            this.btnProximoConvocacao.Name = "btnProximoConvocacao";
+            this.btnProximoConvocacao.Size = new System.Drawing.Size(160, 25);
+            this.btnProximoConvocacao.TabIndex = 0;
+            this.btnProximoConvocacao.Text = "Próximo";
+            this.btnProximoConvocacao.UseVisualStyleBackColor = false;
+            this.btnProximoConvocacao.Visible = false;
+            this.btnProximoConvocacao.Click += new System.EventHandler(this.btnProximoConvocacao_Click);
             // 
-            // pnlTopPg2
+            // pnlTopConvocacao
             // 
-            this.pnlTopPg2.BackColor = System.Drawing.Color.White;
-            this.pnlTopPg2.Controls.Add(this.btnImportarConvocacao);
-            this.pnlTopPg2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTopPg2.Location = new System.Drawing.Point(17, 13);
-            this.pnlTopPg2.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlTopPg2.Name = "pnlTopPg2";
-            this.pnlTopPg2.Size = new System.Drawing.Size(670, 48);
-            this.pnlTopPg2.TabIndex = 1;
+            this.pnlTopConvocacao.BackColor = System.Drawing.Color.White;
+            this.pnlTopConvocacao.Controls.Add(this.label84);
+            this.pnlTopConvocacao.Controls.Add(this.btnImportarConvocacao);
+            this.pnlTopConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTopConvocacao.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopConvocacao.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlTopConvocacao.Name = "pnlTopConvocacao";
+            this.pnlTopConvocacao.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopConvocacao.TabIndex = 1;
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.Color.Transparent;
+            this.label84.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label84.ForeColor = System.Drawing.Color.Gray;
+            this.label84.Location = new System.Drawing.Point(605, 20);
+            this.label84.Name = "label84";
+            this.label84.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label84.Size = new System.Drawing.Size(52, 12);
+            this.label84.TabIndex = 16;
+            this.label84.Text = "Etapa: 1/5";
+            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnImportarConvocacao
             // 
@@ -717,7 +770,7 @@ namespace Raecef
             // pg3
             // 
             this.pg3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pg3.Controls.Add(this.pblPg3);
+            this.pg3.Controls.Add(this.tblPg3);
             this.pg3.Location = new System.Drawing.Point(4, 4);
             this.pg3.Name = "pg3";
             this.pg3.Padding = new System.Windows.Forms.Padding(3);
@@ -725,64 +778,79 @@ namespace Raecef
             this.pg3.TabIndex = 1;
             this.pg3.Text = "pg3";
             // 
-            // pblPg3
+            // tblPg3
             // 
-            this.pblPg3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pblPg3.ColumnCount = 3;
-            this.pblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.pblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.pblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.pblPg3.Controls.Add(this.pnlBottonPg3, 1, 4);
-            this.pblPg3.Controls.Add(this.pnlTopPg3, 1, 1);
-            this.pblPg3.Controls.Add(this.mainPg3, 1, 3);
-            this.pblPg3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pblPg3.Location = new System.Drawing.Point(3, 3);
-            this.pblPg3.Margin = new System.Windows.Forms.Padding(0);
-            this.pblPg3.Name = "pblPg3";
-            this.pblPg3.RowCount = 5;
-            this.pblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.pblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.pblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.pblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
-            this.pblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.pblPg3.Size = new System.Drawing.Size(706, 386);
-            this.pblPg3.TabIndex = 8;
+            this.tblPg3.BackColor = System.Drawing.Color.Gainsboro;
+            this.tblPg3.ColumnCount = 3;
+            this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
+            this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
+            this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
+            this.tblPg3.Controls.Add(this.pnlBottonPfui, 1, 4);
+            this.tblPg3.Controls.Add(this.pnlTopPfui, 1, 1);
+            this.tblPg3.Controls.Add(this.mainPg3, 1, 3);
+            this.tblPg3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblPg3.Location = new System.Drawing.Point(3, 3);
+            this.tblPg3.Margin = new System.Windows.Forms.Padding(0);
+            this.tblPg3.Name = "tblPg3";
+            this.tblPg3.RowCount = 5;
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPg3.Size = new System.Drawing.Size(706, 386);
+            this.tblPg3.TabIndex = 0;
             // 
-            // pnlBottonPg3
+            // pnlBottonPfui
             // 
-            this.pnlBottonPg3.Controls.Add(this.btnProximoTab3);
-            this.pnlBottonPg3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPg3.Location = new System.Drawing.Point(17, 336);
-            this.pnlBottonPg3.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlBottonPg3.Name = "pnlBottonPg3";
-            this.pnlBottonPg3.Size = new System.Drawing.Size(670, 50);
-            this.pnlBottonPg3.TabIndex = 3;
+            this.pnlBottonPfui.Controls.Add(this.btnProximoPfui);
+            this.pnlBottonPfui.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottonPfui.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonPfui.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBottonPfui.Name = "pnlBottonPfui";
+            this.pnlBottonPfui.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonPfui.TabIndex = 1;
             // 
-            // btnProximoTab3
+            // btnProximoPfui
             // 
-            this.btnProximoTab3.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnProximoTab3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProximoTab3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProximoTab3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoTab3.Location = new System.Drawing.Point(510, 13);
-            this.btnProximoTab3.Name = "btnProximoTab3";
-            this.btnProximoTab3.Size = new System.Drawing.Size(160, 25);
-            this.btnProximoTab3.TabIndex = 5;
-            this.btnProximoTab3.Text = "Próximo";
-            this.btnProximoTab3.UseVisualStyleBackColor = false;
-            this.btnProximoTab3.Visible = false;
-            this.btnProximoTab3.Click += new System.EventHandler(this.btnProximoTab3_Click);
+            this.btnProximoPfui.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnProximoPfui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProximoPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProximoPfui.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnProximoPfui.Location = new System.Drawing.Point(510, 13);
+            this.btnProximoPfui.Name = "btnProximoPfui";
+            this.btnProximoPfui.Size = new System.Drawing.Size(160, 25);
+            this.btnProximoPfui.TabIndex = 0;
+            this.btnProximoPfui.Text = "Próximo";
+            this.btnProximoPfui.UseVisualStyleBackColor = false;
+            this.btnProximoPfui.Visible = false;
+            this.btnProximoPfui.Click += new System.EventHandler(this.btnProximoPfui_Click);
             // 
-            // pnlTopPg3
+            // pnlTopPfui
             // 
-            this.pnlTopPg3.BackColor = System.Drawing.Color.White;
-            this.pnlTopPg3.Controls.Add(this.btnImportarPfui);
-            this.pnlTopPg3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTopPg3.Location = new System.Drawing.Point(17, 13);
-            this.pnlTopPg3.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlTopPg3.Name = "pnlTopPg3";
-            this.pnlTopPg3.Size = new System.Drawing.Size(670, 48);
-            this.pnlTopPg3.TabIndex = 1;
+            this.pnlTopPfui.BackColor = System.Drawing.Color.White;
+            this.pnlTopPfui.Controls.Add(this.label85);
+            this.pnlTopPfui.Controls.Add(this.btnImportarPfui);
+            this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTopPfui.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopPfui.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlTopPfui.Name = "pnlTopPfui";
+            this.pnlTopPfui.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopPfui.TabIndex = 1;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.BackColor = System.Drawing.Color.Transparent;
+            this.label85.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label85.ForeColor = System.Drawing.Color.Gray;
+            this.label85.Location = new System.Drawing.Point(605, 20);
+            this.label85.Name = "label85";
+            this.label85.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label85.Size = new System.Drawing.Size(52, 12);
+            this.label85.TabIndex = 17;
+            this.label85.Text = "Etapa: 2/5";
+            this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnImportarPfui
             // 
@@ -1285,7 +1353,7 @@ namespace Raecef
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel15.BackColor = System.Drawing.Color.Black;
             this.panel15.Location = new System.Drawing.Point(50, 1509);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(550, 1);
@@ -1295,7 +1363,7 @@ namespace Raecef
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label55.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label55.ForeColor = System.Drawing.Color.Black;
             this.label55.Location = new System.Drawing.Point(50, 1489);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(161, 13);
@@ -1684,7 +1752,7 @@ namespace Raecef
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel14.BackColor = System.Drawing.Color.Black;
             this.panel14.Location = new System.Drawing.Point(50, 860);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(550, 1);
@@ -1694,7 +1762,7 @@ namespace Raecef
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label29.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(50, 840);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(90, 13);
@@ -1798,7 +1866,7 @@ namespace Raecef
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel12.BackColor = System.Drawing.Color.Black;
             this.panel12.Location = new System.Drawing.Point(50, 651);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(550, 1);
@@ -1808,7 +1876,7 @@ namespace Raecef
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(50, 631);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(46, 13);
@@ -1931,7 +1999,7 @@ namespace Raecef
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel11.BackColor = System.Drawing.Color.Black;
             this.panel11.Location = new System.Drawing.Point(50, 415);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(550, 1);
@@ -1941,7 +2009,7 @@ namespace Raecef
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(50, 395);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(128, 13);
@@ -2053,7 +2121,7 @@ namespace Raecef
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel10.BackColor = System.Drawing.Color.Black;
             this.panel10.Location = new System.Drawing.Point(50, 201);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(550, 1);
@@ -2063,7 +2131,7 @@ namespace Raecef
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(50, 181);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 13);
@@ -2137,7 +2205,7 @@ namespace Raecef
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel9.BackColor = System.Drawing.Color.Black;
             this.panel9.Location = new System.Drawing.Point(50, 45);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(550, 1);
@@ -2147,7 +2215,7 @@ namespace Raecef
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(50, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
@@ -2192,12 +2260,215 @@ namespace Raecef
             // pg4
             // 
             this.pg4.BackColor = System.Drawing.Color.Gainsboro;
+            this.pg4.Controls.Add(this.tblPg4);
             this.pg4.Location = new System.Drawing.Point(4, 4);
             this.pg4.Name = "pg4";
             this.pg4.Padding = new System.Windows.Forms.Padding(3);
             this.pg4.Size = new System.Drawing.Size(712, 392);
             this.pg4.TabIndex = 2;
             this.pg4.Text = "pg4";
+            // 
+            // tblPg4
+            // 
+            this.tblPg4.BackColor = System.Drawing.Color.Gainsboro;
+            this.tblPg4.ColumnCount = 3;
+            this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
+            this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
+            this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
+            this.tblPg4.Controls.Add(this.pnlMainAdicionais, 1, 3);
+            this.tblPg4.Controls.Add(this.pnlBottonAdicionais, 1, 4);
+            this.tblPg4.Controls.Add(this.pnlTopAdicionais, 1, 1);
+            this.tblPg4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblPg4.Location = new System.Drawing.Point(3, 3);
+            this.tblPg4.Margin = new System.Windows.Forms.Padding(0);
+            this.tblPg4.Name = "tblPg4";
+            this.tblPg4.RowCount = 5;
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPg4.Size = new System.Drawing.Size(706, 386);
+            this.tblPg4.TabIndex = 9;
+            // 
+            // pnlMainAdicionais
+            // 
+            this.pnlMainAdicionais.AutoScroll = true;
+            this.pnlMainAdicionais.BackColor = System.Drawing.Color.White;
+            this.pnlMainAdicionais.Controls.Add(this.txtMensuradoAcumulado);
+            this.pnlMainAdicionais.Controls.Add(this.txtEtapaPrevista);
+            this.pnlMainAdicionais.Controls.Add(this.txtContratoTermino);
+            this.pnlMainAdicionais.Controls.Add(this.txtContratoInicio);
+            this.pnlMainAdicionais.Controls.Add(this.panel22);
+            this.pnlMainAdicionais.Controls.Add(this.label83);
+            this.pnlMainAdicionais.Controls.Add(this.label82);
+            this.pnlMainAdicionais.Controls.Add(this.label81);
+            this.pnlMainAdicionais.Controls.Add(this.label140);
+            this.pnlMainAdicionais.Controls.Add(this.label141);
+            this.pnlMainAdicionais.Controls.Add(this.panel27);
+            this.pnlMainAdicionais.Controls.Add(this.label142);
+            this.pnlMainAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainAdicionais.Location = new System.Drawing.Point(17, 74);
+            this.pnlMainAdicionais.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMainAdicionais.Name = "pnlMainAdicionais";
+            this.pnlMainAdicionais.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainAdicionais.TabIndex = 0;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.Black;
+            this.panel22.Location = new System.Drawing.Point(50, 144);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(550, 1);
+            this.panel22.TabIndex = 134;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label83.ForeColor = System.Drawing.Color.Black;
+            this.label83.Location = new System.Drawing.Point(50, 124);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(46, 13);
+            this.label83.TabIndex = 133;
+            this.label83.Text = "Vistoria";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label82.ForeColor = System.Drawing.Color.Black;
+            this.label82.Location = new System.Drawing.Point(135, 200);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(235, 12);
+            this.label82.TabIndex = 132;
+            this.label82.Text = "MENSURADO ACUMULADO NO MÊS ANTERIOR (%)";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label81.ForeColor = System.Drawing.Color.Black;
+            this.label81.Location = new System.Drawing.Point(135, 171);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(258, 12);
+            this.label81.TabIndex = 130;
+            this.label81.Text = "ETAPA PREVISTA NO CRONOGRAMA FÍSICO-FINANCEIRO";
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label140.ForeColor = System.Drawing.Color.Black;
+            this.label140.Location = new System.Drawing.Point(314, 75);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(95, 12);
+            this.label140.TabIndex = 6;
+            this.label140.Text = "TÉRMINO PREVISTO";
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label141.ForeColor = System.Drawing.Color.Black;
+            this.label141.Location = new System.Drawing.Point(135, 75);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(35, 12);
+            this.label141.TabIndex = 4;
+            this.label141.Text = "INÍCIO";
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Black;
+            this.panel27.Location = new System.Drawing.Point(50, 45);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(550, 1);
+            this.panel27.TabIndex = 3;
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label142.ForeColor = System.Drawing.Color.Black;
+            this.label142.Location = new System.Drawing.Point(50, 25);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(53, 13);
+            this.label142.TabIndex = 2;
+            this.label142.Text = "Contrato";
+            // 
+            // pnlBottonAdicionais
+            // 
+            this.pnlBottonAdicionais.Controls.Add(this.btnProximoAdicionais);
+            this.pnlBottonAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottonAdicionais.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonAdicionais.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBottonAdicionais.Name = "pnlBottonAdicionais";
+            this.pnlBottonAdicionais.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonAdicionais.TabIndex = 1;
+            // 
+            // btnProximoAdicionais
+            // 
+            this.btnProximoAdicionais.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnProximoAdicionais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProximoAdicionais.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProximoAdicionais.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnProximoAdicionais.Location = new System.Drawing.Point(510, 13);
+            this.btnProximoAdicionais.Name = "btnProximoAdicionais";
+            this.btnProximoAdicionais.Size = new System.Drawing.Size(160, 25);
+            this.btnProximoAdicionais.TabIndex = 0;
+            this.btnProximoAdicionais.Text = "Próximo";
+            this.btnProximoAdicionais.UseVisualStyleBackColor = false;
+            this.btnProximoAdicionais.Click += new System.EventHandler(this.btnProximoAdicionais_Click);
+            // 
+            // pnlTopAdicionais
+            // 
+            this.pnlTopAdicionais.BackColor = System.Drawing.Color.White;
+            this.pnlTopAdicionais.Controls.Add(this.label86);
+            this.pnlTopAdicionais.Controls.Add(this.label146);
+            this.pnlTopAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTopAdicionais.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopAdicionais.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlTopAdicionais.Name = "pnlTopAdicionais";
+            this.pnlTopAdicionais.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopAdicionais.TabIndex = 2;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.BackColor = System.Drawing.Color.Transparent;
+            this.label86.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label86.ForeColor = System.Drawing.Color.Gray;
+            this.label86.Location = new System.Drawing.Point(605, 20);
+            this.label86.Name = "label86";
+            this.label86.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label86.Size = new System.Drawing.Size(52, 12);
+            this.label86.TabIndex = 1;
+            this.label86.Text = "Etapa: 3/5";
+            this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label146
+            // 
+            this.label146.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label146.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label146.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label146.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label146.Location = new System.Drawing.Point(0, 0);
+            this.label146.Margin = new System.Windows.Forms.Padding(0);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(670, 48);
+            this.label146.TabIndex = 0;
+            this.label146.Text = "Dados Adicionais";
+            this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pg5
+            // 
+            this.pg5.BackColor = System.Drawing.Color.Gainsboro;
+            this.pg5.Location = new System.Drawing.Point(4, 4);
+            this.pg5.Name = "pg5";
+            this.pg5.Padding = new System.Windows.Forms.Padding(3);
+            this.pg5.Size = new System.Drawing.Size(712, 392);
+            this.pg5.TabIndex = 5;
+            this.pg5.Text = "pg5";
             // 
             // panel1
             // 
@@ -2236,7 +2507,7 @@ namespace Raecef
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(40, 30);
-            this.btnBack.TabIndex = 7;
+            this.btnBack.TabIndex = 1;
             this.btnBack.Text = "";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Visible = false;
@@ -2255,7 +2526,7 @@ namespace Raecef
             this.btnAppClose.Location = new System.Drawing.Point(760, 0);
             this.btnAppClose.Name = "btnAppClose";
             this.btnAppClose.Size = new System.Drawing.Size(40, 30);
-            this.btnAppClose.TabIndex = 0;
+            this.btnAppClose.TabIndex = 2;
             this.btnAppClose.UseVisualStyleBackColor = false;
             this.btnAppClose.Click += new System.EventHandler(this.btnAppClose_Click);
             // 
@@ -2487,6 +2758,42 @@ namespace Raecef
             // 
             this.openText.Filter = "Arquivo de texto | *.txt";
             // 
+            // txtContratoInicio
+            // 
+            this.txtContratoInicio.Location = new System.Drawing.Point(176, 70);
+            this.txtContratoInicio.Mask = "00/00/0000";
+            this.txtContratoInicio.Name = "txtContratoInicio";
+            this.txtContratoInicio.Size = new System.Drawing.Size(100, 23);
+            this.txtContratoInicio.TabIndex = 0;
+            this.txtContratoInicio.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtContratoTermino
+            // 
+            this.txtContratoTermino.Location = new System.Drawing.Point(415, 70);
+            this.txtContratoTermino.Mask = "00/00/0000";
+            this.txtContratoTermino.Name = "txtContratoTermino";
+            this.txtContratoTermino.Size = new System.Drawing.Size(100, 23);
+            this.txtContratoTermino.TabIndex = 1;
+            this.txtContratoTermino.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtEtapaPrevista
+            // 
+            this.txtEtapaPrevista.Location = new System.Drawing.Point(415, 166);
+            this.txtEtapaPrevista.Mask = "00";
+            this.txtEtapaPrevista.Name = "txtEtapaPrevista";
+            this.txtEtapaPrevista.Size = new System.Drawing.Size(100, 23);
+            this.txtEtapaPrevista.TabIndex = 2;
+            this.txtEtapaPrevista.ValidatingType = typeof(int);
+            // 
+            // txtMensuradoAcumulado
+            // 
+            this.txtMensuradoAcumulado.Location = new System.Drawing.Point(415, 195);
+            this.txtMensuradoAcumulado.Mask = "00,00";
+            this.txtMensuradoAcumulado.Name = "txtMensuradoAcumulado";
+            this.txtMensuradoAcumulado.Size = new System.Drawing.Size(100, 23);
+            this.txtMensuradoAcumulado.TabIndex = 3;
+            this.txtMensuradoAcumulado.ValidatingType = typeof(int);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2518,15 +2825,24 @@ namespace Raecef
             this.pnlMainConvocacao.PerformLayout();
             this.pnlReferencia.ResumeLayout(false);
             this.pnlReferencia.PerformLayout();
-            this.pnlBottonPg2.ResumeLayout(false);
-            this.pnlTopPg2.ResumeLayout(false);
+            this.pnlBottonConvocacao.ResumeLayout(false);
+            this.pnlTopConvocacao.ResumeLayout(false);
+            this.pnlTopConvocacao.PerformLayout();
             this.pg3.ResumeLayout(false);
-            this.pblPg3.ResumeLayout(false);
-            this.pnlBottonPg3.ResumeLayout(false);
-            this.pnlTopPg3.ResumeLayout(false);
+            this.tblPg3.ResumeLayout(false);
+            this.pnlBottonPfui.ResumeLayout(false);
+            this.pnlTopPfui.ResumeLayout(false);
+            this.pnlTopPfui.PerformLayout();
             this.mainPg3.ResumeLayout(false);
             this.pnlMainPfui.ResumeLayout(false);
             this.pnlMainPfui.PerformLayout();
+            this.pg4.ResumeLayout(false);
+            this.tblPg4.ResumeLayout(false);
+            this.pnlMainAdicionais.ResumeLayout(false);
+            this.pnlMainAdicionais.PerformLayout();
+            this.pnlBottonAdicionais.ResumeLayout(false);
+            this.pnlTopAdicionais.ResumeLayout(false);
+            this.pnlTopAdicionais.PerformLayout();
             this.pnlAppTopPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -2555,17 +2871,17 @@ namespace Raecef
         private System.Windows.Forms.Button btnAppClose;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TableLayoutPanel pblPg3;
-        private System.Windows.Forms.Panel pnlTopPg3;
+        private System.Windows.Forms.TableLayoutPanel tblPg3;
+        private System.Windows.Forms.Panel pnlTopPfui;
         private System.Windows.Forms.Panel pnlMainPfui;
-        private System.Windows.Forms.Panel pnlBottonPg3;
+        private System.Windows.Forms.Panel pnlBottonPfui;
         private System.Windows.Forms.TabPage pg2;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnProximoTab3;
+        private System.Windows.Forms.Button btnProximoPfui;
         private System.Windows.Forms.TableLayoutPanel tblPg2;
-        private System.Windows.Forms.Panel pnlBottonPg2;
-        private System.Windows.Forms.Button btnProximoTab2;
-        private System.Windows.Forms.Panel pnlTopPg2;
+        private System.Windows.Forms.Panel pnlBottonConvocacao;
+        private System.Windows.Forms.Button btnProximoConvocacao;
+        private System.Windows.Forms.Panel pnlTopConvocacao;
         private System.Windows.Forms.Button btnImportarConvocacao;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel6;
@@ -2744,6 +3060,29 @@ namespace Raecef
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.TextBox txtRef5;
         private System.Windows.Forms.TextBox txtRef6;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.TableLayoutPanel tblPg4;
+        private System.Windows.Forms.Panel pnlBottonAdicionais;
+        private System.Windows.Forms.Button btnProximoAdicionais;
+        private System.Windows.Forms.Panel pnlTopAdicionais;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.Panel pnlMainAdicionais;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.Label label141;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Label label142;
+        private System.Windows.Forms.TabPage pg5;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.MaskedTextBox txtContratoInicio;
+        private System.Windows.Forms.MaskedTextBox txtMensuradoAcumulado;
+        private System.Windows.Forms.MaskedTextBox txtEtapaPrevista;
+        private System.Windows.Forms.MaskedTextBox txtContratoTermino;
     }
 }
 
