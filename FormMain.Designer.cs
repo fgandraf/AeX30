@@ -210,6 +210,8 @@ namespace Raecef
             this.pg4 = new System.Windows.Forms.TabPage();
             this.tblPg4 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMainAdicionais = new System.Windows.Forms.Panel();
+            this.txtContratoTermino = new System.Windows.Forms.MaskedTextBox();
+            this.txtContratoInicio = new System.Windows.Forms.MaskedTextBox();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label83 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
@@ -248,10 +250,9 @@ namespace Raecef
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
-            this.txtContratoInicio = new System.Windows.Forms.MaskedTextBox();
-            this.txtContratoTermino = new System.Windows.Forms.MaskedTextBox();
-            this.txtEtapaPrevista = new System.Windows.Forms.MaskedTextBox();
-            this.txtMensuradoAcumulado = new System.Windows.Forms.MaskedTextBox();
+            this.txtEtapaPrevista = new System.Windows.Forms.TextBox();
+            this.txtMensuradoAcumulado = new System.Windows.Forms.TextBox();
+            this.label87 = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -1030,6 +1031,7 @@ namespace Raecef
             // 
             // txtParcela16
             // 
+            this.txtParcela16.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela16.Location = new System.Drawing.Point(302, 2000);
             this.txtParcela16.MaxLength = 50;
             this.txtParcela16.Name = "txtParcela16";
@@ -1049,6 +1051,7 @@ namespace Raecef
             // 
             // txtParcela15
             // 
+            this.txtParcela15.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela15.Location = new System.Drawing.Point(302, 1971);
             this.txtParcela15.MaxLength = 50;
             this.txtParcela15.Name = "txtParcela15";
@@ -1068,6 +1071,7 @@ namespace Raecef
             // 
             // txtParcela14
             // 
+            this.txtParcela14.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela14.Location = new System.Drawing.Point(302, 1942);
             this.txtParcela14.MaxLength = 50;
             this.txtParcela14.Name = "txtParcela14";
@@ -1087,6 +1091,7 @@ namespace Raecef
             // 
             // txtParcela13
             // 
+            this.txtParcela13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela13.Location = new System.Drawing.Point(302, 1913);
             this.txtParcela13.MaxLength = 50;
             this.txtParcela13.Name = "txtParcela13";
@@ -1106,6 +1111,7 @@ namespace Raecef
             // 
             // txtParcela12
             // 
+            this.txtParcela12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela12.Location = new System.Drawing.Point(302, 1884);
             this.txtParcela12.MaxLength = 50;
             this.txtParcela12.Name = "txtParcela12";
@@ -1125,6 +1131,7 @@ namespace Raecef
             // 
             // txtParcela11
             // 
+            this.txtParcela11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela11.Location = new System.Drawing.Point(302, 1855);
             this.txtParcela11.MaxLength = 50;
             this.txtParcela11.Name = "txtParcela11";
@@ -1144,6 +1151,7 @@ namespace Raecef
             // 
             // txtParcela10
             // 
+            this.txtParcela10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela10.Location = new System.Drawing.Point(302, 1826);
             this.txtParcela10.MaxLength = 50;
             this.txtParcela10.Name = "txtParcela10";
@@ -1163,6 +1171,7 @@ namespace Raecef
             // 
             // txtParcela9
             // 
+            this.txtParcela9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela9.Location = new System.Drawing.Point(302, 1797);
             this.txtParcela9.MaxLength = 50;
             this.txtParcela9.Name = "txtParcela9";
@@ -1182,6 +1191,7 @@ namespace Raecef
             // 
             // txtParcela8
             // 
+            this.txtParcela8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela8.Location = new System.Drawing.Point(302, 1768);
             this.txtParcela8.MaxLength = 50;
             this.txtParcela8.Name = "txtParcela8";
@@ -1201,6 +1211,7 @@ namespace Raecef
             // 
             // txtParcela7
             // 
+            this.txtParcela7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela7.Location = new System.Drawing.Point(302, 1739);
             this.txtParcela7.MaxLength = 50;
             this.txtParcela7.Name = "txtParcela7";
@@ -1220,6 +1231,7 @@ namespace Raecef
             // 
             // txtParcela6
             // 
+            this.txtParcela6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela6.Location = new System.Drawing.Point(302, 1710);
             this.txtParcela6.MaxLength = 50;
             this.txtParcela6.Name = "txtParcela6";
@@ -1239,6 +1251,7 @@ namespace Raecef
             // 
             // txtParcela5
             // 
+            this.txtParcela5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela5.Location = new System.Drawing.Point(302, 1681);
             this.txtParcela5.MaxLength = 50;
             this.txtParcela5.Name = "txtParcela5";
@@ -1258,6 +1271,7 @@ namespace Raecef
             // 
             // txtParcela4
             // 
+            this.txtParcela4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela4.Location = new System.Drawing.Point(302, 1652);
             this.txtParcela4.MaxLength = 50;
             this.txtParcela4.Name = "txtParcela4";
@@ -1277,6 +1291,7 @@ namespace Raecef
             // 
             // txtParcela3
             // 
+            this.txtParcela3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela3.Location = new System.Drawing.Point(302, 1623);
             this.txtParcela3.MaxLength = 50;
             this.txtParcela3.Name = "txtParcela3";
@@ -1296,6 +1311,7 @@ namespace Raecef
             // 
             // txtParcela2
             // 
+            this.txtParcela2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela2.Location = new System.Drawing.Point(302, 1594);
             this.txtParcela2.MaxLength = 50;
             this.txtParcela2.Name = "txtParcela2";
@@ -1315,6 +1331,7 @@ namespace Raecef
             // 
             // txtParcela1
             // 
+            this.txtParcela1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtParcela1.Location = new System.Drawing.Point(302, 1565);
             this.txtParcela1.MaxLength = 50;
             this.txtParcela1.Name = "txtParcela1";
@@ -1334,6 +1351,7 @@ namespace Raecef
             // 
             // txtExecutado
             // 
+            this.txtExecutado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtExecutado.Location = new System.Drawing.Point(302, 1536);
             this.txtExecutado.MaxLength = 50;
             this.txtExecutado.Name = "txtExecutado";
@@ -1372,6 +1390,7 @@ namespace Raecef
             // 
             // txt1720
             // 
+            this.txt1720.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1720.Location = new System.Drawing.Point(390, 1438);
             this.txt1720.MaxLength = 50;
             this.txt1720.Name = "txt1720";
@@ -1391,6 +1410,7 @@ namespace Raecef
             // 
             // txt1719
             // 
+            this.txt1719.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1719.Location = new System.Drawing.Point(390, 1409);
             this.txt1719.MaxLength = 50;
             this.txt1719.Name = "txt1719";
@@ -1410,6 +1430,7 @@ namespace Raecef
             // 
             // txt1718
             // 
+            this.txt1718.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1718.Location = new System.Drawing.Point(390, 1380);
             this.txt1718.MaxLength = 50;
             this.txt1718.Name = "txt1718";
@@ -1429,6 +1450,7 @@ namespace Raecef
             // 
             // txt1717
             // 
+            this.txt1717.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1717.Location = new System.Drawing.Point(390, 1351);
             this.txt1717.MaxLength = 50;
             this.txt1717.Name = "txt1717";
@@ -1448,6 +1470,7 @@ namespace Raecef
             // 
             // txt1716
             // 
+            this.txt1716.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1716.Location = new System.Drawing.Point(390, 1322);
             this.txt1716.MaxLength = 50;
             this.txt1716.Name = "txt1716";
@@ -1467,6 +1490,7 @@ namespace Raecef
             // 
             // txt1715
             // 
+            this.txt1715.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1715.Location = new System.Drawing.Point(390, 1293);
             this.txt1715.MaxLength = 50;
             this.txt1715.Name = "txt1715";
@@ -1486,6 +1510,7 @@ namespace Raecef
             // 
             // txt1714
             // 
+            this.txt1714.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1714.Location = new System.Drawing.Point(390, 1264);
             this.txt1714.MaxLength = 50;
             this.txt1714.Name = "txt1714";
@@ -1505,6 +1530,7 @@ namespace Raecef
             // 
             // txt1713
             // 
+            this.txt1713.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1713.Location = new System.Drawing.Point(390, 1235);
             this.txt1713.MaxLength = 50;
             this.txt1713.Name = "txt1713";
@@ -1524,6 +1550,7 @@ namespace Raecef
             // 
             // txt1712
             // 
+            this.txt1712.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1712.Location = new System.Drawing.Point(390, 1206);
             this.txt1712.MaxLength = 50;
             this.txt1712.Name = "txt1712";
@@ -1543,6 +1570,7 @@ namespace Raecef
             // 
             // txt1711
             // 
+            this.txt1711.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1711.Location = new System.Drawing.Point(390, 1177);
             this.txt1711.MaxLength = 50;
             this.txt1711.Name = "txt1711";
@@ -1562,6 +1590,7 @@ namespace Raecef
             // 
             // txt1710
             // 
+            this.txt1710.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1710.Location = new System.Drawing.Point(390, 1148);
             this.txt1710.MaxLength = 50;
             this.txt1710.Name = "txt1710";
@@ -1581,6 +1610,7 @@ namespace Raecef
             // 
             // txt1709
             // 
+            this.txt1709.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1709.Location = new System.Drawing.Point(390, 1119);
             this.txt1709.MaxLength = 50;
             this.txt1709.Name = "txt1709";
@@ -1600,6 +1630,7 @@ namespace Raecef
             // 
             // txt1708
             // 
+            this.txt1708.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1708.Location = new System.Drawing.Point(390, 1090);
             this.txt1708.MaxLength = 50;
             this.txt1708.Name = "txt1708";
@@ -1619,6 +1650,7 @@ namespace Raecef
             // 
             // txt1707
             // 
+            this.txt1707.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1707.Location = new System.Drawing.Point(390, 1061);
             this.txt1707.MaxLength = 50;
             this.txt1707.Name = "txt1707";
@@ -1638,6 +1670,7 @@ namespace Raecef
             // 
             // txt1706
             // 
+            this.txt1706.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1706.Location = new System.Drawing.Point(390, 1032);
             this.txt1706.MaxLength = 50;
             this.txt1706.Name = "txt1706";
@@ -1657,6 +1690,7 @@ namespace Raecef
             // 
             // txt1705
             // 
+            this.txt1705.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1705.Location = new System.Drawing.Point(390, 1003);
             this.txt1705.MaxLength = 50;
             this.txt1705.Name = "txt1705";
@@ -1676,6 +1710,7 @@ namespace Raecef
             // 
             // txt1704
             // 
+            this.txt1704.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1704.Location = new System.Drawing.Point(390, 974);
             this.txt1704.MaxLength = 50;
             this.txt1704.Name = "txt1704";
@@ -1695,6 +1730,7 @@ namespace Raecef
             // 
             // txt1703
             // 
+            this.txt1703.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1703.Location = new System.Drawing.Point(390, 945);
             this.txt1703.MaxLength = 50;
             this.txt1703.Name = "txt1703";
@@ -1714,6 +1750,7 @@ namespace Raecef
             // 
             // txt1702
             // 
+            this.txt1702.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1702.Location = new System.Drawing.Point(390, 916);
             this.txt1702.MaxLength = 50;
             this.txt1702.Name = "txt1702";
@@ -1733,6 +1770,7 @@ namespace Raecef
             // 
             // txt1701
             // 
+            this.txt1701.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt1701.Location = new System.Drawing.Point(390, 887);
             this.txt1701.MaxLength = 50;
             this.txt1701.Name = "txt1701";
@@ -1771,6 +1809,7 @@ namespace Raecef
             // 
             // txtTerrenoUF
             // 
+            this.txtTerrenoUF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTerrenoUF.Location = new System.Drawing.Point(250, 794);
             this.txtTerrenoUF.MaxLength = 2;
             this.txtTerrenoUF.Name = "txtTerrenoUF";
@@ -1790,6 +1829,7 @@ namespace Raecef
             // 
             // txtTerrenoComarca
             // 
+            this.txtTerrenoComarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTerrenoComarca.Location = new System.Drawing.Point(250, 765);
             this.txtTerrenoComarca.MaxLength = 300;
             this.txtTerrenoComarca.Name = "txtTerrenoComarca";
@@ -1809,6 +1849,7 @@ namespace Raecef
             // 
             // txtTerrenoOficio
             // 
+            this.txtTerrenoOficio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTerrenoOficio.Location = new System.Drawing.Point(250, 736);
             this.txtTerrenoOficio.MaxLength = 100;
             this.txtTerrenoOficio.Name = "txtTerrenoOficio";
@@ -1828,6 +1869,7 @@ namespace Raecef
             // 
             // txtTerrenoMatricula
             // 
+            this.txtTerrenoMatricula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTerrenoMatricula.Location = new System.Drawing.Point(250, 707);
             this.txtTerrenoMatricula.MaxLength = 50;
             this.txtTerrenoMatricula.Name = "txtTerrenoMatricula";
@@ -1847,6 +1889,7 @@ namespace Raecef
             // 
             // txtTerrenoValorProposto
             // 
+            this.txtTerrenoValorProposto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTerrenoValorProposto.Location = new System.Drawing.Point(250, 678);
             this.txtTerrenoValorProposto.MaxLength = 15;
             this.txtTerrenoValorProposto.Name = "txtTerrenoValorProposto";
@@ -1885,6 +1928,7 @@ namespace Raecef
             // 
             // txtIdUF
             // 
+            this.txtIdUF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdUF.Location = new System.Drawing.Point(200, 587);
             this.txtIdUF.MaxLength = 2;
             this.txtIdUF.Name = "txtIdUF";
@@ -1904,6 +1948,7 @@ namespace Raecef
             // 
             // txtIdMunicipio
             // 
+            this.txtIdMunicipio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdMunicipio.Location = new System.Drawing.Point(200, 558);
             this.txtIdMunicipio.MaxLength = 300;
             this.txtIdMunicipio.Name = "txtIdMunicipio";
@@ -1923,6 +1968,7 @@ namespace Raecef
             // 
             // txtIdBairro
             // 
+            this.txtIdBairro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdBairro.Location = new System.Drawing.Point(200, 529);
             this.txtIdBairro.MaxLength = 300;
             this.txtIdBairro.Name = "txtIdBairro";
@@ -1942,6 +1988,7 @@ namespace Raecef
             // 
             // txtIdCEP
             // 
+            this.txtIdCEP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdCEP.Location = new System.Drawing.Point(200, 500);
             this.txtIdCEP.MaxLength = 9;
             this.txtIdCEP.Name = "txtIdCEP";
@@ -1961,6 +2008,7 @@ namespace Raecef
             // 
             // txtIdComplemento
             // 
+            this.txtIdComplemento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdComplemento.Location = new System.Drawing.Point(200, 471);
             this.txtIdComplemento.MaxLength = 300;
             this.txtIdComplemento.Name = "txtIdComplemento";
@@ -1980,6 +2028,7 @@ namespace Raecef
             // 
             // txtIdEndereco
             // 
+            this.txtIdEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdEndereco.Location = new System.Drawing.Point(200, 442);
             this.txtIdEndereco.MaxLength = 300;
             this.txtIdEndereco.Name = "txtIdEndereco";
@@ -2018,6 +2067,7 @@ namespace Raecef
             // 
             // txtRTTelefone
             // 
+            this.txtRTTelefone.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRTTelefone.Location = new System.Drawing.Point(276, 344);
             this.txtRTTelefone.MaxLength = 10;
             this.txtRTTelefone.Name = "txtRTTelefone";
@@ -2026,6 +2076,7 @@ namespace Raecef
             // 
             // txtRTDDD
             // 
+            this.txtRTDDD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRTDDD.Location = new System.Drawing.Point(220, 344);
             this.txtRTDDD.MaxLength = 2;
             this.txtRTDDD.Name = "txtRTDDD";
@@ -2045,6 +2096,7 @@ namespace Raecef
             // 
             // txtRTCPF
             // 
+            this.txtRTCPF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRTCPF.Location = new System.Drawing.Point(220, 315);
             this.txtRTCPF.MaxLength = 14;
             this.txtRTCPF.Name = "txtRTCPF";
@@ -2064,6 +2116,7 @@ namespace Raecef
             // 
             // txtRTUF
             // 
+            this.txtRTUF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRTUF.Location = new System.Drawing.Point(220, 286);
             this.txtRTUF.MaxLength = 2;
             this.txtRTUF.Name = "txtRTUF";
@@ -2083,6 +2136,7 @@ namespace Raecef
             // 
             // txtRTCauCrea
             // 
+            this.txtRTCauCrea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRTCauCrea.Location = new System.Drawing.Point(220, 257);
             this.txtRTCauCrea.MaxLength = 300;
             this.txtRTCauCrea.Name = "txtRTCauCrea";
@@ -2102,6 +2156,7 @@ namespace Raecef
             // 
             // txtRTNome
             // 
+            this.txtRTNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRTNome.Location = new System.Drawing.Point(220, 228);
             this.txtRTNome.MaxLength = 300;
             this.txtRTNome.Name = "txtRTNome";
@@ -2140,6 +2195,7 @@ namespace Raecef
             // 
             // txtPropTelefone
             // 
+            this.txtPropTelefone.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPropTelefone.Location = new System.Drawing.Point(276, 130);
             this.txtPropTelefone.MaxLength = 10;
             this.txtPropTelefone.Name = "txtPropTelefone";
@@ -2148,6 +2204,7 @@ namespace Raecef
             // 
             // txtPropDDD
             // 
+            this.txtPropDDD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPropDDD.Location = new System.Drawing.Point(220, 130);
             this.txtPropDDD.MaxLength = 2;
             this.txtPropDDD.Name = "txtPropDDD";
@@ -2167,6 +2224,7 @@ namespace Raecef
             // 
             // txtPropCPF
             // 
+            this.txtPropCPF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPropCPF.Location = new System.Drawing.Point(220, 101);
             this.txtPropCPF.MaxLength = 14;
             this.txtPropCPF.Name = "txtPropCPF";
@@ -2186,6 +2244,7 @@ namespace Raecef
             // 
             // txtPropNome
             // 
+            this.txtPropNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPropNome.Location = new System.Drawing.Point(220, 72);
             this.txtPropNome.MaxLength = 300;
             this.txtPropNome.Name = "txtPropNome";
@@ -2314,6 +2373,24 @@ namespace Raecef
             this.pnlMainAdicionais.Size = new System.Drawing.Size(670, 262);
             this.pnlMainAdicionais.TabIndex = 0;
             // 
+            // txtContratoTermino
+            // 
+            this.txtContratoTermino.Location = new System.Drawing.Point(415, 70);
+            this.txtContratoTermino.Mask = "00/00/0000";
+            this.txtContratoTermino.Name = "txtContratoTermino";
+            this.txtContratoTermino.Size = new System.Drawing.Size(100, 23);
+            this.txtContratoTermino.TabIndex = 1;
+            this.txtContratoTermino.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtContratoInicio
+            // 
+            this.txtContratoInicio.Location = new System.Drawing.Point(176, 70);
+            this.txtContratoInicio.Mask = "00/00/0000";
+            this.txtContratoInicio.Name = "txtContratoInicio";
+            this.txtContratoInicio.Size = new System.Drawing.Size(100, 23);
+            this.txtContratoInicio.TabIndex = 0;
+            this.txtContratoInicio.ValidatingType = typeof(System.DateTime);
+            // 
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.Black;
@@ -2424,6 +2501,7 @@ namespace Raecef
             // 
             this.pnlTopAdicionais.BackColor = System.Drawing.Color.White;
             this.pnlTopAdicionais.Controls.Add(this.label86);
+            this.pnlTopAdicionais.Controls.Add(this.label87);
             this.pnlTopAdicionais.Controls.Add(this.label146);
             this.pnlTopAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopAdicionais.Location = new System.Drawing.Point(17, 13);
@@ -2448,17 +2526,17 @@ namespace Raecef
             // 
             // label146
             // 
-            this.label146.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label146.Dock = System.Windows.Forms.DockStyle.Top;
             this.label146.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label146.ForeColor = System.Drawing.Color.SlateBlue;
             this.label146.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label146.Location = new System.Drawing.Point(0, 0);
             this.label146.Margin = new System.Windows.Forms.Padding(0);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(670, 48);
+            this.label146.Size = new System.Drawing.Size(670, 27);
             this.label146.TabIndex = 0;
             this.label146.Text = "Dados Adicionais";
-            this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label146.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // pg5
             // 
@@ -2758,41 +2836,37 @@ namespace Raecef
             // 
             this.openText.Filter = "Arquivo de texto | *.txt";
             // 
-            // txtContratoInicio
-            // 
-            this.txtContratoInicio.Location = new System.Drawing.Point(176, 70);
-            this.txtContratoInicio.Mask = "00/00/0000";
-            this.txtContratoInicio.Name = "txtContratoInicio";
-            this.txtContratoInicio.Size = new System.Drawing.Size(100, 23);
-            this.txtContratoInicio.TabIndex = 0;
-            this.txtContratoInicio.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtContratoTermino
-            // 
-            this.txtContratoTermino.Location = new System.Drawing.Point(415, 70);
-            this.txtContratoTermino.Mask = "00/00/0000";
-            this.txtContratoTermino.Name = "txtContratoTermino";
-            this.txtContratoTermino.Size = new System.Drawing.Size(100, 23);
-            this.txtContratoTermino.TabIndex = 1;
-            this.txtContratoTermino.ValidatingType = typeof(System.DateTime);
-            // 
             // txtEtapaPrevista
             // 
+            this.txtEtapaPrevista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEtapaPrevista.Location = new System.Drawing.Point(415, 166);
-            this.txtEtapaPrevista.Mask = "00";
+            this.txtEtapaPrevista.MaxLength = 300;
             this.txtEtapaPrevista.Name = "txtEtapaPrevista";
+            this.txtEtapaPrevista.PlaceholderText = "00";
             this.txtEtapaPrevista.Size = new System.Drawing.Size(100, 23);
             this.txtEtapaPrevista.TabIndex = 2;
-            this.txtEtapaPrevista.ValidatingType = typeof(int);
             // 
             // txtMensuradoAcumulado
             // 
+            this.txtMensuradoAcumulado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMensuradoAcumulado.Location = new System.Drawing.Point(415, 195);
-            this.txtMensuradoAcumulado.Mask = "00,00";
+            this.txtMensuradoAcumulado.MaxLength = 300;
             this.txtMensuradoAcumulado.Name = "txtMensuradoAcumulado";
+            this.txtMensuradoAcumulado.PlaceholderText = "00,00";
             this.txtMensuradoAcumulado.Size = new System.Drawing.Size(100, 23);
             this.txtMensuradoAcumulado.TabIndex = 3;
-            this.txtMensuradoAcumulado.ValidatingType = typeof(int);
+            // 
+            // label87
+            // 
+            this.label87.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label87.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label87.ForeColor = System.Drawing.Color.Black;
+            this.label87.Location = new System.Drawing.Point(0, 27);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(670, 12);
+            this.label87.TabIndex = 133;
+            this.label87.Text = "(Preenchimento opcional)";
+            this.label87.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormMain
             // 
@@ -3080,9 +3154,10 @@ namespace Raecef
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.MaskedTextBox txtContratoInicio;
-        private System.Windows.Forms.MaskedTextBox txtMensuradoAcumulado;
-        private System.Windows.Forms.MaskedTextBox txtEtapaPrevista;
         private System.Windows.Forms.MaskedTextBox txtContratoTermino;
+        private System.Windows.Forms.TextBox txtMensuradoAcumulado;
+        private System.Windows.Forms.TextBox txtEtapaPrevista;
+        private System.Windows.Forms.Label label87;
     }
 }
 
