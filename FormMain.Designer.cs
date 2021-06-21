@@ -210,6 +210,8 @@ namespace Raecef
             this.pg4 = new System.Windows.Forms.TabPage();
             this.tblPg4 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMainAdicionais = new System.Windows.Forms.Panel();
+            this.txtMensuradoAcumulado = new System.Windows.Forms.TextBox();
+            this.txtEtapaPrevista = new System.Windows.Forms.TextBox();
             this.txtContratoTermino = new System.Windows.Forms.MaskedTextBox();
             this.txtContratoInicio = new System.Windows.Forms.MaskedTextBox();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -224,6 +226,7 @@ namespace Raecef
             this.btnProximoAdicionais = new System.Windows.Forms.Button();
             this.pnlTopAdicionais = new System.Windows.Forms.Panel();
             this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
             this.label146 = new System.Windows.Forms.Label();
             this.pg5 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -250,9 +253,6 @@ namespace Raecef
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
-            this.txtEtapaPrevista = new System.Windows.Forms.TextBox();
-            this.txtMensuradoAcumulado = new System.Windows.Forms.TextBox();
-            this.label87 = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -2373,23 +2373,45 @@ namespace Raecef
             this.pnlMainAdicionais.Size = new System.Drawing.Size(670, 262);
             this.pnlMainAdicionais.TabIndex = 0;
             // 
+            // txtMensuradoAcumulado
+            // 
+            this.txtMensuradoAcumulado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMensuradoAcumulado.Location = new System.Drawing.Point(415, 195);
+            this.txtMensuradoAcumulado.MaxLength = 300;
+            this.txtMensuradoAcumulado.Name = "txtMensuradoAcumulado";
+            this.txtMensuradoAcumulado.PlaceholderText = "00,00";
+            this.txtMensuradoAcumulado.Size = new System.Drawing.Size(100, 23);
+            this.txtMensuradoAcumulado.TabIndex = 3;
+            // 
+            // txtEtapaPrevista
+            // 
+            this.txtEtapaPrevista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEtapaPrevista.Location = new System.Drawing.Point(415, 166);
+            this.txtEtapaPrevista.MaxLength = 300;
+            this.txtEtapaPrevista.Name = "txtEtapaPrevista";
+            this.txtEtapaPrevista.PlaceholderText = "00";
+            this.txtEtapaPrevista.Size = new System.Drawing.Size(100, 23);
+            this.txtEtapaPrevista.TabIndex = 2;
+            // 
             // txtContratoTermino
             // 
             this.txtContratoTermino.Location = new System.Drawing.Point(415, 70);
-            this.txtContratoTermino.Mask = "00/00/0000";
             this.txtContratoTermino.Name = "txtContratoTermino";
             this.txtContratoTermino.Size = new System.Drawing.Size(100, 23);
             this.txtContratoTermino.TabIndex = 1;
             this.txtContratoTermino.ValidatingType = typeof(System.DateTime);
+            this.txtContratoTermino.Enter += new System.EventHandler(this.DateMask_Enter);
+            this.txtContratoTermino.Leave += new System.EventHandler(this.DateMask_Leave);
             // 
             // txtContratoInicio
             // 
             this.txtContratoInicio.Location = new System.Drawing.Point(176, 70);
-            this.txtContratoInicio.Mask = "00/00/0000";
             this.txtContratoInicio.Name = "txtContratoInicio";
             this.txtContratoInicio.Size = new System.Drawing.Size(100, 23);
             this.txtContratoInicio.TabIndex = 0;
             this.txtContratoInicio.ValidatingType = typeof(System.DateTime);
+            this.txtContratoInicio.Enter += new System.EventHandler(this.DateMask_Enter);
+            this.txtContratoInicio.Leave += new System.EventHandler(this.DateMask_Leave);
             // 
             // panel22
             // 
@@ -2523,6 +2545,18 @@ namespace Raecef
             this.label86.TabIndex = 1;
             this.label86.Text = "Etapa: 3/5";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label87
+            // 
+            this.label87.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label87.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label87.ForeColor = System.Drawing.Color.Black;
+            this.label87.Location = new System.Drawing.Point(0, 27);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(670, 12);
+            this.label87.TabIndex = 133;
+            this.label87.Text = "(Preenchimento opcional)";
+            this.label87.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label146
             // 
@@ -2835,38 +2869,6 @@ namespace Raecef
             // openText
             // 
             this.openText.Filter = "Arquivo de texto | *.txt";
-            // 
-            // txtEtapaPrevista
-            // 
-            this.txtEtapaPrevista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEtapaPrevista.Location = new System.Drawing.Point(415, 166);
-            this.txtEtapaPrevista.MaxLength = 300;
-            this.txtEtapaPrevista.Name = "txtEtapaPrevista";
-            this.txtEtapaPrevista.PlaceholderText = "00";
-            this.txtEtapaPrevista.Size = new System.Drawing.Size(100, 23);
-            this.txtEtapaPrevista.TabIndex = 2;
-            // 
-            // txtMensuradoAcumulado
-            // 
-            this.txtMensuradoAcumulado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMensuradoAcumulado.Location = new System.Drawing.Point(415, 195);
-            this.txtMensuradoAcumulado.MaxLength = 300;
-            this.txtMensuradoAcumulado.Name = "txtMensuradoAcumulado";
-            this.txtMensuradoAcumulado.PlaceholderText = "00,00";
-            this.txtMensuradoAcumulado.Size = new System.Drawing.Size(100, 23);
-            this.txtMensuradoAcumulado.TabIndex = 3;
-            // 
-            // label87
-            // 
-            this.label87.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label87.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label87.ForeColor = System.Drawing.Color.Black;
-            this.label87.Location = new System.Drawing.Point(0, 27);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(670, 12);
-            this.label87.TabIndex = 133;
-            this.label87.Text = "(Preenchimento opcional)";
-            this.label87.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormMain
             // 

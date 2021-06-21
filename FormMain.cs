@@ -35,6 +35,23 @@ namespace Raecef
 
 
 
+        private void DateMask_Enter(object sender, EventArgs e)
+        {
+            if (((MaskedTextBox)sender).Text == "")
+                ((MaskedTextBox)sender).Mask = "00/00/0000";
+        }
+
+        private void DateMask_Leave(object sender, EventArgs e)
+        {
+            if (((MaskedTextBox)sender).Text == "  /  /")
+                ((MaskedTextBox)sender).Mask = "";
+        }
+
+
+
+
+
+
 
         public FormMain()
         {
@@ -249,7 +266,6 @@ namespace Raecef
         private void btnProximoPfui_Click(object sender, EventArgs e)
         {
             TabControl.SelectTab(3);
-            txtContratoInicio.Focus();
         }
 
         private void btnProximoAdicionais_Click(object sender, EventArgs e)
