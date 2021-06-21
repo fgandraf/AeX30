@@ -145,12 +145,26 @@ namespace Raecef
 
                     //CHECK VERSION & CREATE RELATED ARRAY
                     {
-                        if (planilha.Cell("G310").CachedValue.ToString() == "18.50.01")
+                        string version = Util.CleanInput(planilha.PageSetup.Header.Right.GetText(XLHFOccurrence.OddPages));
+                        if (version == "1413010018")
+                        {
+                            lblVersionTitle.Show();
+                            lblVersion.Text = "AE 130 018";
+                            lblVersion.Show();
                             aeX = ae130v018;
-                        else if (planilha.Cell("G311").CachedValue.ToString() == "18.50.01")
+                        }
+                        else if (version == "1413010020")
+                        {
+                            lblVersionTitle.Show();
+                            lblVersion.Text = "AE 130 020";
+                            lblVersion.Show();
                             aeX = ae130v020;
+                        }
                         else
-                            aeX = null;
+                        {
+                            MessageBox.Show("A versão da planilha PFUI inserida não é suportada!", "Planilha PFUI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
                     }
 
 
@@ -231,6 +245,7 @@ namespace Raecef
                         //    txtBox.Text += p.Name + ": " + p.GetValue(pfui) + "\r\n";
                         //}
                     }
+
 
                     pnlMainPfui.Show();
                     btnProximoPfui.Show();

@@ -253,6 +253,8 @@ namespace Raecef
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.lblVersionTitle = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -830,6 +832,8 @@ namespace Raecef
             // pnlTopPfui
             // 
             this.pnlTopPfui.BackColor = System.Drawing.Color.White;
+            this.pnlTopPfui.Controls.Add(this.lblVersionTitle);
+            this.pnlTopPfui.Controls.Add(this.lblVersion);
             this.pnlTopPfui.Controls.Add(this.label85);
             this.pnlTopPfui.Controls.Add(this.btnImportarPfui);
             this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2870,6 +2874,30 @@ namespace Raecef
             // 
             this.openText.Filter = "Arquivo de texto | *.txt";
             // 
+            // lblVersion
+            // 
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVersion.ForeColor = System.Drawing.Color.Gray;
+            this.lblVersion.Location = new System.Drawing.Point(15, 24);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(86, 12);
+            this.lblVersion.TabIndex = 18;
+            this.lblVersion.Text = "AE 000 00";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVersion.Visible = false;
+            // 
+            // lblVersionTitle
+            // 
+            this.lblVersionTitle.AutoSize = true;
+            this.lblVersionTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVersionTitle.ForeColor = System.Drawing.Color.DimGray;
+            this.lblVersionTitle.Location = new System.Drawing.Point(15, 12);
+            this.lblVersionTitle.Name = "lblVersionTitle";
+            this.lblVersionTitle.Size = new System.Drawing.Size(86, 12);
+            this.lblVersionTitle.TabIndex = 19;
+            this.lblVersionTitle.Text = "Versão da Planilha:";
+            this.lblVersionTitle.Visible = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -3160,6 +3188,8 @@ namespace Raecef
         private System.Windows.Forms.TextBox txtMensuradoAcumulado;
         private System.Windows.Forms.TextBox txtEtapaPrevista;
         private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label lblVersionTitle;
+        private System.Windows.Forms.Label lblVersion;
     }
 }
 
