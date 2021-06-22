@@ -1,0 +1,7 @@
+//Função exibe no textBox todos os parâmetros(valores) de um objeto
+        Type t = pfui.GetType();
+        PropertyInfo[] pi = t.GetProperties();
+        foreach (PropertyInfo p in pi)
+        {
+            txtBox.Text += p.Name + ": " + p.GetValue(pfui) + "\r\n";
+        }

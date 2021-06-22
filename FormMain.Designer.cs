@@ -73,6 +73,8 @@ namespace Raecef
             this.pnlBottonPfui = new System.Windows.Forms.Panel();
             this.btnProximoPfui = new System.Windows.Forms.Button();
             this.pnlTopPfui = new System.Windows.Forms.Panel();
+            this.lblVersionTitle = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.btnImportarPfui = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
@@ -226,7 +228,6 @@ namespace Raecef
             this.btnProximoAdicionais = new System.Windows.Forms.Button();
             this.pnlTopAdicionais = new System.Windows.Forms.Panel();
             this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
             this.label146 = new System.Windows.Forms.Label();
             this.pg5 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -237,7 +238,6 @@ namespace Raecef
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -253,8 +253,6 @@ namespace Raecef
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.lblVersionTitle = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -281,7 +279,6 @@ namespace Raecef
             this.pnlAppTopPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel13.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -842,6 +839,30 @@ namespace Raecef
             this.pnlTopPfui.Name = "pnlTopPfui";
             this.pnlTopPfui.Size = new System.Drawing.Size(670, 48);
             this.pnlTopPfui.TabIndex = 1;
+            // 
+            // lblVersionTitle
+            // 
+            this.lblVersionTitle.AutoSize = true;
+            this.lblVersionTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVersionTitle.ForeColor = System.Drawing.Color.DimGray;
+            this.lblVersionTitle.Location = new System.Drawing.Point(15, 12);
+            this.lblVersionTitle.Name = "lblVersionTitle";
+            this.lblVersionTitle.Size = new System.Drawing.Size(86, 12);
+            this.lblVersionTitle.TabIndex = 19;
+            this.lblVersionTitle.Text = "Versão da Planilha:";
+            this.lblVersionTitle.Visible = false;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVersion.ForeColor = System.Drawing.Color.Gray;
+            this.lblVersion.Location = new System.Drawing.Point(15, 24);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(86, 12);
+            this.lblVersion.TabIndex = 18;
+            this.lblVersion.Text = "AE 000 00";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVersion.Visible = false;
             // 
             // label85
             // 
@@ -2527,7 +2548,6 @@ namespace Raecef
             // 
             this.pnlTopAdicionais.BackColor = System.Drawing.Color.White;
             this.pnlTopAdicionais.Controls.Add(this.label86);
-            this.pnlTopAdicionais.Controls.Add(this.label87);
             this.pnlTopAdicionais.Controls.Add(this.label146);
             this.pnlTopAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopAdicionais.Location = new System.Drawing.Point(17, 13);
@@ -2550,31 +2570,19 @@ namespace Raecef
             this.label86.Text = "Etapa: 3/5";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label87
-            // 
-            this.label87.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label87.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label87.ForeColor = System.Drawing.Color.Black;
-            this.label87.Location = new System.Drawing.Point(0, 27);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(670, 12);
-            this.label87.TabIndex = 133;
-            this.label87.Text = "(Preenchimento opcional)";
-            this.label87.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // label146
             // 
-            this.label146.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label146.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label146.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label146.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label146.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label146.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label146.Location = new System.Drawing.Point(0, 0);
             this.label146.Margin = new System.Windows.Forms.Padding(0);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(670, 27);
+            this.label146.Size = new System.Drawing.Size(670, 48);
             this.label146.TabIndex = 0;
             this.label146.Text = "Dados Adicionais";
-            this.label146.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pg5
             // 
@@ -2688,24 +2696,12 @@ namespace Raecef
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.textBox1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(5, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(190, 259);
             this.panel6.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(15, 161);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(640, 83);
-            this.textBox1.TabIndex = 1;
             // 
             // panel13
             // 
@@ -2874,30 +2870,6 @@ namespace Raecef
             // 
             this.openText.Filter = "Arquivo de texto | *.txt";
             // 
-            // lblVersion
-            // 
-            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVersion.ForeColor = System.Drawing.Color.Gray;
-            this.lblVersion.Location = new System.Drawing.Point(15, 24);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(86, 12);
-            this.lblVersion.TabIndex = 18;
-            this.lblVersion.Text = "AE 000 00";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblVersion.Visible = false;
-            // 
-            // lblVersionTitle
-            // 
-            this.lblVersionTitle.AutoSize = true;
-            this.lblVersionTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblVersionTitle.ForeColor = System.Drawing.Color.DimGray;
-            this.lblVersionTitle.Location = new System.Drawing.Point(15, 12);
-            this.lblVersionTitle.Name = "lblVersionTitle";
-            this.lblVersionTitle.Size = new System.Drawing.Size(86, 12);
-            this.lblVersionTitle.TabIndex = 19;
-            this.lblVersionTitle.Text = "Versão da Planilha:";
-            this.lblVersionTitle.Visible = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2951,8 +2923,6 @@ namespace Raecef
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -2989,7 +2959,6 @@ namespace Raecef
         private System.Windows.Forms.Button btnImportarConvocacao;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -3187,7 +3156,6 @@ namespace Raecef
         private System.Windows.Forms.MaskedTextBox txtContratoTermino;
         private System.Windows.Forms.TextBox txtMensuradoAcumulado;
         private System.Windows.Forms.TextBox txtEtapaPrevista;
-        private System.Windows.Forms.Label label87;
         private System.Windows.Forms.Label lblVersionTitle;
         private System.Windows.Forms.Label lblVersion;
     }
