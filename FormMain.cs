@@ -166,6 +166,105 @@ namespace Raecef
 
 
 
+
+
+        //------------------RAE-------------------//
+        string[] rae130v020 = new string[]
+                {
+            "AD35", "AF35", "AH35", "AL35", "AN35", "AO35", "AP35", // 0 a 6
+            "G43", "AJ43", "AP43", "AR43", // 7 a 10
+            "G46", "Z46", "AH46", "AJ46", "AP46", "AR46", // 11 a 16
+            "G49", "AJ49", // 17 a 18
+            "G51", "V51", "AA51", "AS51", // 19 a 22
+            "G53", "Q53", "AA53", "AJ53", "AS53", // 23 a 27
+            "S68","S69","S70","S71","S72","S73","S74","S75","S76","S77","S78","S79","S80","S81","S82","S83","S84","S85","S86","S87",
+            "Y89",
+            "AH63", "AS63",
+            "AS74",
+            "BC61","BC62","BC63","BC64","BC65","BC66","BC67","BC68","BC69","BC70","BC71","BC72","BC73","BC74","BC75","BC76","BC77"
+                };
+        private void Populate_RAE(string[] rae, ClosedXML.Excel.IXLWorksheet ws)
+        {
+            //CABEÇALHO
+            ws.Cell(rae[0]).Value = txtRef0.Text;
+            ws.Cell(rae[1]).Value = txtRef1.Text;
+            ws.Cell(rae[2]).Value = txtRef2.Text;
+            ws.Cell(rae[3]).Value = txtRef3.Text;
+            ws.Cell(rae[4]).Value = txtRef4.Text;
+            ws.Cell(rae[5]).Value = txtRef5.Text;
+            ws.Cell(rae[6]).Value = txtRef6.Text;
+            ws.Cell(rae[7]).Value = txtPropNome.Text;
+            ws.Cell(rae[8]).Value = txtPropCPF.Text;
+            ws.Cell(rae[9]).Value = txtPropDDD.Text;
+            ws.Cell(rae[10]).Value = txtPropTelefone.Text;
+            ws.Cell(rae[11]).Value = txtRTNome.Text;
+            ws.Cell(rae[12]).Value = txtRTCauCrea.Text;
+            ws.Cell(rae[13]).Value = txtRTUF.Text;
+            ws.Cell(rae[14]).Value = txtRTCPF.Text;
+            ws.Cell(rae[15]).Value = txtRTDDD.Text;
+            ws.Cell(rae[16]).Value = txtRTTelefone.Text;
+            ws.Cell(rae[17]).Value = txtIdEndereco.Text;
+            ws.Cell(rae[18]).Value = txtIdComplemento.Text;
+            ws.Cell(rae[19]).Value = txtIdBairro.Text;
+            ws.Cell(rae[20]).Value = txtIdCEP.Text;
+            ws.Cell(rae[21]).Value = txtIdMunicipio.Text;
+            ws.Cell(rae[22]).Value = txtIdUF.Text;
+            ws.Cell(rae[23]).Value = txtTerrenoValorProposto.Text;
+            ws.Cell(rae[24]).Value = txtTerrenoMatricula.Text;
+            ws.Cell(rae[25]).Value = txtTerrenoOficio.Text;
+            ws.Cell(rae[26]).Value = txtTerrenoComarca.Text;
+            ws.Cell(rae[27]).Value = txtTerrenoUF.Text;
+            //ORÇAMENTO (PERCENTUAIS)
+            ws.Cell(rae[28]).Value = Convert.ToDouble(txt1701.Text);
+            ws.Cell(rae[29]).Value = Convert.ToDouble(txt1702.Text);
+            ws.Cell(rae[30]).Value = Convert.ToDouble(txt1703.Text);
+            ws.Cell(rae[31]).Value = Convert.ToDouble(txt1704.Text);
+            ws.Cell(rae[32]).Value = Convert.ToDouble(txt1705.Text);
+            ws.Cell(rae[33]).Value = Convert.ToDouble(txt1706.Text);
+            ws.Cell(rae[34]).Value = Convert.ToDouble(txt1707.Text);
+            ws.Cell(rae[35]).Value = Convert.ToDouble(txt1708.Text);
+            ws.Cell(rae[36]).Value = Convert.ToDouble(txt1709.Text);
+            ws.Cell(rae[37]).Value = Convert.ToDouble(txt1710.Text);
+            ws.Cell(rae[38]).Value = Convert.ToDouble(txt1711.Text);
+            ws.Cell(rae[39]).Value = Convert.ToDouble(txt1712.Text);
+            ws.Cell(rae[40]).Value = Convert.ToDouble(txt1713.Text);
+            ws.Cell(rae[41]).Value = Convert.ToDouble(txt1714.Text);
+            ws.Cell(rae[42]).Value = Convert.ToDouble(txt1715.Text);
+            ws.Cell(rae[43]).Value = Convert.ToDouble(txt1716.Text);
+            ws.Cell(rae[44]).Value = Convert.ToDouble(txt1717.Text);
+            ws.Cell(rae[45]).Value = Convert.ToDouble(txt1718.Text);
+            ws.Cell(rae[46]).Value = Convert.ToDouble(txt1719.Text);
+            ws.Cell(rae[47]).Value = Convert.ToDouble(txt1720.Text);
+            if (txtMensuradoAcumulado.Text != "")
+            ws.Cell(rae[48]).Value = Convert.ToDouble(txtMensuradoAcumulado.Text);
+            //DADOS ADICIONAIS
+            if (txtContratoInicio.Text != "  /  /")
+                ws.Cell(rae[49]).Value = txtContratoInicio.Text;
+            if (txtContratoTermino.Text != "  /  /")
+                ws.Cell(rae[50]).Value = txtContratoTermino.Text;
+            ws.Cell(rae[51]).Value = txtEtapaPrevista.Text;
+            //CRONOGRAMA
+            ws.Cell(rae[52]).Value = Convert.ToDouble(txtExecutado.Text);
+            ws.Cell(rae[53]).Value = Convert.ToDouble(txtParcela1.Text);
+            ws.Cell(rae[54]).Value = Convert.ToDouble(txtParcela2.Text);
+            ws.Cell(rae[55]).Value = Convert.ToDouble(txtParcela3.Text);
+            ws.Cell(rae[56]).Value = Convert.ToDouble(txtParcela4.Text);
+            ws.Cell(rae[57]).Value = Convert.ToDouble(txtParcela5.Text);
+            ws.Cell(rae[58]).Value = Convert.ToDouble(txtParcela6.Text);
+            ws.Cell(rae[59]).Value = Convert.ToDouble(txtParcela7.Text);
+            ws.Cell(rae[60]).Value = Convert.ToDouble(txtParcela8.Text);
+            ws.Cell(rae[61]).Value = Convert.ToDouble(txtParcela9.Text);
+            ws.Cell(rae[62]).Value = Convert.ToDouble(txtParcela10.Text);
+            ws.Cell(rae[63]).Value = Convert.ToDouble(txtParcela11.Text);
+            ws.Cell(rae[64]).Value = Convert.ToDouble(txtParcela12.Text);
+            ws.Cell(rae[65]).Value = Convert.ToDouble(txtParcela13.Text);
+            ws.Cell(rae[66]).Value = Convert.ToDouble(txtParcela14.Text);
+            ws.Cell(rae[67]).Value = Convert.ToDouble(txtParcela15.Text);
+            ws.Cell(rae[68]).Value = Convert.ToDouble(txtParcela16.Text);
+            
+            
+        }
+
         //----------------------------------------//
 
 
@@ -182,6 +281,7 @@ namespace Raecef
         private void FormMain_Load(object sender, EventArgs e)
         {
             TabControl.ItemSize = new System.Drawing.Size(0, 1);
+            //TabControl.SelectTab(2);
         }
 
         private void btnAppClose_Click(object sender, EventArgs e)
@@ -334,11 +434,9 @@ namespace Raecef
                         var wbook = new XLWorkbook(_caminhoModelo);
                         var rae = wbook.Worksheets.First(w => w.Name == "RAE");
 
-
-                        rae.Cell("B15").Value = "Aqui é o campo de observações";
-
-
+                        Populate_RAE(rae130v020, rae);
                         wbook.SaveAs(saveExcel.FileName);
+
                         txtLogFinalizar.Text += "--------------------------------\r\nConcluído!\r\n";
                     }
                     else
