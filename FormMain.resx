@@ -66,6 +66,9 @@
   <data name="label63.Text" xml:space="preserve">
     <value>Após a importação, verificar se os dados foram obtidos corretamente e, caso seja necessário, faça os ajustes. É importante ter atenção nesse processo, pois os dados visualizados na tela irão compor a planilha a ser gerada.</value>
   </data>
+  <data name="label156.Text" xml:space="preserve">
+    <value>Após a importação, verificar se os dados foram obtidos corretamente e, caso seja necessário, faça os ajustes. É importante ter atenção nesse processo, pois os dados visualizados na tela irão compor a planilha a ser gerada.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -383,7 +386,10 @@
   <metadata name="openText.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>119, 17</value>
   </metadata>
+  <metadata name="saveExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>221, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>57</value>
+    <value>84</value>
   </metadata>
 </root>

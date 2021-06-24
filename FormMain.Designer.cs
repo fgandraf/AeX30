@@ -66,7 +66,7 @@ namespace Raecef
             this.pnlBottonConvocacao = new System.Windows.Forms.Panel();
             this.btnProximoConvocacao = new System.Windows.Forms.Button();
             this.pnlTopConvocacao = new System.Windows.Forms.Panel();
-            this.label84 = new System.Windows.Forms.Label();
+            this.lblEtapa1 = new System.Windows.Forms.Label();
             this.btnImportarConvocacao = new System.Windows.Forms.Button();
             this.pg3 = new System.Windows.Forms.TabPage();
             this.tblPg3 = new System.Windows.Forms.TableLayoutPanel();
@@ -75,7 +75,7 @@ namespace Raecef
             this.pnlTopPfui = new System.Windows.Forms.Panel();
             this.lblVersionTitle = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
+            this.lblEtapa2 = new System.Windows.Forms.Label();
             this.btnImportarPfui = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
             this.pnlMainPfui = new System.Windows.Forms.Panel();
@@ -227,9 +227,21 @@ namespace Raecef
             this.pnlBottonAdicionais = new System.Windows.Forms.Panel();
             this.btnProximoAdicionais = new System.Windows.Forms.Button();
             this.pnlTopAdicionais = new System.Windows.Forms.Panel();
-            this.label86 = new System.Windows.Forms.Label();
+            this.lblEtapa3 = new System.Windows.Forms.Label();
             this.label146 = new System.Windows.Forms.Label();
             this.pg5 = new System.Windows.Forms.TabPage();
+            this.tblPg5 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlBottonFinalizar = new System.Windows.Forms.Panel();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.pnlTopFinalizar = new System.Windows.Forms.Panel();
+            this.btnModeloPadrao = new System.Windows.Forms.Button();
+            this.lblEtapa4 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.pnlMainFinalizar = new System.Windows.Forms.Panel();
+            this.txtLogFinalizar = new System.Windows.Forms.TextBox();
+            this.label156 = new System.Windows.Forms.Label();
+            this.label157 = new System.Windows.Forms.Label();
+            this.label158 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAppTopPanel = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
@@ -253,6 +265,7 @@ namespace Raecef
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
+            this.saveExcel = new System.Windows.Forms.SaveFileDialog();
             this.TabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -276,6 +289,12 @@ namespace Raecef
             this.pnlMainAdicionais.SuspendLayout();
             this.pnlBottonAdicionais.SuspendLayout();
             this.pnlTopAdicionais.SuspendLayout();
+            this.pg5.SuspendLayout();
+            this.tblPg5.SuspendLayout();
+            this.pnlBottonFinalizar.SuspendLayout();
+            this.pnlTopFinalizar.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.pnlMainFinalizar.SuspendLayout();
             this.pnlAppTopPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -290,6 +309,7 @@ namespace Raecef
             // openExcel
             // 
             this.openExcel.Filter = "Planilhas do Excel | *.xlsx";
+            this.openExcel.Title = "Abrir planilha PFUI";
             // 
             // TabControl
             // 
@@ -729,7 +749,7 @@ namespace Raecef
             // pnlTopConvocacao
             // 
             this.pnlTopConvocacao.BackColor = System.Drawing.Color.White;
-            this.pnlTopConvocacao.Controls.Add(this.label84);
+            this.pnlTopConvocacao.Controls.Add(this.lblEtapa1);
             this.pnlTopConvocacao.Controls.Add(this.btnImportarConvocacao);
             this.pnlTopConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopConvocacao.Location = new System.Drawing.Point(17, 13);
@@ -738,19 +758,19 @@ namespace Raecef
             this.pnlTopConvocacao.Size = new System.Drawing.Size(670, 48);
             this.pnlTopConvocacao.TabIndex = 1;
             // 
-            // label84
+            // lblEtapa1
             // 
-            this.label84.AutoSize = true;
-            this.label84.BackColor = System.Drawing.Color.Transparent;
-            this.label84.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label84.ForeColor = System.Drawing.Color.Gray;
-            this.label84.Location = new System.Drawing.Point(605, 20);
-            this.label84.Name = "label84";
-            this.label84.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label84.Size = new System.Drawing.Size(52, 12);
-            this.label84.TabIndex = 16;
-            this.label84.Text = "Etapa: 1/5";
-            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEtapa1.AutoSize = true;
+            this.lblEtapa1.BackColor = System.Drawing.Color.Transparent;
+            this.lblEtapa1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa1.ForeColor = System.Drawing.Color.Gray;
+            this.lblEtapa1.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa1.Name = "lblEtapa1";
+            this.lblEtapa1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblEtapa1.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa1.TabIndex = 16;
+            this.lblEtapa1.Text = "Etapa: 1/4";
+            this.lblEtapa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnImportarConvocacao
             // 
@@ -831,7 +851,7 @@ namespace Raecef
             this.pnlTopPfui.BackColor = System.Drawing.Color.White;
             this.pnlTopPfui.Controls.Add(this.lblVersionTitle);
             this.pnlTopPfui.Controls.Add(this.lblVersion);
-            this.pnlTopPfui.Controls.Add(this.label85);
+            this.pnlTopPfui.Controls.Add(this.lblEtapa2);
             this.pnlTopPfui.Controls.Add(this.btnImportarPfui);
             this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopPfui.Location = new System.Drawing.Point(17, 13);
@@ -864,19 +884,19 @@ namespace Raecef
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblVersion.Visible = false;
             // 
-            // label85
+            // lblEtapa2
             // 
-            this.label85.AutoSize = true;
-            this.label85.BackColor = System.Drawing.Color.Transparent;
-            this.label85.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label85.ForeColor = System.Drawing.Color.Gray;
-            this.label85.Location = new System.Drawing.Point(605, 20);
-            this.label85.Name = "label85";
-            this.label85.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label85.Size = new System.Drawing.Size(52, 12);
-            this.label85.TabIndex = 17;
-            this.label85.Text = "Etapa: 2/5";
-            this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEtapa2.AutoSize = true;
+            this.lblEtapa2.BackColor = System.Drawing.Color.Transparent;
+            this.lblEtapa2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa2.ForeColor = System.Drawing.Color.Gray;
+            this.lblEtapa2.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa2.Name = "lblEtapa2";
+            this.lblEtapa2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblEtapa2.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa2.TabIndex = 17;
+            this.lblEtapa2.Text = "Etapa: 2/4";
+            this.lblEtapa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnImportarPfui
             // 
@@ -2421,22 +2441,20 @@ namespace Raecef
             // txtContratoTermino
             // 
             this.txtContratoTermino.Location = new System.Drawing.Point(415, 70);
+            this.txtContratoTermino.Mask = "00/00/0000";
             this.txtContratoTermino.Name = "txtContratoTermino";
             this.txtContratoTermino.Size = new System.Drawing.Size(100, 23);
             this.txtContratoTermino.TabIndex = 1;
             this.txtContratoTermino.ValidatingType = typeof(System.DateTime);
-            this.txtContratoTermino.Enter += new System.EventHandler(this.DateMask_Enter);
-            this.txtContratoTermino.Leave += new System.EventHandler(this.DateMask_Leave);
             // 
             // txtContratoInicio
             // 
             this.txtContratoInicio.Location = new System.Drawing.Point(176, 70);
+            this.txtContratoInicio.Mask = "00/00/0000";
             this.txtContratoInicio.Name = "txtContratoInicio";
             this.txtContratoInicio.Size = new System.Drawing.Size(100, 23);
             this.txtContratoInicio.TabIndex = 0;
             this.txtContratoInicio.ValidatingType = typeof(System.DateTime);
-            this.txtContratoInicio.Enter += new System.EventHandler(this.DateMask_Enter);
-            this.txtContratoInicio.Leave += new System.EventHandler(this.DateMask_Leave);
             // 
             // panel22
             // 
@@ -2547,7 +2565,7 @@ namespace Raecef
             // pnlTopAdicionais
             // 
             this.pnlTopAdicionais.BackColor = System.Drawing.Color.White;
-            this.pnlTopAdicionais.Controls.Add(this.label86);
+            this.pnlTopAdicionais.Controls.Add(this.lblEtapa3);
             this.pnlTopAdicionais.Controls.Add(this.label146);
             this.pnlTopAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopAdicionais.Location = new System.Drawing.Point(17, 13);
@@ -2556,19 +2574,19 @@ namespace Raecef
             this.pnlTopAdicionais.Size = new System.Drawing.Size(670, 48);
             this.pnlTopAdicionais.TabIndex = 2;
             // 
-            // label86
+            // lblEtapa3
             // 
-            this.label86.AutoSize = true;
-            this.label86.BackColor = System.Drawing.Color.Transparent;
-            this.label86.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label86.ForeColor = System.Drawing.Color.Gray;
-            this.label86.Location = new System.Drawing.Point(605, 20);
-            this.label86.Name = "label86";
-            this.label86.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label86.Size = new System.Drawing.Size(52, 12);
-            this.label86.TabIndex = 1;
-            this.label86.Text = "Etapa: 3/5";
-            this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEtapa3.AutoSize = true;
+            this.lblEtapa3.BackColor = System.Drawing.Color.Transparent;
+            this.lblEtapa3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa3.ForeColor = System.Drawing.Color.Gray;
+            this.lblEtapa3.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa3.Name = "lblEtapa3";
+            this.lblEtapa3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblEtapa3.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa3.TabIndex = 1;
+            this.lblEtapa3.Text = "Etapa: 3/4";
+            this.lblEtapa3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label146
             // 
@@ -2587,12 +2605,176 @@ namespace Raecef
             // pg5
             // 
             this.pg5.BackColor = System.Drawing.Color.Gainsboro;
+            this.pg5.Controls.Add(this.tblPg5);
             this.pg5.Location = new System.Drawing.Point(4, 4);
             this.pg5.Name = "pg5";
             this.pg5.Padding = new System.Windows.Forms.Padding(3);
             this.pg5.Size = new System.Drawing.Size(712, 392);
             this.pg5.TabIndex = 5;
             this.pg5.Text = "pg5";
+            // 
+            // tblPg5
+            // 
+            this.tblPg5.BackColor = System.Drawing.Color.Gainsboro;
+            this.tblPg5.ColumnCount = 3;
+            this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
+            this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
+            this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
+            this.tblPg5.Controls.Add(this.pnlBottonFinalizar, 1, 4);
+            this.tblPg5.Controls.Add(this.pnlTopFinalizar, 1, 1);
+            this.tblPg5.Controls.Add(this.panel19, 1, 3);
+            this.tblPg5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblPg5.Location = new System.Drawing.Point(3, 3);
+            this.tblPg5.Margin = new System.Windows.Forms.Padding(0);
+            this.tblPg5.Name = "tblPg5";
+            this.tblPg5.RowCount = 5;
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPg5.Size = new System.Drawing.Size(706, 386);
+            this.tblPg5.TabIndex = 1;
+            // 
+            // pnlBottonFinalizar
+            // 
+            this.pnlBottonFinalizar.Controls.Add(this.btnConfirmar);
+            this.pnlBottonFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottonFinalizar.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonFinalizar.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBottonFinalizar.Name = "pnlBottonFinalizar";
+            this.pnlBottonFinalizar.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonFinalizar.TabIndex = 1;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnConfirmar.Location = new System.Drawing.Point(510, 13);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(160, 25);
+            this.btnConfirmar.TabIndex = 0;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Visible = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // pnlTopFinalizar
+            // 
+            this.pnlTopFinalizar.BackColor = System.Drawing.Color.White;
+            this.pnlTopFinalizar.Controls.Add(this.btnModeloPadrao);
+            this.pnlTopFinalizar.Controls.Add(this.lblEtapa4);
+            this.pnlTopFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTopFinalizar.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopFinalizar.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlTopFinalizar.Name = "pnlTopFinalizar";
+            this.pnlTopFinalizar.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopFinalizar.TabIndex = 1;
+            // 
+            // btnModeloPadrao
+            // 
+            this.btnModeloPadrao.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnModeloPadrao.FlatAppearance.BorderSize = 0;
+            this.btnModeloPadrao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModeloPadrao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnModeloPadrao.ForeColor = System.Drawing.Color.White;
+            this.btnModeloPadrao.Location = new System.Drawing.Point(250, 13);
+            this.btnModeloPadrao.Name = "btnModeloPadrao";
+            this.btnModeloPadrao.Size = new System.Drawing.Size(170, 23);
+            this.btnModeloPadrao.TabIndex = 18;
+            this.btnModeloPadrao.Text = "Modelo Padrão";
+            this.btnModeloPadrao.UseVisualStyleBackColor = false;
+            this.btnModeloPadrao.Click += new System.EventHandler(this.btnModeloPadrao_Click);
+            // 
+            // lblEtapa4
+            // 
+            this.lblEtapa4.AutoSize = true;
+            this.lblEtapa4.BackColor = System.Drawing.Color.Transparent;
+            this.lblEtapa4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa4.ForeColor = System.Drawing.Color.Gray;
+            this.lblEtapa4.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa4.Name = "lblEtapa4";
+            this.lblEtapa4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblEtapa4.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa4.TabIndex = 17;
+            this.lblEtapa4.Text = "Etapa: 4/4";
+            this.lblEtapa4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel19.Controls.Add(this.pnlMainFinalizar);
+            this.panel19.Controls.Add(this.label156);
+            this.panel19.Controls.Add(this.label157);
+            this.panel19.Controls.Add(this.label158);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(17, 74);
+            this.panel19.Margin = new System.Windows.Forms.Padding(0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(670, 262);
+            this.panel19.TabIndex = 5;
+            // 
+            // pnlMainFinalizar
+            // 
+            this.pnlMainFinalizar.AutoScroll = true;
+            this.pnlMainFinalizar.BackColor = System.Drawing.Color.White;
+            this.pnlMainFinalizar.Controls.Add(this.txtLogFinalizar);
+            this.pnlMainFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainFinalizar.Location = new System.Drawing.Point(0, 0);
+            this.pnlMainFinalizar.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMainFinalizar.Name = "pnlMainFinalizar";
+            this.pnlMainFinalizar.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainFinalizar.TabIndex = 4;
+            this.pnlMainFinalizar.Visible = false;
+            // 
+            // txtLogFinalizar
+            // 
+            this.txtLogFinalizar.BackColor = System.Drawing.Color.White;
+            this.txtLogFinalizar.Location = new System.Drawing.Point(40, 42);
+            this.txtLogFinalizar.MaxLength = 200000;
+            this.txtLogFinalizar.Multiline = true;
+            this.txtLogFinalizar.Name = "txtLogFinalizar";
+            this.txtLogFinalizar.ReadOnly = true;
+            this.txtLogFinalizar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLogFinalizar.Size = new System.Drawing.Size(590, 180);
+            this.txtLogFinalizar.TabIndex = 0;
+            // 
+            // label156
+            // 
+            this.label156.Location = new System.Drawing.Point(0, 81);
+            this.label156.Margin = new System.Windows.Forms.Padding(0);
+            this.label156.Name = "label156";
+            this.label156.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
+            this.label156.Size = new System.Drawing.Size(670, 63);
+            this.label156.TabIndex = 6;
+            this.label156.Text = resources.GetString("label156.Text");
+            this.label156.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label157
+            // 
+            this.label157.Location = new System.Drawing.Point(0, 0);
+            this.label157.Margin = new System.Windows.Forms.Padding(0);
+            this.label157.Name = "label157";
+            this.label157.Padding = new System.Windows.Forms.Padding(100, 30, 100, 0);
+            this.label157.Size = new System.Drawing.Size(670, 81);
+            this.label157.TabIndex = 5;
+            this.label157.Text = "Nesta etapa, deve-se selecionar a planilha PFUI (Proposta de Financiamento de Uni" +
+    "dade Isolada) do proponente que foi fornecida pela agência demandante ou disponi" +
+    "bilizada através do SIOPI.";
+            this.label157.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label158
+            // 
+            this.label158.Location = new System.Drawing.Point(0, 144);
+            this.label158.Margin = new System.Windows.Forms.Padding(0);
+            this.label158.Name = "label158";
+            this.label158.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
+            this.label158.Size = new System.Drawing.Size(670, 33);
+            this.label158.TabIndex = 7;
+            this.label158.Text = "Prosseguir quando estiver satisfeito.";
+            this.label158.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -2869,6 +3051,13 @@ namespace Raecef
             // openText
             // 
             this.openText.Filter = "Arquivo de texto | *.txt";
+            this.openText.Title = "Abrir arquivo de convocação";
+            // 
+            // saveExcel
+            // 
+            this.saveExcel.FileName = "RAE_Nome-do-cliente.xlsm";
+            this.saveExcel.Filter = "Planilhas do Excel habilitada p/ macro | *.xlsm";
+            this.saveExcel.Title = "Salvar RAE";
             // 
             // FormMain
             // 
@@ -2919,6 +3108,14 @@ namespace Raecef
             this.pnlBottonAdicionais.ResumeLayout(false);
             this.pnlTopAdicionais.ResumeLayout(false);
             this.pnlTopAdicionais.PerformLayout();
+            this.pg5.ResumeLayout(false);
+            this.tblPg5.ResumeLayout(false);
+            this.pnlBottonFinalizar.ResumeLayout(false);
+            this.pnlTopFinalizar.ResumeLayout(false);
+            this.pnlTopFinalizar.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.pnlMainFinalizar.ResumeLayout(false);
+            this.pnlMainFinalizar.PerformLayout();
             this.pnlAppTopPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -3149,15 +3346,28 @@ namespace Raecef
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label142;
         private System.Windows.Forms.TabPage pg5;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label lblEtapa1;
+        private System.Windows.Forms.Label lblEtapa2;
+        private System.Windows.Forms.Label lblEtapa3;
         private System.Windows.Forms.MaskedTextBox txtContratoInicio;
         private System.Windows.Forms.MaskedTextBox txtContratoTermino;
         private System.Windows.Forms.TextBox txtMensuradoAcumulado;
         private System.Windows.Forms.TextBox txtEtapaPrevista;
         private System.Windows.Forms.Label lblVersionTitle;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.TableLayoutPanel tblPg5;
+        private System.Windows.Forms.Panel pnlBottonFinalizar;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Panel pnlTopFinalizar;
+        private System.Windows.Forms.Button btnModeloPadrao;
+        private System.Windows.Forms.Label lblEtapa4;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel pnlMainFinalizar;
+        private System.Windows.Forms.TextBox txtLogFinalizar;
+        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.SaveFileDialog saveExcel;
     }
 }
 
