@@ -435,13 +435,15 @@ namespace Raecef
         {
             try
             {
+                //CREATING FILENAME FROM "txtPropNome" USING UPPERCASE FOR THE FIRST CHARACTERE
+                string[] proponente = txtPropNome.Text.ToLower().Split(' ');
+                proponente[0] = proponente[0].Substring(0, 1).ToUpper() + proponente[0].Substring(1);
+                proponente[proponente.Length - 1] = proponente[proponente.Length - 1].Substring(0, 1).ToUpper() + proponente[proponente.Length - 1].Substring(1);
+                saveExcel.FileName = "RAE_" + proponente[0] + "-" + proponente[proponente.Length - 1] + ".xlsx";
 
 
                 if (saveExcel.ShowDialog() == DialogResult.OK)
                 {
-
-
-
                     if (File.Exists(_caminhoModelo))
                     {
                         var wbook = new XLWorkbook(_caminhoModelo);

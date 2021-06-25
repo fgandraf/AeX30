@@ -3053,7 +3053,6 @@ namespace Raecef
             // 
             // saveExcel
             // 
-            this.saveExcel.FileName = "RAE_Nome-do-cliente.xlsm";
             this.saveExcel.Filter = "Planilhas do Excel habilitada p/ macro | *.xlsm";
             this.saveExcel.Title = "Salvar RAE";
             // 
