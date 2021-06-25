@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="Spire.XLS" Version="11.6.1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -308,7 +308,7 @@ namespace Raecef
             // 
             // openExcel
             // 
-            this.openExcel.Filter = "Planilhas do Excel | *.xlsx";
+            this.openExcel.Filter = "Planilhas do Excel | *.xls";
             this.openExcel.Title = "Abrir planilha PFUI";
             // 
             // TabControl
@@ -411,7 +411,7 @@ namespace Raecef
             // 
             this.btnIniciar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnIniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnIniciar.Location = new System.Drawing.Point(510, 13);
             this.btnIniciar.Name = "btnIniciar";
@@ -518,7 +518,7 @@ namespace Raecef
             // 
             this.label80.AutoSize = true;
             this.label80.BackColor = System.Drawing.Color.Transparent;
-            this.label80.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label80.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label80.ForeColor = System.Drawing.Color.Black;
             this.label80.Location = new System.Drawing.Point(214, 3);
             this.label80.Margin = new System.Windows.Forms.Padding(0);
@@ -541,7 +541,7 @@ namespace Raecef
             // 
             this.label79.AutoSize = true;
             this.label79.BackColor = System.Drawing.Color.Transparent;
-            this.label79.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label79.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label79.ForeColor = System.Drawing.Color.Black;
             this.label79.Location = new System.Drawing.Point(189, 3);
             this.label79.Margin = new System.Windows.Forms.Padding(0);
@@ -564,7 +564,7 @@ namespace Raecef
             // 
             this.label78.AutoSize = true;
             this.label78.BackColor = System.Drawing.Color.Transparent;
-            this.label78.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label78.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label78.ForeColor = System.Drawing.Color.Black;
             this.label78.Location = new System.Drawing.Point(164, 3);
             this.label78.Margin = new System.Windows.Forms.Padding(0);
@@ -587,12 +587,12 @@ namespace Raecef
             // 
             this.label77.AutoSize = true;
             this.label77.BackColor = System.Drawing.Color.Transparent;
-            this.label77.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label77.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label77.ForeColor = System.Drawing.Color.Black;
             this.label77.Location = new System.Drawing.Point(128, 3);
             this.label77.Margin = new System.Windows.Forms.Padding(0);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(12, 13);
+            this.label77.Size = new System.Drawing.Size(11, 13);
             this.label77.TabIndex = 28;
             this.label77.Text = "/";
             // 
@@ -610,7 +610,7 @@ namespace Raecef
             // 
             this.label76.AutoSize = true;
             this.label76.BackColor = System.Drawing.Color.Transparent;
-            this.label76.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label76.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label76.ForeColor = System.Drawing.Color.Black;
             this.label76.Location = new System.Drawing.Point(60, 3);
             this.label76.Margin = new System.Windows.Forms.Padding(0);
@@ -633,7 +633,7 @@ namespace Raecef
             // 
             this.label73.AutoSize = true;
             this.label73.BackColor = System.Drawing.Color.Transparent;
-            this.label73.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label73.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label73.ForeColor = System.Drawing.Color.Black;
             this.label73.Location = new System.Drawing.Point(26, 3);
             this.label73.Margin = new System.Windows.Forms.Padding(0);
@@ -665,7 +665,7 @@ namespace Raecef
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label74.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label74.ForeColor = System.Drawing.Color.Black;
             this.label74.Location = new System.Drawing.Point(160, 104);
             this.label74.Name = "label74";
@@ -676,11 +676,11 @@ namespace Raecef
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label75.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label75.ForeColor = System.Drawing.Color.Black;
             this.label75.Location = new System.Drawing.Point(60, 37);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(229, 13);
+            this.label75.Size = new System.Drawing.Size(227, 13);
             this.label75.TabIndex = 15;
             this.label75.Text = "Convocação - OS para Prestação de Serviço";
             // 
@@ -735,7 +735,7 @@ namespace Raecef
             // 
             this.btnProximoConvocacao.BackColor = System.Drawing.Color.LimeGreen;
             this.btnProximoConvocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProximoConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProximoConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnProximoConvocacao.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnProximoConvocacao.Location = new System.Drawing.Point(510, 13);
             this.btnProximoConvocacao.Name = "btnProximoConvocacao";
@@ -762,12 +762,12 @@ namespace Raecef
             // 
             this.lblEtapa1.AutoSize = true;
             this.lblEtapa1.BackColor = System.Drawing.Color.Transparent;
-            this.lblEtapa1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa1.ForeColor = System.Drawing.Color.Gray;
             this.lblEtapa1.Location = new System.Drawing.Point(605, 20);
             this.lblEtapa1.Name = "lblEtapa1";
             this.lblEtapa1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblEtapa1.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa1.Size = new System.Drawing.Size(48, 12);
             this.lblEtapa1.TabIndex = 16;
             this.lblEtapa1.Text = "Etapa: 1/4";
             this.lblEtapa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -777,7 +777,7 @@ namespace Raecef
             this.btnImportarConvocacao.BackColor = System.Drawing.Color.SlateBlue;
             this.btnImportarConvocacao.FlatAppearance.BorderSize = 0;
             this.btnImportarConvocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImportarConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnImportarConvocacao.ForeColor = System.Drawing.Color.White;
             this.btnImportarConvocacao.Location = new System.Drawing.Point(250, 12);
             this.btnImportarConvocacao.Name = "btnImportarConvocacao";
@@ -835,7 +835,7 @@ namespace Raecef
             // 
             this.btnProximoPfui.BackColor = System.Drawing.Color.LimeGreen;
             this.btnProximoPfui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProximoPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProximoPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnProximoPfui.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnProximoPfui.Location = new System.Drawing.Point(510, 13);
             this.btnProximoPfui.Name = "btnProximoPfui";
@@ -863,37 +863,35 @@ namespace Raecef
             // lblVersionTitle
             // 
             this.lblVersionTitle.AutoSize = true;
-            this.lblVersionTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVersionTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.lblVersionTitle.ForeColor = System.Drawing.Color.DimGray;
             this.lblVersionTitle.Location = new System.Drawing.Point(15, 12);
             this.lblVersionTitle.Name = "lblVersionTitle";
             this.lblVersionTitle.Size = new System.Drawing.Size(86, 12);
             this.lblVersionTitle.TabIndex = 19;
             this.lblVersionTitle.Text = "Versão da Planilha:";
-            this.lblVersionTitle.Visible = false;
             // 
             // lblVersion
             // 
-            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.lblVersion.ForeColor = System.Drawing.Color.Gray;
             this.lblVersion.Location = new System.Drawing.Point(15, 24);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(86, 12);
             this.lblVersion.TabIndex = 18;
-            this.lblVersion.Text = "AE 000 00";
+            this.lblVersion.Text = "---";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblVersion.Visible = false;
             // 
             // lblEtapa2
             // 
             this.lblEtapa2.AutoSize = true;
             this.lblEtapa2.BackColor = System.Drawing.Color.Transparent;
-            this.lblEtapa2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa2.ForeColor = System.Drawing.Color.Gray;
             this.lblEtapa2.Location = new System.Drawing.Point(605, 20);
             this.lblEtapa2.Name = "lblEtapa2";
             this.lblEtapa2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblEtapa2.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa2.Size = new System.Drawing.Size(48, 12);
             this.lblEtapa2.TabIndex = 17;
             this.lblEtapa2.Text = "Etapa: 2/4";
             this.lblEtapa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -903,7 +901,7 @@ namespace Raecef
             this.btnImportarPfui.BackColor = System.Drawing.Color.SlateBlue;
             this.btnImportarPfui.FlatAppearance.BorderSize = 0;
             this.btnImportarPfui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImportarPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnImportarPfui.ForeColor = System.Drawing.Color.White;
             this.btnImportarPfui.Location = new System.Drawing.Point(250, 13);
             this.btnImportarPfui.Name = "btnImportarPfui";
@@ -1086,7 +1084,7 @@ namespace Raecef
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label66.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label66.ForeColor = System.Drawing.Color.Black;
             this.label66.Location = new System.Drawing.Point(217, 2005);
             this.label66.Name = "label66";
@@ -1106,7 +1104,7 @@ namespace Raecef
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label67.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label67.ForeColor = System.Drawing.Color.Black;
             this.label67.Location = new System.Drawing.Point(217, 1976);
             this.label67.Name = "label67";
@@ -1126,7 +1124,7 @@ namespace Raecef
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label68.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label68.ForeColor = System.Drawing.Color.Black;
             this.label68.Location = new System.Drawing.Point(217, 1947);
             this.label68.Name = "label68";
@@ -1146,7 +1144,7 @@ namespace Raecef
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label69.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label69.ForeColor = System.Drawing.Color.Black;
             this.label69.Location = new System.Drawing.Point(217, 1918);
             this.label69.Name = "label69";
@@ -1166,7 +1164,7 @@ namespace Raecef
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label70.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label70.ForeColor = System.Drawing.Color.Black;
             this.label70.Location = new System.Drawing.Point(217, 1889);
             this.label70.Name = "label70";
@@ -1186,7 +1184,7 @@ namespace Raecef
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label56.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label56.ForeColor = System.Drawing.Color.Black;
             this.label56.Location = new System.Drawing.Point(217, 1860);
             this.label56.Name = "label56";
@@ -1206,7 +1204,7 @@ namespace Raecef
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label57.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label57.ForeColor = System.Drawing.Color.Black;
             this.label57.Location = new System.Drawing.Point(217, 1831);
             this.label57.Name = "label57";
@@ -1226,7 +1224,7 @@ namespace Raecef
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label58.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label58.ForeColor = System.Drawing.Color.Black;
             this.label58.Location = new System.Drawing.Point(217, 1802);
             this.label58.Name = "label58";
@@ -1246,7 +1244,7 @@ namespace Raecef
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label59.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label59.ForeColor = System.Drawing.Color.Black;
             this.label59.Location = new System.Drawing.Point(217, 1773);
             this.label59.Name = "label59";
@@ -1266,7 +1264,7 @@ namespace Raecef
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label60.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label60.ForeColor = System.Drawing.Color.Black;
             this.label60.Location = new System.Drawing.Point(217, 1744);
             this.label60.Name = "label60";
@@ -1286,7 +1284,7 @@ namespace Raecef
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label61.ForeColor = System.Drawing.Color.Black;
             this.label61.Location = new System.Drawing.Point(217, 1715);
             this.label61.Name = "label61";
@@ -1306,7 +1304,7 @@ namespace Raecef
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label49.ForeColor = System.Drawing.Color.Black;
             this.label49.Location = new System.Drawing.Point(217, 1686);
             this.label49.Name = "label49";
@@ -1326,7 +1324,7 @@ namespace Raecef
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label50.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label50.ForeColor = System.Drawing.Color.Black;
             this.label50.Location = new System.Drawing.Point(217, 1657);
             this.label50.Name = "label50";
@@ -1346,7 +1344,7 @@ namespace Raecef
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label51.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label51.ForeColor = System.Drawing.Color.Black;
             this.label51.Location = new System.Drawing.Point(217, 1628);
             this.label51.Name = "label51";
@@ -1366,7 +1364,7 @@ namespace Raecef
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label52.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label52.ForeColor = System.Drawing.Color.Black;
             this.label52.Location = new System.Drawing.Point(217, 1599);
             this.label52.Name = "label52";
@@ -1386,7 +1384,7 @@ namespace Raecef
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label53.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label53.ForeColor = System.Drawing.Color.Black;
             this.label53.Location = new System.Drawing.Point(217, 1570);
             this.label53.Name = "label53";
@@ -1406,7 +1404,7 @@ namespace Raecef
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label54.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label54.ForeColor = System.Drawing.Color.Black;
             this.label54.Location = new System.Drawing.Point(217, 1541);
             this.label54.Name = "label54";
@@ -1425,11 +1423,11 @@ namespace Raecef
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label55.ForeColor = System.Drawing.Color.Black;
             this.label55.Location = new System.Drawing.Point(50, 1489);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(161, 13);
+            this.label55.Size = new System.Drawing.Size(160, 13);
             this.label55.TabIndex = 92;
             this.label55.Text = "Cronograma Físico Financeiro";
             // 
@@ -1445,7 +1443,7 @@ namespace Raecef
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label48.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label48.ForeColor = System.Drawing.Color.Black;
             this.label48.Location = new System.Drawing.Point(130, 1443);
             this.label48.Name = "label48";
@@ -1465,7 +1463,7 @@ namespace Raecef
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label47.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label47.ForeColor = System.Drawing.Color.Black;
             this.label47.Location = new System.Drawing.Point(130, 1414);
             this.label47.Name = "label47";
@@ -1485,7 +1483,7 @@ namespace Raecef
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label46.ForeColor = System.Drawing.Color.Black;
             this.label46.Location = new System.Drawing.Point(130, 1385);
             this.label46.Name = "label46";
@@ -1505,7 +1503,7 @@ namespace Raecef
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label45.ForeColor = System.Drawing.Color.Black;
             this.label45.Location = new System.Drawing.Point(130, 1356);
             this.label45.Name = "label45";
@@ -1525,7 +1523,7 @@ namespace Raecef
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label44.ForeColor = System.Drawing.Color.Black;
             this.label44.Location = new System.Drawing.Point(130, 1327);
             this.label44.Name = "label44";
@@ -1545,7 +1543,7 @@ namespace Raecef
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label43.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label43.ForeColor = System.Drawing.Color.Black;
             this.label43.Location = new System.Drawing.Point(130, 1298);
             this.label43.Name = "label43";
@@ -1565,7 +1563,7 @@ namespace Raecef
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label42.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label42.ForeColor = System.Drawing.Color.Black;
             this.label42.Location = new System.Drawing.Point(130, 1269);
             this.label42.Name = "label42";
@@ -1585,7 +1583,7 @@ namespace Raecef
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label41.ForeColor = System.Drawing.Color.Black;
             this.label41.Location = new System.Drawing.Point(130, 1240);
             this.label41.Name = "label41";
@@ -1605,7 +1603,7 @@ namespace Raecef
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label40.ForeColor = System.Drawing.Color.Black;
             this.label40.Location = new System.Drawing.Point(130, 1211);
             this.label40.Name = "label40";
@@ -1625,7 +1623,7 @@ namespace Raecef
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label39.ForeColor = System.Drawing.Color.Black;
             this.label39.Location = new System.Drawing.Point(130, 1182);
             this.label39.Name = "label39";
@@ -1645,7 +1643,7 @@ namespace Raecef
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label38.ForeColor = System.Drawing.Color.Black;
             this.label38.Location = new System.Drawing.Point(130, 1153);
             this.label38.Name = "label38";
@@ -1665,7 +1663,7 @@ namespace Raecef
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label37.ForeColor = System.Drawing.Color.Black;
             this.label37.Location = new System.Drawing.Point(130, 1124);
             this.label37.Name = "label37";
@@ -1685,7 +1683,7 @@ namespace Raecef
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label36.ForeColor = System.Drawing.Color.Black;
             this.label36.Location = new System.Drawing.Point(130, 1095);
             this.label36.Name = "label36";
@@ -1705,7 +1703,7 @@ namespace Raecef
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label35.ForeColor = System.Drawing.Color.Black;
             this.label35.Location = new System.Drawing.Point(130, 1066);
             this.label35.Name = "label35";
@@ -1725,7 +1723,7 @@ namespace Raecef
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label34.ForeColor = System.Drawing.Color.Black;
             this.label34.Location = new System.Drawing.Point(130, 1037);
             this.label34.Name = "label34";
@@ -1745,7 +1743,7 @@ namespace Raecef
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(130, 1008);
             this.label33.Name = "label33";
@@ -1765,7 +1763,7 @@ namespace Raecef
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label32.ForeColor = System.Drawing.Color.Black;
             this.label32.Location = new System.Drawing.Point(130, 979);
             this.label32.Name = "label32";
@@ -1785,7 +1783,7 @@ namespace Raecef
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label31.ForeColor = System.Drawing.Color.Black;
             this.label31.Location = new System.Drawing.Point(130, 950);
             this.label31.Name = "label31";
@@ -1805,7 +1803,7 @@ namespace Raecef
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Location = new System.Drawing.Point(130, 921);
             this.label30.Name = "label30";
@@ -1825,7 +1823,7 @@ namespace Raecef
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label28.ForeColor = System.Drawing.Color.Black;
             this.label28.Location = new System.Drawing.Point(130, 892);
             this.label28.Name = "label28";
@@ -1844,11 +1842,11 @@ namespace Raecef
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(50, 840);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(90, 13);
+            this.label29.Size = new System.Drawing.Size(89, 13);
             this.label29.TabIndex = 50;
             this.label29.Text = "Valores / Custos";
             // 
@@ -1864,7 +1862,7 @@ namespace Raecef
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label27.ForeColor = System.Drawing.Color.Black;
             this.label27.Location = new System.Drawing.Point(150, 798);
             this.label27.Name = "label27";
@@ -1884,7 +1882,7 @@ namespace Raecef
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(150, 769);
             this.label26.Name = "label26";
@@ -1904,7 +1902,7 @@ namespace Raecef
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(150, 740);
             this.label25.Name = "label25";
@@ -1924,7 +1922,7 @@ namespace Raecef
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(150, 711);
             this.label24.Name = "label24";
@@ -1944,7 +1942,7 @@ namespace Raecef
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(150, 682);
             this.label22.Name = "label22";
@@ -1963,7 +1961,7 @@ namespace Raecef
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(50, 631);
             this.label23.Name = "label23";
@@ -1983,7 +1981,7 @@ namespace Raecef
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(105, 591);
             this.label21.Name = "label21";
@@ -2003,7 +2001,7 @@ namespace Raecef
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(105, 563);
             this.label15.Name = "label15";
@@ -2023,7 +2021,7 @@ namespace Raecef
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(105, 534);
             this.label16.Name = "label16";
@@ -2043,7 +2041,7 @@ namespace Raecef
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(105, 505);
             this.label17.Name = "label17";
@@ -2063,7 +2061,7 @@ namespace Raecef
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(105, 476);
             this.label18.Name = "label18";
@@ -2083,7 +2081,7 @@ namespace Raecef
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(105, 447);
             this.label19.Name = "label19";
@@ -2102,11 +2100,11 @@ namespace Raecef
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(50, 395);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(128, 13);
+            this.label20.Size = new System.Drawing.Size(126, 13);
             this.label20.TabIndex = 24;
             this.label20.Text = "Identificação do Imóvel";
             // 
@@ -2131,7 +2129,7 @@ namespace Raecef
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(120, 348);
             this.label13.Name = "label13";
@@ -2151,7 +2149,7 @@ namespace Raecef
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(120, 320);
             this.label14.Name = "label14";
@@ -2171,7 +2169,7 @@ namespace Raecef
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(120, 291);
             this.label10.Name = "label10";
@@ -2191,7 +2189,7 @@ namespace Raecef
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(120, 262);
             this.label11.Name = "label11";
@@ -2211,7 +2209,7 @@ namespace Raecef
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(120, 233);
             this.label12.Name = "label12";
@@ -2230,11 +2228,11 @@ namespace Raecef
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(50, 181);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 13);
+            this.label9.Size = new System.Drawing.Size(112, 13);
             this.label9.TabIndex = 11;
             this.label9.Text = "Responsável Técnico";
             // 
@@ -2259,7 +2257,7 @@ namespace Raecef
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(120, 134);
             this.label8.Name = "label8";
@@ -2279,7 +2277,7 @@ namespace Raecef
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(120, 106);
             this.label7.Name = "label7";
@@ -2299,7 +2297,7 @@ namespace Raecef
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(120, 77);
             this.label1.Name = "label1";
@@ -2318,11 +2316,11 @@ namespace Raecef
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(50, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Proponente";
             // 
@@ -2467,7 +2465,7 @@ namespace Raecef
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label83.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label83.ForeColor = System.Drawing.Color.Black;
             this.label83.Location = new System.Drawing.Point(50, 124);
             this.label83.Name = "label83";
@@ -2478,7 +2476,7 @@ namespace Raecef
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label82.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label82.ForeColor = System.Drawing.Color.Black;
             this.label82.Location = new System.Drawing.Point(135, 200);
             this.label82.Name = "label82";
@@ -2489,7 +2487,7 @@ namespace Raecef
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label81.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label81.ForeColor = System.Drawing.Color.Black;
             this.label81.Location = new System.Drawing.Point(135, 171);
             this.label81.Name = "label81";
@@ -2500,7 +2498,7 @@ namespace Raecef
             // label140
             // 
             this.label140.AutoSize = true;
-            this.label140.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label140.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label140.ForeColor = System.Drawing.Color.Black;
             this.label140.Location = new System.Drawing.Point(314, 75);
             this.label140.Name = "label140";
@@ -2511,7 +2509,7 @@ namespace Raecef
             // label141
             // 
             this.label141.AutoSize = true;
-            this.label141.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label141.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.label141.ForeColor = System.Drawing.Color.Black;
             this.label141.Location = new System.Drawing.Point(135, 75);
             this.label141.Name = "label141";
@@ -2530,7 +2528,7 @@ namespace Raecef
             // label142
             // 
             this.label142.AutoSize = true;
-            this.label142.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label142.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.GraphicsUnit.Point);
             this.label142.ForeColor = System.Drawing.Color.Black;
             this.label142.Location = new System.Drawing.Point(50, 25);
             this.label142.Name = "label142";
@@ -2552,7 +2550,7 @@ namespace Raecef
             // 
             this.btnProximoAdicionais.BackColor = System.Drawing.Color.LimeGreen;
             this.btnProximoAdicionais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProximoAdicionais.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProximoAdicionais.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnProximoAdicionais.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnProximoAdicionais.Location = new System.Drawing.Point(510, 13);
             this.btnProximoAdicionais.Name = "btnProximoAdicionais";
@@ -2578,12 +2576,12 @@ namespace Raecef
             // 
             this.lblEtapa3.AutoSize = true;
             this.lblEtapa3.BackColor = System.Drawing.Color.Transparent;
-            this.lblEtapa3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa3.ForeColor = System.Drawing.Color.Gray;
             this.lblEtapa3.Location = new System.Drawing.Point(605, 20);
             this.lblEtapa3.Name = "lblEtapa3";
             this.lblEtapa3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblEtapa3.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa3.Size = new System.Drawing.Size(48, 12);
             this.lblEtapa3.TabIndex = 1;
             this.lblEtapa3.Text = "Etapa: 3/4";
             this.lblEtapa3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2591,7 +2589,7 @@ namespace Raecef
             // label146
             // 
             this.label146.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label146.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label146.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.GraphicsUnit.Point);
             this.label146.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label146.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label146.Location = new System.Drawing.Point(0, 0);
@@ -2650,7 +2648,7 @@ namespace Raecef
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConfirmar.Location = new System.Drawing.Point(510, 13);
             this.btnConfirmar.Name = "btnConfirmar";
@@ -2678,7 +2676,7 @@ namespace Raecef
             this.btnModeloPadrao.BackColor = System.Drawing.Color.SlateBlue;
             this.btnModeloPadrao.FlatAppearance.BorderSize = 0;
             this.btnModeloPadrao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModeloPadrao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnModeloPadrao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnModeloPadrao.ForeColor = System.Drawing.Color.White;
             this.btnModeloPadrao.Location = new System.Drawing.Point(250, 13);
             this.btnModeloPadrao.Name = "btnModeloPadrao";
@@ -2692,12 +2690,12 @@ namespace Raecef
             // 
             this.lblEtapa4.AutoSize = true;
             this.lblEtapa4.BackColor = System.Drawing.Color.Transparent;
-            this.lblEtapa4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEtapa4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa4.ForeColor = System.Drawing.Color.Gray;
             this.lblEtapa4.Location = new System.Drawing.Point(605, 20);
             this.lblEtapa4.Name = "lblEtapa4";
             this.lblEtapa4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblEtapa4.Size = new System.Drawing.Size(52, 12);
+            this.lblEtapa4.Size = new System.Drawing.Size(48, 12);
             this.lblEtapa4.TabIndex = 17;
             this.lblEtapa4.Text = "Etapa: 4/4";
             this.lblEtapa4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2808,7 +2806,7 @@ namespace Raecef
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
@@ -2826,7 +2824,7 @@ namespace Raecef
             this.btnAppClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
             this.btnAppClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnAppClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAppClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.btnAppClose.ForeColor = System.Drawing.Color.White;
             this.btnAppClose.Image = ((System.Drawing.Image)(resources.GetObject("btnAppClose.Image")));
             this.btnAppClose.Location = new System.Drawing.Point(760, 0);
@@ -2852,7 +2850,7 @@ namespace Raecef
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(6, 8);
             this.label3.Name = "label3";
@@ -2899,7 +2897,7 @@ namespace Raecef
             // 
             this.button1.BackColor = System.Drawing.Color.LimeGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(510, 13);
             this.button1.Name = "button1";
@@ -2988,7 +2986,7 @@ namespace Raecef
             // 
             this.button3.BackColor = System.Drawing.Color.LimeGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(510, 13);
             this.button3.Name = "button3";
@@ -3022,7 +3020,7 @@ namespace Raecef
             // 
             this.button5.BackColor = System.Drawing.Color.LimeGreen;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button5.Location = new System.Drawing.Point(510, 13);
             this.button5.Name = "button5";
