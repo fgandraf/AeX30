@@ -14,64 +14,21 @@ namespace Raecef
     {
 
 
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
+
         string _caminhoModelo;
 
-        //------------------PFUI------------------//
-        string[] ae130v017_018 = new string[]
-                {
-            "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
-            "G46", "AP46", "BA46", "BF46",
-            "G48", "AB48",
-            "AG50", "AP50", "AX50", "BF50", "BN50",
-            "AR116", "AR118", "AR130", "AR137", "AR146", "AR156", "AR165", "AR172", "AR179", "AR190", "AR197", "AR207", "AR217", "AR228", "AR234", "AR245", "AR254", "AR262", "AR271", "AR273",
-            "AJ311",
-            "AL310", "AP310", "AT310", "AX310", "BB310", "BF310", "BJ310", "BN310",
-            "AL350", "AP350", "AT350", "AX350", "BB350", "BF350", "BJ350", "BN350"
-                };
-        string[] ae130v019_020 = new string[]
-        {
-            "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
-            "G46", "AP46", "BA46", "BF46",
-            "G48", "AB48",
-            "AG50", "AP50", "AX50", "BF50", "BN50",
-            "AR116", "AR118", "AR130", "AR137", "AR146", "AR156", "AR165", "AR172", "AR179", "AR190", "AR197", "AR207", "AR217", "AR228", "AR234", "AR245", "AR254", "AR262", "AR271", "AR273",
-            "AJ312",
-            "AL311", "AP311", "AT311", "AX311", "BB311", "BF311", "BJ311", "BN311",
-            "AL351", "AP351", "AT351", "AX351", "BB351", "BF351", "BJ351", "BN351"
-        };
-        string[] ae130v021 = new string[]
-        {
-            "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
-            "G46", "AP46", "BA46", "BF46",
-            "G48", "AB48",
-            "AG50", "AP50", "AX50", "BF50", "BN50",
-            "AR114", "AR116", "AR128", "AR135", "AR144", "AR154", "AR163", "AR170", "AR177", "AR188", "AR195", "AR205", "AR215", "AR226", "AR232", "AR243", "AR252", "AR260", "AR269", "AR271",
-            "AJ310",
-            "AL309", "AP309", "AT309", "AX309", "BB309", "BF309", "BJ309", "BN309",
-            "AL349", "AP349", "AT349", "AX349", "BB349", "BF349", "BJ349", "BN349"
-        };
-        private string[] SetArrayForThisPFUIVersion(string version)
-        {
-            if (version == "AE 130 017" || version == "AE 130 018")
-                return ae130v017_018;
-            else if (version == "AE 130 019" || version == "AE 130 020")
-                return ae130v019_020;
-            else if (version == "AE 130 021")
-                return ae130v021;
-            else
-            {
-                MessageBox.Show("A versão da planilha PFUI inserida não foi testada.\r\nRedobre a atenção quanto aos valores importados!", "Planilha PFUI não testada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return ae130v021;
-            }
-        }
-        private void GetAndPopulate_PFUI(string[] aeX, ISheet ws)
+
+
+
+
+        //------------------METHODS------------------//
+        private void ImportPFUI(string[] aeX, ISheet ws)
         {
             //CABEÇALHO
             txtPropNome.Text = ws.GetRow(new CellReference(aeX[0]).Row).GetCell(new CellReference(aeX[0]).Col).ToString();
@@ -137,26 +94,7 @@ namespace Raecef
             txtParcela16.Text = ws.GetRow(new CellReference(aeX[57]).Row).GetCell(new CellReference(aeX[57]).Col).NumericCellValue.ToString();
 
         }
-
-
-
-
-        //------------------RAE-------------------//
-        string[] rae130v020 = new string[]
-                {
-            "AD35", "AF35", "AH35", "AL35", "AN35", "AO35", "AP35", // 0 a 6
-            "G43", "AJ43", "AP43", "AR43", // 7 a 10
-            "G46", "Z46", "AH46", "AJ46", "AP46", "AR46", // 11 a 16
-            "G49", "AJ49", // 17 a 18
-            "G51", "V51", "AA51", "AS51", // 19 a 22
-            "G53", "Q53", "AA53", "AJ53", "AS53", // 23 a 27
-            "S68","S69","S70","S71","S72","S73","S74","S75","S76","S77","S78","S79","S80","S81","S82","S83","S84","S85","S86","S87",
-            "Y89",
-            "AH63", "AS63",
-            "AS74",
-            "BC61","BC62","BC63","BC64","BC65","BC66","BC67","BC68","BC69","BC70","BC71","BC72","BC73","BC74","BC75","BC76","BC77"
-                };
-        private void Populate_RAE(string[] rae, ClosedXML.Excel.IXLWorksheet ws)
+        private void ExportRAE(string[] rae, ClosedXML.Excel.IXLWorksheet ws)
         {
             //CABEÇALHO
             ws.Cell(rae[0]).Value = txtRef0.Text;
@@ -237,11 +175,6 @@ namespace Raecef
 
 
         }
-        //----------------------------------------//
-
-
-
-
         private string SanitizeVersion(string header)
         {
             if (header != "")
@@ -269,6 +202,7 @@ namespace Raecef
             else
                 return null;
         }
+        //-------------------------------------------//
 
 
 
@@ -281,6 +215,21 @@ namespace Raecef
 
 
 
+        //------------------SHARED EVENT-------------------//
+        private void NextTabControl(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabControl.SelectedIndex + 1);
+
+        }
+        //------------------------------------------------//
+
+
+
+
+
+
+
+        
 
 
 
@@ -295,7 +244,7 @@ namespace Raecef
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            TabControl.ItemSize = new System.Drawing.Size(0, 1);
+            tabControl.ItemSize = new System.Drawing.Size(0, 1);
             //TabControl.SelectTab(2);
         }
 
@@ -312,17 +261,17 @@ namespace Raecef
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (TabControl.SelectedIndex == 1)
+            if (tabControl.SelectedIndex == 1)
             {
-                TabControl.SelectTab(0);
+                tabControl.SelectTab(0);
                 btnBack.Hide();
             }
-            else if (TabControl.SelectedIndex == 2)
-                TabControl.SelectTab(1);
-            else if (TabControl.SelectedIndex == 3)
-                TabControl.SelectTab(2);
-            else if (TabControl.SelectedIndex == 4)
-                TabControl.SelectTab(3);
+            else if (tabControl.SelectedIndex == 2)
+                tabControl.SelectTab(1);
+            else if (tabControl.SelectedIndex == 3)
+                tabControl.SelectTab(2);
+            else if (tabControl.SelectedIndex == 4)
+                tabControl.SelectTab(3);
 
         }
 
@@ -388,8 +337,8 @@ namespace Raecef
                     else
                     {
                         lblVersion.Text = version;
-                        string[] aeX = SetArrayForThisPFUIVersion(version);
-                        GetAndPopulate_PFUI(aeX, sheet);
+                        string[] aeX = PFUI.SetArray(version);
+                        ImportPFUI(aeX, sheet);
                         pnlMainPfui.Show();
                         btnProximoPfui.Show();
                     }
@@ -447,7 +396,7 @@ namespace Raecef
                         var wbook = new XLWorkbook(_caminhoModelo);
                         var rae = wbook.Worksheets.First(w => w.Name == "RAE");
 
-                        Populate_RAE(rae130v020, rae);
+                        ExportRAE(RAE.SetArray("AE 130 020"), rae);
                         wbook.SaveAs(saveExcel.FileName);
 
                         txtLogFinalizar.Text += "--------------------------------\r\nConcluído!\r\n";
@@ -475,28 +424,12 @@ namespace Raecef
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            TabControl.SelectTab(1);
+            NextTabControl(sender, e);
             btnBack.Show();
         }
 
-        private void btnProximoConvocacao_Click(object sender, EventArgs e)
-        {
-            TabControl.SelectTab(2);
-        }
 
-        private void btnProximoPfui_Click(object sender, EventArgs e)
-        {
-            TabControl.SelectTab(3);
-        }
 
-        private void btnProximoAdicionais_Click(object sender, EventArgs e)
-        {
-            TabControl.SelectTab(4);
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

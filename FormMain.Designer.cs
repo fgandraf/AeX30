@@ -31,7 +31,7 @@ namespace Raecef
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.openExcel = new System.Windows.Forms.OpenFileDialog();
-            this.TabControl = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.pg1 = new System.Windows.Forms.TabPage();
             this.tblPg1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMainPg1 = new System.Windows.Forms.Panel();
@@ -266,7 +266,7 @@ namespace Raecef
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
             this.saveExcel = new System.Windows.Forms.SaveFileDialog();
-            this.TabControl.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
             this.pnlMainPg1.SuspendLayout();
@@ -311,26 +311,26 @@ namespace Raecef
             this.openExcel.Filter = "Planilhas do Excel | *.xls";
             this.openExcel.Title = "Abrir planilha PFUI";
             // 
-            // TabControl
+            // tabControl
             // 
-            this.TabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.TabControl.Controls.Add(this.pg1);
-            this.TabControl.Controls.Add(this.pg2);
-            this.TabControl.Controls.Add(this.pg3);
-            this.TabControl.Controls.Add(this.pg4);
-            this.TabControl.Controls.Add(this.pg5);
-            this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControl.ItemSize = new System.Drawing.Size(60, 10);
-            this.TabControl.Location = new System.Drawing.Point(80, 30);
-            this.TabControl.Margin = new System.Windows.Forms.Padding(0);
-            this.TabControl.Multiline = true;
-            this.TabControl.Name = "TabControl";
-            this.TabControl.Padding = new System.Drawing.Point(0, 0);
-            this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(720, 410);
-            this.TabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.TabControl.TabIndex = 0;
-            this.TabControl.TabStop = false;
+            this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl.Controls.Add(this.pg1);
+            this.tabControl.Controls.Add(this.pg2);
+            this.tabControl.Controls.Add(this.pg3);
+            this.tabControl.Controls.Add(this.pg4);
+            this.tabControl.Controls.Add(this.pg5);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.ItemSize = new System.Drawing.Size(60, 10);
+            this.tabControl.Location = new System.Drawing.Point(80, 30);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(0);
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.Padding = new System.Drawing.Point(0, 0);
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(720, 410);
+            this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl.TabIndex = 0;
+            this.tabControl.TabStop = false;
             // 
             // pg1
             // 
@@ -744,7 +744,7 @@ namespace Raecef
             this.btnProximoConvocacao.Text = "Próximo";
             this.btnProximoConvocacao.UseVisualStyleBackColor = false;
             this.btnProximoConvocacao.Visible = false;
-            this.btnProximoConvocacao.Click += new System.EventHandler(this.btnProximoConvocacao_Click);
+            this.btnProximoConvocacao.Click += new System.EventHandler(this.NextTabControl);
             // 
             // pnlTopConvocacao
             // 
@@ -844,7 +844,7 @@ namespace Raecef
             this.btnProximoPfui.Text = "Próximo";
             this.btnProximoPfui.UseVisualStyleBackColor = false;
             this.btnProximoPfui.Visible = false;
-            this.btnProximoPfui.Click += new System.EventHandler(this.btnProximoPfui_Click);
+            this.btnProximoPfui.Click += new System.EventHandler(this.NextTabControl);
             // 
             // pnlTopPfui
             // 
@@ -2558,7 +2558,7 @@ namespace Raecef
             this.btnProximoAdicionais.TabIndex = 0;
             this.btnProximoAdicionais.Text = "Próximo";
             this.btnProximoAdicionais.UseVisualStyleBackColor = false;
-            this.btnProximoAdicionais.Click += new System.EventHandler(this.btnProximoAdicionais_Click);
+            this.btnProximoAdicionais.Click += new System.EventHandler(this.NextTabControl);
             // 
             // pnlTopAdicionais
             // 
@@ -3062,7 +3062,7 @@ namespace Raecef
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TabControl);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlAppTopPanel);
@@ -3074,7 +3074,7 @@ namespace Raecef
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório de Evolução de Obra - Caixa Econômica Federal";
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.TabControl.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.pg1.ResumeLayout(false);
             this.tblPg1.ResumeLayout(false);
             this.pnlMainPg1.ResumeLayout(false);
@@ -3130,7 +3130,7 @@ namespace Raecef
 
         #endregion
         private System.Windows.Forms.OpenFileDialog openExcel;
-        private System.Windows.Forms.TabControl TabControl;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage pg3;
         private System.Windows.Forms.Button btnImportarPfui;
         private System.Windows.Forms.TabPage pg4;
