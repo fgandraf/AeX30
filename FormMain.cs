@@ -4,7 +4,9 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 using ClosedXML.Excel;
-using Spire.Xls;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using NPOI.SS.Util;
 
 namespace Raecef
 {
@@ -55,7 +57,7 @@ namespace Raecef
             "AL309", "AP309", "AT309", "AX309", "BB309", "BF309", "BJ309", "BN309",
             "AL349", "AP349", "AT349", "AX349", "BB349", "BF349", "BJ349", "BN349"
         };
-        private string[] ChooseArray_PFUI(string version)
+        private string[] SetArrayForThisPFUIVersion(string version)
         {
             if (version == "AE 130 017" || version == "AE 130 018")
                 return ae130v017_018;
@@ -69,73 +71,72 @@ namespace Raecef
                 return ae130v021;
             }
         }
-        private void GetAndPopulate_PFUI(string[] aeX, ClosedXML.Excel.IXLWorksheet ws)
+        private void GetAndPopulate_PFUI(string[] aeX, ISheet ws)
         {
             //CABEÇALHO
-            txtPropNome.Text = ws.Cell(aeX[0]).RichText.ToString().ToUpper();
-            txtPropCPF.Text = Util.FormatedCPF(ws.Cell(aeX[1]).RichText.ToString());
-            txtPropDDD.Text = ws.Cell(aeX[2]).RichText.ToString();
-            txtPropTelefone.Text = Util.FormatedFone(ws.Cell(aeX[3]).RichText.ToString());
-            txtRTNome.Text = ws.Cell(aeX[4]).RichText.ToString().ToUpper();
-            txtRTCauCrea.Text = ws.Cell(aeX[5]).RichText.ToString().Replace(',', '.');
-            txtRTUF.Text = ws.Cell(aeX[6]).RichText.ToString();
-            txtRTCPF.Text = Util.FormatedCPF(ws.Cell(aeX[7]).Value.ToString());
-            txtRTDDD.Text = ws.Cell(aeX[8]).RichText.ToString();
-            txtRTTelefone.Text = Util.FormatedFone(ws.Cell(aeX[9]).RichText.ToString());
-            txtIdEndereco.Text = ws.Cell(aeX[10]).RichText.ToString().ToUpper();
-            txtIdComplemento.Text = ws.Cell(aeX[11]).RichText.ToString().ToUpper();
-            txtIdCEP.Text = Util.FormatedCEP(ws.Cell(aeX[12]).RichText.ToString());
-            txtIdBairro.Text = ws.Cell(aeX[13]).RichText.ToString().ToUpper();
-            txtIdMunicipio.Text = ws.Cell(aeX[14]).RichText.ToString().ToUpper();
-            txtIdUF.Text = ws.Cell(aeX[15]).RichText.ToString();
-            txtTerrenoValorProposto.Text = string.Format("{0:0,0.00}", Convert.ToDouble(ws.Cell(aeX[16]).CachedValue));
-            txtTerrenoMatricula.Text = ws.Cell(aeX[17]).RichText.ToString().Replace(',', '.');
-            txtTerrenoOficio.Text = ws.Cell(aeX[18]).RichText.ToString().ToUpper();
-            txtTerrenoComarca.Text = ws.Cell(aeX[19]).RichText.ToString().ToUpper();
-            txtTerrenoUF.Text = ws.Cell(aeX[20]).RichText.ToString();
+            txtPropNome.Text = ws.GetRow(new CellReference(aeX[0]).Row).GetCell(new CellReference(aeX[0]).Col).ToString();
+            txtPropCPF.Text = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[1]).Row).GetCell(new CellReference(aeX[1]).Col).ToString());
+            txtPropDDD.Text = ws.GetRow(new CellReference(aeX[2]).Row).GetCell(new CellReference(aeX[2]).Col).ToString();
+            txtPropTelefone.Text = Util.FormatedFone(ws.GetRow(new CellReference(aeX[3]).Row).GetCell(new CellReference(aeX[3]).Col).ToString());
+            txtRTNome.Text = ws.GetRow(new CellReference(aeX[4]).Row).GetCell(new CellReference(aeX[4]).Col).ToString();
+            txtRTCauCrea.Text = ws.GetRow(new CellReference(aeX[5]).Row).GetCell(new CellReference(aeX[5]).Col).ToString();     //.Replace(',', '.');
+            txtRTUF.Text = ws.GetRow(new CellReference(aeX[6]).Row).GetCell(new CellReference(aeX[6]).Col).ToString();
+            txtRTCPF.Text = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[7]).Row).GetCell(new CellReference(aeX[7]).Col).ToString());
+            txtRTDDD.Text = ws.GetRow(new CellReference(aeX[8]).Row).GetCell(new CellReference(aeX[8]).Col).ToString();
+            txtRTTelefone.Text = Util.FormatedFone(ws.GetRow(new CellReference(aeX[9]).Row).GetCell(new CellReference(aeX[9]).Col).ToString());
+            txtIdEndereco.Text = ws.GetRow(new CellReference(aeX[10]).Row).GetCell(new CellReference(aeX[10]).Col).ToString();
+            txtIdComplemento.Text = ws.GetRow(new CellReference(aeX[11]).Row).GetCell(new CellReference(aeX[11]).Col).ToString();
+            txtIdCEP.Text = ws.GetRow(new CellReference(aeX[12]).Row).GetCell(new CellReference(aeX[12]).Col).ToString();
+            txtIdBairro.Text = ws.GetRow(new CellReference(aeX[13]).Row).GetCell(new CellReference(aeX[13]).Col).ToString();
+            txtIdMunicipio.Text = ws.GetRow(new CellReference(aeX[14]).Row).GetCell(new CellReference(aeX[14]).Col).ToString();
+            txtIdUF.Text = ws.GetRow(new CellReference(aeX[15]).Row).GetCell(new CellReference(aeX[15]).Col).ToString();
+            txtTerrenoValorProposto.Text = string.Format("{0:0,0.00}", Convert.ToDouble(ws.GetRow(new CellReference(aeX[16]).Row).GetCell(new CellReference(aeX[16]).Col).ToString()));
+            txtTerrenoMatricula.Text = ws.GetRow(new CellReference(aeX[17]).Row).GetCell(new CellReference(aeX[17]).Col).ToString();     //.Replace(',', '.');
+            txtTerrenoOficio.Text = ws.GetRow(new CellReference(aeX[18]).Row).GetCell(new CellReference(aeX[18]).Col).ToString();
+            txtTerrenoComarca.Text = ws.GetRow(new CellReference(aeX[19]).Row).GetCell(new CellReference(aeX[19]).Col).ToString();
+            txtTerrenoUF.Text = ws.GetRow(new CellReference(aeX[20]).Row).GetCell(new CellReference(aeX[20]).Col).ToString();
             //ORÇAMENTO (PERCENTUAIS)
-            txt1701.Text = ws.Cell(aeX[21]).CachedValue.ToString().Replace('.', ',');
-            txt1702.Text = ws.Cell(aeX[22]).CachedValue.ToString().Replace('.', ',');
-            txt1703.Text = ws.Cell(aeX[23]).CachedValue.ToString().Replace('.', ',');
-            txt1704.Text = ws.Cell(aeX[24]).CachedValue.ToString().Replace('.', ',');
-            txt1705.Text = ws.Cell(aeX[25]).CachedValue.ToString().Replace('.', ',');
-            txt1706.Text = ws.Cell(aeX[26]).CachedValue.ToString().Replace('.', ',');
-            txt1707.Text = ws.Cell(aeX[27]).CachedValue.ToString().Replace('.', ',');
-            txt1708.Text = ws.Cell(aeX[28]).CachedValue.ToString().Replace('.', ',');
-            txt1709.Text = ws.Cell(aeX[29]).CachedValue.ToString().Replace('.', ',');
-            txt1710.Text = ws.Cell(aeX[30]).CachedValue.ToString().Replace('.', ',');
-            txt1711.Text = ws.Cell(aeX[31]).CachedValue.ToString().Replace('.', ',');
-            txt1712.Text = ws.Cell(aeX[32]).CachedValue.ToString().Replace('.', ',');
-            txt1713.Text = ws.Cell(aeX[33]).CachedValue.ToString().Replace('.', ',');
-            txt1714.Text = ws.Cell(aeX[34]).CachedValue.ToString().Replace('.', ',');
-            txt1715.Text = ws.Cell(aeX[35]).CachedValue.ToString().Replace('.', ',');
-            txt1716.Text = ws.Cell(aeX[36]).CachedValue.ToString().Replace('.', ',');
-            txt1717.Text = ws.Cell(aeX[37]).CachedValue.ToString().Replace('.', ',');
-            txt1718.Text = ws.Cell(aeX[38]).CachedValue.ToString().Replace('.', ',');
-            txt1719.Text = ws.Cell(aeX[39]).CachedValue.ToString().Replace('.', ',');
-            txt1720.Text = ws.Cell(aeX[40]).CachedValue.ToString().Replace('.', ',');
+            txt1701.Text = ws.GetRow(new CellReference(aeX[21]).Row).GetCell(new CellReference(aeX[21]).Col).NumericCellValue.ToString();
+            txt1702.Text = ws.GetRow(new CellReference(aeX[22]).Row).GetCell(new CellReference(aeX[22]).Col).NumericCellValue.ToString();
+            txt1703.Text = ws.GetRow(new CellReference(aeX[23]).Row).GetCell(new CellReference(aeX[23]).Col).NumericCellValue.ToString();
+            txt1704.Text = ws.GetRow(new CellReference(aeX[24]).Row).GetCell(new CellReference(aeX[24]).Col).NumericCellValue.ToString();
+            txt1705.Text = ws.GetRow(new CellReference(aeX[25]).Row).GetCell(new CellReference(aeX[25]).Col).NumericCellValue.ToString();
+            txt1706.Text = ws.GetRow(new CellReference(aeX[26]).Row).GetCell(new CellReference(aeX[26]).Col).NumericCellValue.ToString();
+            txt1707.Text = ws.GetRow(new CellReference(aeX[27]).Row).GetCell(new CellReference(aeX[27]).Col).NumericCellValue.ToString();
+            txt1708.Text = ws.GetRow(new CellReference(aeX[28]).Row).GetCell(new CellReference(aeX[28]).Col).NumericCellValue.ToString();
+            txt1709.Text = ws.GetRow(new CellReference(aeX[29]).Row).GetCell(new CellReference(aeX[29]).Col).NumericCellValue.ToString();
+            txt1710.Text = ws.GetRow(new CellReference(aeX[30]).Row).GetCell(new CellReference(aeX[30]).Col).NumericCellValue.ToString();
+            txt1711.Text = ws.GetRow(new CellReference(aeX[31]).Row).GetCell(new CellReference(aeX[31]).Col).NumericCellValue.ToString();
+            txt1712.Text = ws.GetRow(new CellReference(aeX[32]).Row).GetCell(new CellReference(aeX[32]).Col).NumericCellValue.ToString();
+            txt1713.Text = ws.GetRow(new CellReference(aeX[33]).Row).GetCell(new CellReference(aeX[33]).Col).NumericCellValue.ToString();
+            txt1714.Text = ws.GetRow(new CellReference(aeX[34]).Row).GetCell(new CellReference(aeX[34]).Col).NumericCellValue.ToString();
+            txt1715.Text = ws.GetRow(new CellReference(aeX[35]).Row).GetCell(new CellReference(aeX[35]).Col).NumericCellValue.ToString();
+            txt1716.Text = ws.GetRow(new CellReference(aeX[36]).Row).GetCell(new CellReference(aeX[36]).Col).NumericCellValue.ToString();
+            txt1717.Text = ws.GetRow(new CellReference(aeX[37]).Row).GetCell(new CellReference(aeX[37]).Col).NumericCellValue.ToString();
+            txt1718.Text = ws.GetRow(new CellReference(aeX[38]).Row).GetCell(new CellReference(aeX[38]).Col).NumericCellValue.ToString();
+            txt1719.Text = ws.GetRow(new CellReference(aeX[39]).Row).GetCell(new CellReference(aeX[39]).Col).NumericCellValue.ToString();
+            txt1720.Text = ws.GetRow(new CellReference(aeX[40]).Row).GetCell(new CellReference(aeX[40]).Col).NumericCellValue.ToString();
             //CRONOGRAMA - PRIMEIRA PÁGINA
-            txtExecutado.Text = ws.Cell(aeX[41]).CachedValue.ToString().Replace('.', ',');
-            txtParcela1.Text = ws.Cell(aeX[42]).CachedValue.ToString().Replace('.', ',');
-            txtParcela2.Text = ws.Cell(aeX[43]).CachedValue.ToString().Replace('.', ',');
-            txtParcela3.Text = ws.Cell(aeX[44]).CachedValue.ToString().Replace('.', ',');
-            txtParcela4.Text = ws.Cell(aeX[45]).CachedValue.ToString().Replace('.', ',');
-            txtParcela5.Text = ws.Cell(aeX[46]).CachedValue.ToString().Replace('.', ',');
-            txtParcela6.Text = ws.Cell(aeX[47]).CachedValue.ToString().Replace('.', ',');
-            txtParcela7.Text = ws.Cell(aeX[48]).CachedValue.ToString().Replace('.', ',');
-            txtParcela8.Text = ws.Cell(aeX[49]).CachedValue.ToString().Replace('.', ',');
-            //CRONOGRAMA - SEGUNDA PÁGINA
-            txtParcela9.Text = ws.Cell(aeX[50]).CachedValue.ToString().Replace('.', ',');
-            txtParcela10.Text = ws.Cell(aeX[51]).CachedValue.ToString().Replace('.', ',');
-            txtParcela11.Text = ws.Cell(aeX[52]).CachedValue.ToString().Replace('.', ',');
-            txtParcela12.Text = ws.Cell(aeX[53]).CachedValue.ToString().Replace('.', ',');
-            txtParcela13.Text = ws.Cell(aeX[54]).CachedValue.ToString().Replace('.', ',');
-            txtParcela14.Text = ws.Cell(aeX[55]).CachedValue.ToString().Replace('.', ',');
-            txtParcela15.Text = ws.Cell(aeX[56]).CachedValue.ToString().Replace('.', ',');
-            txtParcela16.Text = ws.Cell(aeX[57]).CachedValue.ToString().Replace('.', ',');
-        }
-        //----------------------------------------//
+            txtExecutado.Text = ws.GetRow(new CellReference(aeX[41]).Row).GetCell(new CellReference(aeX[41]).Col).NumericCellValue.ToString();
+            txtParcela1.Text = ws.GetRow(new CellReference(aeX[42]).Row).GetCell(new CellReference(aeX[42]).Col).NumericCellValue.ToString();
+            txtParcela2.Text = ws.GetRow(new CellReference(aeX[43]).Row).GetCell(new CellReference(aeX[43]).Col).NumericCellValue.ToString();
+            txtParcela3.Text = ws.GetRow(new CellReference(aeX[44]).Row).GetCell(new CellReference(aeX[44]).Col).NumericCellValue.ToString();
+            txtParcela4.Text = ws.GetRow(new CellReference(aeX[45]).Row).GetCell(new CellReference(aeX[45]).Col).NumericCellValue.ToString();
+            txtParcela5.Text = ws.GetRow(new CellReference(aeX[46]).Row).GetCell(new CellReference(aeX[46]).Col).NumericCellValue.ToString();
+            txtParcela6.Text = ws.GetRow(new CellReference(aeX[47]).Row).GetCell(new CellReference(aeX[47]).Col).NumericCellValue.ToString();
+            txtParcela7.Text = ws.GetRow(new CellReference(aeX[48]).Row).GetCell(new CellReference(aeX[48]).Col).NumericCellValue.ToString();
+            txtParcela8.Text = ws.GetRow(new CellReference(aeX[49]).Row).GetCell(new CellReference(aeX[49]).Col).NumericCellValue.ToString();
+            ////CRONOGRAMA - SEGUNDA PÁGINA
+            txtParcela9.Text = ws.GetRow(new CellReference(aeX[50]).Row).GetCell(new CellReference(aeX[50]).Col).NumericCellValue.ToString();
+            txtParcela10.Text = ws.GetRow(new CellReference(aeX[51]).Row).GetCell(new CellReference(aeX[51]).Col).NumericCellValue.ToString();
+            txtParcela11.Text = ws.GetRow(new CellReference(aeX[52]).Row).GetCell(new CellReference(aeX[52]).Col).NumericCellValue.ToString();
+            txtParcela12.Text = ws.GetRow(new CellReference(aeX[53]).Row).GetCell(new CellReference(aeX[53]).Col).NumericCellValue.ToString();
+            txtParcela13.Text = ws.GetRow(new CellReference(aeX[54]).Row).GetCell(new CellReference(aeX[54]).Col).NumericCellValue.ToString();
+            txtParcela14.Text = ws.GetRow(new CellReference(aeX[55]).Row).GetCell(new CellReference(aeX[55]).Col).NumericCellValue.ToString();
+            txtParcela15.Text = ws.GetRow(new CellReference(aeX[56]).Row).GetCell(new CellReference(aeX[56]).Col).NumericCellValue.ToString();
+            txtParcela16.Text = ws.GetRow(new CellReference(aeX[57]).Row).GetCell(new CellReference(aeX[57]).Col).NumericCellValue.ToString();
 
+        }
 
 
 
@@ -274,6 +275,19 @@ namespace Raecef
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         public FormMain()
         {
             InitializeComponent();
@@ -356,40 +370,29 @@ namespace Raecef
 
         private void btnImportarPfui_Click(object sender, EventArgs e)
         {
-
-
             try
             {
                 if (openExcel.ShowDialog() == DialogResult.OK)
                 {
-                    Workbook workbook = new Workbook();
-                    workbook.LoadFromFile(openExcel.FileName);
-                    workbook.SaveToFile("converted.xlsx");
+                    FileStream arquivoXLS = new FileStream(openExcel.FileName, FileMode.Open, FileAccess.Read);
 
-                    
-                    var wb = new XLWorkbook("converted.xlsx");
-                    var ws = wb.Worksheets.First(w => w.Name == "Proposta");
+                    HSSFWorkbook wbook = new HSSFWorkbook(arquivoXLS);
+                    ISheet sheet = wbook.GetSheet("Proposta");
 
-                    lblVersion.Text = SanitizeVersion(ws.PageSetup.Header.Right.GetText(XLHFOccurrence.OddPages));
-
-                    if (lblVersion.Text == null || lblVersion.Text == "")
+                    string version = SanitizeVersion(sheet.Header.Right);
+                    if (version == null || version == "")
                     {
-                        lblVersion.Text = "---";
                         MessageBox.Show("Arquivo incompatível ou versão não suportada!", "Planilha PFUI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     else
                     {
-                        string[] aeX = ChooseArray_PFUI(lblVersion.Text);
-                        GetAndPopulate_PFUI(aeX, ws);
-
-                        File.Delete("converted.xlsx");
+                        lblVersion.Text = version;
+                        string[] aeX = SetArrayForThisPFUIVersion(version);
+                        GetAndPopulate_PFUI(aeX, sheet);
                         pnlMainPfui.Show();
                         btnProximoPfui.Show();
-                        txtPropNome.Focus();
                     }
-                    
-
                 }
             }
             catch (Exception ex)
@@ -397,11 +400,6 @@ namespace Raecef
                 MessageBox.Show(ex.Message, "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-
-
-
-
         }
 
 
@@ -496,6 +494,9 @@ namespace Raecef
             TabControl.SelectTab(4);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
