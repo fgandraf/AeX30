@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Raecef
 {
@@ -13,12 +10,12 @@ namespace Raecef
         //ARRAY FOR DIFERENT SHEET VERSION
         private static string[] rae130v020 = new string[]
                 {
-            "AD35", "AF35", "AH35", "AL35", "AN35", "AO35", "AP35", // 0 a 6
-            "G43", "AJ43", "AP43", "AR43", // 7 a 10
-            "G46", "Z46", "AH46", "AJ46", "AP46", "AR46", // 11 a 16
-            "G49", "AJ49", // 17 a 18
-            "G51", "V51", "AA51", "AS51", // 19 a 22
-            "G53", "Q53", "AA53", "AJ53", "AS53", // 23 a 27
+            "AD35", "AF35", "AH35", "AL35", "AN35", "AO35", "AP35",
+            "G43", "AJ43", "AP43", "AR43",
+            "G46", "Z46", "AH46", "AJ46", "AP46", "AR46",
+            "G49", "AJ49",
+            "G51", "V51", "AA51", "AS51",
+            "G53", "Q53", "AA53", "AJ53", "AS53",
             "S68","S69","S70","S71","S72","S73","S74","S75","S76","S77","S78","S79","S80","S81","S82","S83","S84","S85","S86","S87",
             "Y89",
             "AH63", "AS63",

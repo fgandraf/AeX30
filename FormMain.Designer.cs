@@ -232,7 +232,7 @@ namespace Raecef
             this.pg5 = new System.Windows.Forms.TabPage();
             this.tblPg5 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBottonFinalizar = new System.Windows.Forms.Panel();
-            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnSalvarComo = new System.Windows.Forms.Button();
             this.pnlTopFinalizar = new System.Windows.Forms.Panel();
             this.btnModeloPadrao = new System.Windows.Forms.Button();
             this.lblEtapa4 = new System.Windows.Forms.Label();
@@ -2636,7 +2636,7 @@ namespace Raecef
             // 
             // pnlBottonFinalizar
             // 
-            this.pnlBottonFinalizar.Controls.Add(this.btnConfirmar);
+            this.pnlBottonFinalizar.Controls.Add(this.btnSalvarComo);
             this.pnlBottonFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottonFinalizar.Location = new System.Drawing.Point(17, 336);
             this.pnlBottonFinalizar.Margin = new System.Windows.Forms.Padding(0);
@@ -2644,20 +2644,20 @@ namespace Raecef
             this.pnlBottonFinalizar.Size = new System.Drawing.Size(670, 50);
             this.pnlBottonFinalizar.TabIndex = 1;
             // 
-            // btnConfirmar
+            // btnSalvarComo
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnConfirmar.Location = new System.Drawing.Point(510, 13);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(160, 25);
-            this.btnConfirmar.TabIndex = 0;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Visible = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            this.btnSalvarComo.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvarComo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarComo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalvarComo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSalvarComo.Location = new System.Drawing.Point(510, 13);
+            this.btnSalvarComo.Name = "btnSalvarComo";
+            this.btnSalvarComo.Size = new System.Drawing.Size(160, 25);
+            this.btnSalvarComo.TabIndex = 0;
+            this.btnSalvarComo.Text = "Salvar como";
+            this.btnSalvarComo.UseVisualStyleBackColor = false;
+            this.btnSalvarComo.Visible = false;
+            this.btnSalvarComo.Click += new System.EventHandler(this.btnSalvarComo_Click);
             // 
             // pnlTopFinalizar
             // 
@@ -3053,7 +3053,7 @@ namespace Raecef
             // 
             // saveExcel
             // 
-            this.saveExcel.Filter = "Planilhas do Excel habilitada p/ macro | *.xlsm";
+            this.saveExcel.Filter = "Planilhas do Excel | *.xls";
             this.saveExcel.Title = "Salvar RAE";
             // 
             // FormMain
@@ -3354,7 +3354,7 @@ namespace Raecef
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.TableLayoutPanel tblPg5;
         private System.Windows.Forms.Panel pnlBottonFinalizar;
-        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnSalvarComo;
         private System.Windows.Forms.Panel pnlTopFinalizar;
         private System.Windows.Forms.Button btnModeloPadrao;
         private System.Windows.Forms.Label lblEtapa4;
