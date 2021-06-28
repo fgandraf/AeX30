@@ -1,5 +1,5 @@
 ﻿
-namespace Raecef
+namespace aeX30
 {
     partial class FormMain
     {
@@ -35,7 +35,12 @@ namespace Raecef
             this.pg1 = new System.Windows.Forms.TabPage();
             this.tblPg1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMainPg1 = new System.Windows.Forms.Panel();
-            this.lblSegundoParagrafo = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.lblPrimeiroParagrafo = new System.Windows.Forms.Label();
             this.pnlBottonPg1 = new System.Windows.Forms.Panel();
             this.btnIniciar = new System.Windows.Forms.Button();
@@ -277,6 +282,7 @@ namespace Raecef
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAppClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label98 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -358,7 +364,7 @@ namespace Raecef
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(0, 0);
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(720, 410);
+            this.tabControl.Size = new System.Drawing.Size(720, 407);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 0;
             this.tabControl.TabStop = false;
@@ -368,24 +374,23 @@ namespace Raecef
             this.pg1.BackColor = System.Drawing.Color.Gainsboro;
             this.pg1.Controls.Add(this.tblPg1);
             this.pg1.Location = new System.Drawing.Point(4, 4);
+            this.pg1.Margin = new System.Windows.Forms.Padding(0);
             this.pg1.Name = "pg1";
-            this.pg1.Padding = new System.Windows.Forms.Padding(3);
-            this.pg1.Size = new System.Drawing.Size(712, 392);
+            this.pg1.Size = new System.Drawing.Size(712, 389);
             this.pg1.TabIndex = 4;
             this.pg1.Text = "pg1";
             // 
             // tblPg1
             // 
-            this.tblPg1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblPg1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tblPg1.BackColor = System.Drawing.Color.Transparent;
             this.tblPg1.ColumnCount = 3;
             this.tblPg1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tblPg1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tblPg1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tblPg1.Controls.Add(this.pnlMainPg1, 1, 1);
             this.tblPg1.Controls.Add(this.pnlBottonPg1, 1, 2);
-            this.tblPg1.Location = new System.Drawing.Point(3, 5);
+            this.tblPg1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblPg1.Location = new System.Drawing.Point(0, 0);
             this.tblPg1.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg1.Name = "tblPg1";
             this.tblPg1.RowCount = 3;
@@ -394,37 +399,102 @@ namespace Raecef
             this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblPg1.Size = new System.Drawing.Size(706, 382);
+            this.tblPg1.Size = new System.Drawing.Size(712, 389);
             this.tblPg1.TabIndex = 0;
             // 
             // pnlMainPg1
             // 
             this.pnlMainPg1.BackColor = System.Drawing.Color.White;
-            this.pnlMainPg1.Controls.Add(this.lblSegundoParagrafo);
+            this.pnlMainPg1.Controls.Add(this.label102);
+            this.pnlMainPg1.Controls.Add(this.label101);
+            this.pnlMainPg1.Controls.Add(this.panel17);
+            this.pnlMainPg1.Controls.Add(this.label100);
+            this.pnlMainPg1.Controls.Add(this.label99);
+            this.pnlMainPg1.Controls.Add(this.label);
             this.pnlMainPg1.Controls.Add(this.lblPrimeiroParagrafo);
             this.pnlMainPg1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainPg1.Location = new System.Drawing.Point(17, 13);
             this.pnlMainPg1.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainPg1.Name = "pnlMainPg1";
-            this.pnlMainPg1.Size = new System.Drawing.Size(670, 320);
+            this.pnlMainPg1.Size = new System.Drawing.Size(676, 326);
             this.pnlMainPg1.TabIndex = 4;
             // 
-            // lblSegundoParagrafo
+            // label102
             // 
-            this.lblSegundoParagrafo.AutoSize = true;
-            this.lblSegundoParagrafo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblSegundoParagrafo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblSegundoParagrafo.Location = new System.Drawing.Point(264, 241);
-            this.lblSegundoParagrafo.Name = "lblSegundoParagrafo";
-            this.lblSegundoParagrafo.Size = new System.Drawing.Size(120, 15);
-            this.lblSegundoParagrafo.TabIndex = 2;
-            this.lblSegundoParagrafo.Text = "fgandraf@gmail.com";
+            this.label102.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label102.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label102.ForeColor = System.Drawing.Color.Black;
+            this.label102.Location = new System.Drawing.Point(501, 271);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(104, 12);
+            this.label102.TabIndex = 7;
+            this.label102.Text = "CAU 166187-6";
+            this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label101
+            // 
+            this.label101.ForeColor = System.Drawing.Color.Black;
+            this.label101.Location = new System.Drawing.Point(0, 207);
+            this.label101.Name = "label101";
+            this.label101.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
+            this.label101.Size = new System.Drawing.Size(676, 21);
+            this.label101.TabIndex = 6;
+            this.label101.Text = "Este software foi testado com as planilhas nas versões: PFUI AE_130_016 à AE_130_" +
+    "021 e RAE AE_130_020";
+            // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Location = new System.Drawing.Point(59, 76);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(250, 1);
+            this.panel17.TabIndex = 5;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.BackColor = System.Drawing.Color.Transparent;
+            this.label100.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label100.ForeColor = System.Drawing.Color.Black;
+            this.label100.Location = new System.Drawing.Point(59, 51);
+            this.label100.Margin = new System.Windows.Forms.Padding(0);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(233, 21);
+            this.label100.TabIndex = 4;
+            this.label100.Text = "Assistente de preenchimento da RAE";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.BackColor = System.Drawing.Color.Transparent;
+            this.label99.Font = new System.Drawing.Font("Segoe Print", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label99.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label99.Location = new System.Drawing.Point(56, 18);
+            this.label99.Margin = new System.Windows.Forms.Padding(0);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(89, 38);
+            this.label99.TabIndex = 3;
+            this.label99.Text = "aeX30";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label.ForeColor = System.Drawing.Color.Black;
+            this.label.Location = new System.Drawing.Point(501, 257);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(104, 13);
+            this.label.TabIndex = 2;
+            this.label.Text = "Arq. Felipe Gandra";
             // 
             // lblPrimeiroParagrafo
             // 
-            this.lblPrimeiroParagrafo.Location = new System.Drawing.Point(56, 49);
+            this.lblPrimeiroParagrafo.ForeColor = System.Drawing.Color.Black;
+            this.lblPrimeiroParagrafo.Location = new System.Drawing.Point(0, 107);
             this.lblPrimeiroParagrafo.Name = "lblPrimeiroParagrafo";
-            this.lblPrimeiroParagrafo.Size = new System.Drawing.Size(559, 151);
+            this.lblPrimeiroParagrafo.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
+            this.lblPrimeiroParagrafo.Size = new System.Drawing.Size(676, 80);
             this.lblPrimeiroParagrafo.TabIndex = 0;
             this.lblPrimeiroParagrafo.Text = resources.GetString("lblPrimeiroParagrafo.Text");
             // 
@@ -432,10 +502,10 @@ namespace Raecef
             // 
             this.pnlBottonPg1.Controls.Add(this.btnIniciar);
             this.pnlBottonPg1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPg1.Location = new System.Drawing.Point(17, 333);
+            this.pnlBottonPg1.Location = new System.Drawing.Point(17, 339);
             this.pnlBottonPg1.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPg1.Name = "pnlBottonPg1";
-            this.pnlBottonPg1.Size = new System.Drawing.Size(670, 49);
+            this.pnlBottonPg1.Size = new System.Drawing.Size(676, 50);
             this.pnlBottonPg1.TabIndex = 1;
             // 
             // btnIniciar
@@ -454,14 +524,14 @@ namespace Raecef
             // 
             // pg2
             // 
+            this.pg2.BackColor = System.Drawing.Color.Gainsboro;
             this.pg2.Controls.Add(this.tblPg2);
             this.pg2.Location = new System.Drawing.Point(4, 4);
+            this.pg2.Margin = new System.Windows.Forms.Padding(0);
             this.pg2.Name = "pg2";
-            this.pg2.Padding = new System.Windows.Forms.Padding(3);
-            this.pg2.Size = new System.Drawing.Size(712, 392);
+            this.pg2.Size = new System.Drawing.Size(712, 389);
             this.pg2.TabIndex = 3;
             this.pg2.Text = "pg2";
-            this.pg2.UseVisualStyleBackColor = true;
             // 
             // tblPg2
             // 
@@ -474,7 +544,7 @@ namespace Raecef
             this.tblPg2.Controls.Add(this.pnlBottonConvocacao, 1, 4);
             this.tblPg2.Controls.Add(this.pnlTopConvocacao, 1, 1);
             this.tblPg2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPg2.Location = new System.Drawing.Point(3, 3);
+            this.tblPg2.Location = new System.Drawing.Point(0, 0);
             this.tblPg2.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg2.Name = "tblPg2";
             this.tblPg2.RowCount = 5;
@@ -483,7 +553,7 @@ namespace Raecef
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg2.Size = new System.Drawing.Size(706, 386);
+            this.tblPg2.Size = new System.Drawing.Size(712, 389);
             this.tblPg2.TabIndex = 0;
             // 
             // panel3
@@ -497,7 +567,7 @@ namespace Raecef
             this.panel3.Location = new System.Drawing.Point(17, 74);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(670, 262);
+            this.panel3.Size = new System.Drawing.Size(676, 264);
             this.panel3.TabIndex = 7;
             // 
             // pnlMainConvocacao
@@ -511,7 +581,7 @@ namespace Raecef
             this.pnlMainConvocacao.Location = new System.Drawing.Point(0, 0);
             this.pnlMainConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainConvocacao.Name = "pnlMainConvocacao";
-            this.pnlMainConvocacao.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainConvocacao.Size = new System.Drawing.Size(676, 264);
             this.pnlMainConvocacao.TabIndex = 0;
             this.pnlMainConvocacao.Visible = false;
             // 
@@ -756,10 +826,10 @@ namespace Raecef
             // 
             this.pnlBottonConvocacao.Controls.Add(this.btnProximoConvocacao);
             this.pnlBottonConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonConvocacao.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonConvocacao.Location = new System.Drawing.Point(17, 338);
             this.pnlBottonConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonConvocacao.Name = "pnlBottonConvocacao";
-            this.pnlBottonConvocacao.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonConvocacao.Size = new System.Drawing.Size(676, 51);
             this.pnlBottonConvocacao.TabIndex = 1;
             // 
             // btnProximoConvocacao
@@ -786,7 +856,7 @@ namespace Raecef
             this.pnlTopConvocacao.Location = new System.Drawing.Point(17, 13);
             this.pnlTopConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopConvocacao.Name = "pnlTopConvocacao";
-            this.pnlTopConvocacao.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopConvocacao.Size = new System.Drawing.Size(676, 48);
             this.pnlTopConvocacao.TabIndex = 1;
             // 
             // lblEtapa1
@@ -823,9 +893,9 @@ namespace Raecef
             this.pg3.BackColor = System.Drawing.Color.Gainsboro;
             this.pg3.Controls.Add(this.tblPg3);
             this.pg3.Location = new System.Drawing.Point(4, 4);
+            this.pg3.Margin = new System.Windows.Forms.Padding(0);
             this.pg3.Name = "pg3";
-            this.pg3.Padding = new System.Windows.Forms.Padding(3);
-            this.pg3.Size = new System.Drawing.Size(712, 392);
+            this.pg3.Size = new System.Drawing.Size(712, 389);
             this.pg3.TabIndex = 1;
             this.pg3.Text = "pg3";
             // 
@@ -840,7 +910,7 @@ namespace Raecef
             this.tblPg3.Controls.Add(this.pnlTopPfui, 1, 1);
             this.tblPg3.Controls.Add(this.mainPg3, 1, 3);
             this.tblPg3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPg3.Location = new System.Drawing.Point(3, 3);
+            this.tblPg3.Location = new System.Drawing.Point(0, 0);
             this.tblPg3.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg3.Name = "tblPg3";
             this.tblPg3.RowCount = 5;
@@ -849,17 +919,17 @@ namespace Raecef
             this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
             this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
             this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg3.Size = new System.Drawing.Size(706, 386);
+            this.tblPg3.Size = new System.Drawing.Size(712, 389);
             this.tblPg3.TabIndex = 0;
             // 
             // pnlBottonPfui
             // 
             this.pnlBottonPfui.Controls.Add(this.btnProximoPfui);
             this.pnlBottonPfui.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPfui.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonPfui.Location = new System.Drawing.Point(17, 338);
             this.pnlBottonPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPfui.Name = "pnlBottonPfui";
-            this.pnlBottonPfui.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonPfui.Size = new System.Drawing.Size(676, 51);
             this.pnlBottonPfui.TabIndex = 2;
             // 
             // btnProximoPfui
@@ -888,7 +958,7 @@ namespace Raecef
             this.pnlTopPfui.Location = new System.Drawing.Point(17, 13);
             this.pnlTopPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopPfui.Name = "pnlTopPfui";
-            this.pnlTopPfui.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopPfui.Size = new System.Drawing.Size(676, 48);
             this.pnlTopPfui.TabIndex = 0;
             // 
             // lblVersionTitle
@@ -953,7 +1023,7 @@ namespace Raecef
             this.mainPg3.Location = new System.Drawing.Point(17, 74);
             this.mainPg3.Margin = new System.Windows.Forms.Padding(0);
             this.mainPg3.Name = "mainPg3";
-            this.mainPg3.Size = new System.Drawing.Size(670, 262);
+            this.mainPg3.Size = new System.Drawing.Size(676, 264);
             this.mainPg3.TabIndex = 5;
             // 
             // pnlMainPfui
@@ -1090,7 +1160,7 @@ namespace Raecef
             this.pnlMainPfui.Location = new System.Drawing.Point(0, 0);
             this.pnlMainPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainPfui.Name = "pnlMainPfui";
-            this.pnlMainPfui.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainPfui.Size = new System.Drawing.Size(676, 264);
             this.pnlMainPfui.TabIndex = 1;
             this.pnlMainPfui.Visible = false;
             // 
@@ -2743,9 +2813,9 @@ namespace Raecef
             this.pg4.BackColor = System.Drawing.Color.Gainsboro;
             this.pg4.Controls.Add(this.tblPg4);
             this.pg4.Location = new System.Drawing.Point(4, 4);
+            this.pg4.Margin = new System.Windows.Forms.Padding(0);
             this.pg4.Name = "pg4";
-            this.pg4.Padding = new System.Windows.Forms.Padding(3);
-            this.pg4.Size = new System.Drawing.Size(712, 392);
+            this.pg4.Size = new System.Drawing.Size(712, 389);
             this.pg4.TabIndex = 2;
             this.pg4.Text = "pg4";
             // 
@@ -2760,7 +2830,7 @@ namespace Raecef
             this.tblPg4.Controls.Add(this.pnlBottonAdicionais, 1, 4);
             this.tblPg4.Controls.Add(this.pnlTopAdicionais, 1, 1);
             this.tblPg4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPg4.Location = new System.Drawing.Point(3, 3);
+            this.tblPg4.Location = new System.Drawing.Point(0, 0);
             this.tblPg4.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg4.Name = "tblPg4";
             this.tblPg4.RowCount = 5;
@@ -2769,7 +2839,7 @@ namespace Raecef
             this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
             this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
             this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg4.Size = new System.Drawing.Size(706, 386);
+            this.tblPg4.Size = new System.Drawing.Size(712, 389);
             this.tblPg4.TabIndex = 9;
             // 
             // pnlMainAdicionais
@@ -2792,7 +2862,7 @@ namespace Raecef
             this.pnlMainAdicionais.Location = new System.Drawing.Point(17, 74);
             this.pnlMainAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainAdicionais.Name = "pnlMainAdicionais";
-            this.pnlMainAdicionais.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainAdicionais.Size = new System.Drawing.Size(676, 264);
             this.pnlMainAdicionais.TabIndex = 0;
             // 
             // txtMensuradoAcumulado
@@ -2919,10 +2989,10 @@ namespace Raecef
             // 
             this.pnlBottonAdicionais.Controls.Add(this.btnProximoAdicionais);
             this.pnlBottonAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonAdicionais.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonAdicionais.Location = new System.Drawing.Point(17, 338);
             this.pnlBottonAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonAdicionais.Name = "pnlBottonAdicionais";
-            this.pnlBottonAdicionais.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonAdicionais.Size = new System.Drawing.Size(676, 51);
             this.pnlBottonAdicionais.TabIndex = 1;
             // 
             // btnProximoAdicionais
@@ -2948,7 +3018,7 @@ namespace Raecef
             this.pnlTopAdicionais.Location = new System.Drawing.Point(17, 13);
             this.pnlTopAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopAdicionais.Name = "pnlTopAdicionais";
-            this.pnlTopAdicionais.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopAdicionais.Size = new System.Drawing.Size(676, 48);
             this.pnlTopAdicionais.TabIndex = 2;
             // 
             // lblEtapa3
@@ -2974,7 +3044,7 @@ namespace Raecef
             this.label146.Location = new System.Drawing.Point(0, 0);
             this.label146.Margin = new System.Windows.Forms.Padding(0);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(670, 48);
+            this.label146.Size = new System.Drawing.Size(676, 48);
             this.label146.TabIndex = 0;
             this.label146.Text = "Dados Adicionais";
             this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2984,9 +3054,9 @@ namespace Raecef
             this.pg5.BackColor = System.Drawing.Color.Gainsboro;
             this.pg5.Controls.Add(this.tblPg5);
             this.pg5.Location = new System.Drawing.Point(4, 4);
+            this.pg5.Margin = new System.Windows.Forms.Padding(0);
             this.pg5.Name = "pg5";
-            this.pg5.Padding = new System.Windows.Forms.Padding(3);
-            this.pg5.Size = new System.Drawing.Size(712, 392);
+            this.pg5.Size = new System.Drawing.Size(712, 389);
             this.pg5.TabIndex = 5;
             this.pg5.Text = "pg5";
             // 
@@ -3001,7 +3071,7 @@ namespace Raecef
             this.tblPg5.Controls.Add(this.pnlTopFinalizar, 1, 1);
             this.tblPg5.Controls.Add(this.panel19, 1, 3);
             this.tblPg5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPg5.Location = new System.Drawing.Point(3, 3);
+            this.tblPg5.Location = new System.Drawing.Point(0, 0);
             this.tblPg5.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg5.Name = "tblPg5";
             this.tblPg5.RowCount = 5;
@@ -3010,7 +3080,7 @@ namespace Raecef
             this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
             this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
             this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg5.Size = new System.Drawing.Size(706, 386);
+            this.tblPg5.Size = new System.Drawing.Size(712, 389);
             this.tblPg5.TabIndex = 1;
             // 
             // pnlBottonFinalizar
@@ -3018,10 +3088,10 @@ namespace Raecef
             this.pnlBottonFinalizar.Controls.Add(this.btnNew);
             this.pnlBottonFinalizar.Controls.Add(this.btnSalvarComo);
             this.pnlBottonFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonFinalizar.Location = new System.Drawing.Point(17, 336);
+            this.pnlBottonFinalizar.Location = new System.Drawing.Point(17, 338);
             this.pnlBottonFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonFinalizar.Name = "pnlBottonFinalizar";
-            this.pnlBottonFinalizar.Size = new System.Drawing.Size(670, 50);
+            this.pnlBottonFinalizar.Size = new System.Drawing.Size(676, 51);
             this.pnlBottonFinalizar.TabIndex = 1;
             // 
             // btnNew
@@ -3063,7 +3133,7 @@ namespace Raecef
             this.pnlTopFinalizar.Location = new System.Drawing.Point(17, 13);
             this.pnlTopFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopFinalizar.Name = "pnlTopFinalizar";
-            this.pnlTopFinalizar.Size = new System.Drawing.Size(670, 48);
+            this.pnlTopFinalizar.Size = new System.Drawing.Size(676, 48);
             this.pnlTopFinalizar.TabIndex = 1;
             // 
             // btnModeloPadrao
@@ -3105,7 +3175,7 @@ namespace Raecef
             this.panel19.Location = new System.Drawing.Point(17, 74);
             this.panel19.Margin = new System.Windows.Forms.Padding(0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(670, 262);
+            this.panel19.Size = new System.Drawing.Size(676, 264);
             this.panel19.TabIndex = 5;
             // 
             // pnlMainFinalizar
@@ -3117,7 +3187,7 @@ namespace Raecef
             this.pnlMainFinalizar.Location = new System.Drawing.Point(0, 0);
             this.pnlMainFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainFinalizar.Name = "pnlMainFinalizar";
-            this.pnlMainFinalizar.Size = new System.Drawing.Size(670, 262);
+            this.pnlMainFinalizar.Size = new System.Drawing.Size(676, 264);
             this.pnlMainFinalizar.TabIndex = 4;
             this.pnlMainFinalizar.Visible = false;
             // 
@@ -3167,7 +3237,7 @@ namespace Raecef
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(80, 410);
+            this.panel1.Size = new System.Drawing.Size(80, 407);
             this.panel1.TabIndex = 0;
             // 
             // pnlAppTopPanel
@@ -3240,13 +3310,25 @@ namespace Raecef
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.Controls.Add(this.label98);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 440);
+            this.panel4.Location = new System.Drawing.Point(0, 437);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(800, 10);
+            this.panel4.Size = new System.Drawing.Size(800, 13);
             this.panel4.TabIndex = 6;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label98.ForeColor = System.Drawing.Color.White;
+            this.label98.Location = new System.Drawing.Point(762, 0);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(34, 12);
+            this.label98.TabIndex = 2;
+            this.label98.Text = "v. 1.0.0";
             // 
             // label3
             // 
@@ -3474,7 +3556,7 @@ namespace Raecef
             this.Name = "FormMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Relatório de Evolução de Obra - Caixa Econômica Federal";
+            this.Text = "aeX30 - Assitente de RAE";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.tabControl.ResumeLayout(false);
             this.pg1.ResumeLayout(false);
@@ -3577,7 +3659,7 @@ namespace Raecef
         private System.Windows.Forms.Panel pnlMainPg1;
         private System.Windows.Forms.Panel pnlBottonPg1;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label lblSegundoParagrafo;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label lblPrimeiroParagrafo;
         private System.Windows.Forms.TextBox txtRTTelefone;
         private System.Windows.Forms.TextBox txtRTDDD;
@@ -3799,6 +3881,12 @@ namespace Raecef
         private System.Windows.Forms.TextBox txtParcela25;
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.Panel pnlPFUIParcelas;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label102;
     }
 }
 

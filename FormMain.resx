@@ -61,7 +61,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="lblPrimeiroParagrafo.Text" xml:space="preserve">
-    <value>Cras dapibus turpis non lacus vestibulum aliquam. Fusce pretium arcu quis nibh porttitor ultrices. Proin porttitor euismod purus, id gravida lectus lacinia quis. Donec sit amet risus dapibus, lacinia justo non, auctor arcu. Maecenas vel eros in ex bibendum iaculis. Pellentesque bibendum convallis imperdiet. Nulla at sapien tempus, volutpat urna non, consequat mi. Suspendisse luctus felis nibh, quis commodo neque fringilla vitae. Cras malesuada justo eget augue mattis sagittis. Suspendisse non condimentum elit. Aenean tristique porta aliquam. Curabitur sed rutrum mauris, vel fermentum neque. Suspendisse mollis nisi in nunc consectetur porttitor. Nunc ornare enim ac mi ornare, at viverra leo condimentum. Mauris accumsan suscipit orci laoreet pharetra. Quisque arcu magna, consectetur at elementum volutpat, vestibulum a ipsum. Phasellus mattis vitae. </value>
+    <value>Este assitente irá automatizar o processo de preenchimento do RAE (Relatório de Acompanhamento de Evolução de Obra) fornecido pela Caixa Ecnonômica Federal aos profissionais credenciados no edital de prestação de serviços de arquitetura e engenharia, utilizando como base o arquivo de convocação para prestação de serviço e da planilha PFUI (Proposta de Financiamento de Unidade Isolada) do proponente disponibilizado ao prestador.</value>
   </data>
   <data name="label63.Text" xml:space="preserve">
     <value>Após a importação, verificar se os dados foram obtidos corretamente e, caso seja necessário, faça os ajustes. É importante ter atenção nesse processo, pois os dados visualizados na tela irão compor a planilha a ser gerada.</value>

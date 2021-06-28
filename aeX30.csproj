@@ -4,8 +4,9 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyName>Raecef</AssemblyName>
-    <RootNamespace>Raecef</RootNamespace>
+    <AssemblyName>aeX30</AssemblyName>
+    <RootNamespace>aeX30</RootNamespace>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
