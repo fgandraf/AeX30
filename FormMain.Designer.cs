@@ -424,7 +424,7 @@ namespace aeX30
             this.label102.Cursor = System.Windows.Forms.Cursors.Default;
             this.label102.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label102.ForeColor = System.Drawing.Color.Black;
-            this.label102.Location = new System.Drawing.Point(501, 271);
+            this.label102.Location = new System.Drawing.Point(501, 276);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(104, 12);
             this.label102.TabIndex = 7;
@@ -434,10 +434,10 @@ namespace aeX30
             // label101
             // 
             this.label101.ForeColor = System.Drawing.Color.Black;
-            this.label101.Location = new System.Drawing.Point(0, 207);
+            this.label101.Location = new System.Drawing.Point(0, 212);
             this.label101.Name = "label101";
             this.label101.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.label101.Size = new System.Drawing.Size(676, 21);
+            this.label101.Size = new System.Drawing.Size(676, 45);
             this.label101.TabIndex = 6;
             this.label101.Text = "Este software foi testado com as planilhas nas versões: PFUI AE_130_016 à AE_130_" +
     "021 e RAE AE_130_020";
@@ -482,7 +482,7 @@ namespace aeX30
             this.label.Cursor = System.Windows.Forms.Cursors.Default;
             this.label.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(501, 257);
+            this.label.Location = new System.Drawing.Point(501, 262);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(104, 13);
             this.label.TabIndex = 2;
@@ -491,10 +491,10 @@ namespace aeX30
             // lblPrimeiroParagrafo
             // 
             this.lblPrimeiroParagrafo.ForeColor = System.Drawing.Color.Black;
-            this.lblPrimeiroParagrafo.Location = new System.Drawing.Point(0, 107);
+            this.lblPrimeiroParagrafo.Location = new System.Drawing.Point(0, 104);
             this.lblPrimeiroParagrafo.Name = "lblPrimeiroParagrafo";
             this.lblPrimeiroParagrafo.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.lblPrimeiroParagrafo.Size = new System.Drawing.Size(676, 80);
+            this.lblPrimeiroParagrafo.Size = new System.Drawing.Size(676, 100);
             this.lblPrimeiroParagrafo.TabIndex = 0;
             this.lblPrimeiroParagrafo.Text = resources.GetString("lblPrimeiroParagrafo.Text");
             // 
@@ -610,9 +610,9 @@ namespace aeX30
             this.pnlReferencia.Controls.Add(this.label73);
             this.pnlReferencia.Controls.Add(this.txtRef5);
             this.pnlReferencia.Controls.Add(this.txtRef6);
-            this.pnlReferencia.Location = new System.Drawing.Point(246, 99);
+            this.pnlReferencia.Location = new System.Drawing.Point(209, 108);
             this.pnlReferencia.Name = "pnlReferencia";
-            this.pnlReferencia.Size = new System.Drawing.Size(244, 23);
+            this.pnlReferencia.Size = new System.Drawing.Size(289, 23);
             this.pnlReferencia.TabIndex = 0;
             // 
             // label80
@@ -621,7 +621,7 @@ namespace aeX30
             this.label80.BackColor = System.Drawing.Color.Transparent;
             this.label80.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label80.ForeColor = System.Drawing.Color.Black;
-            this.label80.Location = new System.Drawing.Point(214, 3);
+            this.label80.Location = new System.Drawing.Point(252, 3);
             this.label80.Margin = new System.Windows.Forms.Padding(0);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(10, 13);
@@ -630,11 +630,12 @@ namespace aeX30
             // 
             // txtRef0
             // 
+            this.txtRef0.BackColor = System.Drawing.Color.White;
             this.txtRef0.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRef0.Location = new System.Drawing.Point(2, 3);
+            this.txtRef0.Location = new System.Drawing.Point(4, 3);
             this.txtRef0.MaxLength = 50;
             this.txtRef0.Name = "txtRef0";
-            this.txtRef0.Size = new System.Drawing.Size(25, 16);
+            this.txtRef0.Size = new System.Drawing.Size(30, 16);
             this.txtRef0.TabIndex = 0;
             this.txtRef0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -644,7 +645,7 @@ namespace aeX30
             this.label79.BackColor = System.Drawing.Color.Transparent;
             this.label79.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label79.ForeColor = System.Drawing.Color.Black;
-            this.label79.Location = new System.Drawing.Point(189, 3);
+            this.label79.Location = new System.Drawing.Point(222, 3);
             this.label79.Margin = new System.Windows.Forms.Padding(0);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(10, 13);
@@ -653,11 +654,12 @@ namespace aeX30
             // 
             // txtRef1
             // 
+            this.txtRef1.BackColor = System.Drawing.Color.White;
             this.txtRef1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRef1.Location = new System.Drawing.Point(35, 3);
+            this.txtRef1.Location = new System.Drawing.Point(43, 3);
             this.txtRef1.MaxLength = 50;
             this.txtRef1.Name = "txtRef1";
-            this.txtRef1.Size = new System.Drawing.Size(25, 16);
+            this.txtRef1.Size = new System.Drawing.Size(30, 16);
             this.txtRef1.TabIndex = 1;
             this.txtRef1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -667,7 +669,7 @@ namespace aeX30
             this.label78.BackColor = System.Drawing.Color.Transparent;
             this.label78.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label78.ForeColor = System.Drawing.Color.Black;
-            this.label78.Location = new System.Drawing.Point(164, 3);
+            this.label78.Location = new System.Drawing.Point(192, 3);
             this.label78.Margin = new System.Windows.Forms.Padding(0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(10, 13);
@@ -676,11 +678,12 @@ namespace aeX30
             // 
             // txtRef2
             // 
+            this.txtRef2.BackColor = System.Drawing.Color.White;
             this.txtRef2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRef2.Location = new System.Drawing.Point(70, 3);
+            this.txtRef2.Location = new System.Drawing.Point(83, 3);
             this.txtRef2.MaxLength = 50;
             this.txtRef2.Name = "txtRef2";
-            this.txtRef2.Size = new System.Drawing.Size(55, 16);
+            this.txtRef2.Size = new System.Drawing.Size(65, 16);
             this.txtRef2.TabIndex = 2;
             this.txtRef2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -690,7 +693,7 @@ namespace aeX30
             this.label77.BackColor = System.Drawing.Color.Transparent;
             this.label77.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label77.ForeColor = System.Drawing.Color.Black;
-            this.label77.Location = new System.Drawing.Point(128, 3);
+            this.label77.Location = new System.Drawing.Point(151, 3);
             this.label77.Margin = new System.Windows.Forms.Padding(0);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(11, 13);
@@ -699,11 +702,12 @@ namespace aeX30
             // 
             // txtRef3
             // 
+            this.txtRef3.BackColor = System.Drawing.Color.White;
             this.txtRef3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRef3.Location = new System.Drawing.Point(139, 3);
+            this.txtRef3.Location = new System.Drawing.Point(162, 3);
             this.txtRef3.MaxLength = 50;
             this.txtRef3.Name = "txtRef3";
-            this.txtRef3.Size = new System.Drawing.Size(25, 16);
+            this.txtRef3.Size = new System.Drawing.Size(30, 16);
             this.txtRef3.TabIndex = 3;
             this.txtRef3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -713,7 +717,7 @@ namespace aeX30
             this.label76.BackColor = System.Drawing.Color.Transparent;
             this.label76.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label76.ForeColor = System.Drawing.Color.Black;
-            this.label76.Location = new System.Drawing.Point(60, 3);
+            this.label76.Location = new System.Drawing.Point(73, 3);
             this.label76.Margin = new System.Windows.Forms.Padding(0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(10, 13);
@@ -722,11 +726,12 @@ namespace aeX30
             // 
             // txtRef4
             // 
+            this.txtRef4.BackColor = System.Drawing.Color.White;
             this.txtRef4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRef4.Location = new System.Drawing.Point(174, 3);
+            this.txtRef4.Location = new System.Drawing.Point(202, 3);
             this.txtRef4.MaxLength = 50;
             this.txtRef4.Name = "txtRef4";
-            this.txtRef4.Size = new System.Drawing.Size(15, 16);
+            this.txtRef4.Size = new System.Drawing.Size(20, 16);
             this.txtRef4.TabIndex = 4;
             this.txtRef4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -736,7 +741,7 @@ namespace aeX30
             this.label73.BackColor = System.Drawing.Color.Transparent;
             this.label73.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label73.ForeColor = System.Drawing.Color.Black;
-            this.label73.Location = new System.Drawing.Point(26, 3);
+            this.label73.Location = new System.Drawing.Point(34, 3);
             this.label73.Margin = new System.Windows.Forms.Padding(0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(10, 13);
@@ -745,21 +750,23 @@ namespace aeX30
             // 
             // txtRef5
             // 
+            this.txtRef5.BackColor = System.Drawing.Color.White;
             this.txtRef5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRef5.Location = new System.Drawing.Point(199, 3);
+            this.txtRef5.Location = new System.Drawing.Point(232, 3);
             this.txtRef5.MaxLength = 50;
             this.txtRef5.Name = "txtRef5";
-            this.txtRef5.Size = new System.Drawing.Size(15, 16);
+            this.txtRef5.Size = new System.Drawing.Size(20, 16);
             this.txtRef5.TabIndex = 5;
             this.txtRef5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtRef6
             // 
+            this.txtRef6.BackColor = System.Drawing.Color.White;
             this.txtRef6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRef6.Location = new System.Drawing.Point(224, 3);
+            this.txtRef6.Location = new System.Drawing.Point(262, 3);
             this.txtRef6.MaxLength = 50;
             this.txtRef6.Name = "txtRef6";
-            this.txtRef6.Size = new System.Drawing.Size(15, 16);
+            this.txtRef6.Size = new System.Drawing.Size(20, 16);
             this.txtRef6.TabIndex = 6;
             this.txtRef6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -768,7 +775,7 @@ namespace aeX30
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(160, 104);
+            this.label74.Location = new System.Drawing.Point(123, 113);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(59, 12);
             this.label74.TabIndex = 17;
@@ -3205,10 +3212,10 @@ namespace aeX30
             // 
             // label156
             // 
-            this.label156.Location = new System.Drawing.Point(0, 81);
+            this.label156.Location = new System.Drawing.Point(0, 88);
             this.label156.Margin = new System.Windows.Forms.Padding(0);
             this.label156.Name = "label156";
-            this.label156.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
+            this.label156.Padding = new System.Windows.Forms.Padding(110, 0, 115, 0);
             this.label156.Size = new System.Drawing.Size(670, 63);
             this.label156.TabIndex = 6;
             this.label156.Text = "O arquivo selecionado não será editado, apenas servirá como modelo para a criação" +
@@ -3220,8 +3227,8 @@ namespace aeX30
             this.label157.Location = new System.Drawing.Point(0, 0);
             this.label157.Margin = new System.Windows.Forms.Padding(0);
             this.label157.Name = "label157";
-            this.label157.Padding = new System.Windows.Forms.Padding(100, 30, 100, 0);
-            this.label157.Size = new System.Drawing.Size(670, 81);
+            this.label157.Padding = new System.Windows.Forms.Padding(110, 20, 90, 0);
+            this.label157.Size = new System.Drawing.Size(670, 85);
             this.label157.TabIndex = 5;
             this.label157.Text = "Nesta etapa, deve-se selecionar o arquivo modelo do relatório RAE (Relatório de A" +
     "companhamento de Evolução de Obra), disponibilizado pela Caixa Econômica Federal" +
@@ -3324,11 +3331,11 @@ namespace aeX30
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label98.ForeColor = System.Drawing.Color.White;
-            this.label98.Location = new System.Drawing.Point(762, 0);
+            this.label98.Location = new System.Drawing.Point(755, 0);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(34, 12);
+            this.label98.Size = new System.Drawing.Size(41, 12);
             this.label98.TabIndex = 2;
-            this.label98.Text = "v. 1.0.0";
+            this.label98.Text = "v. 1.0.0.0";
             // 
             // label3
             // 

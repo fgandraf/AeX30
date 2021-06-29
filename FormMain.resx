@@ -61,7 +61,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="lblPrimeiroParagrafo.Text" xml:space="preserve">
-    <value>Este assitente irá automatizar o processo de preenchimento do RAE (Relatório de Acompanhamento de Evolução de Obra) fornecido pela Caixa Ecnonômica Federal aos profissionais credenciados no edital de prestação de serviços de arquitetura e engenharia, utilizando como base o arquivo de convocação para prestação de serviço e da planilha PFUI (Proposta de Financiamento de Unidade Isolada) do proponente disponibilizado ao prestador.</value>
+    <value>Este assitente irá automatizar o processo de preenchimento do RAE (Relatório de Acompanhamento de Evolução de Obra) fornecido pela Caixa Econômica Federal aos profissionais credenciados no edital de prestação de serviços de arquitetura e engenharia, utilizando como base o arquivo de convocação para prestação de serviço e da planilha PFUI (Proposta de Financiamento de Unidade Isolada) do proponente disponibilizada ao prestador.</value>
   </data>
   <data name="label63.Text" xml:space="preserve">
     <value>Após a importação, verificar se os dados foram obtidos corretamente e, caso seja necessário, faça os ajustes. É importante ter atenção nesse processo, pois os dados visualizados na tela irão compor a planilha a ser gerada.</value>
@@ -400,6 +400,6 @@
     <value>221, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>84</value>
+    <value>38</value>
   </metadata>
 </root>
