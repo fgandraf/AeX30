@@ -48,7 +48,7 @@ namespace aeX30
             "AL431", "AP431", "AT431", "AX431", "BB431", "BF431"
 
         };
-        private static string[] ae130v021 = new string[]
+        private static string[] ae130v021_025 = new string[]
         {
             "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
             "G46", "AP46", "BA46", "BF46",
@@ -62,6 +62,9 @@ namespace aeX30
             "AL429", "AP429", "AT429", "AX429", "BB429", "BF429"
         };
 
+
+
+
         public static string[] SetArray(string version)
         {
             if (version == "AE 130 016")
@@ -70,12 +73,12 @@ namespace aeX30
                 return ae130v017_018;
             else if (version == "AE 130 019" || version == "AE 130 020")
                 return ae130v019_020;
-            else if (version == "AE 130 021")
-                return ae130v021;
+            else if (version == "AE 130 021" || version == "AE 130 022" || version == "AE 130 023" || version == "AE 130 024" || version == "AE 130 025")
+                return ae130v021_025;
             else
             {
                 MessageBox.Show("A versão da planilha PFUI inserida não foi testada.\r\nRedobre a atenção quanto aos valores importados!", "Versão da planilha não testada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return ae130v021;
+                return ae130v021_025;
             }
         }
 

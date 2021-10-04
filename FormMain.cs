@@ -21,7 +21,7 @@ namespace aeX30
 
 
         private string _caminhoModelo;
-
+        private string _rae;
 
 
 
@@ -117,8 +117,16 @@ namespace aeX30
                     return "AE 130 020";
                 else if (version == 1413010021)
                     return "AE 130 021";
-                else if (version > 1413010021)
-                    return "> AE 130 021";
+                else if (version == 1413010022)
+                    return "AE 130 022";
+                else if (version == 1413010023)
+                    return "AE 130 023";
+                else if (version == 1413010024)
+                    return "AE 130 024";
+                else if (version == 1413010025)
+                    return "AE 130 025";
+                else if (version > 1413010025)
+                    return "> AE 130 025";
                 else
                     return null;
             }
@@ -137,9 +145,10 @@ namespace aeX30
             }
             ISheet ws = wbook.GetSheet("RAE");
 
-            string version = SanitizeVersion(ws.Header.Right);
 
-            string[] rae = RAE.SetArray(version);
+
+
+            string[] rae = RAE.SetArray(_rae);
 
             //CABEÇALHO
             ws.GetRow(new CellReference(rae[0]).Row).GetCell(new CellReference(rae[0]).Col).SetCellValue(txtRef0.Text);
@@ -361,7 +370,7 @@ namespace aeX30
                     {
                         string[] aeX = PFUI.SetArray(version);
                         ImportPFUI(aeX, sheet);
-                        
+
                         lblVersion.Text = version;
                         pnlMainPfui.Show();
                         btnProximoPfui.Show();
@@ -385,6 +394,14 @@ namespace aeX30
                     _caminhoModelo = openExcel.FileName;
 
                     txtLogFinalizar.Text = "Caminho do modelo padrão:\r\n" + openExcel.FileName + "\r\n";
+                    
+                    
+                    FileStream arquivoXLS = new FileStream(openExcel.FileName, FileMode.Open, FileAccess.Read);
+                    HSSFWorkbook wbook = new HSSFWorkbook(arquivoXLS);
+                    ISheet sheet = wbook.GetSheet("RAE");
+                    _rae = (sheet.Footer.Left).Substring(10);
+                    txtLogFinalizar.Text += "Vigência da planilha: " + _rae + "\r\n";
+
                     txtLogFinalizar.Text += "\r\nPronto para gravar.\r\n\r\nAguardando confirmação do usuário...\r\n";
                     pnlMainFinalizar.Show();
                     btnSalvarComo.Show();
