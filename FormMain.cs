@@ -319,12 +319,18 @@ namespace aeX30
             {
                 if (openText.ShowDialog() == DialogResult.OK)
                 {
+                    //string line = File.ReadLines(openText.FileName).Skip(9).Take(1).First();
+                    //string referencia = Util.CleanInput(line.Substring(31));
+
                     var convocacao = File.ReadAllLines(openText.FileName)
-                           .Where(l => l.StartsWith("REFERENCIA ........"))
-                           .Select(l => l.Substring(l.LastIndexOf(":") + 2))
+                           .Where(l => l.StartsWith("Refer"))
+                           .Select(l => l.Substring(l.LastIndexOf("-") + 2))
                            .ToList();
 
+
                     string referencia = Util.CleanInput(convocacao[0]);
+
+
 
                     if (referencia.Substring(0, 1) == "0")
                         referencia = referencia.Substring(1);
@@ -335,16 +341,25 @@ namespace aeX30
                     txtRef3.Text = referencia.Substring(17, 4);
                     txtRef4.Text = referencia.Substring(21, 2);
                     txtRef5.Text = referencia.Substring(23, 2);
-                    txtRef6.Text = referencia.Substring(25, 2);
+                    txtRef6.Text = "01";
+
+                    txtRef0.Focus();
 
                     pnlMainConvocacao.Show();
                     btnProximoConvocacao.Show();
-                    txtRef0.Focus();
+
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                if (MessageBox.Show("Não foi possível ler o arquivo de convocação.\r\n \r\n Deseja inserir o número manualmente?", "Informação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    pnlMainConvocacao.Show();
+                    btnProximoConvocacao.Show();
+                    txtRef0.Focus();
+                }
+
                 return;
             }
         }

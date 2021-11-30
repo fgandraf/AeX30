@@ -3335,7 +3335,7 @@ namespace aeX30
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(41, 12);
             this.label98.TabIndex = 2;
-            this.label98.Text = "v. 1.0.1.0";
+            this.label98.Text = "v. 1.1.0.0";
             // 
             // label3
             // 
