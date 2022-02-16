@@ -440,7 +440,8 @@ namespace aeX30
             this.label101.Size = new System.Drawing.Size(676, 45);
             this.label101.TabIndex = 6;
             this.label101.Text = "Este software foi testado com as planilhas nas versões: PFUI AE_130_016 à AE_130_" +
-    "025 e RAE AE_130_020";
+    "025 e RAE de vigência 23/07/2020, 09/09/2021 e 22/10/2021";
+            this.label101.Click += new System.EventHandler(this.label101_Click);
             // 
             // panel17
             // 
@@ -3335,7 +3336,7 @@ namespace aeX30
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(41, 12);
             this.label98.TabIndex = 2;
-            this.label98.Text = "v. 1.1.0.0";
+            this.label98.Text = "v. 1.2.0.0";
             // 
             // label3
             // 
