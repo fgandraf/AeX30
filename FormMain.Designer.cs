@@ -78,10 +78,10 @@ namespace aeX30
             this.pnlBottonPfui = new System.Windows.Forms.Panel();
             this.btnProximoPfui = new System.Windows.Forms.Button();
             this.pnlTopPfui = new System.Windows.Forms.Panel();
-            this.lblVersionTitle = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
+            this.rbtPCI = new System.Windows.Forms.RadioButton();
+            this.rbtPFUI = new System.Windows.Forms.RadioButton();
             this.lblEtapa2 = new System.Windows.Forms.Label();
-            this.btnImportarPfui = new System.Windows.Forms.Button();
+            this.btnImportarPlanilha = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
             this.pnlMainPfui = new System.Windows.Forms.Panel();
             this.pnlPFUIParcelas = new System.Windows.Forms.Panel();
@@ -440,7 +440,7 @@ namespace aeX30
             this.label101.Size = new System.Drawing.Size(676, 45);
             this.label101.TabIndex = 6;
             this.label101.Text = "Este software foi testado com as planilhas nas versões: PFUI AE_130_016 à AE_130_" +
-    "025 e RAE de vigência 23/07/2020, 09/09/2021 e 22/10/2021";
+    "025 e PCI 14/07/2021  RAE de vigência 23/07/2020, 09/09/2021 e 22/10/2021";
             this.label101.Click += new System.EventHandler(this.label101_Click);
             // 
             // panel17
@@ -958,10 +958,10 @@ namespace aeX30
             // pnlTopPfui
             // 
             this.pnlTopPfui.BackColor = System.Drawing.Color.White;
-            this.pnlTopPfui.Controls.Add(this.lblVersionTitle);
-            this.pnlTopPfui.Controls.Add(this.lblVersion);
+            this.pnlTopPfui.Controls.Add(this.rbtPCI);
+            this.pnlTopPfui.Controls.Add(this.rbtPFUI);
             this.pnlTopPfui.Controls.Add(this.lblEtapa2);
-            this.pnlTopPfui.Controls.Add(this.btnImportarPfui);
+            this.pnlTopPfui.Controls.Add(this.btnImportarPlanilha);
             this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopPfui.Location = new System.Drawing.Point(17, 13);
             this.pnlTopPfui.Margin = new System.Windows.Forms.Padding(0);
@@ -969,27 +969,27 @@ namespace aeX30
             this.pnlTopPfui.Size = new System.Drawing.Size(676, 48);
             this.pnlTopPfui.TabIndex = 0;
             // 
-            // lblVersionTitle
+            // rbtPCI
             // 
-            this.lblVersionTitle.AutoSize = true;
-            this.lblVersionTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblVersionTitle.ForeColor = System.Drawing.Color.DimGray;
-            this.lblVersionTitle.Location = new System.Drawing.Point(15, 12);
-            this.lblVersionTitle.Name = "lblVersionTitle";
-            this.lblVersionTitle.Size = new System.Drawing.Size(86, 12);
-            this.lblVersionTitle.TabIndex = 19;
-            this.lblVersionTitle.Text = "Versão da Planilha:";
+            this.rbtPCI.AutoSize = true;
+            this.rbtPCI.Location = new System.Drawing.Point(143, 15);
+            this.rbtPCI.Name = "rbtPCI";
+            this.rbtPCI.Size = new System.Drawing.Size(43, 19);
+            this.rbtPCI.TabIndex = 21;
+            this.rbtPCI.Text = "PCI";
+            this.rbtPCI.UseVisualStyleBackColor = true;
             // 
-            // lblVersion
+            // rbtPFUI
             // 
-            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVersion.ForeColor = System.Drawing.Color.Gray;
-            this.lblVersion.Location = new System.Drawing.Point(15, 24);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(86, 12);
-            this.lblVersion.TabIndex = 18;
-            this.lblVersion.Text = "---";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtPFUI.AutoSize = true;
+            this.rbtPFUI.Checked = true;
+            this.rbtPFUI.Location = new System.Drawing.Point(58, 15);
+            this.rbtPFUI.Name = "rbtPFUI";
+            this.rbtPFUI.Size = new System.Drawing.Size(49, 19);
+            this.rbtPFUI.TabIndex = 20;
+            this.rbtPFUI.TabStop = true;
+            this.rbtPFUI.Text = "PFUI";
+            this.rbtPFUI.UseVisualStyleBackColor = true;
             // 
             // lblEtapa2
             // 
@@ -1005,20 +1005,20 @@ namespace aeX30
             this.lblEtapa2.Text = "Etapa: 2/4";
             this.lblEtapa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnImportarPfui
+            // btnImportarPlanilha
             // 
-            this.btnImportarPfui.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnImportarPfui.FlatAppearance.BorderSize = 0;
-            this.btnImportarPfui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnImportarPfui.ForeColor = System.Drawing.Color.White;
-            this.btnImportarPfui.Location = new System.Drawing.Point(250, 13);
-            this.btnImportarPfui.Name = "btnImportarPfui";
-            this.btnImportarPfui.Size = new System.Drawing.Size(170, 23);
-            this.btnImportarPfui.TabIndex = 4;
-            this.btnImportarPfui.Text = "Importar PFUI";
-            this.btnImportarPfui.UseVisualStyleBackColor = false;
-            this.btnImportarPfui.Click += new System.EventHandler(this.btnImportarPfui_Click);
+            this.btnImportarPlanilha.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnImportarPlanilha.FlatAppearance.BorderSize = 0;
+            this.btnImportarPlanilha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarPlanilha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImportarPlanilha.ForeColor = System.Drawing.Color.White;
+            this.btnImportarPlanilha.Location = new System.Drawing.Point(250, 13);
+            this.btnImportarPlanilha.Name = "btnImportarPlanilha";
+            this.btnImportarPlanilha.Size = new System.Drawing.Size(170, 23);
+            this.btnImportarPlanilha.TabIndex = 4;
+            this.btnImportarPlanilha.Text = "Importar Planilha";
+            this.btnImportarPlanilha.UseVisualStyleBackColor = false;
+            this.btnImportarPlanilha.Click += new System.EventHandler(this.btnImportarPfui_Click);
             // 
             // mainPg3
             // 
@@ -3336,7 +3336,7 @@ namespace aeX30
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(41, 12);
             this.label98.TabIndex = 2;
-            this.label98.Text = "v. 1.2.0.0";
+            this.label98.Text = "v. 1.3.0.0";
             // 
             // label3
             // 
@@ -3626,7 +3626,7 @@ namespace aeX30
         private System.Windows.Forms.OpenFileDialog openExcel;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage pg3;
-        private System.Windows.Forms.Button btnImportarPfui;
+        private System.Windows.Forms.Button btnImportarPlanilha;
         private System.Windows.Forms.TabPage pg4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlAppTopPanel;
@@ -3844,8 +3844,6 @@ namespace aeX30
         private System.Windows.Forms.MaskedTextBox txtContratoTermino;
         private System.Windows.Forms.TextBox txtMensuradoAcumulado;
         private System.Windows.Forms.TextBox txtEtapaPrevista;
-        private System.Windows.Forms.Label lblVersionTitle;
-        private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.TableLayoutPanel tblPg5;
         private System.Windows.Forms.Panel pnlBottonFinalizar;
         private System.Windows.Forms.Button btnSalvarComo;
@@ -3895,6 +3893,8 @@ namespace aeX30
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.RadioButton rbtPCI;
+        private System.Windows.Forms.RadioButton rbtPFUI;
     }
 }
 

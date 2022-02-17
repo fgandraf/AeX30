@@ -28,17 +28,23 @@ namespace aeX30
 
 
         //:METHODS
-        private void ImportPFUI(string[] aeX, ISheet ws)
+        private void ImportPlanilha(string[] aeX, ISheet ws)
         {
             //CABEÇALHO
             txtPropNome.Text = ws.GetRow(new CellReference(aeX[0]).Row).GetCell(new CellReference(aeX[0]).Col).ToString();
+            if (rbtPFUI.Checked)
             txtPropCPF.Text = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[1]).Row).GetCell(new CellReference(aeX[1]).Col).ToString());
+            else
+                txtPropCPF.Text = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[1]).Row).GetCell(new CellReference(aeX[1]).Col).NumericCellValue.ToString());
             txtPropDDD.Text = ws.GetRow(new CellReference(aeX[2]).Row).GetCell(new CellReference(aeX[2]).Col).ToString();
             txtPropTelefone.Text = Util.FormatedFone(ws.GetRow(new CellReference(aeX[3]).Row).GetCell(new CellReference(aeX[3]).Col).ToString());
             txtRTNome.Text = ws.GetRow(new CellReference(aeX[4]).Row).GetCell(new CellReference(aeX[4]).Col).ToString();
             txtRTCauCrea.Text = ws.GetRow(new CellReference(aeX[5]).Row).GetCell(new CellReference(aeX[5]).Col).ToString();
             txtRTUF.Text = ws.GetRow(new CellReference(aeX[6]).Row).GetCell(new CellReference(aeX[6]).Col).ToString();
-            txtRTCPF.Text = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[7]).Row).GetCell(new CellReference(aeX[7]).Col).ToString());   
+            if (rbtPFUI.Checked)
+                txtRTCPF.Text = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[7]).Row).GetCell(new CellReference(aeX[7]).Col).ToString());   
+            else
+                txtRTCPF.Text = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[7]).Row).GetCell(new CellReference(aeX[7]).Col).NumericCellValue.ToString());
             txtRTDDD.Text = ws.GetRow(new CellReference(aeX[8]).Row).GetCell(new CellReference(aeX[8]).Col).ToString();
             txtRTTelefone.Text = Util.FormatedFone(ws.GetRow(new CellReference(aeX[9]).Row).GetCell(new CellReference(aeX[9]).Col).ToString());
             txtIdEndereco.Text = ws.GetRow(new CellReference(aeX[10]).Row).GetCell(new CellReference(aeX[10]).Col).ToString();
@@ -50,9 +56,11 @@ namespace aeX30
             txtTerrenoValorProposto.Text = string.Format("{0:0,0.00}", Convert.ToDouble(ws.GetRow(new CellReference(aeX[16]).Row).GetCell(new CellReference(aeX[16]).Col).ToString()));
             txtTerrenoMatricula.Text = ws.GetRow(new CellReference(aeX[17]).Row).GetCell(new CellReference(aeX[17]).Col).ToString();
             txtTerrenoOficio.Text = ws.GetRow(new CellReference(aeX[18]).Row).GetCell(new CellReference(aeX[18]).Col).ToString();
+            if (rbtPFUI.Checked)
+            { 
             txtTerrenoComarca.Text = ws.GetRow(new CellReference(aeX[19]).Row).GetCell(new CellReference(aeX[19]).Col).ToString();
             txtTerrenoUF.Text = ws.GetRow(new CellReference(aeX[20]).Row).GetCell(new CellReference(aeX[20]).Col).ToString();
-
+            }
 
             
             //ORÇAMENTO (PERCENTUAIS)
@@ -81,20 +89,31 @@ namespace aeX30
             if (ws.GetRow(new CellReference(aeX[41]).Row).GetCell(new CellReference(aeX[41]).Col) != null)
                 txtExecutado.Text = ws.GetRow(new CellReference(aeX[41]).Row).GetCell(new CellReference(aeX[41]).Col).NumericCellValue.ToString();
             ///Parcelas 1 a 30
+
             int txtBox = 1;
             int arr = 42;
             var parcelaX = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
-            while (parcelaX != null)
+            while (parcelaX != null || Convert.ToInt32(parcelaX) != 0)
             {
                 foreach (Control c in this.pnlPFUIParcelas.Controls)
                 {
                     if (c.Name == "txtParcela" + txtBox.ToString())
                         c.Text = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col).NumericCellValue.ToString();
                 }
+                if (rbtPCI.Checked)
+                {
+                    if (txtBox == 24)
+                        return;
+                }
+
                 txtBox++;
                 arr++;
                 parcelaX = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
-            }
+            
+
+        }
+
+
         }
 
         private string SanitizeVersion(string header)
@@ -130,6 +149,8 @@ namespace aeX30
                     return "AE 130 025";
                 else if (version > 1413010025)
                     return "> AE 130 025";
+                else if (version == 14072021)
+                    return "14/07/2021";
                 else
                     return null;
             }
@@ -265,6 +286,8 @@ namespace aeX30
         //:SHARED EVENT
         private void NextTabControl(object sender, EventArgs e)
         {
+            if (rbtPCI.Checked)
+                txtEtapaPrevista.Enabled = false;
             tabControl.SelectTab(tabControl.SelectedIndex + 1);
 
         }
@@ -377,23 +400,43 @@ namespace aeX30
 
                     FileStream arquivoXLS = new FileStream(openExcel.FileName, FileMode.Open, FileAccess.Read);
                     HSSFWorkbook wbook = new HSSFWorkbook(arquivoXLS);
-                    ISheet sheet = wbook.GetSheet("Proposta");
-                    string version = SanitizeVersion(sheet.Header.Right);
 
-                    if (version == null || version == "")
+
+                    if (rbtPFUI.Checked)
                     {
-                        MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n" + version, "Planilha PFUI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        ISheet sheet = wbook.GetSheet("Proposta");
+                        string version = SanitizeVersion(sheet.Header.Right);
+
+                        if (version == null || version == "")
+                        {
+                            MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n" + version, "Planilha PFUI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else
+                        {
+                            string[] aeX = PFUI.SetArray(version);
+                            ImportPlanilha(aeX, sheet);
+                        }
                     }
                     else
                     {
-                        string[] aeX = PFUI.SetArray(version);
-                        ImportPFUI(aeX, sheet);
+                        ISheet sheet = wbook.GetSheet("Proposta_Constr_Individual");
+                        string version = SanitizeVersion(sheet.Footer.Left);
 
-                        lblVersion.Text = version;
-                        pnlMainPfui.Show();
-                        btnProximoPfui.Show();
+                        
+                        if (version == null || version == "")
+                        {
+                            MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n" + version, "Planilha PFUI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else
+                        {
+                            string[] aeX = PCI.SetArray(version);
+                            ImportPlanilha(aeX, sheet); 
+                        }
                     }
+                    pnlMainPfui.Show();
+                    btnProximoPfui.Show();
                 }
             }
             catch (Exception ex)
