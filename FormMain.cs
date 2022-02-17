@@ -290,8 +290,9 @@ namespace aeX30
         {
             if (rbtPCI.Checked)
                 txtEtapaPrevista.Enabled = false;
+            else
+                txtEtapaPrevista.Enabled = true;
             tabControl.SelectTab(tabControl.SelectedIndex + 1);
-
         }
 
 
