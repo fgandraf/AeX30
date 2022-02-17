@@ -82,16 +82,91 @@ namespace aeX30
             /*cron. PARC 24:-------*/    "AM163",
         };
 
+        private static string[] pci21102021 = new string[]
+        {
+            
+            /*prop. NOME:----------*/    "G43",
+            /*prop. CPF:-----------*/    "AK43",
+            /*prop. DDD:-----------*/    "AQ43",
+            /*prop. TELEFONE:------*/    "AS43",
+            
+            /*rt. NOME:------------*/    "G49",
+            /*rt. CAU_CREA:--------*/    "AB49",
+            /*rt. UF:--------------*/    "AI49",
+            /*rt. CPF:-------------*/    "AK49",
+            /*rt. DDD:-------------*/    "AQ49",
+            /*rt. TELEFONE:--------*/    "AS49",
 
-     //CONFERIR COMARCA E UF
+            /*end. ENDEREÇO:-------*/    "G53",
+            /*end. COMPLEMENTO:----*/    "AJ53",
+            /*end. CEP:------------*/    "V55",
+            /*end. BAIRRO:---------*/    "G55",
+            /*end. MUNICIPIO:------*/    "AA55",
+            /*end. UF:-------------*/    "AV55",
+            
+            /*imov. VALOR TERRENO:-*/    "V70",
+            /*imov. MATRICULA:-----*/    "G57",
+            /*imov. OFICIO:--------*/    "M57",
+            /*imov. COMARCA:-------*/    "-",
+            /*imov. UF:------------*/    "-",
+           
+            /*17.01(%):------------*/    "X95",
+            /*17.02(%):------------*/    "X96",
+            /*17.03(%):------------*/    "X97",
+            /*17.04(%):------------*/    "X98",
+            /*17.05(%):------------*/    "X99",
+            /*17.06(%):------------*/    "X100",
+            /*17.07(%):------------*/    "X101",
+            /*17.08(%):------------*/    "X102",
+            /*17.09(%):------------*/    "X103",
+            /*17.10(%):------------*/    "X104",
+            /*17.11(%):------------*/    "X105",
+            /*17.12(%):----PINTURA-*/    "X106",
+            /*17.13(%):----PISO----*/    "X107",
+            /*17.14(%):------------*/    "X108",
+            /*17.15(%):------------*/    "X109",
+            /*17.16(%):------------*/    "X110",
+            /*17.17(%):------------*/    "X111",
+            /*17.18(%):------------*/    "X112",
+            /*17.19(%):------------*/    "X113",
+            /*17.20(%):------------*/    "X114",
+
+            /*cron. EXECUTADO:-----*/    "AM140",
+            /*cron. PARC 1:--------*/    "AM141",
+            /*cron. PARC 2:--------*/    "AM142",
+            /*cron. PARC 3:--------*/    "AM143",
+            /*cron. PARC 4:--------*/    "AM144",
+            /*cron. PARC 5:--------*/    "AM145",
+            /*cron. PARC 6:--------*/    "AM146",
+            /*cron. PARC 7:--------*/    "AM147",
+            /*cron. PARC 8:--------*/    "AM148",
+            /*cron. PARC 9:--------*/    "AM149",
+            /*cron. PARC 10:-------*/    "AM150",
+            /*cron. PARC 11:-------*/    "AM151",
+            /*cron. PARC 12:-------*/    "AM152",
+            /*cron. PARC 13:-------*/    "AM153",
+            /*cron. PARC 14:-------*/    "AM154",
+            /*cron. PARC 15:-------*/    "AM155",
+            /*cron. PARC 16:-------*/    "AM156",
+            /*cron. PARC 17:-------*/    "AM157",
+            /*cron. PARC 18:-------*/    "AM158",
+            /*cron. PARC 19:-------*/    "AM159",
+            /*cron. PARC 20:-------*/    "AM160",
+            /*cron. PARC 21:-------*/    "AM161",
+            /*cron. PARC 22:-------*/    "AM162",
+            /*cron. PARC 23:-------*/    "AM163",
+            /*cron. PARC 24:-------*/    "AM164",
+        };
+
+        //CONFERIR COMARCA E UF
 
 
         public static string[] SetArray(string version)
         {
             if (version == "14/07/2021")
                 return pci14072021;
-            //else if (version == "AE 130 017" || version == "AE 130 018")
-            //    return ae130v017_018;
+            else if (version == "21/10/2021")
+                return pci21102021;
             //else if (version == "AE 130 019" || version == "AE 130 020")
             //    return ae130v019_020;
             //else if (version == "AE 130 021" || version == "AE 130 022" || version == "AE 130 023" || version == "AE 130 024" || version == "AE 130 025")
@@ -99,7 +174,7 @@ namespace aeX30
             else
             {
                 MessageBox.Show("A versão da planilha PCI inserida não foi testada.\r\nRedobre a atenção quanto aos valores importados!", "Versão da planilha não testada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return pci14072021;
+                return pci21102021;
             }
         }
 

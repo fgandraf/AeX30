@@ -151,6 +151,8 @@ namespace aeX30
                     return "> AE 130 025";
                 else if (version == 14072021)
                     return "14/07/2021";
+                else if (version == 21102021)
+                    return "21/10/2021";
                 else
                     return null;
             }
@@ -402,6 +404,8 @@ namespace aeX30
                     HSSFWorkbook wbook = new HSSFWorkbook(arquivoXLS);
 
 
+                    pnlMainPfui.Show();
+
                     if (rbtPFUI.Checked)
                     {
                         ISheet sheet = wbook.GetSheet("Proposta");
@@ -435,7 +439,7 @@ namespace aeX30
                             ImportPlanilha(aeX, sheet); 
                         }
                     }
-                    pnlMainPfui.Show();
+                    
                     btnProximoPfui.Show();
                 }
             }
