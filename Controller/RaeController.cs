@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-namespace aeX30
+namespace aeX30.Controller
 {
-    public class RAE
+    internal class RaeController
     {
 
 
@@ -131,7 +131,7 @@ namespace aeX30
 
 
 
-        public static string[] SetArray(string version)
+        internal static string[] SetRaeArray(string version)
         {
             if (version == "23/07/2020")
                 return rae23072020;

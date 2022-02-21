@@ -35,6 +35,9 @@ namespace aeX30
             this.pg1 = new System.Windows.Forms.TabPage();
             this.tblPg1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMainPg1 = new System.Windows.Forms.Panel();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -81,7 +84,7 @@ namespace aeX30
             this.rbtPCI = new System.Windows.Forms.RadioButton();
             this.rbtPFUI = new System.Windows.Forms.RadioButton();
             this.lblEtapa2 = new System.Windows.Forms.Label();
-            this.btnImportarPlanilha = new System.Windows.Forms.Button();
+            this.btnImportarProposta = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
             this.pnlMainPfui = new System.Windows.Forms.Panel();
             this.pnlPFUIParcelas = new System.Windows.Forms.Panel();
@@ -405,6 +408,9 @@ namespace aeX30
             // pnlMainPg1
             // 
             this.pnlMainPg1.BackColor = System.Drawing.Color.White;
+            this.pnlMainPg1.Controls.Add(this.label105);
+            this.pnlMainPg1.Controls.Add(this.label104);
+            this.pnlMainPg1.Controls.Add(this.label103);
             this.pnlMainPg1.Controls.Add(this.label102);
             this.pnlMainPg1.Controls.Add(this.label101);
             this.pnlMainPg1.Controls.Add(this.panel17);
@@ -418,6 +424,36 @@ namespace aeX30
             this.pnlMainPg1.Name = "pnlMainPg1";
             this.pnlMainPg1.Size = new System.Drawing.Size(676, 326);
             this.pnlMainPg1.TabIndex = 4;
+            // 
+            // label105
+            // 
+            this.label105.ForeColor = System.Drawing.Color.Black;
+            this.label105.Location = new System.Drawing.Point(59, 235);
+            this.label105.Name = "label105";
+            this.label105.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
+            this.label105.Size = new System.Drawing.Size(617, 15);
+            this.label105.TabIndex = 10;
+            this.label105.Text = "RAE 23/07/2020, 09/09/2021 e 22/10/2021";
+            // 
+            // label104
+            // 
+            this.label104.ForeColor = System.Drawing.Color.Black;
+            this.label104.Location = new System.Drawing.Point(59, 219);
+            this.label104.Name = "label104";
+            this.label104.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
+            this.label104.Size = new System.Drawing.Size(617, 16);
+            this.label104.TabIndex = 9;
+            this.label104.Text = "PCI 14/07/2021 e 21/10/2021";
+            // 
+            // label103
+            // 
+            this.label103.ForeColor = System.Drawing.Color.Black;
+            this.label103.Location = new System.Drawing.Point(59, 204);
+            this.label103.Name = "label103";
+            this.label103.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
+            this.label103.Size = new System.Drawing.Size(617, 15);
+            this.label103.TabIndex = 8;
+            this.label103.Text = "PFUI AE_130_016 à AE_130_025";
             // 
             // label102
             // 
@@ -434,14 +470,12 @@ namespace aeX30
             // label101
             // 
             this.label101.ForeColor = System.Drawing.Color.Black;
-            this.label101.Location = new System.Drawing.Point(0, 212);
+            this.label101.Location = new System.Drawing.Point(0, 186);
             this.label101.Name = "label101";
             this.label101.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.label101.Size = new System.Drawing.Size(676, 45);
+            this.label101.Size = new System.Drawing.Size(676, 18);
             this.label101.TabIndex = 6;
-            this.label101.Text = "Este software foi testado com as planilhas nas versões: PFUI AE_130_016 à AE_130_" +
-    "025 e PCI 14/07/2021  RAE de vigência 23/07/2020, 09/09/2021 e 22/10/2021";
-            this.label101.Click += new System.EventHandler(this.label101_Click);
+            this.label101.Text = "Este software foi testado com as planilhas nas versões:";
             // 
             // panel17
             // 
@@ -961,7 +995,7 @@ namespace aeX30
             this.pnlTopPfui.Controls.Add(this.rbtPCI);
             this.pnlTopPfui.Controls.Add(this.rbtPFUI);
             this.pnlTopPfui.Controls.Add(this.lblEtapa2);
-            this.pnlTopPfui.Controls.Add(this.btnImportarPlanilha);
+            this.pnlTopPfui.Controls.Add(this.btnImportarProposta);
             this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopPfui.Location = new System.Drawing.Point(17, 13);
             this.pnlTopPfui.Margin = new System.Windows.Forms.Padding(0);
@@ -972,6 +1006,7 @@ namespace aeX30
             // rbtPCI
             // 
             this.rbtPCI.AutoSize = true;
+            this.rbtPCI.Enabled = false;
             this.rbtPCI.Location = new System.Drawing.Point(143, 15);
             this.rbtPCI.Name = "rbtPCI";
             this.rbtPCI.Size = new System.Drawing.Size(43, 19);
@@ -982,12 +1017,11 @@ namespace aeX30
             // rbtPFUI
             // 
             this.rbtPFUI.AutoSize = true;
-            this.rbtPFUI.Checked = true;
+            this.rbtPFUI.Enabled = false;
             this.rbtPFUI.Location = new System.Drawing.Point(58, 15);
             this.rbtPFUI.Name = "rbtPFUI";
             this.rbtPFUI.Size = new System.Drawing.Size(49, 19);
             this.rbtPFUI.TabIndex = 20;
-            this.rbtPFUI.TabStop = true;
             this.rbtPFUI.Text = "PFUI";
             this.rbtPFUI.UseVisualStyleBackColor = true;
             // 
@@ -1005,20 +1039,20 @@ namespace aeX30
             this.lblEtapa2.Text = "Etapa: 2/4";
             this.lblEtapa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnImportarPlanilha
+            // btnImportarProposta
             // 
-            this.btnImportarPlanilha.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnImportarPlanilha.FlatAppearance.BorderSize = 0;
-            this.btnImportarPlanilha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarPlanilha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnImportarPlanilha.ForeColor = System.Drawing.Color.White;
-            this.btnImportarPlanilha.Location = new System.Drawing.Point(250, 13);
-            this.btnImportarPlanilha.Name = "btnImportarPlanilha";
-            this.btnImportarPlanilha.Size = new System.Drawing.Size(170, 23);
-            this.btnImportarPlanilha.TabIndex = 4;
-            this.btnImportarPlanilha.Text = "Importar Planilha";
-            this.btnImportarPlanilha.UseVisualStyleBackColor = false;
-            this.btnImportarPlanilha.Click += new System.EventHandler(this.btnImportarPfui_Click);
+            this.btnImportarProposta.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnImportarProposta.FlatAppearance.BorderSize = 0;
+            this.btnImportarProposta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarProposta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImportarProposta.ForeColor = System.Drawing.Color.White;
+            this.btnImportarProposta.Location = new System.Drawing.Point(250, 13);
+            this.btnImportarProposta.Name = "btnImportarProposta";
+            this.btnImportarProposta.Size = new System.Drawing.Size(170, 23);
+            this.btnImportarProposta.TabIndex = 4;
+            this.btnImportarProposta.Text = "Importar Planilha";
+            this.btnImportarProposta.UseVisualStyleBackColor = false;
+            this.btnImportarProposta.Click += new System.EventHandler(this.btnImportarProposta_Click);
             // 
             // mainPg3
             // 
@@ -3336,7 +3370,7 @@ namespace aeX30
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(41, 12);
             this.label98.TabIndex = 2;
-            this.label98.Text = "v. 1.3.0.0";
+            this.label98.Text = "v. 1.4.1.0";
             // 
             // label3
             // 
@@ -3626,7 +3660,7 @@ namespace aeX30
         private System.Windows.Forms.OpenFileDialog openExcel;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage pg3;
-        private System.Windows.Forms.Button btnImportarPlanilha;
+        private System.Windows.Forms.Button btnImportarProposta;
         private System.Windows.Forms.TabPage pg4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlAppTopPanel;
@@ -3893,6 +3927,9 @@ namespace aeX30
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label103;
         private System.Windows.Forms.RadioButton rbtPCI;
         private System.Windows.Forms.RadioButton rbtPFUI;
     }
