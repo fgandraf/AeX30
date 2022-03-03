@@ -1,13 +1,12 @@
-﻿using System.Windows.Forms;
+﻿using aeX30.Entities;
+using aeX30.Model;
+using System;
 
 namespace aeX30.Controller
 {
     internal class RaeController
     {
 
-
-
-        //ARRAY FOR DIFERENT SHEET VERSION
         private static string[] rae23072020 = new string[]
                 {
             "AD35", "AF35", "AH35", "AL35", "AN35", "AO35", "AP35",
@@ -20,7 +19,8 @@ namespace aeX30.Controller
             "Y89",
             "AH63", "AS63",
             "AS74",
-            "BC61","BC62","BC63","BC64","BC65","BC66","BC67","BC68","BC69","BC70","BC71","BC72","BC73","BC74","BC75","BC76","BC77", "BC78", "BC79", "BC80", "BC81", "BC82", "BC83", "BC84", "BC85", "BC86", "BC87", "BC88", "BC89", "BC90", "BC91"
+            "BC61","BC62","BC63","BC64","BC65","BC66","BC67","BC68","BC69","BC70","BC71","BC72","BC73","BC74","BC75","BC76","BC77", "BC78", "BC79", "BC80", "BC81", "BC82", "BC83", "BC84", "BC85", "BC86", "BC87", "BC88", "BC89", "BC90", "BC91",
+               /*versão.......:-------*/    "2020"
                 };
         private static string[] rae09092021 = new string[]
                 {
@@ -34,7 +34,8 @@ namespace aeX30.Controller
             "Y89",
             "AH63", "AS63",
             "AS74",
-            "BD62","BD63","BD64","BD65","BD66","BD67","BD68","BD69","BD70","BD71","BD72","BD73","BD74","BD75","BD76","BD77", "BD78", "BD79", "BD80", "BD81", "BD82", "BD83", "BD84", "BD85", "BD86", "BD87", "BD88", "BD89", "BD90", "BD91", "BD92"
+            "BD62","BD63","BD64","BD65","BD66","BD67","BD68","BD69","BD70","BD71","BD72","BD73","BD74","BD75","BD76","BD77", "BD78", "BD79", "BD80", "BD81", "BD82", "BD83", "BD84", "BD85", "BD86", "BD87", "BD88", "BD89", "BD90", "BD91", "BD92",
+                           /*versão.......:-------*/    "2021"
                 };
         private static string[] rae22102021 = new string[]
                 {
@@ -123,33 +124,53 @@ namespace aeX30.Controller
             /*cron. PARC 28:-------*/    "AK99",
             /*cron. PARC 29:-------*/    "AK100",
             /*cron. PARC 30:-------*/    "AK101",
+            /*versão.......:-------*/    "2021"
                 };
 
 
 
-
-
-
-
-        internal static string[] SetRaeArray(string version)
+        private static string[] SetArray(int version)
         {
-            if (version == "23/07/2020")
+            if (version == 23072020)
                 return rae23072020;
-            if (version == "09/09/2021")
+            else if (version == 9092021)
                 return rae09092021;
-            if (version == "22/10/2021")
+            else if (version == 22102021)
                 return rae22102021;
-
-
             else
-            {
-                MessageBox.Show("A versão da planilha RAE inserida não foi testada.\r\nRedobre a atenção quanto aos valores exportados!", "Versão da planilha não testada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return rae22102021;
-            }
+                //MessageBox.Show("A versão da planilha RAE inserida não foi testada.\r\nRedobre a atenção quanto aos valores importados!", "Versão da planilha não testada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return null;
         }
 
+
+        internal static int SetRAE(string path_modelo, string path_destino, RaeEnt rae)
+        {
+
+            string footer = RaeModel.GetFooter(path_modelo);
+
+            if (footer == "" || footer == null)
+                return 0;
+            else
+            {
+                int version = Convert.ToInt32(Util.CleanInput(footer));
+                string[] aeX = SetArray(version);
+
+                if (aeX != null)
+                    return new RaeModel().SetRAE(path_modelo, path_destino, aeX, rae);
+                else
+                    return 0;
+            }
+
+        }
 
 
 
     }
 }
+
+
+
+
+
+
+

@@ -79,10 +79,11 @@ namespace aeX30
             this.pg3 = new System.Windows.Forms.TabPage();
             this.tblPg3 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBottonPfui = new System.Windows.Forms.Panel();
-            this.btnProximoPfui = new System.Windows.Forms.Button();
-            this.pnlTopPfui = new System.Windows.Forms.Panel();
+            this.lblVigencia = new System.Windows.Forms.Label();
             this.rbtPCI = new System.Windows.Forms.RadioButton();
+            this.btnProximoPfui = new System.Windows.Forms.Button();
             this.rbtPFUI = new System.Windows.Forms.RadioButton();
+            this.pnlTopPfui = new System.Windows.Forms.Panel();
             this.lblEtapa2 = new System.Windows.Forms.Label();
             this.btnImportarProposta = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
@@ -966,13 +967,42 @@ namespace aeX30
             // 
             // pnlBottonPfui
             // 
+            this.pnlBottonPfui.Controls.Add(this.lblVigencia);
+            this.pnlBottonPfui.Controls.Add(this.rbtPCI);
             this.pnlBottonPfui.Controls.Add(this.btnProximoPfui);
+            this.pnlBottonPfui.Controls.Add(this.rbtPFUI);
             this.pnlBottonPfui.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottonPfui.Location = new System.Drawing.Point(17, 338);
             this.pnlBottonPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPfui.Name = "pnlBottonPfui";
             this.pnlBottonPfui.Size = new System.Drawing.Size(676, 51);
             this.pnlBottonPfui.TabIndex = 2;
+            // 
+            // lblVigencia
+            // 
+            this.lblVigencia.AutoSize = true;
+            this.lblVigencia.BackColor = System.Drawing.Color.Transparent;
+            this.lblVigencia.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVigencia.ForeColor = System.Drawing.Color.Gray;
+            this.lblVigencia.Location = new System.Drawing.Point(26, 27);
+            this.lblVigencia.Name = "lblVigencia";
+            this.lblVigencia.Size = new System.Drawing.Size(55, 12);
+            this.lblVigencia.TabIndex = 22;
+            this.lblVigencia.Text = "Vigência: --";
+            this.lblVigencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblVigencia.Visible = false;
+            // 
+            // rbtPCI
+            // 
+            this.rbtPCI.AutoSize = true;
+            this.rbtPCI.Enabled = false;
+            this.rbtPCI.Location = new System.Drawing.Point(26, 5);
+            this.rbtPCI.Name = "rbtPCI";
+            this.rbtPCI.Size = new System.Drawing.Size(43, 19);
+            this.rbtPCI.TabIndex = 21;
+            this.rbtPCI.Text = "PCI";
+            this.rbtPCI.UseVisualStyleBackColor = true;
+            this.rbtPCI.Visible = false;
             // 
             // btnProximoPfui
             // 
@@ -989,11 +1019,21 @@ namespace aeX30
             this.btnProximoPfui.Visible = false;
             this.btnProximoPfui.Click += new System.EventHandler(this.NextTabControl);
             // 
+            // rbtPFUI
+            // 
+            this.rbtPFUI.AutoSize = true;
+            this.rbtPFUI.Enabled = false;
+            this.rbtPFUI.Location = new System.Drawing.Point(26, 5);
+            this.rbtPFUI.Name = "rbtPFUI";
+            this.rbtPFUI.Size = new System.Drawing.Size(49, 19);
+            this.rbtPFUI.TabIndex = 20;
+            this.rbtPFUI.Text = "PFUI";
+            this.rbtPFUI.UseVisualStyleBackColor = true;
+            this.rbtPFUI.Visible = false;
+            // 
             // pnlTopPfui
             // 
             this.pnlTopPfui.BackColor = System.Drawing.Color.White;
-            this.pnlTopPfui.Controls.Add(this.rbtPCI);
-            this.pnlTopPfui.Controls.Add(this.rbtPFUI);
             this.pnlTopPfui.Controls.Add(this.lblEtapa2);
             this.pnlTopPfui.Controls.Add(this.btnImportarProposta);
             this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1002,28 +1042,6 @@ namespace aeX30
             this.pnlTopPfui.Name = "pnlTopPfui";
             this.pnlTopPfui.Size = new System.Drawing.Size(676, 48);
             this.pnlTopPfui.TabIndex = 0;
-            // 
-            // rbtPCI
-            // 
-            this.rbtPCI.AutoSize = true;
-            this.rbtPCI.Enabled = false;
-            this.rbtPCI.Location = new System.Drawing.Point(143, 15);
-            this.rbtPCI.Name = "rbtPCI";
-            this.rbtPCI.Size = new System.Drawing.Size(43, 19);
-            this.rbtPCI.TabIndex = 21;
-            this.rbtPCI.Text = "PCI";
-            this.rbtPCI.UseVisualStyleBackColor = true;
-            // 
-            // rbtPFUI
-            // 
-            this.rbtPFUI.AutoSize = true;
-            this.rbtPFUI.Enabled = false;
-            this.rbtPFUI.Location = new System.Drawing.Point(58, 15);
-            this.rbtPFUI.Name = "rbtPFUI";
-            this.rbtPFUI.Size = new System.Drawing.Size(49, 19);
-            this.rbtPFUI.TabIndex = 20;
-            this.rbtPFUI.Text = "PFUI";
-            this.rbtPFUI.UseVisualStyleBackColor = true;
             // 
             // lblEtapa2
             // 
@@ -3370,7 +3388,7 @@ namespace aeX30
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(41, 12);
             this.label98.TabIndex = 2;
-            this.label98.Text = "v. 1.4.1.0";
+            this.label98.Text = "v. 1.5.1.0";
             // 
             // label3
             // 
@@ -3619,6 +3637,7 @@ namespace aeX30
             this.pg3.ResumeLayout(false);
             this.tblPg3.ResumeLayout(false);
             this.pnlBottonPfui.ResumeLayout(false);
+            this.pnlBottonPfui.PerformLayout();
             this.pnlTopPfui.ResumeLayout(false);
             this.pnlTopPfui.PerformLayout();
             this.mainPg3.ResumeLayout(false);
@@ -3932,6 +3951,7 @@ namespace aeX30
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.RadioButton rbtPCI;
         private System.Windows.Forms.RadioButton rbtPFUI;
+        private System.Windows.Forms.Label lblVigencia;
     }
 }
 

@@ -8,6 +8,7 @@ namespace aeX30
 
         internal static string CleanInput(string strIn)
         {
+            strIn = strIn.Split(',')[0];
             var onlyNumber = new Regex(@"[^\d]");
             return onlyNumber.Replace(strIn, "");
         }

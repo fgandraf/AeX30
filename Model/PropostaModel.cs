@@ -41,6 +41,7 @@ namespace aeX30.Model
             PropostaEnt pfui = new PropostaEnt();
             //CABEÇALHO
             pfui.Tipo = "PFUI";
+            pfui.Vigencia = ws.Footer.Left;
             pfui.Prop_Nome = ws.GetRow(new CellReference(aeX[0]).Row).GetCell(new CellReference(aeX[0]).Col).ToString();
             pfui.Prop_CPF = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[1]).Row).GetCell(new CellReference(aeX[1]).Col).ToString());
             pfui.Prop_DDD = ws.GetRow(new CellReference(aeX[2]).Row).GetCell(new CellReference(aeX[2]).Col).ToString();
@@ -92,13 +93,16 @@ namespace aeX30.Model
             var valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
             int parcelaNumero = 1;
 
-            while (valor != null || Convert.ToInt32(valor) != 0)
+            while (arr <= aeX.Length)
             {
                 var properties = pfui.GetType().GetProperties();
                 foreach (var property in properties)
                 {
                     if (property.Name.Equals("Cron_Parc_" + parcelaNumero.ToString()))
-                        property.SetValue(pfui, ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col).NumericCellValue.ToString());
+                        if (valor != null)
+                            property.SetValue(pfui, ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col).NumericCellValue.ToString());
+                        else
+                            property.SetValue(pfui, "0");
                 }
 
                 parcelaNumero++;
@@ -107,7 +111,15 @@ namespace aeX30.Model
                     valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
                 else
                     break;
+
+
+
+
+
+
             }
+
+
             return pfui;
         }
 
@@ -120,14 +132,15 @@ namespace aeX30.Model
             PropostaEnt pci = new PropostaEnt();
             //CABEÇALHO
             pci.Tipo = "PCI";
+            pci.Vigencia = ws.Footer.Left;
             pci.Prop_Nome = ws.GetRow(new CellReference(aeX[0]).Row).GetCell(new CellReference(aeX[0]).Col).ToString();
-            pci.Prop_CPF = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[1]).Row).GetCell(new CellReference(aeX[1]).Col).NumericCellValue.ToString());
+            pci.Prop_CPF = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[1]).Row).GetCell(new CellReference(aeX[1]).Col).ToString());
             pci.Prop_DDD = ws.GetRow(new CellReference(aeX[2]).Row).GetCell(new CellReference(aeX[2]).Col).ToString();
             pci.Prop_Telefone = Util.FormatedFone(ws.GetRow(new CellReference(aeX[3]).Row).GetCell(new CellReference(aeX[3]).Col).ToString());
             pci.Rt_Nome = ws.GetRow(new CellReference(aeX[4]).Row).GetCell(new CellReference(aeX[4]).Col).ToString();
             pci.Rt_CAU_CREA = ws.GetRow(new CellReference(aeX[5]).Row).GetCell(new CellReference(aeX[5]).Col).ToString();
             pci.Rt_UF = ws.GetRow(new CellReference(aeX[6]).Row).GetCell(new CellReference(aeX[6]).Col).ToString();
-            pci.Rt_CPF = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[7]).Row).GetCell(new CellReference(aeX[7]).Col).NumericCellValue.ToString());
+            pci.Rt_CPF = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[7]).Row).GetCell(new CellReference(aeX[7]).Col).ToString());
             pci.Rt_DDD = ws.GetRow(new CellReference(aeX[8]).Row).GetCell(new CellReference(aeX[8]).Col).ToString();
             pci.Rt_Telefone = Util.FormatedFone(ws.GetRow(new CellReference(aeX[9]).Row).GetCell(new CellReference(aeX[9]).Col).ToString());
             pci.End_Endereço = ws.GetRow(new CellReference(aeX[10]).Row).GetCell(new CellReference(aeX[10]).Col).ToString();
@@ -171,13 +184,16 @@ namespace aeX30.Model
             var valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
             int parcelaNumero = 1;
 
-            while (valor != null || Convert.ToInt32(valor) != 0)
+            while (arr <= aeX.Length)
             {
                 var properties = pci.GetType().GetProperties();
                 foreach (var property in properties)
                 {
                     if (property.Name.Equals("Cron_Parc_" + parcelaNumero.ToString()))
-                        property.SetValue(pci, ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col).NumericCellValue.ToString());
+                        if (valor != null)
+                            property.SetValue(pci, ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col).NumericCellValue.ToString());
+                        else
+                            property.SetValue(pci, "0");
                 }
 
                 parcelaNumero++;
@@ -186,6 +202,7 @@ namespace aeX30.Model
                     valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
                 else
                     break;
+
             }
             return pci;
 

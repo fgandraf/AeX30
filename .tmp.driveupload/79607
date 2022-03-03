@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PendingCommit>
-  <CommitComment>MVC Proposta e Inicio da Refatoração do código da RAE</CommitComment>
+  <CommitComment>MVC RAE</CommitComment>
   <WorkItems />
   <PinnedBranches />
   <PublishPrompt Enabled="True" />
