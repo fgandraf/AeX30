@@ -8,7 +8,7 @@ namespace aeX30.Controller
     {
 
 
-        private static string[] pfuiv013 = new string[]
+        private static string[] pfui_2017 = new string[]
                 {
             "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
             "G46", "AP46", "BA46", "BF46",
@@ -21,7 +21,7 @@ namespace aeX30.Controller
             "AL388", "AP388", "AT388", "AX388", "BB388", "BF388", "BJ388", "BN388",
             "AL428", "AP428", "AT428", "AX428", "BB428", "BF428"
                 };
-        private static string[] pfuiv016 = new string[]
+        private static string[] pfui_2018 = new string[]
                 {
             "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
             "G46", "AP46", "BA46", "BF46",
@@ -34,7 +34,7 @@ namespace aeX30.Controller
             "AL392", "AP392", "AT392", "AX392", "BB392", "BF392", "BJ392", "BN392",
             "AL432", "AP432", "AT432", "AX432", "BB432", "BF432"
                 };
-        private static string[] pfui2019a = new string[]
+        private static string[] pfui_2019 = new string[]
                 {
             "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
             "G46", "AP46", "BA46", "BF46",
@@ -47,7 +47,7 @@ namespace aeX30.Controller
             "AL390", "AP390", "AT390", "AX390", "BB390", "BF390", "BJ390", "BN390",
             "AL430", "AP430", "AT430", "AX430", "BB430", "BF430"
                 };
-        private static string[] pfuiv19_20 = new string[]
+        private static string[] pfui_2020a = new string[]
         {
             "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
             "G46", "AP46", "BA46", "BF46",
@@ -61,7 +61,7 @@ namespace aeX30.Controller
             "AL431", "AP431", "AT431", "AX431", "BB431", "BF431"
 
         };
-        private static string[] pfuiv21_25 = new string[]
+        private static string[] pfui_2020b = new string[]
         {
             "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
             "G46", "AP46", "BA46", "BF46",
@@ -74,7 +74,7 @@ namespace aeX30.Controller
             "AL389", "AP389", "AT389", "AX389", "BB389", "BF389", "BJ389", "BN389",
             "AL429", "AP429", "AT429", "AX429", "BB429", "BF429"
         };
-        private static string[] pci2021a = new string[]
+        private static string[] pci_2021a = new string[]
 {
             
             /*prop. NOME:----------*/    "G43",
@@ -149,7 +149,7 @@ namespace aeX30.Controller
             /*cron. PARC 23:-------*/    "AM162",
             /*cron. PARC 24:-------*/    "AM163",
 };
-        private static string[] pci2021b = new string[]
+        private static string[] pci_2021b = new string[]
         {
             
             /*prop. NOME:----------*/    "G43",
@@ -232,29 +232,27 @@ namespace aeX30.Controller
             if (type == "PFUI")
             {
                 if (foot == 927112017)
-                    return pfuiv013;
+                    return pfui_2017;
                 else if (foot == 1102018)
-                    return pfuiv016;
+                    return pfui_2018;
                 else if (foot == 12042019 || foot == 23052019 || foot == 24052019)
-                    return pfui2019a;
+                    return pfui_2019;
                 else if (foot == 13072020 || foot == 13072020)
-                    return pfuiv19_20;
+                    return pfui_2020a;
                 else if (foot == 24092020 || /*foot=planilha22 ||*/ foot == 4122020 || foot == 26022021 || foot == 5052021)
-                    return pfuiv21_25;
+                    return pfui_2020b;
                 else
-                    //MessageBox.Show("A versão da planilha PFUI inserida não foi testada.\r\nRedobre a atenção quanto aos valores importados!", "Versão da planilha não testada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return null;
             }
             else
             {
 
                 if (foot == 1062021 || foot == 14072021 || foot == 6082021)
-                    return pci2021a;
+                    return pci_2021a;
                 else if (foot == 21102021)
-                    return pci2021b;
+                    return pci_2021b;
                 else
                 {
-                    //MessageBox.Show("A versão da planilha PFUI inserida não foi testada.\r\nRedobre a atenção quanto aos valores importados!", "Versão da planilha não testada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return null;
                 }
             }
