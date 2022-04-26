@@ -5,7 +5,6 @@ using System.IO;
 using aeX30.Controller;
 using aeX30.Entities;
 
-
 namespace aeX30
 {
     public partial class FormMain : Form
@@ -117,6 +116,13 @@ namespace aeX30
             rae.Cron_Parc_28 = txtParcela28.Text;
             rae.Cron_Parc_29 = txtParcela29.Text;
             rae.Cron_Parc_30 = txtParcela30.Text;
+            rae.Cron_Parc_31 = txtParcela31.Text;
+            rae.Cron_Parc_32 = txtParcela32.Text;
+            rae.Cron_Parc_33 = txtParcela33.Text;
+            rae.Cron_Parc_34 = txtParcela34.Text;
+            rae.Cron_Parc_35 = txtParcela35.Text;
+            rae.Cron_Parc_36 = txtParcela36.Text;
+
 
             return rae;
         }
@@ -211,6 +217,13 @@ namespace aeX30
             txtParcela28.Text = prop.Cron_Parc_28;
             txtParcela29.Text = prop.Cron_Parc_29;
             txtParcela30.Text = prop.Cron_Parc_30;
+
+            txtParcela31.Text = prop.Cron_Parc_31;
+            txtParcela32.Text = prop.Cron_Parc_32;
+            txtParcela33.Text = prop.Cron_Parc_33;
+            txtParcela34.Text = prop.Cron_Parc_34;
+            txtParcela35.Text = prop.Cron_Parc_35;
+            txtParcela36.Text = prop.Cron_Parc_36;
         }
 
 

@@ -102,5 +102,11 @@ namespace aeX30.Entities
         public string  Cron_Parc_28 { get; set; }
         public string  Cron_Parc_29 { get; set; }
         public string  Cron_Parc_30 { get; set; }
+        public string Cron_Parc_31 { get; set; }
+        public string Cron_Parc_32 { get; set; }
+        public string Cron_Parc_33 { get; set; }
+        public string Cron_Parc_34 { get; set; }
+        public string Cron_Parc_35 { get; set; }
+        public string Cron_Parc_36 { get; set; }
     }
 }

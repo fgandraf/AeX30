@@ -88,7 +88,7 @@ namespace aeX30.Model
                     ws.GetRow(new CellReference(aeX[50]).Row).GetCell(new CellReference(aeX[50]).Col).SetCellValue(rae.ContratoTermino);
                 
                 
-                if (aeX[83] != "2021")
+                if (aeX[83] != "2022")
                     ws.GetRow(new CellReference(aeX[51]).Row).GetCell(new CellReference(aeX[51]).Col).SetCellValue(rae.EtapaPrevista);
 
                 ////CRONOGRAMA
@@ -124,7 +124,18 @@ namespace aeX30.Model
                 ws.GetRow(new CellReference(aeX[81]).Row).GetCell(new CellReference(aeX[81]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_29));
                 ws.GetRow(new CellReference(aeX[82]).Row).GetCell(new CellReference(aeX[82]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_30));
 
-                using (FileStream arquivoRAE = new FileStream(path_destino, FileMode.Create, FileAccess.Write))
+                if (aeX[83] != "2022")
+                {
+                    ws.GetRow(new CellReference(aeX[84]).Row).GetCell(new CellReference(aeX[84]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_31));
+                    ws.GetRow(new CellReference(aeX[85]).Row).GetCell(new CellReference(aeX[85]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_32));
+                    ws.GetRow(new CellReference(aeX[86]).Row).GetCell(new CellReference(aeX[86]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_33));
+                    ws.GetRow(new CellReference(aeX[87]).Row).GetCell(new CellReference(aeX[87]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_34));
+                    ws.GetRow(new CellReference(aeX[88]).Row).GetCell(new CellReference(aeX[88]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_35));
+                    ws.GetRow(new CellReference(aeX[89]).Row).GetCell(new CellReference(aeX[89]).Col).SetCellValue(Convert.ToDouble(rae.Cron_Parc_36));
+                }
+
+
+                    using (FileStream arquivoRAE = new FileStream(path_destino, FileMode.Create, FileAccess.Write))
                 {
                     wbook.ForceFormulaRecalculation = true;
                     wbook.Write(arquivoRAE);
