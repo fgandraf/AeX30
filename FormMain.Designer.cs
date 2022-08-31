@@ -35,11 +35,7 @@ namespace aeX30
             this.pg1 = new System.Windows.Forms.TabPage();
             this.tblPg1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMainPg1 = new System.Windows.Forms.Panel();
-            this.label105 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label100 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
@@ -88,7 +84,19 @@ namespace aeX30
             this.btnImportarProposta = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
             this.pnlMainPfui = new System.Windows.Forms.Panel();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
             this.pnlPFUIParcelas = new System.Windows.Forms.Panel();
+            this.txtParcela36 = new System.Windows.Forms.TextBox();
+            this.txtParcela35 = new System.Windows.Forms.TextBox();
+            this.txtParcela34 = new System.Windows.Forms.TextBox();
+            this.txtParcela33 = new System.Windows.Forms.TextBox();
+            this.txtParcela32 = new System.Windows.Forms.TextBox();
+            this.txtParcela31 = new System.Windows.Forms.TextBox();
             this.txtParcela1 = new System.Windows.Forms.TextBox();
             this.txtParcela30 = new System.Windows.Forms.TextBox();
             this.txtParcela2 = new System.Windows.Forms.TextBox();
@@ -306,18 +314,6 @@ namespace aeX30
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.openText = new System.Windows.Forms.OpenFileDialog();
             this.saveExcel = new System.Windows.Forms.SaveFileDialog();
-            this.txtParcela35 = new System.Windows.Forms.TextBox();
-            this.txtParcela34 = new System.Windows.Forms.TextBox();
-            this.txtParcela33 = new System.Windows.Forms.TextBox();
-            this.txtParcela32 = new System.Windows.Forms.TextBox();
-            this.txtParcela31 = new System.Windows.Forms.TextBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
-            this.txtParcela36 = new System.Windows.Forms.TextBox();
-            this.label111 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.pg1.SuspendLayout();
             this.tblPg1.SuspendLayout();
@@ -421,11 +417,7 @@ namespace aeX30
             // pnlMainPg1
             // 
             this.pnlMainPg1.BackColor = System.Drawing.Color.White;
-            this.pnlMainPg1.Controls.Add(this.label105);
-            this.pnlMainPg1.Controls.Add(this.label104);
-            this.pnlMainPg1.Controls.Add(this.label103);
             this.pnlMainPg1.Controls.Add(this.label102);
-            this.pnlMainPg1.Controls.Add(this.label101);
             this.pnlMainPg1.Controls.Add(this.panel17);
             this.pnlMainPg1.Controls.Add(this.label100);
             this.pnlMainPg1.Controls.Add(this.label99);
@@ -438,39 +430,8 @@ namespace aeX30
             this.pnlMainPg1.Size = new System.Drawing.Size(676, 326);
             this.pnlMainPg1.TabIndex = 4;
             // 
-            // label105
-            // 
-            this.label105.ForeColor = System.Drawing.Color.Black;
-            this.label105.Location = new System.Drawing.Point(59, 235);
-            this.label105.Name = "label105";
-            this.label105.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.label105.Size = new System.Drawing.Size(617, 15);
-            this.label105.TabIndex = 10;
-            this.label105.Text = "RAE 23/07/2020, 09/09/2021 e 22/10/2021";
-            // 
-            // label104
-            // 
-            this.label104.ForeColor = System.Drawing.Color.Black;
-            this.label104.Location = new System.Drawing.Point(59, 219);
-            this.label104.Name = "label104";
-            this.label104.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.label104.Size = new System.Drawing.Size(617, 16);
-            this.label104.TabIndex = 9;
-            this.label104.Text = "PCI 14/07/2021 e 21/10/2021";
-            // 
-            // label103
-            // 
-            this.label103.ForeColor = System.Drawing.Color.Black;
-            this.label103.Location = new System.Drawing.Point(59, 204);
-            this.label103.Name = "label103";
-            this.label103.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.label103.Size = new System.Drawing.Size(617, 15);
-            this.label103.TabIndex = 8;
-            this.label103.Text = "PFUI AE_130_016 à AE_130_025";
-            // 
             // label102
             // 
-            this.label102.Cursor = System.Windows.Forms.Cursors.Default;
             this.label102.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label102.ForeColor = System.Drawing.Color.Black;
             this.label102.Location = new System.Drawing.Point(501, 276);
@@ -479,16 +440,6 @@ namespace aeX30
             this.label102.TabIndex = 7;
             this.label102.Text = "CAU 166187-6";
             this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label101
-            // 
-            this.label101.ForeColor = System.Drawing.Color.Black;
-            this.label101.Location = new System.Drawing.Point(0, 186);
-            this.label101.Name = "label101";
-            this.label101.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.label101.Size = new System.Drawing.Size(676, 18);
-            this.label101.TabIndex = 6;
-            this.label101.Text = "Este software foi testado com as planilhas nas versões:";
             // 
             // panel17
             // 
@@ -527,7 +478,6 @@ namespace aeX30
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Cursor = System.Windows.Forms.Cursors.Default;
             this.label.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label.ForeColor = System.Drawing.Color.Black;
             this.label.Location = new System.Drawing.Point(501, 262);
@@ -539,7 +489,7 @@ namespace aeX30
             // lblPrimeiroParagrafo
             // 
             this.lblPrimeiroParagrafo.ForeColor = System.Drawing.Color.Black;
-            this.lblPrimeiroParagrafo.Location = new System.Drawing.Point(0, 104);
+            this.lblPrimeiroParagrafo.Location = new System.Drawing.Point(0, 125);
             this.lblPrimeiroParagrafo.Name = "lblPrimeiroParagrafo";
             this.lblPrimeiroParagrafo.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
             this.lblPrimeiroParagrafo.Size = new System.Drawing.Size(676, 100);
@@ -1242,6 +1192,72 @@ namespace aeX30
             this.pnlMainPfui.TabIndex = 1;
             this.pnlMainPfui.Visible = false;
             // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label111.ForeColor = System.Drawing.Color.Black;
+            this.label111.Location = new System.Drawing.Point(217, 2586);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(57, 12);
+            this.label111.TabIndex = 162;
+            this.label111.Text = "PARCELA 36";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label106.ForeColor = System.Drawing.Color.Black;
+            this.label106.Location = new System.Drawing.Point(217, 2555);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(57, 12);
+            this.label106.TabIndex = 161;
+            this.label106.Text = "PARCELA 35";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label107.ForeColor = System.Drawing.Color.Black;
+            this.label107.Location = new System.Drawing.Point(217, 2526);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(57, 12);
+            this.label107.TabIndex = 160;
+            this.label107.Text = "PARCELA 34";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label108.ForeColor = System.Drawing.Color.Black;
+            this.label108.Location = new System.Drawing.Point(217, 2497);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(57, 12);
+            this.label108.TabIndex = 159;
+            this.label108.Text = "PARCELA 33";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label109.ForeColor = System.Drawing.Color.Black;
+            this.label109.Location = new System.Drawing.Point(217, 2468);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(57, 12);
+            this.label109.TabIndex = 158;
+            this.label109.Text = "PARCELA 32";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label110.ForeColor = System.Drawing.Color.Black;
+            this.label110.Location = new System.Drawing.Point(217, 2439);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(57, 12);
+            this.label110.TabIndex = 157;
+            this.label110.Text = "PARCELA 31";
+            // 
             // pnlPFUIParcelas
             // 
             this.pnlPFUIParcelas.BackColor = System.Drawing.Color.Transparent;
@@ -1285,6 +1301,66 @@ namespace aeX30
             this.pnlPFUIParcelas.Name = "pnlPFUIParcelas";
             this.pnlPFUIParcelas.Size = new System.Drawing.Size(136, 1053);
             this.pnlPFUIParcelas.TabIndex = 42;
+            // 
+            // txtParcela36
+            // 
+            this.txtParcela36.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtParcela36.Location = new System.Drawing.Point(3, 1018);
+            this.txtParcela36.MaxLength = 50;
+            this.txtParcela36.Name = "txtParcela36";
+            this.txtParcela36.Size = new System.Drawing.Size(130, 23);
+            this.txtParcela36.TabIndex = 35;
+            this.txtParcela36.Text = "0";
+            // 
+            // txtParcela35
+            // 
+            this.txtParcela35.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtParcela35.Location = new System.Drawing.Point(3, 989);
+            this.txtParcela35.MaxLength = 50;
+            this.txtParcela35.Name = "txtParcela35";
+            this.txtParcela35.Size = new System.Drawing.Size(130, 23);
+            this.txtParcela35.TabIndex = 34;
+            this.txtParcela35.Text = "0";
+            // 
+            // txtParcela34
+            // 
+            this.txtParcela34.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtParcela34.Location = new System.Drawing.Point(3, 960);
+            this.txtParcela34.MaxLength = 50;
+            this.txtParcela34.Name = "txtParcela34";
+            this.txtParcela34.Size = new System.Drawing.Size(130, 23);
+            this.txtParcela34.TabIndex = 33;
+            this.txtParcela34.Text = "0";
+            // 
+            // txtParcela33
+            // 
+            this.txtParcela33.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtParcela33.Location = new System.Drawing.Point(3, 931);
+            this.txtParcela33.MaxLength = 50;
+            this.txtParcela33.Name = "txtParcela33";
+            this.txtParcela33.Size = new System.Drawing.Size(130, 23);
+            this.txtParcela33.TabIndex = 32;
+            this.txtParcela33.Text = "0";
+            // 
+            // txtParcela32
+            // 
+            this.txtParcela32.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtParcela32.Location = new System.Drawing.Point(3, 902);
+            this.txtParcela32.MaxLength = 50;
+            this.txtParcela32.Name = "txtParcela32";
+            this.txtParcela32.Size = new System.Drawing.Size(130, 23);
+            this.txtParcela32.TabIndex = 31;
+            this.txtParcela32.Text = "0";
+            // 
+            // txtParcela31
+            // 
+            this.txtParcela31.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtParcela31.Location = new System.Drawing.Point(3, 873);
+            this.txtParcela31.MaxLength = 50;
+            this.txtParcela31.Name = "txtParcela31";
+            this.txtParcela31.Size = new System.Drawing.Size(130, 23);
+            this.txtParcela31.TabIndex = 30;
+            this.txtParcela31.Text = "0";
             // 
             // txtParcela1
             // 
@@ -2876,9 +2952,8 @@ namespace aeX30
             this.label62.Padding = new System.Windows.Forms.Padding(100, 30, 100, 0);
             this.label62.Size = new System.Drawing.Size(670, 81);
             this.label62.TabIndex = 5;
-            this.label62.Text = "Nesta etapa, deve-se selecionar a planilha PFUI (Proposta de Financiamento de Uni" +
-    "dade Isolada) do proponente que foi fornecida pela agência demandante ou disponi" +
-    "bilizada através do SIOPI.";
+            this.label62.Text = "Nesta etapa, deve-se selecionar a planilha proposta (PFUI ou PCI) do proponente q" +
+    "ue foi fornecida pela agência demandante ou disponibilizada através do SIOPI.";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label64
@@ -3624,132 +3699,6 @@ namespace aeX30
             this.saveExcel.Filter = "Planilhas do Excel | *.xls";
             this.saveExcel.Title = "Salvar RAE";
             // 
-            // txtParcela35
-            // 
-            this.txtParcela35.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParcela35.Location = new System.Drawing.Point(3, 989);
-            this.txtParcela35.MaxLength = 50;
-            this.txtParcela35.Name = "txtParcela35";
-            this.txtParcela35.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela35.TabIndex = 34;
-            this.txtParcela35.Text = "0";
-            // 
-            // txtParcela34
-            // 
-            this.txtParcela34.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParcela34.Location = new System.Drawing.Point(3, 960);
-            this.txtParcela34.MaxLength = 50;
-            this.txtParcela34.Name = "txtParcela34";
-            this.txtParcela34.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela34.TabIndex = 33;
-            this.txtParcela34.Text = "0";
-            // 
-            // txtParcela33
-            // 
-            this.txtParcela33.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParcela33.Location = new System.Drawing.Point(3, 931);
-            this.txtParcela33.MaxLength = 50;
-            this.txtParcela33.Name = "txtParcela33";
-            this.txtParcela33.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela33.TabIndex = 32;
-            this.txtParcela33.Text = "0";
-            // 
-            // txtParcela32
-            // 
-            this.txtParcela32.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParcela32.Location = new System.Drawing.Point(3, 902);
-            this.txtParcela32.MaxLength = 50;
-            this.txtParcela32.Name = "txtParcela32";
-            this.txtParcela32.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela32.TabIndex = 31;
-            this.txtParcela32.Text = "0";
-            // 
-            // txtParcela31
-            // 
-            this.txtParcela31.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParcela31.Location = new System.Drawing.Point(3, 873);
-            this.txtParcela31.MaxLength = 50;
-            this.txtParcela31.Name = "txtParcela31";
-            this.txtParcela31.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela31.TabIndex = 30;
-            this.txtParcela31.Text = "0";
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label106.ForeColor = System.Drawing.Color.Black;
-            this.label106.Location = new System.Drawing.Point(217, 2555);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(57, 12);
-            this.label106.TabIndex = 161;
-            this.label106.Text = "PARCELA 35";
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label107.ForeColor = System.Drawing.Color.Black;
-            this.label107.Location = new System.Drawing.Point(217, 2526);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(57, 12);
-            this.label107.TabIndex = 160;
-            this.label107.Text = "PARCELA 34";
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label108.ForeColor = System.Drawing.Color.Black;
-            this.label108.Location = new System.Drawing.Point(217, 2497);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(57, 12);
-            this.label108.TabIndex = 159;
-            this.label108.Text = "PARCELA 33";
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label109.ForeColor = System.Drawing.Color.Black;
-            this.label109.Location = new System.Drawing.Point(217, 2468);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(57, 12);
-            this.label109.TabIndex = 158;
-            this.label109.Text = "PARCELA 32";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label110.ForeColor = System.Drawing.Color.Black;
-            this.label110.Location = new System.Drawing.Point(217, 2439);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(57, 12);
-            this.label110.TabIndex = 157;
-            this.label110.Text = "PARCELA 31";
-            // 
-            // txtParcela36
-            // 
-            this.txtParcela36.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParcela36.Location = new System.Drawing.Point(3, 1018);
-            this.txtParcela36.MaxLength = 50;
-            this.txtParcela36.Name = "txtParcela36";
-            this.txtParcela36.Size = new System.Drawing.Size(130, 23);
-            this.txtParcela36.TabIndex = 35;
-            this.txtParcela36.Text = "0";
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label111.ForeColor = System.Drawing.Color.Black;
-            this.label111.Location = new System.Drawing.Point(217, 2586);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(57, 12);
-            this.label111.TabIndex = 162;
-            this.label111.Text = "PARCELA 36";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -4094,11 +4043,7 @@ namespace aeX30
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.Label label103;
         private System.Windows.Forms.RadioButton rbtPCI;
         private System.Windows.Forms.RadioButton rbtPFUI;
         private System.Windows.Forms.Label lblVigencia;
