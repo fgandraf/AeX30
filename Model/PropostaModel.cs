@@ -111,10 +111,10 @@ namespace aeX30.Model
                     valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
                 else
                     break;
+            
 
 
-
-
+            
 
 
             }
@@ -195,14 +195,14 @@ namespace aeX30.Model
                         else
                             property.SetValue(pci, "0");
                 }
-
+            
                 parcelaNumero++;
                 arr++;
                 if (arr < aeX.Length)
                     valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
                 else
                     break;
-
+            
             }
             return pci;
 

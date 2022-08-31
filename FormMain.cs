@@ -224,6 +224,7 @@ namespace aeX30
             txtParcela34.Text = prop.Cron_Parc_34;
             txtParcela35.Text = prop.Cron_Parc_35;
             txtParcela36.Text = prop.Cron_Parc_36;
+            
         }
 
 

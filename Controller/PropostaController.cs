@@ -74,6 +74,19 @@ namespace aeX30.Controller
             "AL389", "AP389", "AT389", "AX389", "BB389", "BF389", "BJ389", "BN389",
             "AL429", "AP429", "AT429", "AX429", "BB429", "BF429"
         };
+        private static string[] pfui_2020c = new string[]
+        {
+            "G42", "AA42", "AG42", "AI42", "AN42", "AX42", "BD42", "BF42", "BL42", "BN42",
+            "G46", "AP46", "BA46", "BF46",
+            "G48", "AB48",
+            "AG50", "AP50", "AX50", "BF50", "BN50",
+            "AR115", "AR117", "AR129", "AR136", "AR145", "AR155", "AR164", "AR171", "AR178", "AR189", "AR196", "AR206", "AR216", "AR227", "AR233", "AR244", "AR253", "AR261", "AR270", "AR272",
+            "AJ311",
+            "AL310", "AP310", "AT310", "AX310", "BB310", "BF310", "BJ310", "BN310",
+            "AL350", "AP350", "AT350", "AX350", "BB350", "BF350", "BJ350", "BN350",
+            "AL390", "AP390", "AT390", "AX390", "BB390", "BF390", "BJ390", "BN390",
+            "AL430", "AP430", "AT430", "AX430", "BB430", "BF430"
+        };
         private static string[] pci_2021a = new string[]
 {
             
@@ -237,19 +250,21 @@ namespace aeX30.Controller
                     return pfui_2018;
                 else if (foot == 12042019 || foot == 23052019 || foot == 24052019)
                     return pfui_2019;
-                else if (foot == 13072020 || foot == 13072020)
+                else if (foot == 13072020 || foot == 13072020 || foot == 23072020)
                     return pfui_2020a;
-                else if (foot == 24092020 || /*foot=planilha22 ||*/ foot == 4122020 || foot == 26022021 || foot == 5052021)
+                else if (foot == 24092020 || foot == 4122020 || foot == 26022021 || foot == 5052021)
                     return pfui_2020b;
+                else if (foot == 4122020)
+                    return pfui_2020c;
                 else
                     return null;
             }
             else
             {
 
-                if (foot == 1062021 || foot == 14072021 || foot == 6082021)
+                if (foot == 1062021 || foot == 5072021 || foot == 14072021 || foot == 6082021)
                     return pci_2021a;
-                else if (foot == 21102021)
+                else if (foot == 21102021 || foot == 4112021)
                     return pci_2021b;
                 else
                 {
