@@ -7,12 +7,12 @@ using NPOI.SS.Util;
 
 namespace aeX30.Model
 {
-    public class PropostaModel
+    public class ProposalModel
     {
 
-        internal static bool isValid(string path)
+        internal static bool IsValid(string filePath)
         {
-            FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read);
+            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
             
             string sheetName = wbook.GetSheetName(0);
@@ -27,22 +27,22 @@ namespace aeX30.Model
         }
 
 
-        internal PropostaEnt GetProposal(string path)
+        internal Proposal GetProposal(string filePath)
         {
             //Open File
-            FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read);
+            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
-            ISheet ws = wbook.GetSheet(wbook.GetSheetName(0));
-            string footer = ws.Footer.Left;
+            ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
+            string footer = sheet.Footer.Left;
 
 
             //Set the right for the case array
             int version = Convert.ToInt32(Util.CleanInput(footer));
-            string[] aeX = SetArray(version);
+            string[] xy = SetArray(version);
 
 
             //Create the object
-            PropostaEnt proposal = new PropostaEnt();
+            Proposal proposal = new Proposal();
 
 
             //Star populate the object
@@ -51,89 +51,85 @@ namespace aeX30.Model
             if (wbook.GetSheetName(0) == "Proposta")
             {
                 proposal.Tipo = "PFUI";
-                proposal.Imov_Comarca = ws.GetRow(new CellReference(aeX[19]).Row).GetCell(new CellReference(aeX[19]).Col).ToString();
-                proposal.Imov_UF = ws.GetRow(new CellReference(aeX[20]).Row).GetCell(new CellReference(aeX[20]).Col).ToString();
+                proposal.Imov_Comarca = sheet.GetRow(new CellReference(xy[19]).Row).GetCell(new CellReference(xy[19]).Col).ToString();
+                proposal.Imov_UF = sheet.GetRow(new CellReference(xy[20]).Row).GetCell(new CellReference(xy[20]).Col).ToString();
             }
             else
-            {
                 proposal.Tipo = "PCI";
-                proposal.Imov_Comarca = null;
-                proposal.Imov_UF = null;
-            }
 
             ///HEADER         
-            proposal.Prop_Nome = ws.GetRow(new CellReference(aeX[0]).Row).GetCell(new CellReference(aeX[0]).Col).ToString();
-            proposal.Prop_CPF = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[1]).Row).GetCell(new CellReference(aeX[1]).Col).ToString());
-            proposal.Prop_DDD = ws.GetRow(new CellReference(aeX[2]).Row).GetCell(new CellReference(aeX[2]).Col).ToString();
-            proposal.Prop_Telefone = Util.FormatedFone(ws.GetRow(new CellReference(aeX[3]).Row).GetCell(new CellReference(aeX[3]).Col).ToString());
-            proposal.Rt_Nome = ws.GetRow(new CellReference(aeX[4]).Row).GetCell(new CellReference(aeX[4]).Col).ToString();
-            proposal.Rt_CAU_CREA = ws.GetRow(new CellReference(aeX[5]).Row).GetCell(new CellReference(aeX[5]).Col).ToString();
-            proposal.Rt_UF = ws.GetRow(new CellReference(aeX[6]).Row).GetCell(new CellReference(aeX[6]).Col).ToString();
-            proposal.Rt_CPF = Util.FormatedCPF(ws.GetRow(new CellReference(aeX[7]).Row).GetCell(new CellReference(aeX[7]).Col).ToString());
-            proposal.Rt_DDD = ws.GetRow(new CellReference(aeX[8]).Row).GetCell(new CellReference(aeX[8]).Col).ToString();
-            proposal.Rt_Telefone = Util.FormatedFone(ws.GetRow(new CellReference(aeX[9]).Row).GetCell(new CellReference(aeX[9]).Col).ToString());
-            proposal.End_Endereço = ws.GetRow(new CellReference(aeX[10]).Row).GetCell(new CellReference(aeX[10]).Col).ToString();
-            proposal.End_Complemento = ws.GetRow(new CellReference(aeX[11]).Row).GetCell(new CellReference(aeX[11]).Col).ToString();
-            proposal.End_CEP = Util.FormatedCEP(ws.GetRow(new CellReference(aeX[12]).Row).GetCell(new CellReference(aeX[12]).Col).ToString());
-            proposal.End_Bairro = ws.GetRow(new CellReference(aeX[13]).Row).GetCell(new CellReference(aeX[13]).Col).ToString();
-            proposal.End_Municipio = ws.GetRow(new CellReference(aeX[14]).Row).GetCell(new CellReference(aeX[14]).Col).ToString();
-            proposal.End_UF = ws.GetRow(new CellReference(aeX[15]).Row).GetCell(new CellReference(aeX[15]).Col).ToString();
+            proposal.Prop_Nome = sheet.GetRow(new CellReference(xy[0]).Row).GetCell(new CellReference(xy[0]).Col).ToString();
+            proposal.Prop_CPF = Util.FormatedCPF(sheet.GetRow(new CellReference(xy[1]).Row).GetCell(new CellReference(xy[1]).Col).ToString());
+            proposal.Prop_DDD = sheet.GetRow(new CellReference(xy[2]).Row).GetCell(new CellReference(xy[2]).Col).ToString();
+            proposal.Prop_Telefone = Util.FormatedFone(sheet.GetRow(new CellReference(xy[3]).Row).GetCell(new CellReference(xy[3]).Col).ToString());
+            proposal.Rt_Nome = sheet.GetRow(new CellReference(xy[4]).Row).GetCell(new CellReference(xy[4]).Col).ToString();
+            proposal.Rt_CAU_CREA = sheet.GetRow(new CellReference(xy[5]).Row).GetCell(new CellReference(xy[5]).Col).ToString();
+            proposal.Rt_UF = sheet.GetRow(new CellReference(xy[6]).Row).GetCell(new CellReference(xy[6]).Col).ToString();
+            proposal.Rt_CPF = Util.FormatedCPF(sheet.GetRow(new CellReference(xy[7]).Row).GetCell(new CellReference(xy[7]).Col).ToString());
+            proposal.Rt_DDD = sheet.GetRow(new CellReference(xy[8]).Row).GetCell(new CellReference(xy[8]).Col).ToString();
+            proposal.Rt_Telefone = Util.FormatedFone(sheet.GetRow(new CellReference(xy[9]).Row).GetCell(new CellReference(xy[9]).Col).ToString());
+            proposal.End_Endereço = sheet.GetRow(new CellReference(xy[10]).Row).GetCell(new CellReference(xy[10]).Col).ToString();
+            proposal.End_Complemento = sheet.GetRow(new CellReference(xy[11]).Row).GetCell(new CellReference(xy[11]).Col).ToString();
+            proposal.End_CEP = Util.FormatedCEP(sheet.GetRow(new CellReference(xy[12]).Row).GetCell(new CellReference(xy[12]).Col).ToString());
+            proposal.End_Bairro = sheet.GetRow(new CellReference(xy[13]).Row).GetCell(new CellReference(xy[13]).Col).ToString();
+            proposal.End_Municipio = sheet.GetRow(new CellReference(xy[14]).Row).GetCell(new CellReference(xy[14]).Col).ToString();
+            proposal.End_UF = sheet.GetRow(new CellReference(xy[15]).Row).GetCell(new CellReference(xy[15]).Col).ToString();
             try
             {
-                proposal.Imov_Valor_Terreno = string.Format("{0:0,0.00}", Convert.ToDouble(ws.GetRow(new CellReference(aeX[16]).Row).GetCell(new CellReference(aeX[16]).Col).ToString()));
+                proposal.Imov_Valor_Terreno = string.Format("{0:0,0.00}", Convert.ToDouble(sheet.GetRow(new CellReference(xy[16]).Row).GetCell(new CellReference(xy[16]).Col).ToString()));
             }
             catch
             {
                 proposal.Imov_Valor_Terreno = null;
             }
-            proposal.Imov_Matricula = ws.GetRow(new CellReference(aeX[17]).Row).GetCell(new CellReference(aeX[17]).Col).ToString();
-            proposal.Imov_Oficio = ws.GetRow(new CellReference(aeX[18]).Row).GetCell(new CellReference(aeX[18]).Col).ToString();
+            proposal.Imov_Matricula = sheet.GetRow(new CellReference(xy[17]).Row).GetCell(new CellReference(xy[17]).Col).ToString();
+            proposal.Imov_Oficio = sheet.GetRow(new CellReference(xy[18]).Row).GetCell(new CellReference(xy[18]).Col).ToString();
             ///ORÇAMENTO (PERCENTUAIS)
-            proposal.Item_17_01 = ws.GetRow(new CellReference(aeX[21]).Row).GetCell(new CellReference(aeX[21]).Col).NumericCellValue.ToString();
-            proposal.Item_17_02 = ws.GetRow(new CellReference(aeX[22]).Row).GetCell(new CellReference(aeX[22]).Col).NumericCellValue.ToString();
-            proposal.Item_17_03 = ws.GetRow(new CellReference(aeX[23]).Row).GetCell(new CellReference(aeX[23]).Col).NumericCellValue.ToString();
-            proposal.Item_17_04 = ws.GetRow(new CellReference(aeX[24]).Row).GetCell(new CellReference(aeX[24]).Col).NumericCellValue.ToString();
-            proposal.Item_17_05 = ws.GetRow(new CellReference(aeX[25]).Row).GetCell(new CellReference(aeX[25]).Col).NumericCellValue.ToString();
-            proposal.Item_17_06 = ws.GetRow(new CellReference(aeX[26]).Row).GetCell(new CellReference(aeX[26]).Col).NumericCellValue.ToString();
-            proposal.Item_17_07 = ws.GetRow(new CellReference(aeX[27]).Row).GetCell(new CellReference(aeX[27]).Col).NumericCellValue.ToString();
-            proposal.Item_17_08 = ws.GetRow(new CellReference(aeX[28]).Row).GetCell(new CellReference(aeX[28]).Col).NumericCellValue.ToString();
-            proposal.Item_17_09 = ws.GetRow(new CellReference(aeX[29]).Row).GetCell(new CellReference(aeX[29]).Col).NumericCellValue.ToString();
-            proposal.Item_17_10 = ws.GetRow(new CellReference(aeX[30]).Row).GetCell(new CellReference(aeX[30]).Col).NumericCellValue.ToString();
-            proposal.Item_17_11 = ws.GetRow(new CellReference(aeX[31]).Row).GetCell(new CellReference(aeX[31]).Col).NumericCellValue.ToString();
-            proposal.Item_17_12 = ws.GetRow(new CellReference(aeX[32]).Row).GetCell(new CellReference(aeX[32]).Col).NumericCellValue.ToString();
-            proposal.Item_17_13 = ws.GetRow(new CellReference(aeX[33]).Row).GetCell(new CellReference(aeX[33]).Col).NumericCellValue.ToString();
-            proposal.Item_17_14 = ws.GetRow(new CellReference(aeX[34]).Row).GetCell(new CellReference(aeX[34]).Col).NumericCellValue.ToString();
-            proposal.Item_17_15 = ws.GetRow(new CellReference(aeX[35]).Row).GetCell(new CellReference(aeX[35]).Col).NumericCellValue.ToString();
-            proposal.Item_17_16 = ws.GetRow(new CellReference(aeX[36]).Row).GetCell(new CellReference(aeX[36]).Col).NumericCellValue.ToString();
-            proposal.Item_17_17 = ws.GetRow(new CellReference(aeX[37]).Row).GetCell(new CellReference(aeX[37]).Col).NumericCellValue.ToString();
-            proposal.Item_17_18 = ws.GetRow(new CellReference(aeX[38]).Row).GetCell(new CellReference(aeX[38]).Col).NumericCellValue.ToString();
-            proposal.Item_17_19 = ws.GetRow(new CellReference(aeX[39]).Row).GetCell(new CellReference(aeX[39]).Col).NumericCellValue.ToString();
-            proposal.Item_17_20 = ws.GetRow(new CellReference(aeX[40]).Row).GetCell(new CellReference(aeX[40]).Col).NumericCellValue.ToString();
+            proposal.Item_17_01 = sheet.GetRow(new CellReference(xy[21]).Row).GetCell(new CellReference(xy[21]).Col).NumericCellValue.ToString();
+            proposal.Item_17_02 = sheet.GetRow(new CellReference(xy[22]).Row).GetCell(new CellReference(xy[22]).Col).NumericCellValue.ToString();
+            proposal.Item_17_03 = sheet.GetRow(new CellReference(xy[23]).Row).GetCell(new CellReference(xy[23]).Col).NumericCellValue.ToString();
+            proposal.Item_17_04 = sheet.GetRow(new CellReference(xy[24]).Row).GetCell(new CellReference(xy[24]).Col).NumericCellValue.ToString();
+            proposal.Item_17_05 = sheet.GetRow(new CellReference(xy[25]).Row).GetCell(new CellReference(xy[25]).Col).NumericCellValue.ToString();
+            proposal.Item_17_06 = sheet.GetRow(new CellReference(xy[26]).Row).GetCell(new CellReference(xy[26]).Col).NumericCellValue.ToString();
+            proposal.Item_17_07 = sheet.GetRow(new CellReference(xy[27]).Row).GetCell(new CellReference(xy[27]).Col).NumericCellValue.ToString();
+            proposal.Item_17_08 = sheet.GetRow(new CellReference(xy[28]).Row).GetCell(new CellReference(xy[28]).Col).NumericCellValue.ToString();
+            proposal.Item_17_09 = sheet.GetRow(new CellReference(xy[29]).Row).GetCell(new CellReference(xy[29]).Col).NumericCellValue.ToString();
+            proposal.Item_17_10 = sheet.GetRow(new CellReference(xy[30]).Row).GetCell(new CellReference(xy[30]).Col).NumericCellValue.ToString();
+            proposal.Item_17_11 = sheet.GetRow(new CellReference(xy[31]).Row).GetCell(new CellReference(xy[31]).Col).NumericCellValue.ToString();
+            proposal.Item_17_12 = sheet.GetRow(new CellReference(xy[32]).Row).GetCell(new CellReference(xy[32]).Col).NumericCellValue.ToString();
+            proposal.Item_17_13 = sheet.GetRow(new CellReference(xy[33]).Row).GetCell(new CellReference(xy[33]).Col).NumericCellValue.ToString();
+            proposal.Item_17_14 = sheet.GetRow(new CellReference(xy[34]).Row).GetCell(new CellReference(xy[34]).Col).NumericCellValue.ToString();
+            proposal.Item_17_15 = sheet.GetRow(new CellReference(xy[35]).Row).GetCell(new CellReference(xy[35]).Col).NumericCellValue.ToString();
+            proposal.Item_17_16 = sheet.GetRow(new CellReference(xy[36]).Row).GetCell(new CellReference(xy[36]).Col).NumericCellValue.ToString();
+            proposal.Item_17_17 = sheet.GetRow(new CellReference(xy[37]).Row).GetCell(new CellReference(xy[37]).Col).NumericCellValue.ToString();
+            proposal.Item_17_18 = sheet.GetRow(new CellReference(xy[38]).Row).GetCell(new CellReference(xy[38]).Col).NumericCellValue.ToString();
+            proposal.Item_17_19 = sheet.GetRow(new CellReference(xy[39]).Row).GetCell(new CellReference(xy[39]).Col).NumericCellValue.ToString();
+            proposal.Item_17_20 = sheet.GetRow(new CellReference(xy[40]).Row).GetCell(new CellReference(xy[40]).Col).NumericCellValue.ToString();
             ///CRONOGRAMA
             ///Executado
-            if (ws.GetRow(new CellReference(aeX[41]).Row).GetCell(new CellReference(aeX[41]).Col) != null)
-                proposal.Cron_Executado = ws.GetRow(new CellReference(aeX[41]).Row).GetCell(new CellReference(aeX[41]).Col).NumericCellValue.ToString();
+            if (sheet.GetRow(new CellReference(xy[41]).Row).GetCell(new CellReference(xy[41]).Col) != null)
+                proposal.Cron_Executado = sheet.GetRow(new CellReference(xy[41]).Row).GetCell(new CellReference(xy[41]).Col).NumericCellValue.ToString();
             ///Parcelas 1 a 30
             int arr = 42;
-            var valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
+            var valor = sheet.GetRow(new CellReference(xy[arr]).Row).GetCell(new CellReference(xy[arr]).Col);
             int parcelaNumero = 1;
 
-            while (arr <= aeX.Length)
+            while (arr <= xy.Length)
             {
                 var properties = proposal.GetType().GetProperties();
                 foreach (var property in properties)
                 {
                     if (property.Name.Equals("Cron_Parc_" + parcelaNumero.ToString()))
                         if (valor != null)
-                            property.SetValue(proposal, ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col).NumericCellValue.ToString());
+                            property.SetValue(proposal, sheet.GetRow(new CellReference(xy[arr]).Row).GetCell(new CellReference(xy[arr]).Col).NumericCellValue.ToString());
                         else
                             property.SetValue(proposal, "0");
                 }
 
                 parcelaNumero++;
                 arr++;
-                if (arr < aeX.Length)
-                    valor = ws.GetRow(new CellReference(aeX[arr]).Row).GetCell(new CellReference(aeX[arr]).Col);
+                if (arr < xy.Length)
+                    valor = sheet.GetRow(new CellReference(xy[arr]).Row).GetCell(new CellReference(xy[arr]).Col);
                 else
                     break;
             }
@@ -366,10 +362,9 @@ namespace aeX30.Model
 };
         private static string[] pci_2021b = new string[]
         {
-            
             /*prop. NOME:----------*/    "G43",
-            /*prop. CPF:-----------*/    "AK43",
-            /*prop. DDD:-----------*/    "AQ43",
+            /*prop. CPF:-----------*/    "AK43", 
+            /*prop. DDD:-----------*/    "AQ43", 
             /*prop. TELEFONE:------*/    "AS43",
             
             /*rt. NOME:------------*/    "G49",

@@ -1,9 +1,9 @@
-﻿//using
+﻿
 
 namespace aeX30.Entities
 {
 
-    internal class PropostaEnt
+    internal class Proposal
     {
         public string  Tipo { get; set; }
         public string  Vigencia { get; set; }

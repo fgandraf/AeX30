@@ -2,14 +2,14 @@
 
 namespace aeX30.Controller
 {
-    internal class ConvocacaoController
+    internal class RequestController
     {
 
         internal string[] GetReferencia(string path)
         {
             try
             {
-                return new Model.ConvocacaoModel().GetReferencia(path);
+                return new Model.RequestModel().GetReferencia(path);
             }
             catch (Exception ex)
             {

@@ -22,9 +22,9 @@ namespace aeX30
 
 
         //:METODS
-        private RaeEnt PopulateToRAE()
+        private Entities.Report PopulateToRAE()
         {
-            RaeEnt rae = new RaeEnt();
+            Entities.Report rae = new Entities.Report();
 
             rae.Ref0 = txtRef0.Text;
             rae.Ref1 = txtRef1.Text;
@@ -126,7 +126,7 @@ namespace aeX30
 
             return rae;
         }
-        private void PopulateFromProposta(PropostaEnt prop)
+        private void PopulateFromProposta(Proposal prop)
         {
             if (prop.Tipo == "PFUI")
             {
@@ -297,7 +297,7 @@ namespace aeX30
             {
                 if (openText.ShowDialog() == DialogResult.OK)
                 {
-                    string[] referencia = new ConvocacaoController().GetReferencia(openText.FileName);
+                    string[] referencia = new RequestController().GetReferencia(openText.FileName);
 
                     //Populate
                     txtRef0.Text = referencia[0];
@@ -333,7 +333,7 @@ namespace aeX30
                 if (openExcel.ShowDialog() == DialogResult.OK)
                 {
 
-                    PropostaEnt prop = new PropostaController().GetProposal(openExcel.FileName);
+                    Proposal prop = new ProposalController().GetProposal(openExcel.FileName);
                     if (prop == null)
                     {
                         MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -393,7 +393,7 @@ namespace aeX30
                     if (File.Exists(_caminhoModelo))
                     {
 
-                        if (RaeController.SetRAE(_caminhoModelo, saveExcel.FileName, PopulateToRAE()) == 1)
+                        if (ReportController.SetReport(_caminhoModelo, saveExcel.FileName, PopulateToRAE()) == 1)
                         {
                             txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
                             btnNew.Show();

@@ -1,9 +1,8 @@
-﻿//using
-
+﻿
 namespace aeX30.Entities
 {
 
-    internal class RaeEnt
+    internal class Report
     {
         public string Ref0 { get; set; }
         public string Ref1 { get; set; }

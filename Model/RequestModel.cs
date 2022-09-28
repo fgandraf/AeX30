@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace aeX30.Model
 {
-    internal class ConvocacaoModel
+    internal class RequestModel
     {
         internal string[] GetReferencia(string path)
         {
