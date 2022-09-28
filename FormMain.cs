@@ -333,7 +333,7 @@ namespace aeX30
                 if (openExcel.ShowDialog() == DialogResult.OK)
                 {
 
-                    PropostaEnt prop = new PropostaController().GetProposta(openExcel.FileName);
+                    PropostaEnt prop = new PropostaController().GetProposal(openExcel.FileName);
                     if (prop == null)
                     {
                         MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
