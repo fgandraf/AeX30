@@ -10,7 +10,10 @@ namespace aeX30.Controller
         {
 
             if (IsValid(filePath))
-                return new ProposalModel().GetProposal(filePath);
+            {
+                Proposal proposal = new ProposalModel().GetProposal(filePath);
+                return RegexObject(proposal);
+            }
             else
                 return null;
         }
@@ -28,6 +31,20 @@ namespace aeX30.Controller
             else
                 return false;
         }
+
+
+
+        private static Proposal RegexObject(Proposal prop)
+        {
+            prop.ProponenteCPF = Util.FormatedCPF(prop.ProponenteCPF);
+            prop.ProponenteFone = Util.FormatedFone(prop.ProponenteFone);
+            prop.ProponenteCPF = Util.FormatedCPF(prop.ProponenteCPF);
+            prop.ResponsavelCPF = Util.FormatedCPF(prop.ResponsavelCPF);
+            prop.ImovelCep = Util.FormatedCEP(prop.ImovelCep);
+
+            return prop;
+        }
+
 
     }
 

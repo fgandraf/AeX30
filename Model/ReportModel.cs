@@ -9,7 +9,7 @@ namespace aeX30.Model
 {
     public class ReportModel
     {
-        private static string[] CellAdress = new string[]
+        private static string[] CellAddress = new string[]
                 {
             /*auto. de serv.:------*/    "AB35", "AD35", "AF35", "AJ35", "AL35", "AM35", "AN35",
             
@@ -134,7 +134,7 @@ namespace aeX30.Model
                 FileStream file = new FileStream(pathTemplate, FileMode.Open, FileAccess.Read);
                 HSSFWorkbook wbook = new HSSFWorkbook(file);
                 ISheet sheet = wbook.GetSheet("RAE");
-                string[] xy = CellAdress;
+                string[] xy = CellAddress;
 
                 
                 //CABEÇALHO

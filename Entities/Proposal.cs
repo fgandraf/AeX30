@@ -7,51 +7,51 @@ namespace aeX30.Entities
     {
         public string  Tipo { get; set; }
         public string  Vigencia { get; set; }
-        public string  Prop_Nome { get; set; }
-        public string  Prop_CPF { get; set; }
-        public string  Prop_DDD { get; set; }
-        public string  Prop_Telefone { get; set; }
+        public string  ProponenteNome { get; set; }
+        public string  ProponenteCPF { get; set; }
+        public string  ProponenteDDD { get; set; }
+        public string  ProponenteFone { get; set; }
 
-        public string  Rt_Nome { get; set; }
-        public string  Rt_CAU_CREA { get; set; }
-        public string  Rt_UF { get; set; }
-        public string  Rt_CPF { get; set; }
-        public string  Rt_DDD { get; set; }
-        public string  Rt_Telefone { get; set; }
+        public string  ResponsavelNome { get; set; }
+        public string  ReponsavelCauCrea { get; set; }
+        public string  ResponsavelUF { get; set; }
+        public string  ResponsavelCPF { get; set; }
+        public string  ResponsavelDDD { get; set; }
+        public string  ResponsavelFone { get; set; }
 
-        public string  End_Endereço { get; set; }
-        public string  End_Complemento { get; set; }
-        public string  End_CEP { get; set; }
-        public string  End_Bairro { get; set; }
-        public string  End_Municipio { get; set; }
-        public string  End_UF { get; set; }
+        public string  ImovelEndereco { get; set; }
+        public string  ImovelComplemento { get; set; }
+        public string  ImovelCep { get; set; }
+        public string  ImovelBairro { get; set; }
+        public string  ImovelMunicipio { get; set; }
+        public string  ImovelUF { get; set; }
         
-        public string  Imov_Valor_Terreno { get; set; }
-        public string  Imov_Matricula { get; set; }
-        public string  Imov_Oficio { get; set; }
-        public string  Imov_Comarca { get; set; }
-        public string  Imov_UF { get; set; }
+        public string  ImovelValorTerreno { get; set; }
+        public string  ImovelMatricula { get; set; }
+        public string  ImovelOficio { get; set; }
+        public string  ImovelComarca { get; set; }
+        public string  ImovelComarcaUF { get; set; }
         
-        public string  Item_17_01 { get; set; }
-        public string  Item_17_02 { get; set; }
-        public string  Item_17_03 { get; set; }
-        public string  Item_17_04 { get; set; }
-        public string  Item_17_05 { get; set; }
-        public string  Item_17_06 { get; set; }
-        public string  Item_17_07 { get; set; }
-        public string  Item_17_08 { get; set; }
-        public string  Item_17_09 { get; set; }
-        public string  Item_17_10 { get; set; }
-        public string  Item_17_11 { get; set; }
-        public string  Item_17_12 { get; set; }
-        public string  Item_17_13 { get; set; }
-        public string  Item_17_14 { get; set; }
-        public string  Item_17_15 { get; set; }
-        public string  Item_17_16 { get; set; }
-        public string  Item_17_17 { get; set; }
-        public string  Item_17_18 { get; set; }
-        public string  Item_17_19 { get; set; }
-        public string  Item_17_20 { get; set; }
+        public string  ServicoItem01 { get; set; }
+        public string  ServicoItem02 { get; set; }
+        public string  ServicoItem03 { get; set; }
+        public string  ServicoItem04 { get; set; }
+        public string  ServicoItem05 { get; set; }
+        public string  ServicoItem06 { get; set; }
+        public string  ServicoItem07 { get; set; }
+        public string  ServicoItem08 { get; set; }
+        public string  ServicoItem09 { get; set; }
+        public string  ServicoItem10 { get; set; }
+        public string  ServicoItem11 { get; set; }
+        public string  ServicoItem12 { get; set; }
+        public string  ServicoItem13 { get; set; }
+        public string  ServicoItem14 { get; set; }
+        public string  ServicoItem15 { get; set; }
+        public string  ServicoItem16 { get; set; }
+        public string  ServicoItem17 { get; set; }
+        public string  ServicoItem18 { get; set; }
+        public string  ServicoItem19 { get; set; }
+        public string  ServicoItem20 { get; set; }
         
         public string  Cron_Executado { get; set; }
         
@@ -85,11 +85,5 @@ namespace aeX30.Entities
         public string  Cron_Parc_28 { get; set; } = "0";
         public string  Cron_Parc_29 { get; set; } = "0";
         public string  Cron_Parc_30 { get; set; } = "0";
-        public string Cron_Parc_31 { get; set; } = "0";
-        public string Cron_Parc_32 { get; set; } = "0";
-        public string Cron_Parc_33 { get; set; } = "0";
-        public string Cron_Parc_34 { get; set; } = "0";
-        public string Cron_Parc_35 { get; set; } = "0";
-        public string Cron_Parc_36 { get; set; } = "0";
     }
 }

@@ -143,48 +143,48 @@ namespace aeX30
             lblVigencia.Show();
             lblVigencia.Text = prop.Vigencia;
             ///CABEÇALHO
-            txtPropNome.Text = prop.Prop_Nome;
-            txtPropCPF.Text = prop.Prop_CPF;
-            txtPropDDD.Text = prop.Prop_DDD;
-            txtPropTelefone.Text = prop.Prop_Telefone;
-            txtRTNome.Text = prop.Rt_Nome;
-            txtRTCauCrea.Text = prop.Rt_CAU_CREA;
-            txtRTUF.Text = prop.Rt_UF;
-            txtRTCPF.Text = prop.Rt_CPF;
-            txtRTDDD.Text = prop.Rt_DDD;
-            txtRTTelefone.Text = prop.Rt_Telefone;
-            txtIdEndereco.Text = prop.End_Endereço;
-            txtIdComplemento.Text = prop.End_Complemento;
-            txtIdCEP.Text = prop.End_CEP;
-            txtIdBairro.Text = prop.End_Bairro;
-            txtIdMunicipio.Text = prop.End_Municipio;
-            txtIdUF.Text = prop.End_UF;
-            txtTerrenoValorProposto.Text = prop.Imov_Valor_Terreno;
-            txtTerrenoMatricula.Text = prop.Imov_Matricula;
-            txtTerrenoOficio.Text = prop.Imov_Oficio;
-            txtTerrenoComarca.Text = prop.Imov_Comarca;
-            txtTerrenoUF.Text = prop.Imov_UF;
+            txtPropNome.Text = prop.ProponenteNome;
+            txtPropCPF.Text = prop.ProponenteCPF;
+            txtPropDDD.Text = prop.ProponenteDDD;
+            txtPropTelefone.Text = prop.ProponenteFone;
+            txtRTNome.Text = prop.ResponsavelNome;
+            txtRTCauCrea.Text = prop.ReponsavelCauCrea;
+            txtRTUF.Text = prop.ResponsavelUF;
+            txtRTCPF.Text = prop.ResponsavelCPF;
+            txtRTDDD.Text = prop.ResponsavelDDD;
+            txtRTTelefone.Text = prop.ResponsavelFone;
+            txtIdEndereco.Text = prop.ImovelEndereco;
+            txtIdComplemento.Text = prop.ImovelComplemento;
+            txtIdCEP.Text = prop.ImovelCep;
+            txtIdBairro.Text = prop.ImovelBairro;
+            txtIdMunicipio.Text = prop.ImovelMunicipio;
+            txtIdUF.Text = prop.ImovelUF;
+            txtTerrenoValorProposto.Text = prop.ImovelValorTerreno;
+            txtTerrenoMatricula.Text = prop.ImovelMatricula;
+            txtTerrenoOficio.Text = prop.ImovelOficio;
+            txtTerrenoComarca.Text = prop.ImovelComarca;
+            txtTerrenoUF.Text = prop.ImovelComarcaUF;
             ///ORÇAMENTO (PERCENTUAIS)
-            txt1701.Text = prop.Item_17_01;
-            txt1702.Text = prop.Item_17_02;
-            txt1703.Text = prop.Item_17_03;
-            txt1704.Text = prop.Item_17_04;
-            txt1705.Text = prop.Item_17_05;
-            txt1706.Text = prop.Item_17_06;
-            txt1707.Text = prop.Item_17_07;
-            txt1708.Text = prop.Item_17_08;
-            txt1709.Text = prop.Item_17_09;
-            txt1710.Text = prop.Item_17_10;
-            txt1711.Text = prop.Item_17_11;
-            txt1712.Text = prop.Item_17_12;
-            txt1713.Text = prop.Item_17_13;
-            txt1714.Text = prop.Item_17_14;
-            txt1715.Text = prop.Item_17_15;
-            txt1716.Text = prop.Item_17_16;
-            txt1717.Text = prop.Item_17_17;
-            txt1718.Text = prop.Item_17_18;
-            txt1719.Text = prop.Item_17_19;
-            txt1720.Text = prop.Item_17_20;
+            txt1701.Text = prop.ServicoItem01;
+            txt1702.Text = prop.ServicoItem02;
+            txt1703.Text = prop.ServicoItem03;
+            txt1704.Text = prop.ServicoItem04;
+            txt1705.Text = prop.ServicoItem05;
+            txt1706.Text = prop.ServicoItem06;
+            txt1707.Text = prop.ServicoItem07;
+            txt1708.Text = prop.ServicoItem08;
+            txt1709.Text = prop.ServicoItem09;
+            txt1710.Text = prop.ServicoItem10;
+            txt1711.Text = prop.ServicoItem11;
+            txt1712.Text = prop.ServicoItem12;
+            txt1713.Text = prop.ServicoItem13;
+            txt1714.Text = prop.ServicoItem14;
+            txt1715.Text = prop.ServicoItem15;
+            txt1716.Text = prop.ServicoItem16;
+            txt1717.Text = prop.ServicoItem17;
+            txt1718.Text = prop.ServicoItem18;
+            txt1719.Text = prop.ServicoItem19;
+            txt1720.Text = prop.ServicoItem20;
             ///CRONOGRAMA
             txtExecutado.Text = prop.Cron_Executado;
             txtParcela1.Text = prop.Cron_Parc_1;
@@ -216,15 +216,7 @@ namespace aeX30
             txtParcela27.Text = prop.Cron_Parc_27;
             txtParcela28.Text = prop.Cron_Parc_28;
             txtParcela29.Text = prop.Cron_Parc_29;
-            txtParcela30.Text = prop.Cron_Parc_30;
-
-            txtParcela31.Text = prop.Cron_Parc_31;
-            txtParcela32.Text = prop.Cron_Parc_32;
-            txtParcela33.Text = prop.Cron_Parc_33;
-            txtParcela34.Text = prop.Cron_Parc_34;
-            txtParcela35.Text = prop.Cron_Parc_35;
-            txtParcela36.Text = prop.Cron_Parc_36;
-            
+            txtParcela30.Text = prop.Cron_Parc_30;           
         }
 
 
