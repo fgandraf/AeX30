@@ -107,19 +107,23 @@ namespace aeX30.Model
                 };
 
 
-        internal static bool IsValid(string filePath)
+        internal static string GetSheetName(string filePath)
         {
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
-            string sheetName = wbook.GetSheetName(0);
-            ISheet sheet = wbook.GetSheet(sheetName);
-            string footer = sheet.Footer.Left;
+
+            return wbook.GetSheetName(0);
+        }
 
 
-            if (sheetName == "RAE" && footer != "" || footer != null)
-                return true;
-            else
-                return false;
+        internal static string GetFooter(string filePath)
+        {
+            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            HSSFWorkbook wbook = new HSSFWorkbook(file);
+
+            ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
+
+            return sheet.Footer.Left;
         }
 
 
@@ -132,9 +136,7 @@ namespace aeX30.Model
                 ISheet sheet = wbook.GetSheet("RAE");
                 string[] xy = CellAdress;
 
-
-
-
+                
                 //CABEÇALHO
                 sheet.GetRow(new CellReference(xy[0]).Row).GetCell(new CellReference(xy[0]).Col).SetCellValue(report.Ref0);
                 sheet.GetRow(new CellReference(xy[1]).Row).GetCell(new CellReference(xy[1]).Col).SetCellValue(report.Ref1);

@@ -10,20 +10,23 @@ namespace aeX30.Model
     public class ProposalModel
     {
 
-        internal static bool IsValid(string filePath)
+        internal static string GetSheetName(string filePath)
         {
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
             
-            string sheetName = wbook.GetSheetName(0);
-            ISheet sheet = wbook.GetSheet(sheetName);
-            string footer = sheet.Footer.Left;
+            return wbook.GetSheetName(0);
+        }
 
 
-            if ((sheetName == "Proposta" || sheetName == "Proposta_Constr_Individual") && (footer != "" || footer != null))
-                return true;
-            else
-                return false;
+        internal static string GetFooter(string filePath)
+        {
+            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            HSSFWorkbook wbook = new HSSFWorkbook(file);
+
+            ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
+
+            return sheet.Footer.Left;
         }
 
 
@@ -33,11 +36,10 @@ namespace aeX30.Model
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
             ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
-            string footer = sheet.Footer.Left;
 
 
             //Set the right for the case array
-            int version = Convert.ToInt32(Util.CleanInput(footer));
+            int version = Convert.ToInt32(Util.CleanInput(sheet.Footer.Left));
             string[] xy = SetArray(version);
 
 
@@ -46,7 +48,7 @@ namespace aeX30.Model
 
 
             //Star populate the object
-            proposal.Vigencia = footer;
+            proposal.Vigencia = sheet.Footer.Left;
 
             if (wbook.GetSheetName(0) == "Proposta")
             {

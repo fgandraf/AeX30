@@ -297,16 +297,16 @@ namespace aeX30
             {
                 if (openText.ShowDialog() == DialogResult.OK)
                 {
-                    string[] referencia = new RequestController().GetReferencia(openText.FileName);
+                    Request requestNumber = new RequestController().GetRequestNumber(openText.FileName);
 
                     //Populate
-                    txtRef0.Text = referencia[0];
-                    txtRef1.Text = referencia[1];
-                    txtRef2.Text = referencia[2];
-                    txtRef3.Text = referencia[3];
-                    txtRef4.Text = referencia[4];
-                    txtRef5.Text = referencia[5];
-                    txtRef6.Text = referencia[6];
+                    txtRef0.Text = requestNumber.Part1;
+                    txtRef1.Text = requestNumber.Part2;
+                    txtRef2.Text = requestNumber.Part3;
+                    txtRef3.Text = requestNumber.Part4;
+                    txtRef4.Text = requestNumber.Part5;
+                    txtRef5.Text = requestNumber.Part6;
+                    txtRef6.Text = requestNumber.Part7;
 
                     pnlMainConvocacao.Show();
                     btnProximoConvocacao.Show();

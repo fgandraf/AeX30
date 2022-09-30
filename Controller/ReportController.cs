@@ -10,11 +10,24 @@ namespace aeX30.Controller
 
         internal static int SetReport(string pathTemplate, string pathDestin, Report report)
         {
-            if (ReportModel.IsValid(pathTemplate))
+            if (IsValid(pathTemplate))
                 return new ReportModel().SetReport(pathTemplate, pathDestin, report);
             else
                 return 0;
 
+        }
+
+
+
+        private static bool IsValid(string filePath)
+        {
+            string sheetName = ReportModel.GetSheetName(filePath);
+            string footer = ReportModel.GetFooter(filePath);
+
+            if (sheetName == "RAE" && footer != "" || footer != null)
+                return true;
+            else
+                return false;
         }
 
 

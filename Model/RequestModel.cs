@@ -1,4 +1,5 @@
 ﻿using System;
+using aeX30.Entities;
 using System.IO;
 using System.Linq;
 
@@ -6,32 +7,27 @@ namespace aeX30.Model
 {
     internal class RequestModel
     {
-        internal string[] GetReferencia(string path)
+        internal Request GetRequestNumber(string path)
         {
-            var convocacao = File.ReadAllLines(path)
+            var line = File.ReadAllLines(path)
                                .Where(l => l.StartsWith("Refer"))
                                .Select(l => l.Substring(l.LastIndexOf("-") + 2))
                                .ToList();
 
 
-            string referencia = Util.CleanInput(convocacao[0]);
-            if (referencia.Substring(0, 1) == "0")
-                referencia = referencia.Substring(1);
-
-
-            string[] refe = new string[]
+            string fullNumber = line[0].TrimStart('0');
+            
+            return new Request
             {
-            referencia.Substring(0, 4),
-            referencia.Substring(4, 4),
-            Convert.ToInt32(referencia.Substring(8, 9)).ToString(),
-            referencia.Substring(17, 4),
-            referencia.Substring(21, 2),
-            referencia.Substring(23, 2),
-            "01"
+                Part1 = fullNumber.Substring(0, 4),
+                Part2 = fullNumber.Substring(5, 4),
+                Part3 = fullNumber.Substring(10, 9).TrimStart('0'),
+                Part4 = fullNumber.Substring(20, 4),
+                Part5 = fullNumber.Substring(25, 2),
+                Part6 = fullNumber.Substring(28, 2),
+                Part7 = "01"
             };
 
-
-            return refe;
         }
 
     }
