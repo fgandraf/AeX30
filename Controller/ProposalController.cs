@@ -3,17 +3,14 @@ using aeX30.Model;
 
 namespace aeX30.Controller
 {
-    internal class ProposalController
+    public class ProposalController
     {
 
-        internal Proposal GetProposal(string filePath)
+        public Proposal GetProposal(string filePath)
         {
 
             if (IsValid(filePath))
-            {
-                Proposal proposal = new ProposalModel().GetProposal(filePath);
-                return RegexObject(proposal);
-            }
+                return FormatedProposalIn(filePath);
             else
                 return null;
         }
@@ -21,7 +18,7 @@ namespace aeX30.Controller
 
 
 
-        private static bool IsValid(string filePath)
+        private bool IsValid(string filePath)
         {
             string sheetName = ProposalModel.GetSheetName(filePath);
             string footer = ProposalModel.GetFooter(filePath);
@@ -33,16 +30,32 @@ namespace aeX30.Controller
         }
 
 
-
-        private static Proposal RegexObject(Proposal prop)
+        private Proposal FormatedProposalIn(string filePath)
         {
-            prop.ProponenteCPF = Util.FormatedCPF(prop.ProponenteCPF);
-            prop.ProponenteFone = Util.FormatedFone(prop.ProponenteFone);
-            prop.ProponenteCPF = Util.FormatedCPF(prop.ProponenteCPF);
-            prop.ResponsavelCPF = Util.FormatedCPF(prop.ResponsavelCPF);
-            prop.ImovelCep = Util.FormatedCEP(prop.ImovelCep);
+            Proposal proposal = new ProposalModel().GetProposal(filePath);
 
-            return prop;
+
+            proposal.ProponenteCPF = Util.FormatedCPF(proposal.ProponenteCPF);
+            proposal.ProponenteFone = Util.FormatedFone(proposal.ProponenteFone);
+
+            proposal.ResponsavelCPF = Util.FormatedCPF(proposal.ResponsavelCPF);
+            proposal.ResponsavelFone = Util.FormatedFone(proposal.ProponenteFone);
+
+            proposal.ImovelCep = Util.FormatedCEP(proposal.ImovelCep);
+            
+            
+            
+            if (proposal.Tipo == "Proposta")
+                proposal.Tipo = "PFUI";
+            else
+            {
+                proposal.Tipo = "PCI";
+                proposal.ImovelComarca = "";
+                proposal.ImovelComarcaUF = "";
+            }
+
+
+            return proposal;
         }
 
 

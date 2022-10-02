@@ -3,7 +3,7 @@
 namespace aeX30.Entities
 {
 
-    internal class Request
+    public class Request
     {
         // 0000.0000.00000000/0000.00.00.00
 

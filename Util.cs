@@ -39,7 +39,7 @@ namespace aeX30
 
 
 
-        private static string OnlyNumber(string strIn)
+        public static string OnlyNumber(string strIn)
         {
             strIn = strIn.Split(',')[0];
             var onlyNumber = new Regex(@"[^\d]");

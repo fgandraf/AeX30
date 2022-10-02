@@ -11,7 +11,7 @@ namespace aeX30.Model
     public class ProposalModel
     {
 
-        internal static string GetSheetName(string filePath)
+        public static string GetSheetName(string filePath)
         {
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
@@ -20,7 +20,7 @@ namespace aeX30.Model
         }
 
 
-        internal static string GetFooter(string filePath)
+        public static string GetFooter(string filePath)
         {
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
@@ -31,127 +31,97 @@ namespace aeX30.Model
         }
 
 
-        internal Proposal GetProposal(string filePath)
+        public Proposal GetProposal(string filePath)
         {
-            //Open File
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
             ISheet sheet = wbook.GetSheetAt(0);
 
-
-            //Set the right cell reference for the version
             string[] xy = SetCellReference(sheet.Footer.Left);
 
-
-            //Create the object
             Proposal proposal = new Proposal
             {
-                Vigencia          = sheet.Footer.Left,
-                
-                ProponenteNome    = sheet.GetRow(new CellReference(xy[0]).Row).GetCell(new CellReference(xy[0]).Col).ToString(),
-                ProponenteCPF     = sheet.GetRow(new CellReference(xy[1]).Row).GetCell(new CellReference(xy[1]).Col).ToString(),
-                ProponenteDDD     = sheet.GetRow(new CellReference(xy[2]).Row).GetCell(new CellReference(xy[2]).Col).ToString(),
-                ProponenteFone    = sheet.GetRow(new CellReference(xy[3]).Row).GetCell(new CellReference(xy[3]).Col).ToString(),
-                
-                ResponsavelNome   = sheet.GetRow(new CellReference(xy[4]).Row).GetCell(new CellReference(xy[4]).Col).ToString(),
-                ReponsavelCauCrea = sheet.GetRow(new CellReference(xy[5]).Row).GetCell(new CellReference(xy[5]).Col).ToString(),
-                ResponsavelUF     = sheet.GetRow(new CellReference(xy[6]).Row).GetCell(new CellReference(xy[6]).Col).ToString(),
-                ResponsavelCPF    = sheet.GetRow(new CellReference(xy[7]).Row).GetCell(new CellReference(xy[7]).Col).ToString(),
-                ResponsavelDDD    = sheet.GetRow(new CellReference(xy[8]).Row).GetCell(new CellReference(xy[8]).Col).ToString(),
-                ResponsavelFone   = sheet.GetRow(new CellReference(xy[9]).Row).GetCell(new CellReference(xy[9]).Col).ToString(),
-                
-                ImovelEndereco    = sheet.GetRow(new CellReference(xy[10]).Row).GetCell(new CellReference(xy[10]).Col).ToString(),
-                ImovelComplemento = sheet.GetRow(new CellReference(xy[11]).Row).GetCell(new CellReference(xy[11]).Col).ToString(),
-                ImovelCep         = sheet.GetRow(new CellReference(xy[12]).Row).GetCell(new CellReference(xy[12]).Col).ToString(),
-                ImovelBairro      = sheet.GetRow(new CellReference(xy[13]).Row).GetCell(new CellReference(xy[13]).Col).ToString(),
-                ImovelMunicipio   = sheet.GetRow(new CellReference(xy[14]).Row).GetCell(new CellReference(xy[14]).Col).ToString(),
-                ImovelUF          = sheet.GetRow(new CellReference(xy[15]).Row).GetCell(new CellReference(xy[15]).Col).ToString(),
-                ImovelMatricula   = sheet.GetRow(new CellReference(xy[17]).Row).GetCell(new CellReference(xy[17]).Col).ToString(),
-                ImovelOficio      = sheet.GetRow(new CellReference(xy[18]).Row).GetCell(new CellReference(xy[18]).Col).ToString(),
-                
-                ServicoItem01     = sheet.GetRow(new CellReference(xy[21]).Row).GetCell(new CellReference(xy[21]).Col).NumericCellValue.ToString(),
-                ServicoItem02     = sheet.GetRow(new CellReference(xy[22]).Row).GetCell(new CellReference(xy[22]).Col).NumericCellValue.ToString(),
-                ServicoItem03     = sheet.GetRow(new CellReference(xy[23]).Row).GetCell(new CellReference(xy[23]).Col).NumericCellValue.ToString(),
-                ServicoItem04     = sheet.GetRow(new CellReference(xy[24]).Row).GetCell(new CellReference(xy[24]).Col).NumericCellValue.ToString(),
-                ServicoItem05     = sheet.GetRow(new CellReference(xy[25]).Row).GetCell(new CellReference(xy[25]).Col).NumericCellValue.ToString(),
-                ServicoItem06     = sheet.GetRow(new CellReference(xy[26]).Row).GetCell(new CellReference(xy[26]).Col).NumericCellValue.ToString(),
-                ServicoItem07     = sheet.GetRow(new CellReference(xy[27]).Row).GetCell(new CellReference(xy[27]).Col).NumericCellValue.ToString(),
-                ServicoItem08     = sheet.GetRow(new CellReference(xy[28]).Row).GetCell(new CellReference(xy[28]).Col).NumericCellValue.ToString(),
-                ServicoItem09     = sheet.GetRow(new CellReference(xy[29]).Row).GetCell(new CellReference(xy[29]).Col).NumericCellValue.ToString(),
-                ServicoItem10     = sheet.GetRow(new CellReference(xy[30]).Row).GetCell(new CellReference(xy[30]).Col).NumericCellValue.ToString(),
-                ServicoItem11     = sheet.GetRow(new CellReference(xy[31]).Row).GetCell(new CellReference(xy[31]).Col).NumericCellValue.ToString(),
-                ServicoItem12     = sheet.GetRow(new CellReference(xy[32]).Row).GetCell(new CellReference(xy[32]).Col).NumericCellValue.ToString(),
-                ServicoItem13     = sheet.GetRow(new CellReference(xy[33]).Row).GetCell(new CellReference(xy[33]).Col).NumericCellValue.ToString(),
-                ServicoItem14     = sheet.GetRow(new CellReference(xy[34]).Row).GetCell(new CellReference(xy[34]).Col).NumericCellValue.ToString(),
-                ServicoItem15     = sheet.GetRow(new CellReference(xy[35]).Row).GetCell(new CellReference(xy[35]).Col).NumericCellValue.ToString(),
-                ServicoItem16     = sheet.GetRow(new CellReference(xy[36]).Row).GetCell(new CellReference(xy[36]).Col).NumericCellValue.ToString(),
-                ServicoItem17     = sheet.GetRow(new CellReference(xy[37]).Row).GetCell(new CellReference(xy[37]).Col).NumericCellValue.ToString(),
-                ServicoItem18     = sheet.GetRow(new CellReference(xy[38]).Row).GetCell(new CellReference(xy[38]).Col).NumericCellValue.ToString(),
-                ServicoItem19     = sheet.GetRow(new CellReference(xy[39]).Row).GetCell(new CellReference(xy[39]).Col).NumericCellValue.ToString(),
-                ServicoItem20     = sheet.GetRow(new CellReference(xy[40]).Row).GetCell(new CellReference(xy[40]).Col).NumericCellValue.ToString(),
-
-                Cron_Executado    = sheet.GetRow(new CellReference(xy[41]).Row).GetCell(new CellReference(xy[41]).Col).NumericCellValue.ToString(),
-                
-                Cron_Parc_1       = sheet.GetRow(new CellReference(xy[42]).Row).GetCell(new CellReference(xy[42]).Col).NumericCellValue.ToString(),
-                Cron_Parc_2       = sheet.GetRow(new CellReference(xy[43]).Row).GetCell(new CellReference(xy[43]).Col).NumericCellValue.ToString(),
-                Cron_Parc_3       = sheet.GetRow(new CellReference(xy[44]).Row).GetCell(new CellReference(xy[44]).Col).NumericCellValue.ToString(),
-                Cron_Parc_4       = sheet.GetRow(new CellReference(xy[45]).Row).GetCell(new CellReference(xy[45]).Col).NumericCellValue.ToString(),
-                Cron_Parc_5       = sheet.GetRow(new CellReference(xy[46]).Row).GetCell(new CellReference(xy[46]).Col).NumericCellValue.ToString(),
-                Cron_Parc_6       = sheet.GetRow(new CellReference(xy[47]).Row).GetCell(new CellReference(xy[47]).Col).NumericCellValue.ToString(),
-                Cron_Parc_7       = sheet.GetRow(new CellReference(xy[48]).Row).GetCell(new CellReference(xy[48]).Col).NumericCellValue.ToString(),
-                Cron_Parc_8       = sheet.GetRow(new CellReference(xy[49]).Row).GetCell(new CellReference(xy[49]).Col).NumericCellValue.ToString(),
-                Cron_Parc_9       = sheet.GetRow(new CellReference(xy[50]).Row).GetCell(new CellReference(xy[50]).Col).NumericCellValue.ToString(),
-                Cron_Parc_10      = sheet.GetRow(new CellReference(xy[51]).Row).GetCell(new CellReference(xy[52]).Col).NumericCellValue.ToString(),
-                Cron_Parc_11      = sheet.GetRow(new CellReference(xy[52]).Row).GetCell(new CellReference(xy[52]).Col).NumericCellValue.ToString(),
-                Cron_Parc_12      = sheet.GetRow(new CellReference(xy[53]).Row).GetCell(new CellReference(xy[53]).Col).NumericCellValue.ToString(),
-                Cron_Parc_13      = sheet.GetRow(new CellReference(xy[54]).Row).GetCell(new CellReference(xy[54]).Col).NumericCellValue.ToString(),
-                Cron_Parc_14      = sheet.GetRow(new CellReference(xy[55]).Row).GetCell(new CellReference(xy[55]).Col).NumericCellValue.ToString(),
-                Cron_Parc_15      = sheet.GetRow(new CellReference(xy[56]).Row).GetCell(new CellReference(xy[56]).Col).NumericCellValue.ToString(),
-                Cron_Parc_16      = sheet.GetRow(new CellReference(xy[57]).Row).GetCell(new CellReference(xy[57]).Col).NumericCellValue.ToString(),
-                Cron_Parc_17      = sheet.GetRow(new CellReference(xy[58]).Row).GetCell(new CellReference(xy[58]).Col).NumericCellValue.ToString(),
-                Cron_Parc_18      = sheet.GetRow(new CellReference(xy[59]).Row).GetCell(new CellReference(xy[59]).Col).NumericCellValue.ToString(),
-                Cron_Parc_19      = sheet.GetRow(new CellReference(xy[60]).Row).GetCell(new CellReference(xy[60]).Col).NumericCellValue.ToString(),
-                Cron_Parc_20      = sheet.GetRow(new CellReference(xy[61]).Row).GetCell(new CellReference(xy[61]).Col).NumericCellValue.ToString(),
-                Cron_Parc_21      = sheet.GetRow(new CellReference(xy[62]).Row).GetCell(new CellReference(xy[62]).Col).NumericCellValue.ToString(),
-                Cron_Parc_22      = sheet.GetRow(new CellReference(xy[63]).Row).GetCell(new CellReference(xy[63]).Col).NumericCellValue.ToString(),
-                Cron_Parc_23      = sheet.GetRow(new CellReference(xy[64]).Row).GetCell(new CellReference(xy[64]).Col).NumericCellValue.ToString(),
-                Cron_Parc_24      = sheet.GetRow(new CellReference(xy[65]).Row).GetCell(new CellReference(xy[65]).Col).NumericCellValue.ToString(),
-                Cron_Parc_25      = sheet.GetRow(new CellReference(xy[66]).Row).GetCell(new CellReference(xy[66]).Col).NumericCellValue.ToString(),
-                Cron_Parc_26      = sheet.GetRow(new CellReference(xy[67]).Row).GetCell(new CellReference(xy[67]).Col).NumericCellValue.ToString(),
-                Cron_Parc_27      = sheet.GetRow(new CellReference(xy[68]).Row).GetCell(new CellReference(xy[68]).Col).NumericCellValue.ToString(),
-                Cron_Parc_28      = sheet.GetRow(new CellReference(xy[69]).Row).GetCell(new CellReference(xy[69]).Col).NumericCellValue.ToString(),
-                Cron_Parc_29      = sheet.GetRow(new CellReference(xy[70]).Row).GetCell(new CellReference(xy[70]).Col).NumericCellValue.ToString(),
-                Cron_Parc_30      = sheet.GetRow(new CellReference(xy[71]).Row).GetCell(new CellReference(xy[71]).Col).NumericCellValue.ToString()
+                Vigencia           = sheet.Footer.Left,
+                Tipo               = wbook.GetSheetName(0),
+                ProponenteNome     = sheet.GetRow(new CellReference(xy[00]).Row).GetCell(new CellReference(xy[00]).Col).ToString(),
+                ProponenteCPF      = sheet.GetRow(new CellReference(xy[01]).Row).GetCell(new CellReference(xy[01]).Col).ToString(),
+                ProponenteDDD      = sheet.GetRow(new CellReference(xy[02]).Row).GetCell(new CellReference(xy[02]).Col).ToString(),
+                ProponenteFone     = sheet.GetRow(new CellReference(xy[03]).Row).GetCell(new CellReference(xy[03]).Col).ToString(),
+                ResponsavelNome    = sheet.GetRow(new CellReference(xy[04]).Row).GetCell(new CellReference(xy[04]).Col).ToString(),
+                ReponsavelCauCrea  = sheet.GetRow(new CellReference(xy[05]).Row).GetCell(new CellReference(xy[05]).Col).ToString(),
+                ResponsavelUF      = sheet.GetRow(new CellReference(xy[06]).Row).GetCell(new CellReference(xy[06]).Col).ToString(),
+                ResponsavelCPF     = sheet.GetRow(new CellReference(xy[07]).Row).GetCell(new CellReference(xy[07]).Col).ToString(),
+                ResponsavelDDD     = sheet.GetRow(new CellReference(xy[08]).Row).GetCell(new CellReference(xy[08]).Col).ToString(),
+                ResponsavelFone    = sheet.GetRow(new CellReference(xy[09]).Row).GetCell(new CellReference(xy[09]).Col).ToString(),
+                ImovelEndereco     = sheet.GetRow(new CellReference(xy[10]).Row).GetCell(new CellReference(xy[10]).Col).ToString(),
+                ImovelComplemento  = sheet.GetRow(new CellReference(xy[11]).Row).GetCell(new CellReference(xy[11]).Col).ToString(),
+                ImovelCep          = sheet.GetRow(new CellReference(xy[12]).Row).GetCell(new CellReference(xy[12]).Col).ToString(),
+                ImovelBairro       = sheet.GetRow(new CellReference(xy[13]).Row).GetCell(new CellReference(xy[13]).Col).ToString(),
+                ImovelMunicipio    = sheet.GetRow(new CellReference(xy[14]).Row).GetCell(new CellReference(xy[14]).Col).ToString(),
+                ImovelUF           = sheet.GetRow(new CellReference(xy[15]).Row).GetCell(new CellReference(xy[15]).Col).ToString(),
+                ImovelValorTerreno = sheet.GetRow(new CellReference(xy[16]).Row).GetCell(new CellReference(xy[16]).Col).ToString(),
+                ImovelMatricula    = sheet.GetRow(new CellReference(xy[17]).Row).GetCell(new CellReference(xy[17]).Col).ToString(),
+                ImovelOficio       = sheet.GetRow(new CellReference(xy[18]).Row).GetCell(new CellReference(xy[18]).Col).ToString(),
+                ImovelComarca      = sheet.GetRow(new CellReference(xy[19]).Row).GetCell(new CellReference(xy[19]).Col).ToString(),
+                ImovelComarcaUF    = sheet.GetRow(new CellReference(xy[20]).Row).GetCell(new CellReference(xy[20]).Col).ToString(),
+                ServicoItem01      = sheet.GetRow(new CellReference(xy[21]).Row).GetCell(new CellReference(xy[21]).Col).NumericCellValue.ToString(),
+                ServicoItem02      = sheet.GetRow(new CellReference(xy[22]).Row).GetCell(new CellReference(xy[22]).Col).NumericCellValue.ToString(),
+                ServicoItem03      = sheet.GetRow(new CellReference(xy[23]).Row).GetCell(new CellReference(xy[23]).Col).NumericCellValue.ToString(),
+                ServicoItem04      = sheet.GetRow(new CellReference(xy[24]).Row).GetCell(new CellReference(xy[24]).Col).NumericCellValue.ToString(),
+                ServicoItem05      = sheet.GetRow(new CellReference(xy[25]).Row).GetCell(new CellReference(xy[25]).Col).NumericCellValue.ToString(),
+                ServicoItem06      = sheet.GetRow(new CellReference(xy[26]).Row).GetCell(new CellReference(xy[26]).Col).NumericCellValue.ToString(),
+                ServicoItem07      = sheet.GetRow(new CellReference(xy[27]).Row).GetCell(new CellReference(xy[27]).Col).NumericCellValue.ToString(),
+                ServicoItem08      = sheet.GetRow(new CellReference(xy[28]).Row).GetCell(new CellReference(xy[28]).Col).NumericCellValue.ToString(),
+                ServicoItem09      = sheet.GetRow(new CellReference(xy[29]).Row).GetCell(new CellReference(xy[29]).Col).NumericCellValue.ToString(),
+                ServicoItem10      = sheet.GetRow(new CellReference(xy[30]).Row).GetCell(new CellReference(xy[30]).Col).NumericCellValue.ToString(),
+                ServicoItem11      = sheet.GetRow(new CellReference(xy[31]).Row).GetCell(new CellReference(xy[31]).Col).NumericCellValue.ToString(),
+                ServicoItem12      = sheet.GetRow(new CellReference(xy[32]).Row).GetCell(new CellReference(xy[32]).Col).NumericCellValue.ToString(),
+                ServicoItem13      = sheet.GetRow(new CellReference(xy[33]).Row).GetCell(new CellReference(xy[33]).Col).NumericCellValue.ToString(),
+                ServicoItem14      = sheet.GetRow(new CellReference(xy[34]).Row).GetCell(new CellReference(xy[34]).Col).NumericCellValue.ToString(),
+                ServicoItem15      = sheet.GetRow(new CellReference(xy[35]).Row).GetCell(new CellReference(xy[35]).Col).NumericCellValue.ToString(),
+                ServicoItem16      = sheet.GetRow(new CellReference(xy[36]).Row).GetCell(new CellReference(xy[36]).Col).NumericCellValue.ToString(),
+                ServicoItem17      = sheet.GetRow(new CellReference(xy[37]).Row).GetCell(new CellReference(xy[37]).Col).NumericCellValue.ToString(),
+                ServicoItem18      = sheet.GetRow(new CellReference(xy[38]).Row).GetCell(new CellReference(xy[38]).Col).NumericCellValue.ToString(),
+                ServicoItem19      = sheet.GetRow(new CellReference(xy[39]).Row).GetCell(new CellReference(xy[39]).Col).NumericCellValue.ToString(),
+                ServicoItem20      = sheet.GetRow(new CellReference(xy[40]).Row).GetCell(new CellReference(xy[40]).Col).NumericCellValue.ToString(),
+                Cron_Executado     = sheet.GetRow(new CellReference(xy[41]).Row).GetCell(new CellReference(xy[41]).Col).NumericCellValue.ToString(),
+                Cron_Parc_1        = sheet.GetRow(new CellReference(xy[42]).Row).GetCell(new CellReference(xy[42]).Col).NumericCellValue.ToString(),
+                Cron_Parc_2        = sheet.GetRow(new CellReference(xy[43]).Row).GetCell(new CellReference(xy[43]).Col).NumericCellValue.ToString(),
+                Cron_Parc_3        = sheet.GetRow(new CellReference(xy[44]).Row).GetCell(new CellReference(xy[44]).Col).NumericCellValue.ToString(),
+                Cron_Parc_4        = sheet.GetRow(new CellReference(xy[45]).Row).GetCell(new CellReference(xy[45]).Col).NumericCellValue.ToString(),
+                Cron_Parc_5        = sheet.GetRow(new CellReference(xy[46]).Row).GetCell(new CellReference(xy[46]).Col).NumericCellValue.ToString(),
+                Cron_Parc_6        = sheet.GetRow(new CellReference(xy[47]).Row).GetCell(new CellReference(xy[47]).Col).NumericCellValue.ToString(),
+                Cron_Parc_7        = sheet.GetRow(new CellReference(xy[48]).Row).GetCell(new CellReference(xy[48]).Col).NumericCellValue.ToString(),
+                Cron_Parc_8        = sheet.GetRow(new CellReference(xy[49]).Row).GetCell(new CellReference(xy[49]).Col).NumericCellValue.ToString(),
+                Cron_Parc_9        = sheet.GetRow(new CellReference(xy[50]).Row).GetCell(new CellReference(xy[50]).Col).NumericCellValue.ToString(),
+                Cron_Parc_10       = sheet.GetRow(new CellReference(xy[51]).Row).GetCell(new CellReference(xy[52]).Col).NumericCellValue.ToString(),
+                Cron_Parc_11       = sheet.GetRow(new CellReference(xy[52]).Row).GetCell(new CellReference(xy[52]).Col).NumericCellValue.ToString(),
+                Cron_Parc_12       = sheet.GetRow(new CellReference(xy[53]).Row).GetCell(new CellReference(xy[53]).Col).NumericCellValue.ToString(),
+                Cron_Parc_13       = sheet.GetRow(new CellReference(xy[54]).Row).GetCell(new CellReference(xy[54]).Col).NumericCellValue.ToString(),
+                Cron_Parc_14       = sheet.GetRow(new CellReference(xy[55]).Row).GetCell(new CellReference(xy[55]).Col).NumericCellValue.ToString(),
+                Cron_Parc_15       = sheet.GetRow(new CellReference(xy[56]).Row).GetCell(new CellReference(xy[56]).Col).NumericCellValue.ToString(),
+                Cron_Parc_16       = sheet.GetRow(new CellReference(xy[57]).Row).GetCell(new CellReference(xy[57]).Col).NumericCellValue.ToString(),
+                Cron_Parc_17       = sheet.GetRow(new CellReference(xy[58]).Row).GetCell(new CellReference(xy[58]).Col).NumericCellValue.ToString(),
+                Cron_Parc_18       = sheet.GetRow(new CellReference(xy[59]).Row).GetCell(new CellReference(xy[59]).Col).NumericCellValue.ToString(),
+                Cron_Parc_19       = sheet.GetRow(new CellReference(xy[60]).Row).GetCell(new CellReference(xy[60]).Col).NumericCellValue.ToString(),
+                Cron_Parc_20       = sheet.GetRow(new CellReference(xy[61]).Row).GetCell(new CellReference(xy[61]).Col).NumericCellValue.ToString(),
+                Cron_Parc_21       = sheet.GetRow(new CellReference(xy[62]).Row).GetCell(new CellReference(xy[62]).Col).NumericCellValue.ToString(),
+                Cron_Parc_22       = sheet.GetRow(new CellReference(xy[63]).Row).GetCell(new CellReference(xy[63]).Col).NumericCellValue.ToString(),
+                Cron_Parc_23       = sheet.GetRow(new CellReference(xy[64]).Row).GetCell(new CellReference(xy[64]).Col).NumericCellValue.ToString(),
+                Cron_Parc_24       = sheet.GetRow(new CellReference(xy[65]).Row).GetCell(new CellReference(xy[65]).Col).NumericCellValue.ToString(),
+                Cron_Parc_25       = sheet.GetRow(new CellReference(xy[66]).Row).GetCell(new CellReference(xy[66]).Col).NumericCellValue.ToString(),
+                Cron_Parc_26       = sheet.GetRow(new CellReference(xy[67]).Row).GetCell(new CellReference(xy[67]).Col).NumericCellValue.ToString(),
+                Cron_Parc_27       = sheet.GetRow(new CellReference(xy[68]).Row).GetCell(new CellReference(xy[68]).Col).NumericCellValue.ToString(),
+                Cron_Parc_28       = sheet.GetRow(new CellReference(xy[69]).Row).GetCell(new CellReference(xy[69]).Col).NumericCellValue.ToString(),
+                Cron_Parc_29       = sheet.GetRow(new CellReference(xy[70]).Row).GetCell(new CellReference(xy[70]).Col).NumericCellValue.ToString(),
+                Cron_Parc_30       = sheet.GetRow(new CellReference(xy[71]).Row).GetCell(new CellReference(xy[71]).Col).NumericCellValue.ToString()
             };
 
-
-
-            try
-            {
-                proposal.ImovelValorTerreno = string.Format("{0:0,0.00}", Convert.ToDouble(sheet.GetRow(new CellReference(xy[16]).Row).GetCell(new CellReference(xy[16]).Col).ToString()));
-            }
-            catch
-            {
-                proposal.ImovelValorTerreno = null;
-            }
-            
-
-            if (wbook.GetSheetName(0) == "Proposta")
-            {
-                proposal.Tipo = "PFUI";
-                proposal.ImovelComarca = sheet.GetRow(new CellReference(xy[19]).Row).GetCell(new CellReference(xy[19]).Col).ToString();
-                proposal.ImovelComarcaUF = sheet.GetRow(new CellReference(xy[20]).Row).GetCell(new CellReference(xy[20]).Col).ToString();
-            }
-            else
-                proposal.Tipo = "PCI";
-
-
-            //Return the populated object
             return proposal;
         }
 
 
-        private static string[] SetCellReference(string version)
+        private string[] SetCellReference(string version)
         {
             var onlyNumber = new Regex(@"[^\d]");
             int convertedVersion = Convert.ToInt32(onlyNumber.Replace(version, ""));
@@ -199,7 +169,7 @@ namespace aeX30.Model
             }
         }
  
-        private static string[] pfui_2017 = new string[]
+        private string[] pfui_2017 = new string[]
         {
             // PROPOSTA
             "G42",     // [0]  Proponente
@@ -282,7 +252,7 @@ namespace aeX30.Model
             "BN388",  // [70]  Etapa 29
             "BN388"   // [71]  Etapa 30  
         };
-        private static string[] pfui_2018 = new string[]
+        private string[] pfui_2018 = new string[]
         {
             // PROPOSTA
             "G42",     // [0]  Proponente
@@ -365,7 +335,7 @@ namespace aeX30.Model
             "BN392",  // [70]  Etapa 29
             "BN392"   // [71]  Etapa 30   
         };
-        private static string[] pfui_2018b = new string[]
+        private string[] pfui_2018b = new string[]
         {
             // PROPOSTA
             "G42",     // [0]  Proponente
@@ -448,7 +418,7 @@ namespace aeX30.Model
             "BN388",  // [70]  Etapa 29
             "BN388"   // [71]  Etapa 30  
         };
-        private static string[] pfui_2019 = new string[]
+        private string[] pfui_2019 = new string[]
         {
             // PROPOSTA
             "G42",     // [0]  Proponente
@@ -532,7 +502,7 @@ namespace aeX30.Model
             "BN390"   // [71]  Etapa 30  
   
         };
-        private static string[] pfui_2020a = new string[]
+        private string[] pfui_2020a = new string[]
         {
 
             // PROPOSTA
@@ -616,7 +586,7 @@ namespace aeX30.Model
             "BN391",  // [70]  Etapa 29
             "BN391"   // [71]  Etapa 30  
         };
-        private static string[] pfui_2020b = new string[]
+        private string[] pfui_2020b = new string[]
         {
             // PROPOSTA
             "G42",     // [0]  Proponente
@@ -699,7 +669,7 @@ namespace aeX30.Model
             "BN389",  // [70]  Etapa 29
             "BN389"   // [71]  Etapa 30  
         };
-        private static string[] pfui_2020c = new string[]
+        private string[] pfui_2020c = new string[]
         {
             // PROPOSTA
             "G42",     // [0]  Proponente
@@ -782,7 +752,7 @@ namespace aeX30.Model
             "BB430",  // [70]  Etapa 29
             "BF430"   // [71]  Etapa 30  
         };
-        private static string[] pci_2021a = new string[]
+        private string[] pci_2021a = new string[]
         {
             // IDENTIFICAÇÃO
             "G43",   // [0]  Proponente
@@ -806,8 +776,8 @@ namespace aeX30.Model
             "V70",   // [16]  Valor do terreno
             "G57",   // [17]  Matrícula
             "M57",   // [18]  ORI
-            "-",     // [19]  Comarca
-            "-",     // [20]  Comarca UF
+            "M57",     // [19]  Comarca
+            "M57",     // [20]  Comarca UF
            
             // SERVIÇOS 
             "X94",    // [21]  Item 1
@@ -865,7 +835,7 @@ namespace aeX30.Model
             "AM164",  // [70]  Etapa 29
             "AM164"   // [71]  Etapa 30
         };
-        private static string[] pci_2021b = new string[]
+        private string[] pci_2021b = new string[]
         {
             // IDENTIFICAÇÃO
             "G43",   // [0]  Proponente
@@ -889,8 +859,8 @@ namespace aeX30.Model
             "V70",   // [16]  Valor do terreno
             "G57",   // [17]  Matrícula
             "M57",   // [18]  ORI
-            "-",     // [19]  Comarca
-            "-",     // [20]  Comarca UF
+            "M57",     // [19]  Comarca
+            "M57",     // [20]  Comarca UF
            
             // SERVIÇOS
             "X95",    // [21]  Item 1

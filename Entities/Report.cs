@@ -2,7 +2,7 @@
 namespace aeX30.Entities
 {
 
-    internal class Report
+    public class Report
     {
         public string Ref0 { get; set; }
         public string Ref1 { get; set; }
