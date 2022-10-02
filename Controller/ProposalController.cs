@@ -5,15 +5,26 @@ namespace aeX30.Controller
 {
     public class ProposalController
     {
+        
 
         public Proposal GetProposal(string filePath)
         {
 
             if (IsValid(filePath))
-                return FormatedProposalIn(filePath);
+            {
+                string footer = ProposalModel.GetFooter(filePath);
+                string[] cellReference = new ProposalCellReference().Get(footer);
+                Proposal proposal = new ProposalModel().GetProposal(filePath, cellReference);
+
+                return Validate(proposal);
+            }
             else
                 return null;
+
+            
         }
+
+
 
 
 
@@ -30,20 +41,16 @@ namespace aeX30.Controller
         }
 
 
-        private Proposal FormatedProposalIn(string filePath)
+        
+
+
+        private Proposal Validate(Proposal proposal)
         {
-            Proposal proposal = new ProposalModel().GetProposal(filePath);
-
-
             proposal.ProponenteCPF = Util.FormatedCPF(proposal.ProponenteCPF);
             proposal.ProponenteFone = Util.FormatedFone(proposal.ProponenteFone);
-
             proposal.ResponsavelCPF = Util.FormatedCPF(proposal.ResponsavelCPF);
             proposal.ResponsavelFone = Util.FormatedFone(proposal.ProponenteFone);
-
             proposal.ImovelCep = Util.FormatedCEP(proposal.ImovelCep);
-            
-            
             
             if (proposal.Tipo == "Proposta")
                 proposal.Tipo = "PFUI";
@@ -53,7 +60,6 @@ namespace aeX30.Controller
                 proposal.ImovelComarca = "";
                 proposal.ImovelComarcaUF = "";
             }
-
 
             return proposal;
         }
