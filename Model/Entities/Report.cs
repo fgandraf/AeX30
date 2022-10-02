@@ -1,5 +1,5 @@
 ﻿
-namespace aeX30.Entities
+namespace aeX30.Model.Entities
 {
 
     public class Report

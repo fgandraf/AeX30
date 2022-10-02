@@ -1,6 +1,6 @@
 ﻿
 
-namespace aeX30.Entities
+namespace aeX30.Model.Entities
 {
 
     public class Proposal
@@ -11,27 +11,23 @@ namespace aeX30.Entities
         public string  ProponenteCPF { get; set; }
         public string  ProponenteDDD { get; set; }
         public string  ProponenteFone { get; set; }
-
         public string  ResponsavelNome { get; set; }
         public string  ReponsavelCauCrea { get; set; }
         public string  ResponsavelUF { get; set; }
         public string  ResponsavelCPF { get; set; }
         public string  ResponsavelDDD { get; set; }
         public string  ResponsavelFone { get; set; }
-
         public string  ImovelEndereco { get; set; }
         public string  ImovelComplemento { get; set; }
         public string  ImovelCep { get; set; }
         public string  ImovelBairro { get; set; }
         public string  ImovelMunicipio { get; set; }
         public string  ImovelUF { get; set; }
-        
         public string  ImovelValorTerreno { get; set; }
         public string  ImovelMatricula { get; set; }
         public string  ImovelOficio { get; set; }
         public string  ImovelComarca { get; set; }
         public string  ImovelComarcaUF { get; set; }
-        
         public string  ServicoItem01 { get; set; }
         public string  ServicoItem02 { get; set; }
         public string  ServicoItem03 { get; set; }
@@ -52,9 +48,7 @@ namespace aeX30.Entities
         public string  ServicoItem18 { get; set; }
         public string  ServicoItem19 { get; set; }
         public string  ServicoItem20 { get; set; }
-        
         public string  Cron_Executado { get; set; }
-        
         public string  Cron_Parc_1 { get; set; } = "0";
         public string  Cron_Parc_2 { get; set; } = "0";
         public string  Cron_Parc_3 { get; set; } = "0";

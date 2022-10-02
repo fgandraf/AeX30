@@ -1,4 +1,4 @@
-﻿using aeX30.Entities;
+﻿using aeX30.Model.Entities;
 using aeX30.Model;
 
 namespace aeX30.Controller

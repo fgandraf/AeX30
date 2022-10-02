@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 using aeX30.Controller;
-using aeX30.Entities;
+using aeX30.Model.Entities;
 
 namespace aeX30
 {
@@ -22,9 +22,9 @@ namespace aeX30
 
 
         //:METODS
-        private Entities.Report PopulateToRAE()
+        private Report PopulateToRAE()
         {
-            Entities.Report rae = new Entities.Report();
+            Report rae = new Report();
 
             rae.Ref0 = txtRef0.Text;
             rae.Ref1 = txtRef1.Text;
