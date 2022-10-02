@@ -16,16 +16,13 @@ namespace aeX30.Controller
                 string[] cellReference = new ProposalCellReference().Get(footer);
                 Proposal proposal = new ProposalModel().GetProposal(filePath, cellReference);
 
-                return Validate(proposal);
+                return FormatedProposal(proposal);
             }
             else
                 return null;
 
             
         }
-
-
-
 
 
 
@@ -41,10 +38,8 @@ namespace aeX30.Controller
         }
 
 
-        
 
-
-        private Proposal Validate(Proposal proposal)
+        private Proposal FormatedProposal(Proposal proposal)
         {
             proposal.ProponenteCPF = Util.FormatedCPF(proposal.ProponenteCPF);
             proposal.ProponenteFone = Util.FormatedFone(proposal.ProponenteFone);
