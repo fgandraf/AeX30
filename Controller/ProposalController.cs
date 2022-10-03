@@ -41,6 +41,7 @@ namespace aeX30.Controller
 
         private Proposal FormatedProposal(Proposal proposal)
         {
+            proposal.ProponenteNome = proposal.ProponenteNome.TrimEnd();
             proposal.ProponenteCPF = Util.FormatedCPF(proposal.ProponenteCPF);
             proposal.ProponenteFone = Util.FormatedFone(proposal.ProponenteFone);
             proposal.ResponsavelCPF = Util.FormatedCPF(proposal.ResponsavelCPF);

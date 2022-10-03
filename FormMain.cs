@@ -22,126 +22,110 @@ namespace aeX30
 
 
         //:METODS
-        private Report PopulateToRAE()
+        private Report PopulateReport()
         {
-            Report rae = new Report();
+            Report report = new Report();
 
-            rae.Ref0 = txtRef0.Text;
-            rae.Ref1 = txtRef1.Text;
-            rae.Ref2 = txtRef2.Text;
-            rae.Ref3 = txtRef3.Text;
-            rae.Ref4 = txtRef4.Text;
-            rae.Ref5 = txtRef5.Text;
-            rae.Ref6 = txtRef6.Text;
-
-            rae.Prop_Nome = txtPropNome.Text;
-            rae.Prop_CPF = txtPropCPF.Text;
-            rae.Prop_DDD = txtPropDDD.Text;
-            rae.Prop_Telefone = txtPropTelefone.Text;
-
-            rae.Rt_Nome = txtRTNome.Text;
-            rae.Rt_CAU_CREA = txtRTCauCrea.Text;
-            rae.Rt_UF = txtRTUF.Text;
-            rae.Rt_CPF = txtRTCPF.Text;
-            rae.Rt_DDD = txtRTDDD.Text;
-            rae.Rt_Telefone = txtRTTelefone.Text;
-
-            rae.End_Endereco = txtIdEndereco.Text;
-            rae.End_Complemento = txtIdComplemento.Text;
-            rae.End_Bairro = txtIdBairro.Text;
-            rae.End_CEP = txtIdCEP.Text;
-            rae.End_Municipio = txtIdMunicipio.Text;
-            rae.End_UF = txtIdUF.Text;
-
-            rae.Imov_Valor_Terreno = txtTerrenoValorProposto.Text;
-            rae.Imov_Matricula = txtTerrenoMatricula.Text;
-            rae.Imov_Oficio = txtTerrenoOficio.Text;
-            rae.Imov_Comarca = txtTerrenoComarca.Text;
-            rae.Imov_UF = txtTerrenoUF.Text;
-
-            rae.Item_17_01 = txt1701.Text;
-            rae.Item_17_02 = txt1702.Text;
-            rae.Item_17_03 = txt1703.Text;
-            rae.Item_17_04 = txt1704.Text;
-            rae.Item_17_05 = txt1705.Text;
-            rae.Item_17_06 = txt1706.Text;
-            rae.Item_17_07 = txt1707.Text;
-            rae.Item_17_08 = txt1708.Text;
-            rae.Item_17_09 = txt1709.Text;
-            rae.Item_17_10 = txt1710.Text;
-            rae.Item_17_11 = txt1711.Text;
-            rae.Item_17_12 = txt1712.Text;
-            rae.Item_17_13 = txt1713.Text;
-            rae.Item_17_14 = txt1714.Text;
-            rae.Item_17_15 = txt1715.Text;
-            rae.Item_17_16 = txt1716.Text;
-            rae.Item_17_17 = txt1717.Text;
-            rae.Item_17_18 = txt1718.Text;
-            rae.Item_17_19 = txt1719.Text;
-            rae.Item_17_20 = txt1720.Text;
-
-            rae.MensuradoAcumulado = txtMensuradoAcumulado.Text;
-            rae.ContratoInicio = txtContratoInicio.Text;
-            rae.ContratoTermino = txtContratoTermino.Text;
-            rae.EtapaPrevista = txtEtapaPrevista.Text;
-
-            rae.Cron_Executado = txtExecutado.Text;
-            rae.Cron_Parc_1 = txtParcela1.Text;
-            rae.Cron_Parc_2 = txtParcela2.Text;
-            rae.Cron_Parc_3 = txtParcela3.Text;
-            rae.Cron_Parc_4 = txtParcela4.Text;
-            rae.Cron_Parc_5 = txtParcela5.Text;
-            rae.Cron_Parc_6 = txtParcela6.Text;
-            rae.Cron_Parc_7 = txtParcela7.Text;
-            rae.Cron_Parc_8 = txtParcela8.Text;
-            rae.Cron_Parc_9 = txtParcela9.Text;
-            rae.Cron_Parc_10 = txtParcela10.Text;
-            rae.Cron_Parc_11 = txtParcela11.Text;
-            rae.Cron_Parc_12 = txtParcela12.Text;
-            rae.Cron_Parc_13 = txtParcela13.Text;
-            rae.Cron_Parc_14 = txtParcela14.Text;
-            rae.Cron_Parc_15 = txtParcela15.Text;
-            rae.Cron_Parc_16 = txtParcela16.Text;
-            rae.Cron_Parc_17 = txtParcela17.Text;
-            rae.Cron_Parc_18 = txtParcela18.Text;
-            rae.Cron_Parc_19 = txtParcela19.Text;
-            rae.Cron_Parc_20 = txtParcela20.Text;
-            rae.Cron_Parc_21 = txtParcela21.Text;
-            rae.Cron_Parc_22 = txtParcela22.Text;
-            rae.Cron_Parc_23 = txtParcela23.Text;
-            rae.Cron_Parc_24 = txtParcela24.Text;
-            rae.Cron_Parc_25 = txtParcela25.Text;
-            rae.Cron_Parc_26 = txtParcela26.Text;
-            rae.Cron_Parc_27 = txtParcela27.Text;
-            rae.Cron_Parc_28 = txtParcela28.Text;
-            rae.Cron_Parc_29 = txtParcela29.Text;
-            rae.Cron_Parc_30 = txtParcela30.Text;
-            rae.Cron_Parc_31 = txtParcela31.Text;
-            rae.Cron_Parc_32 = txtParcela32.Text;
-            rae.Cron_Parc_33 = txtParcela33.Text;
-            rae.Cron_Parc_34 = txtParcela34.Text;
-            rae.Cron_Parc_35 = txtParcela35.Text;
-            rae.Cron_Parc_36 = txtParcela36.Text;
+            report.Ref1 = txtRef1.Text;
+            report.Ref2 = txtRef2.Text;
+            report.Ref3 = txtRef3.Text;
+            report.Ref4 = txtRef4.Text;
+            report.Ref5 = txtRef5.Text;
 
 
-            return rae;
+            report.ProponenteNome = txtPropNome.Text;
+            report.ProponenteCPF = txtPropCPF.Text;
+            report.ProponenteDDD = txtPropDDD.Text;
+            report.ProponenteFone = txtPropTelefone.Text;
+
+            report.ResponsavelNome = txtRTNome.Text;
+            report.ReponsavelCauCrea = txtRTCauCrea.Text;
+            report.ResponsavelUF = txtRTUF.Text;
+            report.ResponsavelCPF = txtRTCPF.Text;
+            report.ResponsavelDDD = txtRTDDD.Text;
+            report.ResponsavelFone = txtRTTelefone.Text;
+
+            report.ImovelEndereco = txtIdEndereco.Text;
+            report.ImovelComplemento = txtIdComplemento.Text;
+            report.ImovelBairro = txtIdBairro.Text;
+            report.ImovelCEP = txtIdCEP.Text;
+            report.ImovelMunicipio = txtIdMunicipio.Text;
+            report.ImovelUF = txtIdUF.Text;
+
+            report.ImovelValorTerreno = txtTerrenoValorProposto.Text;
+            report.ImovelMatricula = txtTerrenoMatricula.Text;
+            report.ImovelOficio = txtTerrenoOficio.Text;
+            report.ImovelComarca = txtTerrenoComarca.Text;
+            report.ImovelComarcaUF = txtTerrenoUF.Text;
+
+            report.ServicoItem01 = txt1701.Text;
+            report.ServicoItem02 = txt1702.Text;
+            report.ServicoItem03 = txt1703.Text;
+            report.ServicoItem04 = txt1704.Text;
+            report.ServicoItem05 = txt1705.Text;
+            report.ServicoItem06 = txt1706.Text;
+            report.ServicoItem07 = txt1707.Text;
+            report.ServicoItem08 = txt1708.Text;
+            report.ServicoItem09 = txt1709.Text;
+            report.ServicoItem10 = txt1710.Text;
+            report.ServicoItem11 = txt1711.Text;
+            report.ServicoItem12 = txt1712.Text;
+            report.ServicoItem13 = txt1713.Text;
+            report.ServicoItem14 = txt1714.Text;
+            report.ServicoItem15 = txt1715.Text;
+            report.ServicoItem16 = txt1716.Text;
+            report.ServicoItem17 = txt1717.Text;
+            report.ServicoItem18 = txt1718.Text;
+            report.ServicoItem19 = txt1719.Text;
+            report.ServicoItem20 = txt1720.Text;
+
+            report.MensuradoAcumulado = txtMensuradoAcumulado.Text;
+            report.ContratoInicio = txtContratoInicio.Text;
+            report.ContratoTermino = txtContratoTermino.Text;
+
+            report.Cron_Executado = txtExecutado.Text;
+            report.Cron_Parc_1 = txtParcela1.Text;
+            report.Cron_Parc_2 = txtParcela2.Text;
+            report.Cron_Parc_3 = txtParcela3.Text;
+            report.Cron_Parc_4 = txtParcela4.Text;
+            report.Cron_Parc_5 = txtParcela5.Text;
+            report.Cron_Parc_6 = txtParcela6.Text;
+            report.Cron_Parc_7 = txtParcela7.Text;
+            report.Cron_Parc_8 = txtParcela8.Text;
+            report.Cron_Parc_9 = txtParcela9.Text;
+            report.Cron_Parc_10 = txtParcela10.Text;
+            report.Cron_Parc_11 = txtParcela11.Text;
+            report.Cron_Parc_12 = txtParcela12.Text;
+            report.Cron_Parc_13 = txtParcela13.Text;
+            report.Cron_Parc_14 = txtParcela14.Text;
+            report.Cron_Parc_15 = txtParcela15.Text;
+            report.Cron_Parc_16 = txtParcela16.Text;
+            report.Cron_Parc_17 = txtParcela17.Text;
+            report.Cron_Parc_18 = txtParcela18.Text;
+            report.Cron_Parc_19 = txtParcela19.Text;
+            report.Cron_Parc_20 = txtParcela20.Text;
+            report.Cron_Parc_21 = txtParcela21.Text;
+            report.Cron_Parc_22 = txtParcela22.Text;
+            report.Cron_Parc_23 = txtParcela23.Text;
+            report.Cron_Parc_24 = txtParcela24.Text;
+            report.Cron_Parc_25 = txtParcela25.Text;
+            report.Cron_Parc_26 = txtParcela26.Text;
+            report.Cron_Parc_27 = txtParcela27.Text;
+            report.Cron_Parc_28 = txtParcela28.Text;
+            report.Cron_Parc_29 = txtParcela29.Text;
+            report.Cron_Parc_30 = txtParcela30.Text;
+
+
+            return report;
         }
         private void PopulateFromProposta(Proposal prop)
         {
             if (prop.Tipo == "PFUI")
-            {
-                rbtPFUI.Show();
-                rbtPFUI.Checked = true;
-                rbtPCI.Hide();
-            }
+                  lblVigencia.Text = $"Ꙩ PFUI | {prop.Vigencia}";
             else
-            {
-                rbtPCI.Show();
-                rbtPCI.Checked = true;
-                rbtPFUI.Hide();
-            }
+                lblVigencia.Text = $"Ꙩ PCI | {prop.Vigencia}";
             lblVigencia.Show();
-            lblVigencia.Text = prop.Vigencia;
+
             ///CABEÇALHO
             txtPropNome.Text = prop.ProponenteNome;
             txtPropCPF.Text = prop.ProponenteCPF;
@@ -228,10 +212,6 @@ namespace aeX30
         //:SHARED EVENT
         private void NextTabControl(object sender, EventArgs e)
         {
-            if (rbtPCI.Checked)
-                txtEtapaPrevista.Enabled = false;
-            else
-                txtEtapaPrevista.Enabled = true;
             tabControl.SelectTab(tabControl.SelectedIndex + 1);
         }
 
@@ -292,13 +272,12 @@ namespace aeX30
                     Request requestNumber = new RequestController().GetRequestNumber(openText.FileName);
 
                     //Populate
-                    txtRef0.Text = requestNumber.Part1;
-                    txtRef1.Text = requestNumber.Part2;
-                    txtRef2.Text = requestNumber.Part3;
-                    txtRef3.Text = requestNumber.Part4;
-                    txtRef4.Text = requestNumber.Part5;
-                    txtRef5.Text = requestNumber.Part6;
-                    txtRef6.Text = requestNumber.Part7;
+                    txtRef1.Text = requestNumber.Ref1;
+                    txtRef2.Text = requestNumber.Ref2;
+                    txtRef3.Text = requestNumber.Ref3;
+                    txtRef4.Text = requestNumber.Ref4;
+                    txtRef5.Text = requestNumber.Ref5;
+                    txtRef6.Text = requestNumber.Ref6;
 
                     pnlMainConvocacao.Show();
                     btnProximoConvocacao.Show();
@@ -311,7 +290,7 @@ namespace aeX30
                 {
                     pnlMainConvocacao.Show();
                     btnProximoConvocacao.Show();
-                    txtRef0.Focus();
+                    txtRef1.Focus();
                 }
 
                 return;
@@ -385,7 +364,7 @@ namespace aeX30
                     if (File.Exists(_caminhoModelo))
                     {
 
-                        if (ReportController.SetReport(_caminhoModelo, saveExcel.FileName, PopulateToRAE()) == 1)
+                        if (ReportController.SetReport(_caminhoModelo, saveExcel.FileName, PopulateReport()) == 1)
                         {
                             txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
                             btnNew.Show();

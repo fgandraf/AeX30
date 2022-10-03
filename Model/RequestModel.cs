@@ -18,13 +18,12 @@ namespace aeX30.Model
             
             return new Request
             {
-                Part1 = fullNumber.Substring(0, 4),
-                Part2 = fullNumber.Substring(5, 4),
-                Part3 = fullNumber.Substring(10, 9).TrimStart('0'),
-                Part4 = fullNumber.Substring(20, 4),
-                Part5 = fullNumber.Substring(25, 2),
-                Part6 = fullNumber.Substring(28, 2),
-                Part7 = "01"
+                Ref1 = fullNumber.Substring(0, 4),
+                Ref2 = fullNumber.Substring(5, 4),
+                Ref3 = fullNumber.Substring(10, 9).TrimStart('0'),
+                Ref4 = fullNumber.Substring(20, 4),
+                Ref5 = fullNumber.Substring(25, 2),
+                Ref6 = fullNumber.Substring(28, 2),
             };
 
         }
