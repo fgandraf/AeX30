@@ -4,11 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyName>aeX30</AssemblyName>
-    <RootNamespace>aeX30</RootNamespace>
+    <AssemblyName>AeX30</AssemblyName>
+    <RootNamespace>AeX30</RootNamespace>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>aeX30.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>AeX30.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <Authors>Felipe Gandra</Authors>
     <Version>1.0.0.0</Version>

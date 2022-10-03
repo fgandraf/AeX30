@@ -1,7 +1,7 @@
-﻿using aeX30.Model.Entities;
-using aeX30.Model;
+﻿using AeX30.Model.Entities;
+using AeX30.Model;
 
-namespace aeX30.Controller
+namespace AeX30.Controller
 {
     internal class ReportController
     {

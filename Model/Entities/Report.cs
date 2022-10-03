@@ -1,5 +1,5 @@
 ﻿
-namespace aeX30.Model.Entities
+namespace AeX30.Model.Entities
 {
 
     public class Report
@@ -52,43 +52,41 @@ namespace aeX30.Model.Entities
         public string ServicoItem18 { get; set; }
         public string ServicoItem19 { get; set; }
         public string ServicoItem20 { get; set; }
-        
+        public string CronogramaExecutado { get; set; }
+        public string CronogramaEtapa1 { get; set; }
+        public string CronogramaEtapa2 { get; set; }
+        public string CronogramaEtapa3 { get; set; }
+        public string CronogramaEtapa4 { get; set; }
+        public string CronogramaEtapa5 { get; set; }
+        public string CronogramaEtapa6 { get; set; }
+        public string CronogramaEtapa7 { get; set; }
+        public string CronogramaEtapa8 { get; set; }
+        public string CronogramaEtapa9 { get; set; }
+        public string CronogramaEtapa10 { get; set; }
+        public string CronogramaEtapa11 { get; set; }
+        public string CronogramaEtapa12 { get; set; }
+        public string CronogramaEtapa13 { get; set; }
+        public string CronogramaEtapa14 { get; set; }
+        public string CronogramaEtapa15 { get; set; }
+        public string CronogramaEtapa16 { get; set; }
+        public string CronogramaEtapa17 { get; set; }
+        public string CronogramaEtapa18 { get; set; }
+        public string CronogramaEtapa19 { get; set; }
+        public string CronogramaEtapa20 { get; set; }
+        public string CronogramaEtapa21 { get; set; }
+        public string CronogramaEtapa22 { get; set; }
+        public string CronogramaEtapa23 { get; set; }
+        public string CronogramaEtapa24 { get; set; }
+        public string CronogramaEtapa25 { get; set; }
+        public string CronogramaEtapa26 { get; set; }
+        public string CronogramaEtapa27 { get; set; }
+        public string CronogramaEtapa28 { get; set; }
+        public string CronogramaEtapa29 { get; set; }
+        public string CronogramaEtapa30 { get; set; }
+
 
         public string MensuradoAcumulado { get; set; }
         public string ContratoInicio { get; set; }
         public string ContratoTermino { get; set; }
-
-
-        public string Cron_Executado { get; set; }
-        public string Cron_Parc_1 { get; set; }
-        public string Cron_Parc_2 { get; set; }
-        public string Cron_Parc_3 { get; set; }
-        public string Cron_Parc_4 { get; set; }
-        public string Cron_Parc_5 { get; set; }
-        public string Cron_Parc_6 { get; set; }
-        public string Cron_Parc_7 { get; set; }
-        public string Cron_Parc_8 { get; set; }
-        public string Cron_Parc_9 { get; set; }
-        public string Cron_Parc_10 { get; set; }
-        public string Cron_Parc_11 { get; set; }
-        public string Cron_Parc_12 { get; set; }
-        public string Cron_Parc_13 { get; set; }
-        public string Cron_Parc_14 { get; set; }
-        public string Cron_Parc_15 { get; set; }
-        public string Cron_Parc_16 { get; set; }
-        public string Cron_Parc_17 { get; set; }
-        public string Cron_Parc_18 { get; set; }
-        public string Cron_Parc_19 { get; set; }
-        public string Cron_Parc_20 { get; set; }
-        public string Cron_Parc_21 { get; set; }
-        public string Cron_Parc_22 { get; set; }
-        public string Cron_Parc_23 { get; set; }
-        public string Cron_Parc_24 { get; set; }
-        public string Cron_Parc_25 { get; set; }
-        public string Cron_Parc_26 { get; set; }
-        public string Cron_Parc_27 { get; set; }
-        public string Cron_Parc_28 { get; set; }
-        public string Cron_Parc_29 { get; set; }
-        public string Cron_Parc_30 { get; set; }
     }
 }

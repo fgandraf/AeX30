@@ -1,5 +1,5 @@
 ﻿
-namespace aeX30
+namespace AeX30
 {
     partial class FormMain
     {
@@ -453,9 +453,9 @@ namespace aeX30
             this.label99.Location = new System.Drawing.Point(56, 18);
             this.label99.Margin = new System.Windows.Forms.Padding(0);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(89, 38);
+            this.label99.Size = new System.Drawing.Size(93, 38);
             this.label99.TabIndex = 3;
-            this.label99.Text = "aeX30";
+            this.label99.Text = "AeX30";
             // 
             // label
             // 
@@ -3484,7 +3484,7 @@ namespace aeX30
             this.Name = "FormMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "aeX30 - Assitente de RAE";
+            this.Text = "AeX30 - Assitente de RAE";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.tabControl.ResumeLayout(false);
             this.pg1.ResumeLayout(false);

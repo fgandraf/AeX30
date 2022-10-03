@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace aeX30
+namespace AeX30
 
 {
     static class Program

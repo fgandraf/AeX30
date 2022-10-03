@@ -1,8 +1,8 @@
-﻿using aeX30.Model.Entities;
+﻿using AeX30.Model.Entities;
 using System.IO;
 using System.Linq;
 
-namespace aeX30.Model
+namespace AeX30.Model
 {
     internal class RequestModel
     {

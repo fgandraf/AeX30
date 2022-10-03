@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace aeX30
+namespace AeX30
 {
     internal class Util
     {

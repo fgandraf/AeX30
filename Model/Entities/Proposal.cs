@@ -1,6 +1,6 @@
 ﻿
 
-namespace aeX30.Model.Entities
+namespace AeX30.Model.Entities
 {
 
     public class Proposal
@@ -48,36 +48,36 @@ namespace aeX30.Model.Entities
         public string ServicoItem18 { get; set; }
         public string ServicoItem19 { get; set; }
         public string ServicoItem20 { get; set; }
-        public string Cron_Executado { get; set; }
-        public string Cron_Parc_1 { get; set; } = "0";
-        public string Cron_Parc_2 { get; set; } = "0";
-        public string Cron_Parc_3 { get; set; } = "0";
-        public string Cron_Parc_4 { get; set; } = "0";
-        public string Cron_Parc_5 { get; set; } = "0";
-        public string Cron_Parc_6 { get; set; } = "0";
-        public string Cron_Parc_7 { get; set; } = "0";
-        public string Cron_Parc_8 { get; set; } = "0";
-        public string Cron_Parc_9 { get; set; } = "0";
-        public string Cron_Parc_10 { get; set; } = "0";
-        public string Cron_Parc_11 { get; set; } = "0";
-        public string Cron_Parc_12 { get; set; } = "0";
-        public string Cron_Parc_13 { get; set; } = "0";
-        public string Cron_Parc_14 { get; set; } = "0";
-        public string Cron_Parc_15 { get; set; } = "0";
-        public string Cron_Parc_16 { get; set; } = "0";
-        public string Cron_Parc_17 { get; set; } = "0";
-        public string Cron_Parc_18 { get; set; } = "0";
-        public string Cron_Parc_19 { get; set; } = "0";
-        public string Cron_Parc_20 { get; set; } = "0";
-        public string Cron_Parc_21 { get; set; } = "0";
-        public string Cron_Parc_22 { get; set; } = "0";
-        public string Cron_Parc_23 { get; set; } = "0";
-        public string Cron_Parc_24 { get; set; } = "0";
-        public string Cron_Parc_25 { get; set; } = "0";
-        public string Cron_Parc_26 { get; set; } = "0";
-        public string Cron_Parc_27 { get; set; } = "0";
-        public string Cron_Parc_28 { get; set; } = "0";
-        public string Cron_Parc_29 { get; set; } = "0";
-        public string Cron_Parc_30 { get; set; } = "0";
+        public string CronogramaExecutado { get; set; }
+        public string CronogramaEtapa1 { get; set; } = "0";
+        public string CronogramaEtapa2 { get; set; } = "0";
+        public string CronogramaEtapa3 { get; set; } = "0";
+        public string CronogramaEtapa4 { get; set; } = "0";
+        public string CronogramaEtapa5 { get; set; } = "0";
+        public string CronogramaEtapa6 { get; set; } = "0";
+        public string CronogramaEtapa7 { get; set; } = "0";
+        public string CronogramaEtapa8 { get; set; } = "0";
+        public string CronogramaEtapa9 { get; set; } = "0";
+        public string CronogramaEtapa10 { get; set; } = "0";
+        public string CronogramaEtapa11 { get; set; } = "0";
+        public string CronogramaEtapa12 { get; set; } = "0";
+        public string CronogramaEtapa13 { get; set; } = "0";
+        public string CronogramaEtapa14 { get; set; } = "0";
+        public string CronogramaEtapa15 { get; set; } = "0";
+        public string CronogramaEtapa16 { get; set; } = "0";
+        public string CronogramaEtapa17 { get; set; } = "0";
+        public string CronogramaEtapa18 { get; set; } = "0";
+        public string CronogramaEtapa19 { get; set; } = "0";
+        public string CronogramaEtapa20 { get; set; } = "0";
+        public string CronogramaEtapa21 { get; set; } = "0";
+        public string CronogramaEtapa22 { get; set; } = "0";
+        public string CronogramaEtapa23 { get; set; } = "0";
+        public string CronogramaEtapa24 { get; set; } = "0";
+        public string CronogramaEtapa25 { get; set; } = "0";
+        public string CronogramaEtapa26 { get; set; } = "0";
+        public string CronogramaEtapa27 { get; set; } = "0";
+        public string CronogramaEtapa28 { get; set; } = "0";
+        public string CronogramaEtapa29 { get; set; } = "0";
+        public string CronogramaEtapa30 { get; set; } = "0";
     }
 }

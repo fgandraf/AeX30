@@ -1,6 +1,6 @@
 ﻿
 
-namespace aeX30.Model.Entities
+namespace AeX30.Model.Entities
 {
 
     public class Request

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace aeX30.Model
+namespace AeX30.Model
 {
     public class ProposalCellReference
     {
@@ -762,7 +762,7 @@ namespace aeX30.Model
 
             switch (convertedVersion)
             {
-                case 927112017:
+                case 27112017:
                     return PFUI2017;
 
                 case 1102018:

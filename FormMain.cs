@@ -2,10 +2,10 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
-using aeX30.Controller;
-using aeX30.Model.Entities;
+using AeX30.Controller;
+using AeX30.Model.Entities;
 
-namespace aeX30
+namespace AeX30
 {
     public partial class FormMain : Form
     {
@@ -83,37 +83,37 @@ namespace aeX30
             report.ContratoInicio = txtContratoInicio.Text;
             report.ContratoTermino = txtContratoTermino.Text;
 
-            report.Cron_Executado = txtExecutado.Text;
-            report.Cron_Parc_1 = txtParcela1.Text;
-            report.Cron_Parc_2 = txtParcela2.Text;
-            report.Cron_Parc_3 = txtParcela3.Text;
-            report.Cron_Parc_4 = txtParcela4.Text;
-            report.Cron_Parc_5 = txtParcela5.Text;
-            report.Cron_Parc_6 = txtParcela6.Text;
-            report.Cron_Parc_7 = txtParcela7.Text;
-            report.Cron_Parc_8 = txtParcela8.Text;
-            report.Cron_Parc_9 = txtParcela9.Text;
-            report.Cron_Parc_10 = txtParcela10.Text;
-            report.Cron_Parc_11 = txtParcela11.Text;
-            report.Cron_Parc_12 = txtParcela12.Text;
-            report.Cron_Parc_13 = txtParcela13.Text;
-            report.Cron_Parc_14 = txtParcela14.Text;
-            report.Cron_Parc_15 = txtParcela15.Text;
-            report.Cron_Parc_16 = txtParcela16.Text;
-            report.Cron_Parc_17 = txtParcela17.Text;
-            report.Cron_Parc_18 = txtParcela18.Text;
-            report.Cron_Parc_19 = txtParcela19.Text;
-            report.Cron_Parc_20 = txtParcela20.Text;
-            report.Cron_Parc_21 = txtParcela21.Text;
-            report.Cron_Parc_22 = txtParcela22.Text;
-            report.Cron_Parc_23 = txtParcela23.Text;
-            report.Cron_Parc_24 = txtParcela24.Text;
-            report.Cron_Parc_25 = txtParcela25.Text;
-            report.Cron_Parc_26 = txtParcela26.Text;
-            report.Cron_Parc_27 = txtParcela27.Text;
-            report.Cron_Parc_28 = txtParcela28.Text;
-            report.Cron_Parc_29 = txtParcela29.Text;
-            report.Cron_Parc_30 = txtParcela30.Text;
+            report.CronogramaExecutado = txtExecutado.Text;
+            report.CronogramaEtapa1 = txtParcela1.Text;
+            report.CronogramaEtapa2 = txtParcela2.Text;
+            report.CronogramaEtapa3 = txtParcela3.Text;
+            report.CronogramaEtapa4 = txtParcela4.Text;
+            report.CronogramaEtapa5 = txtParcela5.Text;
+            report.CronogramaEtapa6 = txtParcela6.Text;
+            report.CronogramaEtapa7 = txtParcela7.Text;
+            report.CronogramaEtapa8 = txtParcela8.Text;
+            report.CronogramaEtapa9 = txtParcela9.Text;
+            report.CronogramaEtapa10 = txtParcela10.Text;
+            report.CronogramaEtapa11 = txtParcela11.Text;
+            report.CronogramaEtapa12 = txtParcela12.Text;
+            report.CronogramaEtapa13 = txtParcela13.Text;
+            report.CronogramaEtapa14 = txtParcela14.Text;
+            report.CronogramaEtapa15 = txtParcela15.Text;
+            report.CronogramaEtapa16 = txtParcela16.Text;
+            report.CronogramaEtapa17 = txtParcela17.Text;
+            report.CronogramaEtapa18 = txtParcela18.Text;
+            report.CronogramaEtapa19 = txtParcela19.Text;
+            report.CronogramaEtapa20 = txtParcela20.Text;
+            report.CronogramaEtapa21 = txtParcela21.Text;
+            report.CronogramaEtapa22 = txtParcela22.Text;
+            report.CronogramaEtapa23 = txtParcela23.Text;
+            report.CronogramaEtapa24 = txtParcela24.Text;
+            report.CronogramaEtapa25 = txtParcela25.Text;
+            report.CronogramaEtapa26 = txtParcela26.Text;
+            report.CronogramaEtapa27 = txtParcela27.Text;
+            report.CronogramaEtapa28 = txtParcela28.Text;
+            report.CronogramaEtapa29 = txtParcela29.Text;
+            report.CronogramaEtapa30 = txtParcela30.Text;
 
 
             return report;
@@ -170,37 +170,37 @@ namespace aeX30
             txt1719.Text = prop.ServicoItem19;
             txt1720.Text = prop.ServicoItem20;
             ///CRONOGRAMA
-            txtExecutado.Text = prop.Cron_Executado;
-            txtParcela1.Text = prop.Cron_Parc_1;
-            txtParcela2.Text = prop.Cron_Parc_2;
-            txtParcela3.Text = prop.Cron_Parc_3;
-            txtParcela4.Text = prop.Cron_Parc_4;
-            txtParcela5.Text = prop.Cron_Parc_5;
-            txtParcela6.Text = prop.Cron_Parc_6;
-            txtParcela7.Text = prop.Cron_Parc_7;
-            txtParcela8.Text = prop.Cron_Parc_8;
-            txtParcela9.Text = prop.Cron_Parc_9;
-            txtParcela10.Text = prop.Cron_Parc_10;
-            txtParcela11.Text = prop.Cron_Parc_11;
-            txtParcela12.Text = prop.Cron_Parc_12;
-            txtParcela13.Text = prop.Cron_Parc_13;
-            txtParcela14.Text = prop.Cron_Parc_14;
-            txtParcela15.Text = prop.Cron_Parc_15;
-            txtParcela16.Text = prop.Cron_Parc_16;
-            txtParcela17.Text = prop.Cron_Parc_17;
-            txtParcela18.Text = prop.Cron_Parc_18;
-            txtParcela19.Text = prop.Cron_Parc_19;
-            txtParcela20.Text = prop.Cron_Parc_20;
-            txtParcela21.Text = prop.Cron_Parc_21;
-            txtParcela22.Text = prop.Cron_Parc_22;
-            txtParcela23.Text = prop.Cron_Parc_23;
-            txtParcela24.Text = prop.Cron_Parc_24;
-            txtParcela25.Text = prop.Cron_Parc_25;
-            txtParcela26.Text = prop.Cron_Parc_29;
-            txtParcela27.Text = prop.Cron_Parc_27;
-            txtParcela28.Text = prop.Cron_Parc_28;
-            txtParcela29.Text = prop.Cron_Parc_29;
-            txtParcela30.Text = prop.Cron_Parc_30;           
+            txtExecutado.Text = prop.CronogramaExecutado;
+            txtParcela1.Text = prop.CronogramaEtapa1;
+            txtParcela2.Text = prop.CronogramaEtapa2;
+            txtParcela3.Text = prop.CronogramaEtapa3;
+            txtParcela4.Text = prop.CronogramaEtapa4;
+            txtParcela5.Text = prop.CronogramaEtapa5;
+            txtParcela6.Text = prop.CronogramaEtapa6;
+            txtParcela7.Text = prop.CronogramaEtapa7;
+            txtParcela8.Text = prop.CronogramaEtapa8;
+            txtParcela9.Text = prop.CronogramaEtapa9;
+            txtParcela10.Text = prop.CronogramaEtapa10;
+            txtParcela11.Text = prop.CronogramaEtapa11;
+            txtParcela12.Text = prop.CronogramaEtapa12;
+            txtParcela13.Text = prop.CronogramaEtapa13;
+            txtParcela14.Text = prop.CronogramaEtapa14;
+            txtParcela15.Text = prop.CronogramaEtapa15;
+            txtParcela16.Text = prop.CronogramaEtapa16;
+            txtParcela17.Text = prop.CronogramaEtapa17;
+            txtParcela18.Text = prop.CronogramaEtapa18;
+            txtParcela19.Text = prop.CronogramaEtapa19;
+            txtParcela20.Text = prop.CronogramaEtapa20;
+            txtParcela21.Text = prop.CronogramaEtapa21;
+            txtParcela22.Text = prop.CronogramaEtapa22;
+            txtParcela23.Text = prop.CronogramaEtapa23;
+            txtParcela24.Text = prop.CronogramaEtapa24;
+            txtParcela25.Text = prop.CronogramaEtapa25;
+            txtParcela26.Text = prop.CronogramaEtapa29;
+            txtParcela27.Text = prop.CronogramaEtapa27;
+            txtParcela28.Text = prop.CronogramaEtapa28;
+            txtParcela29.Text = prop.CronogramaEtapa29;
+            txtParcela30.Text = prop.CronogramaEtapa30;           
         }
 
 
