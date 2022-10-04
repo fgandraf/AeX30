@@ -45,7 +45,7 @@ namespace AeX30.Controller
             proposal.ProponenteCPF = FormatString.CPF(proposal.ProponenteCPF);
             proposal.ProponenteFone = FormatString.Fone(proposal.ProponenteFone);
             proposal.ResponsavelCPF = FormatString.CPF(proposal.ResponsavelCPF);
-            proposal.ResponsavelFone = FormatString.Fone(proposal.ProponenteFone);
+            proposal.ResponsavelFone = FormatString.Fone(proposal.ResponsavelFone);
             proposal.ImovelCep = FormatString.CEP(proposal.ImovelCep);
 
             if (proposal.Tipo == "Proposta")

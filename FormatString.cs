@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.ConstrainedExecution;
 using System.Text.RegularExpressions;
 
 namespace AeX30
@@ -9,25 +10,36 @@ namespace AeX30
 
         public static string CPF(string cpf)
         {
-            return OnlyNumber(cpf).ToString(@"000\.000\.000\-00");
+            if (cpf == "")
+                return cpf;
+            else
+                return OnlyNumber(cpf).ToString(@"000\.000\.000\-00");
         }
 
         public static string CEP(string cep)
         {
-            return OnlyNumber(cep).ToString(@"00000\-000");
+            if (cep == "")
+                return cep;
+            else
+                return OnlyNumber(cep).ToString(@"00000\-000");
         }
 
         public static string Fone(string fone)
         {
-            int phoneNumber = OnlyNumber(fone);
-            int lenght = phoneNumber.ToString().Length;
-
-            if (lenght == 8)
-                return phoneNumber.ToString(@"0000\-0000");
-            else if (lenght == 9)
-                return phoneNumber.ToString(@"00000\-0000");
-            else
+            if (fone == "")
                 return fone;
+            else
+            {
+                long phoneNumber = OnlyNumber(fone);
+                int lenght = phoneNumber.ToString().Length;
+
+                if (lenght == 8)
+                    return phoneNumber.ToString(@"0000\-0000");
+                else if (lenght == 9)
+                    return phoneNumber.ToString(@"00000\-0000");
+                else
+                    return fone;
+            }
         }
 
 
@@ -38,11 +50,11 @@ namespace AeX30
 
 
 
-        private static int OnlyNumber(string strIn)
+        private static long OnlyNumber(string strIn)
         {
             strIn = strIn.Split(',')[0];
             var onlyNumber = new Regex(@"[^\d]");
-            return Convert.ToInt32(onlyNumber.Replace(strIn, ""));
+            return Convert.ToInt64(onlyNumber.Replace(strIn, ""));
         }
 
 
