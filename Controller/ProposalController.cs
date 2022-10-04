@@ -14,9 +14,7 @@ namespace AeX30.Controller
             {
                 string footer = ProposalModel.GetFooter(filePath);
                 string[] cellReference = new ProposalCellReference().Get(footer);
-                Proposal proposal = new ProposalModel().GetProposal(filePath, cellReference);
-
-                return FormatedProposal(proposal);
+                return new ProposalModel().GetProposal(filePath, cellReference);
             }
             else
                 return null;
@@ -37,28 +35,6 @@ namespace AeX30.Controller
                 return false;
         }
 
-
-
-        private Proposal FormatedProposal(Proposal proposal)
-        {
-            proposal.ProponenteNome = proposal.ProponenteNome.TrimEnd();
-            proposal.ProponenteCPF = FormatString.CPF(proposal.ProponenteCPF);
-            proposal.ProponenteFone = FormatString.Fone(proposal.ProponenteFone);
-            proposal.ResponsavelCPF = FormatString.CPF(proposal.ResponsavelCPF);
-            proposal.ResponsavelFone = FormatString.Fone(proposal.ResponsavelFone);
-            proposal.ImovelCep = FormatString.CEP(proposal.ImovelCep);
-
-            if (proposal.Tipo == "Proposta")
-                proposal.Tipo = "PFUI";
-            else
-            {
-                proposal.Tipo = "PCI";
-                proposal.ImovelComarca = "";
-                proposal.ImovelComarcaUF = "";
-            }
-
-            return proposal;
-        }
 
 
     }

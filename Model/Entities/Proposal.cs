@@ -1,11 +1,34 @@
 ﻿
 
+using NPOI.OpenXmlFormats.Dml.Chart;
+
 namespace AeX30.Model.Entities
 {
 
     public class Proposal
     {
-        public string Tipo { get; set; }
+
+
+        private string _tipo;
+        public string Tipo
+        {
+            get => _tipo;
+            set
+            {
+                if (value == "Proposta")
+                    _tipo = "PFUI";
+                else
+                {
+                    _tipo = "PCI";
+                    ImovelComarca = "";
+                    ImovelComarcaUF = "";
+                }
+            }
+        }
+
+
+
+
         public string Vigencia { get; set; }
         public string ProponenteNome { get; set; }
         public string ProponenteCPF { get; set; }
