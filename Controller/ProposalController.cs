@@ -42,12 +42,12 @@ namespace AeX30.Controller
         private Proposal FormatedProposal(Proposal proposal)
         {
             proposal.ProponenteNome = proposal.ProponenteNome.TrimEnd();
-            proposal.ProponenteCPF = Util.FormatedCPF(proposal.ProponenteCPF);
-            proposal.ProponenteFone = Util.FormatedFone(proposal.ProponenteFone);
-            proposal.ResponsavelCPF = Util.FormatedCPF(proposal.ResponsavelCPF);
-            proposal.ResponsavelFone = Util.FormatedFone(proposal.ProponenteFone);
-            proposal.ImovelCep = Util.FormatedCEP(proposal.ImovelCep);
-            
+            proposal.ProponenteCPF = FormatString.CPF(proposal.ProponenteCPF);
+            proposal.ProponenteFone = FormatString.Fone(proposal.ProponenteFone);
+            proposal.ResponsavelCPF = FormatString.CPF(proposal.ResponsavelCPF);
+            proposal.ResponsavelFone = FormatString.Fone(proposal.ProponenteFone);
+            proposal.ImovelCep = FormatString.CEP(proposal.ImovelCep);
+
             if (proposal.Tipo == "Proposta")
                 proposal.Tipo = "PFUI";
             else
