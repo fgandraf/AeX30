@@ -127,27 +127,27 @@ namespace AeX30
             lblVigencia.Show();
 
             ///CABEÇALHO
-            txtPropNome.Text = prop.ProponenteNome;
-            txtPropCPF.Text = prop.ProponenteCPF;
-            txtPropDDD.Text = prop.ProponenteDDD;
-            txtPropTelefone.Text = prop.ProponenteFone;
-            txtRTNome.Text = prop.ResponsavelNome;
-            txtRTCauCrea.Text = prop.ReponsavelCauCrea;
-            txtRTUF.Text = prop.ResponsavelUF;
-            txtRTCPF.Text = prop.ResponsavelCPF;
-            txtRTDDD.Text = prop.ResponsavelDDD;
-            txtRTTelefone.Text = prop.ResponsavelFone;
-            txtIdEndereco.Text = prop.ImovelEndereco;
-            txtIdComplemento.Text = prop.ImovelComplemento;
-            txtIdCEP.Text = prop.ImovelCep;
-            txtIdBairro.Text = prop.ImovelBairro;
-            txtIdMunicipio.Text = prop.ImovelMunicipio;
-            txtIdUF.Text = prop.ImovelUF;
-            txtTerrenoValorProposto.Text = prop.ImovelValorTerreno;
-            txtTerrenoMatricula.Text = prop.ImovelMatricula;
-            txtTerrenoOficio.Text = prop.ImovelOficio;
-            txtTerrenoComarca.Text = prop.ImovelComarca;
-            txtTerrenoUF.Text = prop.ImovelComarcaUF;
+            txtPropNome.Text = prop.ProponenteNome.ToUpper();
+            txtPropCPF.Text = prop.ProponenteCPF.ToUpper();
+            txtPropDDD.Text = prop.ProponenteDDD.ToUpper();
+            txtPropTelefone.Text = prop.ProponenteFone.ToUpper();
+            txtRTNome.Text = prop.ResponsavelNome.ToUpper();
+            txtRTCauCrea.Text = prop.ReponsavelCauCrea.ToUpper();
+            txtRTUF.Text = prop.ResponsavelUF.ToUpper();
+            txtRTCPF.Text = prop.ResponsavelCPF.ToUpper();
+            txtRTDDD.Text = prop.ResponsavelDDD.ToUpper();
+            txtRTTelefone.Text = prop.ResponsavelFone.ToUpper();
+            txtIdEndereco.Text = prop.ImovelEndereco.ToUpper();
+            txtIdComplemento.Text = prop.ImovelComplemento.ToUpper();
+            txtIdCEP.Text = prop.ImovelCep.ToUpper();
+            txtIdBairro.Text = prop.ImovelBairro.ToUpper();
+            txtIdMunicipio.Text = prop.ImovelMunicipio.ToUpper();
+            txtIdUF.Text = prop.ImovelUF.ToUpper();
+            txtTerrenoValorProposto.Text = prop.ImovelValorTerreno.ToUpper();
+            txtTerrenoMatricula.Text = prop.ImovelMatricula.ToUpper();
+            txtTerrenoOficio.Text = prop.ImovelOficio.ToUpper();
+            txtTerrenoComarca.Text = prop.ImovelComarca.ToUpper();
+            txtTerrenoUF.Text = prop.ImovelComarcaUF.ToUpper();
             ///ORÇAMENTO (PERCENTUAIS)
             txt1701.Text = prop.ServicoItem01;
             txt1702.Text = prop.ServicoItem02;
