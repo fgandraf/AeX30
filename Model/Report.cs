@@ -1,16 +1,22 @@
-﻿using System;
-using System.IO;
-using AeX30.Model.Entities;
-using NPOI.HSSF.UserModel;
+﻿using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
+using System.IO;
+using System;
 
 namespace AeX30.Model
 {
-    public class ReportModel
+
+    public class Report : Proposal
     {
+        public string[] Referencia { get; set; } = new string[7];
+        public string MensuradoAcumulado { get; set; }
+        public string ContratoInicio { get; set; }
+        public string ContratoTermino { get; set; }
+
+
         private static string[] CellAddress = new string[]
-                {
+        {
             /*auto. de serv.:------*/    "AB35", "AD35", "AF35", "AJ35", "AL35", "AM35", "-",
             
             /*prop. NOME:----------*/    "G43",
@@ -102,30 +108,8 @@ namespace AeX30.Model
             /*cron. PARC 35:-------*/    "AK106",
             /*cron. PARC 36:-------*/    "AK107",
 
-                };
-
-
-        internal static string GetSheetName(string filePath)
-        {
-            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            HSSFWorkbook wbook = new HSSFWorkbook(file);
-
-            return wbook.GetSheetName(0);
-        }
-
-
-        internal static string GetFooter(string filePath)
-        {
-            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            HSSFWorkbook wbook = new HSSFWorkbook(file);
-
-            ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
-
-            return sheet.Footer.Left;
-        }
-
-
-        internal int SetReport(string pathTemplate, string pathDestin, Report report)
+        };
+        public int SetReport(string pathTemplate, string pathDestin, Report report)
         {
             try
             {
@@ -134,14 +118,14 @@ namespace AeX30.Model
                 ISheet sheet = wbook.GetSheet("RAE");
                 string[] xy = CellAddress;
 
-                
+
                 //CABEÇALHO
-                sheet.GetRow(new CellReference(xy[0]).Row).GetCell(new CellReference(xy[0]).Col).SetCellValue(report.Ref1);
-                sheet.GetRow(new CellReference(xy[1]).Row).GetCell(new CellReference(xy[1]).Col).SetCellValue(report.Ref2);
-                sheet.GetRow(new CellReference(xy[2]).Row).GetCell(new CellReference(xy[2]).Col).SetCellValue(Convert.ToInt32(report.Ref3));
-                sheet.GetRow(new CellReference(xy[3]).Row).GetCell(new CellReference(xy[3]).Col).SetCellValue(report.Ref4);
-                sheet.GetRow(new CellReference(xy[4]).Row).GetCell(new CellReference(xy[4]).Col).SetCellValue(report.Ref5);
-                sheet.GetRow(new CellReference(xy[5]).Row).GetCell(new CellReference(xy[5]).Col).SetCellValue(report.Ref5);
+                sheet.GetRow(new CellReference(xy[0]).Row).GetCell(new CellReference(xy[0]).Col).SetCellValue(report.Referencia[1]);
+                sheet.GetRow(new CellReference(xy[1]).Row).GetCell(new CellReference(xy[1]).Col).SetCellValue(report.Referencia[2]);
+                sheet.GetRow(new CellReference(xy[2]).Row).GetCell(new CellReference(xy[2]).Col).SetCellValue(Convert.ToInt32(report.Referencia[3]));
+                sheet.GetRow(new CellReference(xy[3]).Row).GetCell(new CellReference(xy[3]).Col).SetCellValue(report.Referencia[4]);
+                sheet.GetRow(new CellReference(xy[4]).Row).GetCell(new CellReference(xy[4]).Col).SetCellValue(report.Referencia[5]);
+                sheet.GetRow(new CellReference(xy[5]).Row).GetCell(new CellReference(xy[5]).Col).SetCellValue(report.Referencia[6]);
 
                 sheet.GetRow(new CellReference(xy[7]).Row).GetCell(new CellReference(xy[7]).Col).SetCellValue(report.ProponenteNome);
                 sheet.GetRow(new CellReference(xy[8]).Row).GetCell(new CellReference(xy[8]).Col).SetCellValue(report.ProponenteCPF);
@@ -156,7 +140,7 @@ namespace AeX30.Model
                 sheet.GetRow(new CellReference(xy[17]).Row).GetCell(new CellReference(xy[17]).Col).SetCellValue(report.ImovelEndereco);
                 sheet.GetRow(new CellReference(xy[18]).Row).GetCell(new CellReference(xy[18]).Col).SetCellValue(report.ImovelComplemento);
                 sheet.GetRow(new CellReference(xy[19]).Row).GetCell(new CellReference(xy[19]).Col).SetCellValue(report.ImovelBairro);
-                sheet.GetRow(new CellReference(xy[20]).Row).GetCell(new CellReference(xy[20]).Col).SetCellValue(report.ImovelCEP);
+                sheet.GetRow(new CellReference(xy[20]).Row).GetCell(new CellReference(xy[20]).Col).SetCellValue(report.ImovelCep);
                 sheet.GetRow(new CellReference(xy[21]).Row).GetCell(new CellReference(xy[21]).Col).SetCellValue(report.ImovelMunicipio);
                 sheet.GetRow(new CellReference(xy[22]).Row).GetCell(new CellReference(xy[22]).Col).SetCellValue(report.ImovelUF);
                 sheet.GetRow(new CellReference(xy[23]).Row).GetCell(new CellReference(xy[23]).Col).SetCellValue(report.ImovelValorTerreno);
@@ -226,7 +210,7 @@ namespace AeX30.Model
                 sheet.GetRow(new CellReference(xy[79]).Row).GetCell(new CellReference(xy[79]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa28));
                 sheet.GetRow(new CellReference(xy[80]).Row).GetCell(new CellReference(xy[80]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa29));
                 sheet.GetRow(new CellReference(xy[81]).Row).GetCell(new CellReference(xy[81]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa30));
-   
+
 
                 using (FileStream arquivoRAE = new FileStream(pathDestin, FileMode.Create, FileAccess.Write))
                 {
@@ -242,7 +226,5 @@ namespace AeX30.Model
             }
 
         }
-
     }
 }
-

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace AeX30.Model
+namespace AeX30.Controller
 {
     public class ProposalCellReference
     {
@@ -610,8 +610,8 @@ namespace AeX30.Model
             "V70",   // [16]  Valor do terreno
             "G57",   // [17]  Matrícula
             "M57",   // [18]  ORI
-            "M57",     // [19]  Comarca
-            "M57",     // [20]  Comarca UF
+            "-",   // [19]  Comarca
+            "-",   // [20]  Comarca UF
            
             // SERVIÇOS 
             "X94",    // [21]  Item 1
@@ -693,8 +693,8 @@ namespace AeX30.Model
             "V70",   // [16]  Valor do terreno
             "G57",   // [17]  Matrícula
             "M57",   // [18]  ORI
-            "M57",     // [19]  Comarca
-            "M57",     // [20]  Comarca UF
+            "-",     // [19]  Comarca
+            "-",     // [20]  Comarca UF
            
             // SERVIÇOS
             "X95",    // [21]  Item 1
