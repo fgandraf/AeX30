@@ -17,7 +17,7 @@ namespace AeX30.Controller
         private static bool IsValid(string filePath)
         {
             string sheetName = Report.GetSheetName(filePath);
-            string footer = Report.GetFooter(filePath);
+            string footer = Report.GetLeftFooter(filePath);
 
             if (sheetName == "RAE" && footer != "" || footer != null)
                 return true;

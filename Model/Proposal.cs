@@ -94,7 +94,7 @@ namespace AeX30.Model
             return wbook.GetSheetName(0);
         }
 
-        public static string GetFooter(string filePath)
+        public static string GetLeftFooter(string filePath)
         {
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             HSSFWorkbook wbook = new HSSFWorkbook(file);
