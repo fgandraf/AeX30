@@ -374,11 +374,7 @@ namespace AeX30
                         return;
                     }
                 }
-                else
-                {
-                    txtLogFinalizar.Text += "Arquivo modelo não existe ou foi movido!\r\nA gravação não foi executada!";
-                    return;
-                }
+
             }
 
 

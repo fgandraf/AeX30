@@ -15,7 +15,10 @@ namespace AeX30.Model
         public string ContratoTermino { get; set; }
 
 
-        private static string[] CellAddress = new string[]
+        
+        public int SetReport(string pathTemplate, string pathDestin, Report report)
+        {
+            string[] cellReference = new string[]
         {
             /*auto. de serv.:------*/    "AB35", "AD35", "AF35", "AJ35", "AL35", "AM35", "-",
             
@@ -109,107 +112,105 @@ namespace AeX30.Model
             /*cron. PARC 36:-------*/    "AK107",
 
         };
-        public int SetReport(string pathTemplate, string pathDestin, Report report)
-        {
+
             try
             {
                 FileStream file = new FileStream(pathTemplate, FileMode.Open, FileAccess.Read);
                 HSSFWorkbook wbook = new HSSFWorkbook(file);
                 ISheet sheet = wbook.GetSheet("RAE");
-                string[] xy = CellAddress;
 
 
                 //CABEÇALHO
-                sheet.GetRow(new CellReference(xy[0]).Row).GetCell(new CellReference(xy[0]).Col).SetCellValue(report.Referencia[1]);
-                sheet.GetRow(new CellReference(xy[1]).Row).GetCell(new CellReference(xy[1]).Col).SetCellValue(report.Referencia[2]);
-                sheet.GetRow(new CellReference(xy[2]).Row).GetCell(new CellReference(xy[2]).Col).SetCellValue(Convert.ToInt32(report.Referencia[3]));
-                sheet.GetRow(new CellReference(xy[3]).Row).GetCell(new CellReference(xy[3]).Col).SetCellValue(report.Referencia[4]);
-                sheet.GetRow(new CellReference(xy[4]).Row).GetCell(new CellReference(xy[4]).Col).SetCellValue(report.Referencia[5]);
-                sheet.GetRow(new CellReference(xy[5]).Row).GetCell(new CellReference(xy[5]).Col).SetCellValue(report.Referencia[6]);
+                sheet.GetRow(new CellReference(cellReference[0]).Row).GetCell(new CellReference(cellReference[0]).Col).SetCellValue(report.Referencia[1]);
+                sheet.GetRow(new CellReference(cellReference[1]).Row).GetCell(new CellReference(cellReference[1]).Col).SetCellValue(report.Referencia[2]);
+                sheet.GetRow(new CellReference(cellReference[2]).Row).GetCell(new CellReference(cellReference[2]).Col).SetCellValue(Convert.ToInt32(report.Referencia[3]));
+                sheet.GetRow(new CellReference(cellReference[3]).Row).GetCell(new CellReference(cellReference[3]).Col).SetCellValue(report.Referencia[4]);
+                sheet.GetRow(new CellReference(cellReference[4]).Row).GetCell(new CellReference(cellReference[4]).Col).SetCellValue(report.Referencia[5]);
+                sheet.GetRow(new CellReference(cellReference[5]).Row).GetCell(new CellReference(cellReference[5]).Col).SetCellValue(report.Referencia[6]);
 
-                sheet.GetRow(new CellReference(xy[7]).Row).GetCell(new CellReference(xy[7]).Col).SetCellValue(report.ProponenteNome);
-                sheet.GetRow(new CellReference(xy[8]).Row).GetCell(new CellReference(xy[8]).Col).SetCellValue(report.ProponenteCPF);
-                sheet.GetRow(new CellReference(xy[9]).Row).GetCell(new CellReference(xy[9]).Col).SetCellValue(report.ProponenteDDD);
-                sheet.GetRow(new CellReference(xy[10]).Row).GetCell(new CellReference(xy[10]).Col).SetCellValue(report.ProponenteFone);
-                sheet.GetRow(new CellReference(xy[11]).Row).GetCell(new CellReference(xy[11]).Col).SetCellValue(report.ResponsavelNome);
-                sheet.GetRow(new CellReference(xy[12]).Row).GetCell(new CellReference(xy[12]).Col).SetCellValue(report.ReponsavelCauCrea);
-                sheet.GetRow(new CellReference(xy[13]).Row).GetCell(new CellReference(xy[13]).Col).SetCellValue(report.ResponsavelUF);
-                sheet.GetRow(new CellReference(xy[14]).Row).GetCell(new CellReference(xy[14]).Col).SetCellValue(report.ResponsavelCPF);
-                sheet.GetRow(new CellReference(xy[15]).Row).GetCell(new CellReference(xy[15]).Col).SetCellValue(report.ResponsavelDDD);
-                sheet.GetRow(new CellReference(xy[16]).Row).GetCell(new CellReference(xy[16]).Col).SetCellValue(report.ResponsavelFone);
-                sheet.GetRow(new CellReference(xy[17]).Row).GetCell(new CellReference(xy[17]).Col).SetCellValue(report.ImovelEndereco);
-                sheet.GetRow(new CellReference(xy[18]).Row).GetCell(new CellReference(xy[18]).Col).SetCellValue(report.ImovelComplemento);
-                sheet.GetRow(new CellReference(xy[19]).Row).GetCell(new CellReference(xy[19]).Col).SetCellValue(report.ImovelBairro);
-                sheet.GetRow(new CellReference(xy[20]).Row).GetCell(new CellReference(xy[20]).Col).SetCellValue(report.ImovelCep);
-                sheet.GetRow(new CellReference(xy[21]).Row).GetCell(new CellReference(xy[21]).Col).SetCellValue(report.ImovelMunicipio);
-                sheet.GetRow(new CellReference(xy[22]).Row).GetCell(new CellReference(xy[22]).Col).SetCellValue(report.ImovelUF);
-                sheet.GetRow(new CellReference(xy[23]).Row).GetCell(new CellReference(xy[23]).Col).SetCellValue(report.ImovelValorTerreno);
-                sheet.GetRow(new CellReference(xy[24]).Row).GetCell(new CellReference(xy[24]).Col).SetCellValue(report.ImovelMatricula);
-                sheet.GetRow(new CellReference(xy[25]).Row).GetCell(new CellReference(xy[25]).Col).SetCellValue(report.ImovelOficio);
-                sheet.GetRow(new CellReference(xy[26]).Row).GetCell(new CellReference(xy[26]).Col).SetCellValue(report.ImovelComarca);
-                sheet.GetRow(new CellReference(xy[27]).Row).GetCell(new CellReference(xy[27]).Col).SetCellValue(report.ImovelComarcaUF);
+                sheet.GetRow(new CellReference(cellReference[7]).Row).GetCell(new CellReference(cellReference[7]).Col).SetCellValue(report.ProponenteNome);
+                sheet.GetRow(new CellReference(cellReference[8]).Row).GetCell(new CellReference(cellReference[8]).Col).SetCellValue(report.ProponenteCPF);
+                sheet.GetRow(new CellReference(cellReference[9]).Row).GetCell(new CellReference(cellReference[9]).Col).SetCellValue(report.ProponenteDDD);
+                sheet.GetRow(new CellReference(cellReference[10]).Row).GetCell(new CellReference(cellReference[10]).Col).SetCellValue(report.ProponenteFone);
+                sheet.GetRow(new CellReference(cellReference[11]).Row).GetCell(new CellReference(cellReference[11]).Col).SetCellValue(report.ResponsavelNome);
+                sheet.GetRow(new CellReference(cellReference[12]).Row).GetCell(new CellReference(cellReference[12]).Col).SetCellValue(report.ReponsavelCauCrea);
+                sheet.GetRow(new CellReference(cellReference[13]).Row).GetCell(new CellReference(cellReference[13]).Col).SetCellValue(report.ResponsavelUF);
+                sheet.GetRow(new CellReference(cellReference[14]).Row).GetCell(new CellReference(cellReference[14]).Col).SetCellValue(report.ResponsavelCPF);
+                sheet.GetRow(new CellReference(cellReference[15]).Row).GetCell(new CellReference(cellReference[15]).Col).SetCellValue(report.ResponsavelDDD);
+                sheet.GetRow(new CellReference(cellReference[16]).Row).GetCell(new CellReference(cellReference[16]).Col).SetCellValue(report.ResponsavelFone);
+                sheet.GetRow(new CellReference(cellReference[17]).Row).GetCell(new CellReference(cellReference[17]).Col).SetCellValue(report.ImovelEndereco);
+                sheet.GetRow(new CellReference(cellReference[18]).Row).GetCell(new CellReference(cellReference[18]).Col).SetCellValue(report.ImovelComplemento);
+                sheet.GetRow(new CellReference(cellReference[19]).Row).GetCell(new CellReference(cellReference[19]).Col).SetCellValue(report.ImovelBairro);
+                sheet.GetRow(new CellReference(cellReference[20]).Row).GetCell(new CellReference(cellReference[20]).Col).SetCellValue(report.ImovelCep);
+                sheet.GetRow(new CellReference(cellReference[21]).Row).GetCell(new CellReference(cellReference[21]).Col).SetCellValue(report.ImovelMunicipio);
+                sheet.GetRow(new CellReference(cellReference[22]).Row).GetCell(new CellReference(cellReference[22]).Col).SetCellValue(report.ImovelUF);
+                sheet.GetRow(new CellReference(cellReference[23]).Row).GetCell(new CellReference(cellReference[23]).Col).SetCellValue(report.ImovelValorTerreno);
+                sheet.GetRow(new CellReference(cellReference[24]).Row).GetCell(new CellReference(cellReference[24]).Col).SetCellValue(report.ImovelMatricula);
+                sheet.GetRow(new CellReference(cellReference[25]).Row).GetCell(new CellReference(cellReference[25]).Col).SetCellValue(report.ImovelOficio);
+                sheet.GetRow(new CellReference(cellReference[26]).Row).GetCell(new CellReference(cellReference[26]).Col).SetCellValue(report.ImovelComarca);
+                sheet.GetRow(new CellReference(cellReference[27]).Row).GetCell(new CellReference(cellReference[27]).Col).SetCellValue(report.ImovelComarcaUF);
                 //ORÇAMENTO (PERCENTUAIS)
-                sheet.GetRow(new CellReference(xy[28]).Row).GetCell(new CellReference(xy[28]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem01));
-                sheet.GetRow(new CellReference(xy[29]).Row).GetCell(new CellReference(xy[29]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem02));
-                sheet.GetRow(new CellReference(xy[30]).Row).GetCell(new CellReference(xy[30]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem03));
-                sheet.GetRow(new CellReference(xy[31]).Row).GetCell(new CellReference(xy[31]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem04));
-                sheet.GetRow(new CellReference(xy[32]).Row).GetCell(new CellReference(xy[32]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem05));
-                sheet.GetRow(new CellReference(xy[33]).Row).GetCell(new CellReference(xy[33]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem06));
-                sheet.GetRow(new CellReference(xy[34]).Row).GetCell(new CellReference(xy[34]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem07));
-                sheet.GetRow(new CellReference(xy[35]).Row).GetCell(new CellReference(xy[35]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem08));
-                sheet.GetRow(new CellReference(xy[36]).Row).GetCell(new CellReference(xy[36]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem09));
-                sheet.GetRow(new CellReference(xy[37]).Row).GetCell(new CellReference(xy[37]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem10));
-                sheet.GetRow(new CellReference(xy[38]).Row).GetCell(new CellReference(xy[38]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem11));
-                sheet.GetRow(new CellReference(xy[39]).Row).GetCell(new CellReference(xy[39]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem12));
-                sheet.GetRow(new CellReference(xy[40]).Row).GetCell(new CellReference(xy[40]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem13));
-                sheet.GetRow(new CellReference(xy[41]).Row).GetCell(new CellReference(xy[41]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem14));
-                sheet.GetRow(new CellReference(xy[42]).Row).GetCell(new CellReference(xy[42]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem15));
-                sheet.GetRow(new CellReference(xy[43]).Row).GetCell(new CellReference(xy[43]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem16));
-                sheet.GetRow(new CellReference(xy[44]).Row).GetCell(new CellReference(xy[44]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem17));
-                sheet.GetRow(new CellReference(xy[45]).Row).GetCell(new CellReference(xy[45]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem18));
-                sheet.GetRow(new CellReference(xy[46]).Row).GetCell(new CellReference(xy[46]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem19));
-                sheet.GetRow(new CellReference(xy[47]).Row).GetCell(new CellReference(xy[47]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem20));
+                sheet.GetRow(new CellReference(cellReference[28]).Row).GetCell(new CellReference(cellReference[28]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem01));
+                sheet.GetRow(new CellReference(cellReference[29]).Row).GetCell(new CellReference(cellReference[29]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem02));
+                sheet.GetRow(new CellReference(cellReference[30]).Row).GetCell(new CellReference(cellReference[30]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem03));
+                sheet.GetRow(new CellReference(cellReference[31]).Row).GetCell(new CellReference(cellReference[31]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem04));
+                sheet.GetRow(new CellReference(cellReference[32]).Row).GetCell(new CellReference(cellReference[32]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem05));
+                sheet.GetRow(new CellReference(cellReference[33]).Row).GetCell(new CellReference(cellReference[33]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem06));
+                sheet.GetRow(new CellReference(cellReference[34]).Row).GetCell(new CellReference(cellReference[34]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem07));
+                sheet.GetRow(new CellReference(cellReference[35]).Row).GetCell(new CellReference(cellReference[35]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem08));
+                sheet.GetRow(new CellReference(cellReference[36]).Row).GetCell(new CellReference(cellReference[36]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem09));
+                sheet.GetRow(new CellReference(cellReference[37]).Row).GetCell(new CellReference(cellReference[37]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem10));
+                sheet.GetRow(new CellReference(cellReference[38]).Row).GetCell(new CellReference(cellReference[38]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem11));
+                sheet.GetRow(new CellReference(cellReference[39]).Row).GetCell(new CellReference(cellReference[39]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem12));
+                sheet.GetRow(new CellReference(cellReference[40]).Row).GetCell(new CellReference(cellReference[40]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem13));
+                sheet.GetRow(new CellReference(cellReference[41]).Row).GetCell(new CellReference(cellReference[41]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem14));
+                sheet.GetRow(new CellReference(cellReference[42]).Row).GetCell(new CellReference(cellReference[42]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem15));
+                sheet.GetRow(new CellReference(cellReference[43]).Row).GetCell(new CellReference(cellReference[43]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem16));
+                sheet.GetRow(new CellReference(cellReference[44]).Row).GetCell(new CellReference(cellReference[44]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem17));
+                sheet.GetRow(new CellReference(cellReference[45]).Row).GetCell(new CellReference(cellReference[45]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem18));
+                sheet.GetRow(new CellReference(cellReference[46]).Row).GetCell(new CellReference(cellReference[46]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem19));
+                sheet.GetRow(new CellReference(cellReference[47]).Row).GetCell(new CellReference(cellReference[47]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem20));
                 if (report.MensuradoAcumulado != "")
-                    sheet.GetRow(new CellReference(xy[48]).Row).GetCell(new CellReference(xy[48]).Col).SetCellValue(Convert.ToDouble(report.MensuradoAcumulado));
+                    sheet.GetRow(new CellReference(cellReference[48]).Row).GetCell(new CellReference(cellReference[48]).Col).SetCellValue(Convert.ToDouble(report.MensuradoAcumulado));
                 //DADOS ADICIONAIS
                 if (report.ContratoInicio != "  /  /")
-                    sheet.GetRow(new CellReference(xy[49]).Row).GetCell(new CellReference(xy[49]).Col).SetCellValue(report.ContratoInicio);
+                    sheet.GetRow(new CellReference(cellReference[49]).Row).GetCell(new CellReference(cellReference[49]).Col).SetCellValue(report.ContratoInicio);
                 if (report.ContratoTermino != "  /  /")
-                    sheet.GetRow(new CellReference(xy[50]).Row).GetCell(new CellReference(xy[50]).Col).SetCellValue(report.ContratoTermino);
+                    sheet.GetRow(new CellReference(cellReference[50]).Row).GetCell(new CellReference(cellReference[50]).Col).SetCellValue(report.ContratoTermino);
 
 
                 ////CRONOGRAMA
-                sheet.GetRow(new CellReference(xy[51]).Row).GetCell(new CellReference(xy[51]).Col).SetCellValue(Convert.ToDouble(report.CronogramaExecutado));
-                sheet.GetRow(new CellReference(xy[52]).Row).GetCell(new CellReference(xy[52]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa1));
-                sheet.GetRow(new CellReference(xy[53]).Row).GetCell(new CellReference(xy[53]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa2));
-                sheet.GetRow(new CellReference(xy[54]).Row).GetCell(new CellReference(xy[54]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa3));
-                sheet.GetRow(new CellReference(xy[55]).Row).GetCell(new CellReference(xy[55]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa4));
-                sheet.GetRow(new CellReference(xy[56]).Row).GetCell(new CellReference(xy[56]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa5));
-                sheet.GetRow(new CellReference(xy[57]).Row).GetCell(new CellReference(xy[57]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa6));
-                sheet.GetRow(new CellReference(xy[58]).Row).GetCell(new CellReference(xy[58]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa7));
-                sheet.GetRow(new CellReference(xy[59]).Row).GetCell(new CellReference(xy[59]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa8));
-                sheet.GetRow(new CellReference(xy[60]).Row).GetCell(new CellReference(xy[60]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa9));
-                sheet.GetRow(new CellReference(xy[61]).Row).GetCell(new CellReference(xy[61]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa10));
-                sheet.GetRow(new CellReference(xy[62]).Row).GetCell(new CellReference(xy[62]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa11));
-                sheet.GetRow(new CellReference(xy[63]).Row).GetCell(new CellReference(xy[63]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa12));
-                sheet.GetRow(new CellReference(xy[64]).Row).GetCell(new CellReference(xy[64]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa13));
-                sheet.GetRow(new CellReference(xy[65]).Row).GetCell(new CellReference(xy[65]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa14));
-                sheet.GetRow(new CellReference(xy[66]).Row).GetCell(new CellReference(xy[66]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa15));
-                sheet.GetRow(new CellReference(xy[67]).Row).GetCell(new CellReference(xy[67]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa16));
-                sheet.GetRow(new CellReference(xy[68]).Row).GetCell(new CellReference(xy[68]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa17));
-                sheet.GetRow(new CellReference(xy[69]).Row).GetCell(new CellReference(xy[69]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa18));
-                sheet.GetRow(new CellReference(xy[70]).Row).GetCell(new CellReference(xy[70]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa19));
-                sheet.GetRow(new CellReference(xy[71]).Row).GetCell(new CellReference(xy[71]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa20));
-                sheet.GetRow(new CellReference(xy[72]).Row).GetCell(new CellReference(xy[72]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa21));
-                sheet.GetRow(new CellReference(xy[73]).Row).GetCell(new CellReference(xy[73]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa22));
-                sheet.GetRow(new CellReference(xy[74]).Row).GetCell(new CellReference(xy[74]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa23));
-                sheet.GetRow(new CellReference(xy[75]).Row).GetCell(new CellReference(xy[75]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa24));
-                sheet.GetRow(new CellReference(xy[76]).Row).GetCell(new CellReference(xy[76]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa25));
-                sheet.GetRow(new CellReference(xy[77]).Row).GetCell(new CellReference(xy[77]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa26));
-                sheet.GetRow(new CellReference(xy[78]).Row).GetCell(new CellReference(xy[78]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa27));
-                sheet.GetRow(new CellReference(xy[79]).Row).GetCell(new CellReference(xy[79]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa28));
-                sheet.GetRow(new CellReference(xy[80]).Row).GetCell(new CellReference(xy[80]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa29));
-                sheet.GetRow(new CellReference(xy[81]).Row).GetCell(new CellReference(xy[81]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa30));
+                sheet.GetRow(new CellReference(cellReference[51]).Row).GetCell(new CellReference(cellReference[51]).Col).SetCellValue(Convert.ToDouble(report.CronogramaExecutado));
+                sheet.GetRow(new CellReference(cellReference[52]).Row).GetCell(new CellReference(cellReference[52]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa1));
+                sheet.GetRow(new CellReference(cellReference[53]).Row).GetCell(new CellReference(cellReference[53]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa2));
+                sheet.GetRow(new CellReference(cellReference[54]).Row).GetCell(new CellReference(cellReference[54]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa3));
+                sheet.GetRow(new CellReference(cellReference[55]).Row).GetCell(new CellReference(cellReference[55]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa4));
+                sheet.GetRow(new CellReference(cellReference[56]).Row).GetCell(new CellReference(cellReference[56]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa5));
+                sheet.GetRow(new CellReference(cellReference[57]).Row).GetCell(new CellReference(cellReference[57]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa6));
+                sheet.GetRow(new CellReference(cellReference[58]).Row).GetCell(new CellReference(cellReference[58]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa7));
+                sheet.GetRow(new CellReference(cellReference[59]).Row).GetCell(new CellReference(cellReference[59]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa8));
+                sheet.GetRow(new CellReference(cellReference[60]).Row).GetCell(new CellReference(cellReference[60]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa9));
+                sheet.GetRow(new CellReference(cellReference[61]).Row).GetCell(new CellReference(cellReference[61]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa10));
+                sheet.GetRow(new CellReference(cellReference[62]).Row).GetCell(new CellReference(cellReference[62]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa11));
+                sheet.GetRow(new CellReference(cellReference[63]).Row).GetCell(new CellReference(cellReference[63]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa12));
+                sheet.GetRow(new CellReference(cellReference[64]).Row).GetCell(new CellReference(cellReference[64]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa13));
+                sheet.GetRow(new CellReference(cellReference[65]).Row).GetCell(new CellReference(cellReference[65]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa14));
+                sheet.GetRow(new CellReference(cellReference[66]).Row).GetCell(new CellReference(cellReference[66]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa15));
+                sheet.GetRow(new CellReference(cellReference[67]).Row).GetCell(new CellReference(cellReference[67]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa16));
+                sheet.GetRow(new CellReference(cellReference[68]).Row).GetCell(new CellReference(cellReference[68]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa17));
+                sheet.GetRow(new CellReference(cellReference[69]).Row).GetCell(new CellReference(cellReference[69]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa18));
+                sheet.GetRow(new CellReference(cellReference[70]).Row).GetCell(new CellReference(cellReference[70]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa19));
+                sheet.GetRow(new CellReference(cellReference[71]).Row).GetCell(new CellReference(cellReference[71]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa20));
+                sheet.GetRow(new CellReference(cellReference[72]).Row).GetCell(new CellReference(cellReference[72]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa21));
+                sheet.GetRow(new CellReference(cellReference[73]).Row).GetCell(new CellReference(cellReference[73]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa22));
+                sheet.GetRow(new CellReference(cellReference[74]).Row).GetCell(new CellReference(cellReference[74]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa23));
+                sheet.GetRow(new CellReference(cellReference[75]).Row).GetCell(new CellReference(cellReference[75]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa24));
+                sheet.GetRow(new CellReference(cellReference[76]).Row).GetCell(new CellReference(cellReference[76]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa25));
+                sheet.GetRow(new CellReference(cellReference[77]).Row).GetCell(new CellReference(cellReference[77]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa26));
+                sheet.GetRow(new CellReference(cellReference[78]).Row).GetCell(new CellReference(cellReference[78]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa27));
+                sheet.GetRow(new CellReference(cellReference[79]).Row).GetCell(new CellReference(cellReference[79]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa28));
+                sheet.GetRow(new CellReference(cellReference[80]).Row).GetCell(new CellReference(cellReference[80]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa29));
+                sheet.GetRow(new CellReference(cellReference[81]).Row).GetCell(new CellReference(cellReference[81]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa30));
 
 
                 using (FileStream arquivoRAE = new FileStream(pathDestin, FileMode.Create, FileAccess.Write))
