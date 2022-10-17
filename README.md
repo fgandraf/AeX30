@@ -2,6 +2,9 @@
 
 Software assistente desenvolvido para automatizar o processo de preenchimento dos relatórios RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
 
+[![NPM](https://img.shields.io/github/license/fgandraf/AeX30)](https://github.com/fgandraf/AeX30/blob/master/LICENCE)
+
+
 ## Tecnologias
 
 - .NET Core 3.1
