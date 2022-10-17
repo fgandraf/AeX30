@@ -1,6 +1,6 @@
 ![logo](https://user-images.githubusercontent.com/41455881/196264371-577eab9c-62ab-4de1-ab02-cc04390a290f.png)
 
-Software assistente desenvolvido para automatizar o processo de preenchimento dos relatório RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
+Software assistente desenvolvido para automatizar o processo de preenchimento dos relatórios RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
 
 ## Tecnologias
 
@@ -10,7 +10,7 @@ Software assistente desenvolvido para automatizar o processo de preenchimento do
 - NPOI Library
 
 ## Como usar
-Por tratar-se de um assistente, o software é bastante intuitivo e auto-explicativo.
+Por tratar-se de um assistente, o software é bastante intuitivo e autoexplicativo.
 
 - **Tela Inicial:**
   
