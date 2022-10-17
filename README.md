@@ -1,4 +1,5 @@
-# Aex30
+![logo](https://user-images.githubusercontent.com/41455881/196264371-577eab9c-62ab-4de1-ab02-cc04390a290f.png)
+
 Software assistente desenvolvido para automatizar o processo de preenchimento dos relatório RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
 
 ## Tecnologias
@@ -71,3 +72,14 @@ Por tratar-se de um assistente, o software é bastante intuitivo e auto-explicat
   ![12](https://user-images.githubusercontent.com/41455881/196261277-4a896934-bcf3-45a7-8923-2a39b2cfe826.png)
 
 
+
+## Versão
+
+1.0.0
+
+
+## Autor
+
+**Felipe Ferreira Gandra**
+
+fgandraf@gmail.com
