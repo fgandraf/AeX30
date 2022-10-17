@@ -1,8 +1,8 @@
-![logo](https://user-images.githubusercontent.com/41455881/196264371-577eab9c-62ab-4de1-ab02-cc04390a290f.png)
+![logo](https://github.com/fgandraf/AeX30/blob/master/Assets/Logo.png)
 
 Software assistente desenvolvido para automatizar o processo de preenchimento dos relatórios RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
 
-[![NPM](https://img.shields.io/github/license/fgandraf/AeX30)](https://github.com/fgandraf/AeX30/blob/master/LICENCE)
+[![Licence](https://img.shields.io/github/license/fgandraf/AeX30)](https://github.com/fgandraf/AeX30/blob/master/LICENCE)
 
 
 ## Tecnologias
