@@ -1,31 +1,28 @@
-﻿using AeX30.Model;
+﻿using AeX30.Entities;
+using AeX30.Repository;
+using System.IO;
 
 namespace AeX30.Controller
 {
     public class ReportController
     {
-        public static int SetReport(string pathTemplate, string pathDestin, Report report)
+        public static void SetReport(string templatePath, string saveAsPath, Report report)
         {
-            if (IsValid(pathTemplate))
-                return new Report().SetReport(pathTemplate, pathDestin, report);
-            else
-                return 0;
-
+            if (IsValid(templatePath))
+                ReportRepository.SetReport(templatePath, saveAsPath, report);
         }
-
 
         private static bool IsValid(string filePath)
         {
-            string sheetName = Report.GetSheetName(filePath);
-            string footer = Report.GetLeftFooter(filePath);
+            string footer = ReportRepository.GetLeftFooter(filePath);
+            string sheetName = ReportRepository.GetSheetName(filePath);
 
-            if (sheetName == "RAE" && footer != "" || footer != null)
-                return true;
-            else
-                return false;
+            bool fileExists = File.Exists(filePath);
+            bool sheetNameIsValid = sheetName == "RAE";
+            bool footerIsValid = footer != "" || footer != null;
+
+            return fileExists && sheetNameIsValid && footerIsValid;
         }
-
-
 
     }
 }

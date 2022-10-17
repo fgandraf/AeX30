@@ -13,6 +13,7 @@
     <Authors>Felipe Gandra</Authors>
     <Version>1.0.0.0</Version>
     <Company>Aláfia</Company>
+    <UseWPF>False</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>

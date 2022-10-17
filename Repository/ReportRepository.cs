@@ -1,22 +1,34 @@
-﻿using NPOI.HSSF.UserModel;
+﻿using AeX30.Entities;
+using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
-using System.IO;
 using System;
+using System.IO;
 
-namespace AeX30.Model
+namespace AeX30.Repository
 {
-
-    public class Report : Proposal
+    public class ReportRepository
     {
-        public string[] Referencia { get; set; } = new string[7];
-        public string MensuradoAcumulado { get; set; }
-        public string ContratoInicio { get; set; }
-        public string ContratoTermino { get; set; }
+
+        public static string GetSheetName(string filePath)
+        {
+            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            HSSFWorkbook wbook = new HSSFWorkbook(file);
+
+            return wbook.GetSheetName(0);
+        }
+
+        public static string GetLeftFooter(string filePath)
+        {
+            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            HSSFWorkbook wbook = new HSSFWorkbook(file);
+            ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
+
+            return sheet.Footer.Left;
+        }
 
 
-        
-        public int SetReport(string pathTemplate, string pathDestin, Report report)
+        public static void SetReport(string pathTemplate, string pathDestin, Report report)
         {
             string[] cellReference = new string[]
         {
@@ -218,12 +230,10 @@ namespace AeX30.Model
                     wbook.ForceFormulaRecalculation = true;
                     wbook.Write(arquivoRAE);
                 }
-                return 1;
-
             }
-            catch
+            catch (Exception ex)
             {
-                return 0;
+                throw ex;
             }
 
         }

@@ -755,8 +755,7 @@ namespace AeX30
             this.label65.Size = new System.Drawing.Size(670, 63);
             this.label65.TabIndex = 9;
             this.label65.Text = "O objetivo desta etapa é importar o número da Ordem de Serviço (Referência), sepa" +
-    "rá-lo e tratá-lo removendo os zeros à esquerda do número da GIHAB (quando existe" +
-    "nte) e do número da referência.";
+    "rá-lo e tratá-lo.";
             this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label71

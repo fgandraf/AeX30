@@ -1,31 +1,262 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.IO;
 using AeX30.Controller;
-using AeX30.Model;
+using AeX30.Entities;
 
 namespace AeX30
 {
     public partial class FormMain : Form
     {
-
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
+        private string _templatePath;
 
-        private string _caminhoModelo;
+
+        public FormMain()
+        {
+            InitializeComponent();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            tabControl.ItemSize = new System.Drawing.Size(0, 1);
+        }
+
+        private void btnAppClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pnlAppTopPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedIndex == 1)
+            {
+                tabControl.SelectTab(0);
+                btnBack.Hide();
+            }
+            else
+                tabControl.SelectTab(tabControl.SelectedIndex - 1);
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            NextTabControl(sender, e);
+            btnBack.Show();
+        }
+
+        private void btnImportarConvocacao_Click(object sender, EventArgs e)
+        {
+
+            if (openText.ShowDialog() == DialogResult.OK)
+            {
+                Request request = new RequestController().GetRequestNumber(openText.FileName);
+
+                if (request != null)
+                {
+                    PopulateFromRequest(request);
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível ler o arquivo de convocação.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                pnlMainConvocacao.Show();
+                btnProximoConvocacao.Show();
+                txtRef1.Focus();
+            }
+        }
+
+        private void btnImportarProposta_Click(object sender, EventArgs e)
+        {
+            if (openExcel.ShowDialog() == DialogResult.OK)
+            {
+                Proposal proposal = new ProposalController().GetProposal(openExcel.FileName);
+
+                if (proposal != null)
+                {
+                    PopulateFromProposal(proposal);
+                }
+                else
+                {
+                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                pnlMainPfui.Show();
+                btnProximoPfui.Show();
+                txtPropNome.Focus();
+            }
+
+        }
+
+        private void btnModeloPadrao_Click(object sender, EventArgs e)
+        {
+            if (openExcel.ShowDialog() == DialogResult.OK)
+            {
+                _templatePath = openExcel.FileName;
+
+                txtLogFinalizar.Text = "Caminho do modelo padrão:\r\n" + _templatePath + "\r\n";
+
+                txtLogFinalizar.Text += "\r\nPronto para gravar.\r\n\r\nAguardando confirmação do usuário...\r\n";
+                pnlMainFinalizar.Show();
+                btnSalvarComo.Show();
+            }
+
+        }
+
+        private void btnSalvarComo_Click(object sender, EventArgs e)
+        {
+            saveExcel.FileName = SuggestedFileName();
+
+            if (saveExcel.ShowDialog() == DialogResult.OK)
+            {
+                ReportController.SetReport(_templatePath, saveExcel.FileName, PopulateReport());
+                
+                txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
+                btnNew.Show();
+            }
+
+        }
+
+        private void btnAppMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            InitializeComponent();
+            FormMain_Load(null, EventArgs.Empty);
+        }
 
 
-        //:METODS
+
+
+
+        private void NextTabControl(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabControl.SelectedIndex + 1);
+        }
+
+        private void PopulateFromRequest(Request request)
+        {
+            txtRef1.Text = request.Referencia[1];
+            txtRef2.Text = request.Referencia[2];
+            txtRef3.Text = request.Referencia[3];
+            txtRef4.Text = request.Referencia[4];
+            txtRef5.Text = request.Referencia[5];
+            txtRef6.Text = request.Referencia[6];
+        }
+
+        private void PopulateFromProposal(Proposal proposal)
+        {
+            if (proposal.Tipo == "PFUI")
+                lblVigencia.Text = $"Ꙩ PFUI | {proposal.Vigencia}";
+            else
+                lblVigencia.Text = $"Ꙩ PCI | {proposal.Vigencia}";
+            lblVigencia.Show();
+
+            ///CABEÇALHO
+            txtPropNome.Text = proposal.ProponenteNome.ToUpper();
+            txtPropCPF.Text = proposal.ProponenteCPF.ToUpper();
+            txtPropDDD.Text = proposal.ProponenteDDD.ToUpper();
+            txtPropTelefone.Text = proposal.ProponenteFone.ToUpper();
+            txtRTNome.Text = proposal.ResponsavelNome.ToUpper();
+            txtRTCauCrea.Text = proposal.ReponsavelCauCrea.ToUpper();
+            txtRTUF.Text = proposal.ResponsavelUF.ToUpper();
+            txtRTCPF.Text = proposal.ResponsavelCPF.ToUpper();
+            txtRTDDD.Text = proposal.ResponsavelDDD.ToUpper();
+            txtRTTelefone.Text = proposal.ResponsavelFone.ToUpper();
+            txtIdEndereco.Text = proposal.ImovelEndereco.ToUpper();
+            txtIdComplemento.Text = proposal.ImovelComplemento.ToUpper();
+            txtIdCEP.Text = proposal.ImovelCep.ToUpper();
+            txtIdBairro.Text = proposal.ImovelBairro.ToUpper();
+            txtIdMunicipio.Text = proposal.ImovelMunicipio.ToUpper();
+            txtIdUF.Text = proposal.ImovelUF.ToUpper();
+            txtTerrenoValorProposto.Text = proposal.ImovelValorTerreno.ToUpper();
+            txtTerrenoMatricula.Text = proposal.ImovelMatricula.ToUpper();
+            txtTerrenoOficio.Text = proposal.ImovelOficio.ToUpper();
+            txtTerrenoComarca.Text = proposal.ImovelComarca.ToUpper();
+            txtTerrenoUF.Text = proposal.ImovelComarcaUF.ToUpper();
+            ///ORÇAMENTO (PERCENTUAIS)
+            txt1701.Text = proposal.ServicoItem01;
+            txt1702.Text = proposal.ServicoItem02;
+            txt1703.Text = proposal.ServicoItem03;
+            txt1704.Text = proposal.ServicoItem04;
+            txt1705.Text = proposal.ServicoItem05;
+            txt1706.Text = proposal.ServicoItem06;
+            txt1707.Text = proposal.ServicoItem07;
+            txt1708.Text = proposal.ServicoItem08;
+            txt1709.Text = proposal.ServicoItem09;
+            txt1710.Text = proposal.ServicoItem10;
+            txt1711.Text = proposal.ServicoItem11;
+            txt1712.Text = proposal.ServicoItem12;
+            txt1713.Text = proposal.ServicoItem13;
+            txt1714.Text = proposal.ServicoItem14;
+            txt1715.Text = proposal.ServicoItem15;
+            txt1716.Text = proposal.ServicoItem16;
+            txt1717.Text = proposal.ServicoItem17;
+            txt1718.Text = proposal.ServicoItem18;
+            txt1719.Text = proposal.ServicoItem19;
+            txt1720.Text = proposal.ServicoItem20;
+            ///CRONOGRAMA
+            txtExecutado.Text = proposal.CronogramaExecutado;
+            txtParcela1.Text = proposal.CronogramaEtapa1;
+            txtParcela2.Text = proposal.CronogramaEtapa2;
+            txtParcela3.Text = proposal.CronogramaEtapa3;
+            txtParcela4.Text = proposal.CronogramaEtapa4;
+            txtParcela5.Text = proposal.CronogramaEtapa5;
+            txtParcela6.Text = proposal.CronogramaEtapa6;
+            txtParcela7.Text = proposal.CronogramaEtapa7;
+            txtParcela8.Text = proposal.CronogramaEtapa8;
+            txtParcela9.Text = proposal.CronogramaEtapa9;
+            txtParcela10.Text = proposal.CronogramaEtapa10;
+            txtParcela11.Text = proposal.CronogramaEtapa11;
+            txtParcela12.Text = proposal.CronogramaEtapa12;
+            txtParcela13.Text = proposal.CronogramaEtapa13;
+            txtParcela14.Text = proposal.CronogramaEtapa14;
+            txtParcela15.Text = proposal.CronogramaEtapa15;
+            txtParcela16.Text = proposal.CronogramaEtapa16;
+            txtParcela17.Text = proposal.CronogramaEtapa17;
+            txtParcela18.Text = proposal.CronogramaEtapa18;
+            txtParcela19.Text = proposal.CronogramaEtapa19;
+            txtParcela20.Text = proposal.CronogramaEtapa20;
+            txtParcela21.Text = proposal.CronogramaEtapa21;
+            txtParcela22.Text = proposal.CronogramaEtapa22;
+            txtParcela23.Text = proposal.CronogramaEtapa23;
+            txtParcela24.Text = proposal.CronogramaEtapa24;
+            txtParcela25.Text = proposal.CronogramaEtapa25;
+            txtParcela26.Text = proposal.CronogramaEtapa29;
+            txtParcela27.Text = proposal.CronogramaEtapa27;
+            txtParcela28.Text = proposal.CronogramaEtapa28;
+            txtParcela29.Text = proposal.CronogramaEtapa29;
+            txtParcela30.Text = proposal.CronogramaEtapa30;
+        }
+
+        private string SuggestedFileName()
+        {
+            string[] proponente = txtPropNome.Text.ToLower().Split(' ');
+            string nome = proponente[0].Substring(0, 1).ToUpper() + proponente[0].Substring(1);
+            string sobrenome = proponente[proponente.Length - 1].Substring(0, 1).ToUpper() + proponente[proponente.Length - 1].Substring(1);
+
+            return $"RAE_{nome}-{sobrenome}.xls";
+        }
+
         private Report PopulateReport()
         {
             Report report = new Report();
-            
+
             report.Referencia[1] = txtRef1.Text;
             report.Referencia[2] = txtRef2.Text;
             report.Referencia[3] = txtRef3.Text;
@@ -117,286 +348,6 @@ namespace AeX30
 
             return report;
         }
-    private void PopulateFromProposta(Proposal prop)
-    {
-        if (prop.Tipo == "PFUI")
-            lblVigencia.Text = $"Ꙩ PFUI | {prop.Vigencia}";
-        else
-            lblVigencia.Text = $"Ꙩ PCI | {prop.Vigencia}";
-        lblVigencia.Show();
-
-        ///CABEÇALHO
-        txtPropNome.Text = prop.ProponenteNome.ToUpper();
-        txtPropCPF.Text = prop.ProponenteCPF.ToUpper();
-        txtPropDDD.Text = prop.ProponenteDDD.ToUpper();
-        txtPropTelefone.Text = prop.ProponenteFone.ToUpper();
-        txtRTNome.Text = prop.ResponsavelNome.ToUpper();
-        txtRTCauCrea.Text = prop.ReponsavelCauCrea.ToUpper();
-        txtRTUF.Text = prop.ResponsavelUF.ToUpper();
-        txtRTCPF.Text = prop.ResponsavelCPF.ToUpper();
-        txtRTDDD.Text = prop.ResponsavelDDD.ToUpper();
-        txtRTTelefone.Text = prop.ResponsavelFone.ToUpper();
-        txtIdEndereco.Text = prop.ImovelEndereco.ToUpper();
-        txtIdComplemento.Text = prop.ImovelComplemento.ToUpper();
-        txtIdCEP.Text = prop.ImovelCep.ToUpper();
-        txtIdBairro.Text = prop.ImovelBairro.ToUpper();
-        txtIdMunicipio.Text = prop.ImovelMunicipio.ToUpper();
-        txtIdUF.Text = prop.ImovelUF.ToUpper();
-        txtTerrenoValorProposto.Text = prop.ImovelValorTerreno.ToUpper();
-        txtTerrenoMatricula.Text = prop.ImovelMatricula.ToUpper();
-        txtTerrenoOficio.Text = prop.ImovelOficio.ToUpper();
-        txtTerrenoComarca.Text = prop.ImovelComarca.ToUpper();
-        txtTerrenoUF.Text = prop.ImovelComarcaUF.ToUpper();
-        ///ORÇAMENTO (PERCENTUAIS)
-        txt1701.Text = prop.ServicoItem01;
-        txt1702.Text = prop.ServicoItem02;
-        txt1703.Text = prop.ServicoItem03;
-        txt1704.Text = prop.ServicoItem04;
-        txt1705.Text = prop.ServicoItem05;
-        txt1706.Text = prop.ServicoItem06;
-        txt1707.Text = prop.ServicoItem07;
-        txt1708.Text = prop.ServicoItem08;
-        txt1709.Text = prop.ServicoItem09;
-        txt1710.Text = prop.ServicoItem10;
-        txt1711.Text = prop.ServicoItem11;
-        txt1712.Text = prop.ServicoItem12;
-        txt1713.Text = prop.ServicoItem13;
-        txt1714.Text = prop.ServicoItem14;
-        txt1715.Text = prop.ServicoItem15;
-        txt1716.Text = prop.ServicoItem16;
-        txt1717.Text = prop.ServicoItem17;
-        txt1718.Text = prop.ServicoItem18;
-        txt1719.Text = prop.ServicoItem19;
-        txt1720.Text = prop.ServicoItem20;
-        ///CRONOGRAMA
-        txtExecutado.Text = prop.CronogramaExecutado;
-        txtParcela1.Text = prop.CronogramaEtapa1;
-        txtParcela2.Text = prop.CronogramaEtapa2;
-        txtParcela3.Text = prop.CronogramaEtapa3;
-        txtParcela4.Text = prop.CronogramaEtapa4;
-        txtParcela5.Text = prop.CronogramaEtapa5;
-        txtParcela6.Text = prop.CronogramaEtapa6;
-        txtParcela7.Text = prop.CronogramaEtapa7;
-        txtParcela8.Text = prop.CronogramaEtapa8;
-        txtParcela9.Text = prop.CronogramaEtapa9;
-        txtParcela10.Text = prop.CronogramaEtapa10;
-        txtParcela11.Text = prop.CronogramaEtapa11;
-        txtParcela12.Text = prop.CronogramaEtapa12;
-        txtParcela13.Text = prop.CronogramaEtapa13;
-        txtParcela14.Text = prop.CronogramaEtapa14;
-        txtParcela15.Text = prop.CronogramaEtapa15;
-        txtParcela16.Text = prop.CronogramaEtapa16;
-        txtParcela17.Text = prop.CronogramaEtapa17;
-        txtParcela18.Text = prop.CronogramaEtapa18;
-        txtParcela19.Text = prop.CronogramaEtapa19;
-        txtParcela20.Text = prop.CronogramaEtapa20;
-        txtParcela21.Text = prop.CronogramaEtapa21;
-        txtParcela22.Text = prop.CronogramaEtapa22;
-        txtParcela23.Text = prop.CronogramaEtapa23;
-        txtParcela24.Text = prop.CronogramaEtapa24;
-        txtParcela25.Text = prop.CronogramaEtapa25;
-        txtParcela26.Text = prop.CronogramaEtapa29;
-        txtParcela27.Text = prop.CronogramaEtapa27;
-        txtParcela28.Text = prop.CronogramaEtapa28;
-        txtParcela29.Text = prop.CronogramaEtapa29;
-        txtParcela30.Text = prop.CronogramaEtapa30;
-    }
-
-
-
-
-
-
-
-    //:SHARED EVENT
-    private void NextTabControl(object sender, EventArgs e)
-    {
-        tabControl.SelectTab(tabControl.SelectedIndex + 1);
-    }
-
-
-
-
-
-
-
-    //:EVENTS
-    public FormMain()
-    {
-        InitializeComponent();
-    }
-
-    private void FormMain_Load(object sender, EventArgs e)
-    {
-        tabControl.ItemSize = new System.Drawing.Size(0, 1);
-    }
-
-    private void btnAppClose_Click(object sender, EventArgs e)
-    {
-        Application.Exit();
-    }
-
-    private void pnlAppTopPanel_MouseDown(object sender, MouseEventArgs e)
-    {
-        ReleaseCapture();
-        SendMessage(this.Handle, 0x112, 0xf012, 0);
-    }
-
-    private void btnBack_Click(object sender, EventArgs e)
-    {
-        if (tabControl.SelectedIndex == 1)
-        {
-            tabControl.SelectTab(0);
-            btnBack.Hide();
-        }
-        else
-        {
-            tabControl.SelectTab(tabControl.SelectedIndex - 1);
-        }
 
     }
-
-    private void btnIniciar_Click(object sender, EventArgs e)
-    {
-        NextTabControl(sender, e);
-        btnBack.Show();
-    }
-
-    private void btnImportarConvocacao_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            if (openText.ShowDialog() == DialogResult.OK)
-            {
-                string[] requestNumber = new RequestController().GetRequestNumber(openText.FileName);
-
-                //Populate
-                txtRef1.Text = requestNumber[1];
-                txtRef2.Text = requestNumber[2];
-                txtRef3.Text = requestNumber[3];
-                txtRef4.Text = requestNumber[4];
-                txtRef5.Text = requestNumber[5];
-                txtRef6.Text = requestNumber[6];
-
-                pnlMainConvocacao.Show();
-                btnProximoConvocacao.Show();
-            }
-        }
-        catch
-        {
-
-            if (MessageBox.Show("Não foi possível ler o arquivo de convocação.\r\n \r\n Deseja inserir o número manualmente?", "Informação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                pnlMainConvocacao.Show();
-                btnProximoConvocacao.Show();
-                txtRef1.Focus();
-            }
-
-            return;
-        }
-    }
-
-    private void btnImportarProposta_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            if (openExcel.ShowDialog() == DialogResult.OK)
-            {
-
-                Proposal prop = new ProposalController().GetProposal(openExcel.FileName);
-                if (prop == null)
-                {
-                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    PopulateFromProposta(prop);
-
-                    pnlMainPfui.Show();
-                    btnProximoPfui.Show();
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show(ex.Message, "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
-    }
-
-    private void btnModeloPadrao_Click(object sender, EventArgs e)
-    {
-        try
-        {
-
-            if (openExcel.ShowDialog() == DialogResult.OK)
-            {
-                _caminhoModelo = openExcel.FileName;
-
-                txtLogFinalizar.Text = "Caminho do modelo padrão:\r\n" + openExcel.FileName + "\r\n";
-
-                txtLogFinalizar.Text += "\r\nPronto para gravar.\r\n\r\nAguardando confirmação do usuário...\r\n";
-                pnlMainFinalizar.Show();
-                btnSalvarComo.Show();
-            }
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show(ex.Message, "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
-    }
-
-    private void btnSalvarComo_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            //CREATING FILENAME FROM "txtPropNome" USING UPPERCASE FOR THE FIRST CHARACTERE
-            string[] proponente = txtPropNome.Text.ToLower().Split(' ');
-            proponente[0] = proponente[0].Substring(0, 1).ToUpper() + proponente[0].Substring(1);
-            proponente[proponente.Length - 1] = proponente[proponente.Length - 1].Substring(0, 1).ToUpper() + proponente[proponente.Length - 1].Substring(1);
-            saveExcel.FileName = "RAE_" + proponente[0] + "-" + proponente[proponente.Length - 1] + ".xls";
-
-
-            if (saveExcel.ShowDialog() == DialogResult.OK)
-            {
-                if (File.Exists(_caminhoModelo))
-                {
-
-                    if (ReportController.SetReport(_caminhoModelo, saveExcel.FileName, PopulateReport()) == 1)
-                    {
-                        txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
-                        btnNew.Show();
-                    }
-                    else
-                    {
-                        txtLogFinalizar.Text += "Não foi possível escrever no arquivo destino!\r\n\r\nresult=0";
-                        return;
-                    }
-                }
-
-            }
-
-
-        }
-        catch (Exception ex)
-        {
-            txtLogFinalizar.Text += "Erro: \r\n\r\n" + ex.Message + "\r\n\r\nProcesso encerrado!";
-            return;
-        }
-    }
-
-    private void btnAppMinimize_Click(object sender, EventArgs e)
-    {
-        this.WindowState = FormWindowState.Minimized;
-    }
-
-    private void btnNew_Click(object sender, EventArgs e)
-    {
-        Controls.Clear();
-        InitializeComponent();
-        FormMain_Load(null, EventArgs.Empty);
-    }
-
-}
 }
