@@ -100,6 +100,7 @@ namespace AeX30.View
 
         private void btnModeloPadrao_Click(object sender, EventArgs e)
         {
+            openExcel.Title = "Abrir planilha modelo de RAE";
             if (openExcel.ShowDialog() == DialogResult.OK)
             {
                 _templatePath = openExcel.FileName;
