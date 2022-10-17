@@ -43,7 +43,7 @@ Por tratar-se de um assistente, o software é bastante intuitivo e auto-explicat
 
 - **Verificar a importação dos dados e continuar:**
 
-  ![7](https://user-images.githubusercontent.com/41455881/196256738-2bd3f245-2595-489d-a6a0-be02876a9418.png)
+  ![7](https://user-images.githubusercontent.com/41455881/196261167-86691b2b-21e5-42dd-99c8-ca80a0e41614.png)
 
 
 - **Terceira etapa:**
@@ -68,5 +68,6 @@ Por tratar-se de um assistente, o software é bastante intuitivo e auto-explicat
 
 - **Escolher o local a ser salvo o Relatório:**
 
-  ![12](https://user-images.githubusercontent.com/41455881/196257751-4a2f904a-180b-4bf4-b37e-c1e5c3177393.png)
+  ![12](https://user-images.githubusercontent.com/41455881/196261277-4a896934-bcf3-45a7-8923-2a39b2cfe826.png)
+
 
