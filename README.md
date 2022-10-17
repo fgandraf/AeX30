@@ -1,5 +1,5 @@
 # Aex30
-Software assitente desenvolvido para automatizar o processo de preenchimento dos relatório RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
+Software assistente desenvolvido para automatizar o processo de preenchimento dos relatório RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
 
 ## Tecnologias
 
@@ -9,7 +9,7 @@ Software assitente desenvolvido para automatizar o processo de preenchimento dos
 - NPOI Library
 
 ## Como usar
-**Por tratar-se de um assistente, o software é bastante intuitivo e auto-explicativo.**
+Por tratar-se de um assistente, o software é bastante intuitivo e auto-explicativo.
 
 - **Tela Inicial:**
   
