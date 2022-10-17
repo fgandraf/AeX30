@@ -4,7 +4,7 @@ using NPOI.SS.Util;
 using System.IO;
 using System;
 using AeX30.Controller;
-using AeX30.Entities;
+using AeX30.Model;
 
 namespace AeX30.Repository
 {

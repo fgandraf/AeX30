@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AeX30.Entities
+namespace AeX30.Model
 {
     public class Request
     {

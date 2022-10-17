@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using AeX30.Controller;
-using AeX30.Entities;
+using AeX30.Model;
 
 namespace AeX30.View
 {

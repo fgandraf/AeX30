@@ -4,7 +4,7 @@ using NPOI.SS.Util;
 using System.IO;
 using System;
 
-namespace AeX30.Entities
+namespace AeX30.Model
 {
 
     public class Report : Proposal
