@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace AeX30
+namespace AeX30.Controller
 {
     public class FormatString
     {

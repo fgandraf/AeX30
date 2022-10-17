@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using AeX30.Controller;
 using AeX30.Entities;
 
-namespace AeX30
+namespace AeX30.View
 {
     public partial class FormMain : Form
     {

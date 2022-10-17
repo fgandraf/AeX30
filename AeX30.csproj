@@ -6,7 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>AeX30</AssemblyName>
     <RootNamespace>AeX30</RootNamespace>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>Images\icon.ico</ApplicationIcon>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>AeX30.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
@@ -15,6 +15,10 @@
     <Company>Aláfia</Company>
     <UseWPF>False</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Images\icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="NPOI" Version="2.5.3" />

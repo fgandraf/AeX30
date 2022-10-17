@@ -1,5 +1,5 @@
 ﻿
-namespace AeX30
+namespace AeX30.View
 {
     partial class FormMain
     {
@@ -39,7 +39,6 @@ namespace AeX30
             this.panel17 = new System.Windows.Forms.Panel();
             this.label100 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
             this.lblPrimeiroParagrafo = new System.Windows.Forms.Label();
             this.pnlBottonPg1 = new System.Windows.Forms.Panel();
             this.btnIniciar = new System.Windows.Forms.Button();
@@ -403,7 +402,6 @@ namespace AeX30
             this.pnlMainPg1.Controls.Add(this.panel17);
             this.pnlMainPg1.Controls.Add(this.label100);
             this.pnlMainPg1.Controls.Add(this.label99);
-            this.pnlMainPg1.Controls.Add(this.label);
             this.pnlMainPg1.Controls.Add(this.lblPrimeiroParagrafo);
             this.pnlMainPg1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainPg1.Location = new System.Drawing.Point(17, 13);
@@ -416,12 +414,12 @@ namespace AeX30
             // 
             this.label102.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label102.ForeColor = System.Drawing.Color.Black;
-            this.label102.Location = new System.Drawing.Point(501, 276);
+            this.label102.Location = new System.Drawing.Point(418, 246);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(104, 12);
+            this.label102.Size = new System.Drawing.Size(191, 43);
             this.label102.TabIndex = 7;
-            this.label102.Text = "CAU 166187-6";
-            this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label102.Text = "Desenvolvido por Felipe F. Gandra\r\nfgandraf@gmail.com\r\n(14) 99829-0103";
+            this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel17
             // 
@@ -456,17 +454,6 @@ namespace AeX30
             this.label99.Size = new System.Drawing.Size(93, 38);
             this.label99.TabIndex = 3;
             this.label99.Text = "AeX30";
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(501, 262);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(104, 13);
-            this.label.TabIndex = 2;
-            this.label.Text = "Arq. Felipe Gandra";
             // 
             // lblPrimeiroParagrafo
             // 
@@ -3253,9 +3240,9 @@ namespace AeX30
             this.label98.ForeColor = System.Drawing.Color.White;
             this.label98.Location = new System.Drawing.Point(755, 0);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(41, 12);
+            this.label98.Size = new System.Drawing.Size(34, 12);
             this.label98.TabIndex = 2;
-            this.label98.Text = "v. 1.5.1.0";
+            this.label98.Text = "v. 1.0.0";
             // 
             // label3
             // 
@@ -3587,7 +3574,6 @@ namespace AeX30
         private System.Windows.Forms.Panel pnlMainPg1;
         private System.Windows.Forms.Panel pnlBottonPg1;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label lblPrimeiroParagrafo;
         private System.Windows.Forms.TextBox txtRTTelefone;
         private System.Windows.Forms.TextBox txtRTDDD;
