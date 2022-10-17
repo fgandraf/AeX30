@@ -4,7 +4,7 @@ Software assistente desenvolvido para automatizar o processo de preenchimento do
 
 ## Tecnologias
 
-- .NET
+- .NET Core 3.1
 - Windows Forms
 - C#
 - NPOI Library
@@ -71,6 +71,10 @@ Por tratar-se de um assistente, o software é bastante intuitivo e autoexplicati
 
   ![12](https://user-images.githubusercontent.com/41455881/196261277-4a896934-bcf3-45a7-8923-2a39b2cfe826.png)
 
+
+## Observações
+
+Para verificação do funcionamento do software, é possível utilizar os arquivos de modelo na pasta _Template. Dados sensíveis foram ocultados.
 
 
 ## Versão
