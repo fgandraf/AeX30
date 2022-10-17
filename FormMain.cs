@@ -96,7 +96,6 @@ namespace AeX30
                 btnProximoPfui.Show();
                 txtPropNome.Focus();
             }
-
         }
 
         private void btnModeloPadrao_Click(object sender, EventArgs e)
@@ -111,7 +110,6 @@ namespace AeX30
                 pnlMainFinalizar.Show();
                 btnSalvarComo.Show();
             }
-
         }
 
         private void btnSalvarComo_Click(object sender, EventArgs e)
@@ -120,12 +118,16 @@ namespace AeX30
 
             if (saveExcel.ShowDialog() == DialogResult.OK)
             {
-                ReportController.SetReport(_templatePath, saveExcel.FileName, PopulateReport());
-                
-                txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
-                btnNew.Show();
+                if (ReportController.SetReport(_templatePath, saveExcel.FileName, PopulateReport()))
+                {
+                    txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
+                    btnNew.Show();
+                }
+                else
+                {
+                    txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nNão foi possível escrever o relatório!";
+                }
             }
-
         }
 
         private void btnAppMinimize_Click(object sender, EventArgs e)
@@ -167,7 +169,6 @@ namespace AeX30
                 lblVigencia.Text = $"Ꙩ PCI | {proposal.Vigencia}";
             lblVigencia.Show();
 
-            ///CABEÇALHO
             txtPropNome.Text = proposal.ProponenteNome.ToUpper();
             txtPropCPF.Text = proposal.ProponenteCPF.ToUpper();
             txtPropDDD.Text = proposal.ProponenteDDD.ToUpper();
@@ -189,7 +190,6 @@ namespace AeX30
             txtTerrenoOficio.Text = proposal.ImovelOficio.ToUpper();
             txtTerrenoComarca.Text = proposal.ImovelComarca.ToUpper();
             txtTerrenoUF.Text = proposal.ImovelComarcaUF.ToUpper();
-            ///ORÇAMENTO (PERCENTUAIS)
             txt1701.Text = proposal.ServicoItem01;
             txt1702.Text = proposal.ServicoItem02;
             txt1703.Text = proposal.ServicoItem03;
@@ -210,7 +210,6 @@ namespace AeX30
             txt1718.Text = proposal.ServicoItem18;
             txt1719.Text = proposal.ServicoItem19;
             txt1720.Text = proposal.ServicoItem20;
-            ///CRONOGRAMA
             txtExecutado.Text = proposal.CronogramaExecutado;
             txtParcela1.Text = proposal.CronogramaEtapa1;
             txtParcela2.Text = proposal.CronogramaEtapa2;
@@ -263,32 +262,27 @@ namespace AeX30
             report.Referencia[4] = txtRef4.Text;
             report.Referencia[5] = txtRef5.Text;
             report.Referencia[6] = txtRef6.Text;
-
             report.ProponenteNome = txtPropNome.Text;
             report.ProponenteCPF = txtPropCPF.Text;
             report.ProponenteDDD = txtPropDDD.Text;
             report.ProponenteFone = txtPropTelefone.Text;
-
             report.ResponsavelNome = txtRTNome.Text;
             report.ReponsavelCauCrea = txtRTCauCrea.Text;
             report.ResponsavelUF = txtRTUF.Text;
             report.ResponsavelCPF = txtRTCPF.Text;
             report.ResponsavelDDD = txtRTDDD.Text;
             report.ResponsavelFone = txtRTTelefone.Text;
-
             report.ImovelEndereco = txtIdEndereco.Text;
             report.ImovelComplemento = txtIdComplemento.Text;
             report.ImovelBairro = txtIdBairro.Text;
             report.ImovelCep = txtIdCEP.Text;
             report.ImovelMunicipio = txtIdMunicipio.Text;
             report.ImovelUF = txtIdUF.Text;
-
             report.ImovelValorTerreno = txtTerrenoValorProposto.Text;
             report.ImovelMatricula = txtTerrenoMatricula.Text;
             report.ImovelOficio = txtTerrenoOficio.Text;
             report.ImovelComarca = txtTerrenoComarca.Text;
             report.ImovelComarcaUF = txtTerrenoUF.Text;
-
             report.ServicoItem01 = txt1701.Text;
             report.ServicoItem02 = txt1702.Text;
             report.ServicoItem03 = txt1703.Text;
@@ -309,11 +303,9 @@ namespace AeX30
             report.ServicoItem18 = txt1718.Text;
             report.ServicoItem19 = txt1719.Text;
             report.ServicoItem20 = txt1720.Text;
-
             report.MensuradoAcumulado = txtMensuradoAcumulado.Text;
             report.ContratoInicio = txtContratoInicio.Text;
             report.ContratoTermino = txtContratoTermino.Text;
-
             report.CronogramaExecutado = txtExecutado.Text;
             report.CronogramaEtapa1 = txtParcela1.Text;
             report.CronogramaEtapa2 = txtParcela2.Text;
