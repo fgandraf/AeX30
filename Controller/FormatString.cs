@@ -41,7 +41,18 @@ namespace AeX30.Controller
             }
         }
 
+        public static string ValorMonetário(string valor)
+        {
+            if (valor == "")
+                return valor;
+            else
+            {
+                long sonumero = OnlyNumber(valor);
 
+                return $"{sonumero:N2}";
+
+            }
+        }
 
 
 
