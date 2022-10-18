@@ -15,10 +15,6 @@ Software assistente desenvolvido para automatizar o processo de preenchimento do
   * NPOI Library.
 
 
-## Objetivos
-  - [ ] .NET Maui
-
-
 ## Versão
   * 1.0.0
 
