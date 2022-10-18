@@ -16,7 +16,7 @@ Software assistente desenvolvido para automatizar o processo de preenchimento do
 
 
 ## Versão
-  * 1.0.0
+  * 1.0.1
 
 
 ## Como usar
