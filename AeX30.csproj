@@ -11,7 +11,7 @@
     <AssemblyOriginatorKeyFile>AeX30.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <Authors>Felipe Gandra</Authors>
-    <Version>1.0.0.0</Version>
+    <Version>1.0.1</Version>
     <Company>Aláfia</Company>
     <UseWPF>False</UseWPF>
   </PropertyGroup>
