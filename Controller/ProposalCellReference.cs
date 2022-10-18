@@ -514,7 +514,7 @@ namespace AeX30.Controller
             "AX42",    // [5]  Nº CAU/CREA/CFT - RTE
             "BD42",    // [6]  UF (RTE)
             "BF42",    // [7]  CPF - RTE
-            "BM42",    // [8]  Telefone - RTE (DDD)
+            "BL42",    // [8]  Telefone - RTE (DDD)
             "BN42",    // [9]  Telefone - RTE
 
             // IDENTIFICAÇÃO DO IMÓVEL PROPOSTO
@@ -953,7 +953,6 @@ namespace AeX30.Controller
 
                 case "Vigência: 24/09/2020":
                 case "Vigência: 26/02/2021":
-                case "Vigência: 05/05/2027":
                     return PFUI2020b;
 
                 case "Vigência: 04/12/2020":
