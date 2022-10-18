@@ -925,6 +925,7 @@ namespace AeX30.Controller
             switch (footer)
             {
                 case "Vigência: 27/11/2017":
+                case "&9Vigência: 27/11/2017":
                     return PFUI2017;
 
                 case "Vigência: 11/02/2018":
