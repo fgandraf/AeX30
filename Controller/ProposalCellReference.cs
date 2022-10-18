@@ -662,12 +662,12 @@ namespace AeX30.Controller
             "BJ390",  // [64]  Etapa 23
             "BN390",  // [65]  Etapa 24
             ///"AL430", "AP430", "AT430", "AX430", "BB430", "BF430"
-            "AL430",  // [66]  Etapa 25
-            "AP430",  // [67]  Etapa 26
-            "AT430",  // [68]  Etapa 27
-            "AX430",  // [69]  Etapa 28
-            "BB430",  // [70]  Etapa 29
-            "BF430"   // [71]  Etapa 30  
+            "BN390",  // [66]  Etapa 25
+            "BN390",  // [67]  Etapa 26
+            "BN390",  // [68]  Etapa 27
+            "BN390",  // [69]  Etapa 28
+            "BN390",  // [70]  Etapa 29
+            "BN390"   // [71]  Etapa 30  
         };
         private readonly string[] PCI2021a = new string[]
             {
