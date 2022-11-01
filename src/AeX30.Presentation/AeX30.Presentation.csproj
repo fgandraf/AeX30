@@ -6,7 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>AeX30.Presentation</AssemblyName>
     <RootNamespace>AeX30.Presentation</RootNamespace>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <ApplicationIcon>assets\icon.ico</ApplicationIcon>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>AeX30.Presentation.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Icon.ico" />
+    <Content Include="assets\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>

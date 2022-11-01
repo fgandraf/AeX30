@@ -9,25 +9,6 @@ namespace AeX30.Infra.Repository
 {
     public class ReportRepository
     {
-
-        public static string GetSheetName(string filePath)
-        {
-            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            HSSFWorkbook wbook = new HSSFWorkbook(file);
-
-            return wbook.GetSheetName(0);
-        }
-
-        public static string GetLeftFooter(string filePath)
-        {
-            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            HSSFWorkbook wbook = new HSSFWorkbook(file);
-            ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
-
-            return sheet.Footer.Left;
-        }
-
-
         public static void SetReport(string pathTemplate, string pathDestin, Report report)
         {
             string[] cellReference = new string[]
@@ -130,16 +111,12 @@ namespace AeX30.Infra.Repository
                 FileStream file = new FileStream(pathTemplate, FileMode.Open, FileAccess.Read);
                 HSSFWorkbook wbook = new HSSFWorkbook(file);
                 ISheet sheet = wbook.GetSheet("RAE");
-
-
-                //CABEÇALHO
                 sheet.GetRow(new CellReference(cellReference[0]).Row).GetCell(new CellReference(cellReference[0]).Col).SetCellValue(report.Referencia[1]);
                 sheet.GetRow(new CellReference(cellReference[1]).Row).GetCell(new CellReference(cellReference[1]).Col).SetCellValue(report.Referencia[2]);
                 sheet.GetRow(new CellReference(cellReference[2]).Row).GetCell(new CellReference(cellReference[2]).Col).SetCellValue(Convert.ToInt32(report.Referencia[3]));
                 sheet.GetRow(new CellReference(cellReference[3]).Row).GetCell(new CellReference(cellReference[3]).Col).SetCellValue(report.Referencia[4]);
                 sheet.GetRow(new CellReference(cellReference[4]).Row).GetCell(new CellReference(cellReference[4]).Col).SetCellValue(report.Referencia[5]);
                 sheet.GetRow(new CellReference(cellReference[5]).Row).GetCell(new CellReference(cellReference[5]).Col).SetCellValue(report.Referencia[6]);
-
                 sheet.GetRow(new CellReference(cellReference[7]).Row).GetCell(new CellReference(cellReference[7]).Col).SetCellValue(report.ProponenteNome);
                 sheet.GetRow(new CellReference(cellReference[8]).Row).GetCell(new CellReference(cellReference[8]).Col).SetCellValue(report.ProponenteCPF);
                 sheet.GetRow(new CellReference(cellReference[9]).Row).GetCell(new CellReference(cellReference[9]).Col).SetCellValue(report.ProponenteDDD);
@@ -161,7 +138,6 @@ namespace AeX30.Infra.Repository
                 sheet.GetRow(new CellReference(cellReference[25]).Row).GetCell(new CellReference(cellReference[25]).Col).SetCellValue(report.ImovelOficio);
                 sheet.GetRow(new CellReference(cellReference[26]).Row).GetCell(new CellReference(cellReference[26]).Col).SetCellValue(report.ImovelComarca);
                 sheet.GetRow(new CellReference(cellReference[27]).Row).GetCell(new CellReference(cellReference[27]).Col).SetCellValue(report.ImovelComarcaUF);
-                //ORÇAMENTO (PERCENTUAIS)
                 sheet.GetRow(new CellReference(cellReference[28]).Row).GetCell(new CellReference(cellReference[28]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem01));
                 sheet.GetRow(new CellReference(cellReference[29]).Row).GetCell(new CellReference(cellReference[29]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem02));
                 sheet.GetRow(new CellReference(cellReference[30]).Row).GetCell(new CellReference(cellReference[30]).Col).SetCellValue(Convert.ToDouble(report.ServicoItem03));
@@ -189,9 +165,6 @@ namespace AeX30.Infra.Repository
                     sheet.GetRow(new CellReference(cellReference[49]).Row).GetCell(new CellReference(cellReference[49]).Col).SetCellValue(report.ContratoInicio);
                 if (report.ContratoTermino != "  /  /")
                     sheet.GetRow(new CellReference(cellReference[50]).Row).GetCell(new CellReference(cellReference[50]).Col).SetCellValue(report.ContratoTermino);
-
-
-                ////CRONOGRAMA
                 sheet.GetRow(new CellReference(cellReference[51]).Row).GetCell(new CellReference(cellReference[51]).Col).SetCellValue(Convert.ToDouble(report.CronogramaExecutado));
                 sheet.GetRow(new CellReference(cellReference[52]).Row).GetCell(new CellReference(cellReference[52]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa1));
                 sheet.GetRow(new CellReference(cellReference[53]).Row).GetCell(new CellReference(cellReference[53]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa2));
@@ -224,7 +197,6 @@ namespace AeX30.Infra.Repository
                 sheet.GetRow(new CellReference(cellReference[80]).Row).GetCell(new CellReference(cellReference[80]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa29));
                 sheet.GetRow(new CellReference(cellReference[81]).Row).GetCell(new CellReference(cellReference[81]).Col).SetCellValue(Convert.ToDouble(report.CronogramaEtapa30));
 
-
                 using (FileStream arquivoRAE = new FileStream(pathDestin, FileMode.Create, FileAccess.Write))
                 {
                     wbook.ForceFormulaRecalculation = true;
@@ -235,7 +207,6 @@ namespace AeX30.Infra.Repository
             {
                 throw ex;
             }
-
         }
     }
 }

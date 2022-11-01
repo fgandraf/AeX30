@@ -10,24 +10,6 @@ namespace AeX30.Infra.Repository
 
     public class ProposalRepository
     {
-        
-        public static string GetSheetName(string filePath)
-        {
-            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            HSSFWorkbook wbook = new HSSFWorkbook(file);
-
-            return wbook.GetSheetName(0);
-        }
-
-        public static string GetLeftFooter(string filePath)
-        {
-            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            HSSFWorkbook wbook = new HSSFWorkbook(file);
-            ISheet sheet = wbook.GetSheet(wbook.GetSheetName(0));
-
-            return sheet.Footer.Left;
-        }
-
         public Proposal GetProposal(string filePath, string[] cellReference)
         {
             try

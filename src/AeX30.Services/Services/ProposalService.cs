@@ -1,7 +1,6 @@
 ﻿using AeX30.Domain.Entities;
 using System.IO;
 using AeX30.Infra.Repository;
-using NPOI.SS.UserModel;
 
 namespace AeX30.Services.Services
 {
@@ -12,7 +11,7 @@ namespace AeX30.Services.Services
         {
             if (IsValid(filePath))
             {
-                string footer = ProposalRepository.GetLeftFooter(filePath);
+                string footer = FileProperties.GetLeftFooter(filePath);
                 string[] cellReference = new ProposalCellReference().Get(footer);
                 
                 Proposal proposal = new ProposalRepository().GetProposal(filePath, cellReference);
@@ -32,8 +31,8 @@ namespace AeX30.Services.Services
 
         private bool IsValid(string filePath)
         {
-            string footer = ProposalRepository.GetLeftFooter(filePath);
-            string sheetName = ProposalRepository.GetSheetName(filePath);
+            string footer = FileProperties.GetLeftFooter(filePath);
+            string sheetName = FileProperties.GetSheetName(filePath);
 
             bool fileExists = File.Exists(filePath);
             bool sheetNameIsValid = sheetName == "Proposta" || sheetName == "Proposta_Constr_Individual";

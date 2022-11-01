@@ -19,8 +19,8 @@ namespace AeX30.Services.Services
 
         private static bool IsValid(string filePath)
         {
-            string footer = ReportRepository.GetLeftFooter(filePath);
-            string sheetName = ReportRepository.GetSheetName(filePath);
+            string footer = FileProperties.GetLeftFooter(filePath);
+            string sheetName = FileProperties.GetSheetName(filePath);
 
             bool fileExists = File.Exists(filePath);
             bool sheetNameIsValid = sheetName == "RAE";
