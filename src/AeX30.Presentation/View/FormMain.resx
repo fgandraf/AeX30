@@ -61,7 +61,10 @@
     <value>17, 17</value>
   </metadata>
   <data name="lblPrimeiroParagrafo.Text" xml:space="preserve">
-    <value>Este assitente irá automatizar o processo de preenchimento do RAE (Relatório de Acompanhamento de Evolução de Obra) fornecido pela Caixa Econômica Federal aos profissionais credenciados no edital de prestação de serviços de arquitetura e engenharia, utilizando como base o arquivo de convocação para prestação de serviço e da planilha proposta (PFUI ou PCI) do proponente disponibilizada ao prestador.</value>
+    <value>Este assitente irá automatizar o processo de preenchimento do RAE (Relatório de Acompanhamento
+de Evolução de Obra) fornecido pela Caixa Econômica Federal aos profissionais credenciados no edital
+de prestação de serviços de arquitetura e engenharia, utilizando como base o arquivo de convocação
+para prestação de serviço e da planilha proposta (PFUI ou PCI) do proponente disponibilizada ao prestador.</value>
   </data>
   <data name="label63.Text" xml:space="preserve">
     <value>Após a importação, verificar se os dados foram obtidos corretamente e, caso seja necessário, faça os ajustes. É importante ter atenção nesse processo, pois os dados visualizados na tela irão compor a planilha a ser gerada.</value>
@@ -273,33 +276,6 @@
         rACH8ZHoyN//EDx63+6A5BGsRIe3IcZH337w6BXQwT7hsb8JKyrg4WqEcPuhbci2CRE6ovelc87YgCAN
         HrcbD2dBBNAARlzZAx2uhQ7BA5X4UAIYhsgtPnDnI+99dIgkQta8w0ObDvSBiLqAjt7RvKED//H3uef8
         gJhMJpPJ5JXn/uH/AFMPqBsoXgg0AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnAppMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
-        EAAAjBIAAP1NAACBPgAAWesAARIPAAA85gAAGc66ySIyAAABK2lDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
-        bGUAACjPY2BgMnB0cXJlEmBgyM0rKQpyd1KIiIxSYD/PwMbAzAAGicnFBY4BAT4gdl5+XioDBvh2jYER
-        RF/WBZnFQBrgSi4oKgHSf4DYKCW1OJmBgdEAyM4uLykAijPOAbJFkrLB7A0gdlFIkDOQfQTI5kuHsK+A
-        2EkQ9hMQuwjoCSD7C0h9OpjNxAE2B8KWAbFLUitA9jI45xdUFmWmZ5QoGFpaWio4puQnpSoEVxaXpOYW
-        K3jmJecXFeQXJZakpgDVQtwHBoIQhaAQ0wBqtNBkoDIAxQOE9TkQHL6MYmcQYgiQXFpUBmUyMhkT5iPM
-        mCPBwOC/lIGB5Q9CzKSXgWGBDgMD/1SEmJohA4OAPgPDvjkAwMZP/eeaqagAAAAJcEhZcwAADrwAAA68
-        AZW8ckkAAABGSURBVDhPrcsxCgAhEARB///p9XIrEPsGKmmYNTO/YiwYC8aCsWAsGAvGgrFg/Nzu+B6h
-        YiwYC8aCsWAsGAvGgrFgfDdrA0+otYPfMRHRAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnAppClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
-        EAAAjBIAAP1NAACBPgAAWesAARIPAAA85gAAGc66ySIyAAABK2lDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
-        bGUAACjPY2BgMnB0cXJlEmBgyM0rKQpyd1KIiIxSYD/PwMbAzAAGicnFBY4BAT4gdl5+XioDBvh2jYER
-        RF/WBZnFQBrgSi4oKgHSf4DYKCW1OJmBgdEAyM4uLykAijPOAbJFkrLB7A0gdlFIkDOQfQTI5kuHsK+A
-        2EkQ9hMQuwjoCSD7C0h9OpjNxAE2B8KWAbFLUitA9jI45xdUFmWmZ5QoGFpaWio4puQnpSoEVxaXpOYW
-        K3jmJecXFeQXJZakpgDVQtwHBoIQhaAQ0wBqtNBkoDIAxQOE9TkQHL6MYmcQYgiQXFpUBmUyMhkT5iPM
-        mCPBwOC/lIGB5Q9CzKSXgWGBDgMD/1SEmJohA4OAPgPDvjkAwMZP/eeaqagAAAAJcEhZcwAADrwAAA68
-        AZW8ckkAAACGSURBVDhPrZJBCoAwDAT7Cx/S/39LpZfYlAghHS8mC3OZuAsFm4iUgjIDygwoM6DMgHIy
-        eu9H+4je9JvQWWxC0cK4r5NG/Y26m1gyFJeYiQ67KC1+II5psIvSxYZE8WMa7KJ0KR20sZon00B02CVJ
-        Y2/8jbqbMGp/7AwoM6DMgDIDyv9IewBCt+SaFu/RDwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="panel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

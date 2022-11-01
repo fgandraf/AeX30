@@ -271,9 +271,7 @@ namespace AeX30.Presentation.View
             this.label157 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAppTopPanel = new System.Windows.Forms.Panel();
-            this.btnAppMinimize = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnAppClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label98 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -357,7 +355,7 @@ namespace AeX30.Presentation.View
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(0, 0);
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(720, 407);
+            this.tabControl.Size = new System.Drawing.Size(720, 419);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 0;
             this.tabControl.TabStop = false;
@@ -369,30 +367,26 @@ namespace AeX30.Presentation.View
             this.pg1.Location = new System.Drawing.Point(4, 4);
             this.pg1.Margin = new System.Windows.Forms.Padding(0);
             this.pg1.Name = "pg1";
-            this.pg1.Size = new System.Drawing.Size(712, 389);
+            this.pg1.Size = new System.Drawing.Size(712, 401);
             this.pg1.TabIndex = 4;
             this.pg1.Text = "pg1";
             // 
             // tblPg1
             // 
             this.tblPg1.BackColor = System.Drawing.Color.Transparent;
-            this.tblPg1.ColumnCount = 3;
-            this.tblPg1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.tblPg1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg1.Controls.Add(this.pnlMainPg1, 1, 1);
-            this.tblPg1.Controls.Add(this.pnlBottonPg1, 1, 2);
+            this.tblPg1.ColumnCount = 1;
+            this.tblPg1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblPg1.Controls.Add(this.pnlMainPg1, 0, 0);
+            this.tblPg1.Controls.Add(this.pnlBottonPg1, 0, 1);
             this.tblPg1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg1.Location = new System.Drawing.Point(0, 0);
             this.tblPg1.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg1.Name = "tblPg1";
-            this.tblPg1.RowCount = 3;
-            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84F));
-            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPg1.RowCount = 2;
+            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87F));
+            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblPg1.Size = new System.Drawing.Size(712, 389);
+            this.tblPg1.Size = new System.Drawing.Size(712, 401);
             this.tblPg1.TabIndex = 0;
             // 
             // pnlMainPg1
@@ -404,17 +398,17 @@ namespace AeX30.Presentation.View
             this.pnlMainPg1.Controls.Add(this.label99);
             this.pnlMainPg1.Controls.Add(this.lblPrimeiroParagrafo);
             this.pnlMainPg1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainPg1.Location = new System.Drawing.Point(17, 13);
+            this.pnlMainPg1.Location = new System.Drawing.Point(0, 0);
             this.pnlMainPg1.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainPg1.Name = "pnlMainPg1";
-            this.pnlMainPg1.Size = new System.Drawing.Size(676, 326);
+            this.pnlMainPg1.Size = new System.Drawing.Size(712, 348);
             this.pnlMainPg1.TabIndex = 4;
             // 
             // label102
             // 
             this.label102.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label102.ForeColor = System.Drawing.Color.Black;
-            this.label102.Location = new System.Drawing.Point(418, 246);
+            this.label102.Location = new System.Drawing.Point(454, 246);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(191, 43);
             this.label102.TabIndex = 7;
@@ -460,8 +454,8 @@ namespace AeX30.Presentation.View
             this.lblPrimeiroParagrafo.ForeColor = System.Drawing.Color.Black;
             this.lblPrimeiroParagrafo.Location = new System.Drawing.Point(0, 125);
             this.lblPrimeiroParagrafo.Name = "lblPrimeiroParagrafo";
-            this.lblPrimeiroParagrafo.Padding = new System.Windows.Forms.Padding(60, 0, 60, 0);
-            this.lblPrimeiroParagrafo.Size = new System.Drawing.Size(676, 100);
+            this.lblPrimeiroParagrafo.Padding = new System.Windows.Forms.Padding(70, 0, 70, 0);
+            this.lblPrimeiroParagrafo.Size = new System.Drawing.Size(712, 100);
             this.lblPrimeiroParagrafo.TabIndex = 0;
             this.lblPrimeiroParagrafo.Text = resources.GetString("lblPrimeiroParagrafo.Text");
             // 
@@ -469,10 +463,10 @@ namespace AeX30.Presentation.View
             // 
             this.pnlBottonPg1.Controls.Add(this.btnIniciar);
             this.pnlBottonPg1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPg1.Location = new System.Drawing.Point(17, 339);
+            this.pnlBottonPg1.Location = new System.Drawing.Point(0, 348);
             this.pnlBottonPg1.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPg1.Name = "pnlBottonPg1";
-            this.pnlBottonPg1.Size = new System.Drawing.Size(676, 50);
+            this.pnlBottonPg1.Size = new System.Drawing.Size(712, 53);
             this.pnlBottonPg1.TabIndex = 1;
             // 
             // btnIniciar
@@ -481,7 +475,7 @@ namespace AeX30.Presentation.View
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIniciar.Location = new System.Drawing.Point(490, 13);
+            this.btnIniciar.Location = new System.Drawing.Point(513, 13);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(180, 25);
             this.btnIniciar.TabIndex = 0;
@@ -496,31 +490,29 @@ namespace AeX30.Presentation.View
             this.pg2.Location = new System.Drawing.Point(4, 4);
             this.pg2.Margin = new System.Windows.Forms.Padding(0);
             this.pg2.Name = "pg2";
-            this.pg2.Size = new System.Drawing.Size(712, 389);
+            this.pg2.Size = new System.Drawing.Size(712, 401);
             this.pg2.TabIndex = 3;
             this.pg2.Text = "pg2";
             // 
             // tblPg2
             // 
             this.tblPg2.BackColor = System.Drawing.Color.Gainsboro;
-            this.tblPg2.ColumnCount = 3;
-            this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg2.Controls.Add(this.panel3, 1, 3);
-            this.tblPg2.Controls.Add(this.pnlBottonConvocacao, 1, 4);
-            this.tblPg2.Controls.Add(this.pnlTopConvocacao, 1, 1);
+            this.tblPg2.ColumnCount = 1;
+            this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblPg2.Controls.Add(this.panel3, 0, 2);
+            this.tblPg2.Controls.Add(this.pnlBottonConvocacao, 0, 3);
+            this.tblPg2.Controls.Add(this.pnlTopConvocacao, 0, 0);
             this.tblPg2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg2.Location = new System.Drawing.Point(0, 0);
             this.tblPg2.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg2.Name = "tblPg2";
-            this.tblPg2.RowCount = 5;
+            this.tblPg2.RowCount = 4;
+            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
-            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg2.Size = new System.Drawing.Size(712, 389);
+            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg2.Size = new System.Drawing.Size(712, 401);
             this.tblPg2.TabIndex = 0;
             // 
             // panel3
@@ -531,10 +523,10 @@ namespace AeX30.Presentation.View
             this.panel3.Controls.Add(this.label71);
             this.panel3.Controls.Add(this.label72);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(17, 74);
+            this.panel3.Location = new System.Drawing.Point(0, 66);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(676, 264);
+            this.panel3.Size = new System.Drawing.Size(712, 284);
             this.panel3.TabIndex = 7;
             // 
             // pnlMainConvocacao
@@ -548,14 +540,14 @@ namespace AeX30.Presentation.View
             this.pnlMainConvocacao.Location = new System.Drawing.Point(0, 0);
             this.pnlMainConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainConvocacao.Name = "pnlMainConvocacao";
-            this.pnlMainConvocacao.Size = new System.Drawing.Size(676, 264);
+            this.pnlMainConvocacao.Size = new System.Drawing.Size(712, 284);
             this.pnlMainConvocacao.TabIndex = 0;
             this.pnlMainConvocacao.Visible = false;
             // 
             // panel28
             // 
             this.panel28.BackColor = System.Drawing.Color.Black;
-            this.panel28.Location = new System.Drawing.Point(60, 60);
+            this.panel28.Location = new System.Drawing.Point(89, 67);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(550, 1);
             this.panel28.TabIndex = 18;
@@ -575,7 +567,7 @@ namespace AeX30.Presentation.View
             this.pnlReferencia.Controls.Add(this.txtRef5);
             this.pnlReferencia.Controls.Add(this.label73);
             this.pnlReferencia.Controls.Add(this.txtRef6);
-            this.pnlReferencia.Location = new System.Drawing.Point(209, 108);
+            this.pnlReferencia.Location = new System.Drawing.Point(261, 112);
             this.pnlReferencia.Name = "pnlReferencia";
             this.pnlReferencia.Size = new System.Drawing.Size(258, 23);
             this.pnlReferencia.TabIndex = 0;
@@ -716,7 +708,7 @@ namespace AeX30.Presentation.View
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(123, 113);
+            this.label74.Location = new System.Drawing.Point(175, 117);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(59, 12);
             this.label74.TabIndex = 17;
@@ -727,7 +719,7 @@ namespace AeX30.Presentation.View
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label75.ForeColor = System.Drawing.Color.Black;
-            this.label75.Location = new System.Drawing.Point(60, 37);
+            this.label75.Location = new System.Drawing.Point(89, 44);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(229, 13);
             this.label75.TabIndex = 15;
@@ -773,10 +765,10 @@ namespace AeX30.Presentation.View
             // 
             this.pnlBottonConvocacao.Controls.Add(this.btnProximoConvocacao);
             this.pnlBottonConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonConvocacao.Location = new System.Drawing.Point(17, 338);
+            this.pnlBottonConvocacao.Location = new System.Drawing.Point(0, 350);
             this.pnlBottonConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonConvocacao.Name = "pnlBottonConvocacao";
-            this.pnlBottonConvocacao.Size = new System.Drawing.Size(676, 51);
+            this.pnlBottonConvocacao.Size = new System.Drawing.Size(712, 51);
             this.pnlBottonConvocacao.TabIndex = 1;
             // 
             // btnProximoConvocacao
@@ -785,7 +777,7 @@ namespace AeX30.Presentation.View
             this.btnProximoConvocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProximoConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProximoConvocacao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoConvocacao.Location = new System.Drawing.Point(490, 13);
+            this.btnProximoConvocacao.Location = new System.Drawing.Point(513, 13);
             this.btnProximoConvocacao.Name = "btnProximoConvocacao";
             this.btnProximoConvocacao.Size = new System.Drawing.Size(180, 25);
             this.btnProximoConvocacao.TabIndex = 0;
@@ -800,10 +792,10 @@ namespace AeX30.Presentation.View
             this.pnlTopConvocacao.Controls.Add(this.lblEtapa1);
             this.pnlTopConvocacao.Controls.Add(this.btnImportarConvocacao);
             this.pnlTopConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTopConvocacao.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopConvocacao.Location = new System.Drawing.Point(0, 0);
             this.pnlTopConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopConvocacao.Name = "pnlTopConvocacao";
-            this.pnlTopConvocacao.Size = new System.Drawing.Size(676, 48);
+            this.pnlTopConvocacao.Size = new System.Drawing.Size(712, 52);
             this.pnlTopConvocacao.TabIndex = 1;
             // 
             // lblEtapa1
@@ -812,7 +804,7 @@ namespace AeX30.Presentation.View
             this.lblEtapa1.BackColor = System.Drawing.Color.Transparent;
             this.lblEtapa1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa1.ForeColor = System.Drawing.Color.Gray;
-            this.lblEtapa1.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa1.Location = new System.Drawing.Point(645, 18);
             this.lblEtapa1.Name = "lblEtapa1";
             this.lblEtapa1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblEtapa1.Size = new System.Drawing.Size(48, 12);
@@ -827,7 +819,7 @@ namespace AeX30.Presentation.View
             this.btnImportarConvocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportarConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnImportarConvocacao.ForeColor = System.Drawing.Color.White;
-            this.btnImportarConvocacao.Location = new System.Drawing.Point(250, 12);
+            this.btnImportarConvocacao.Location = new System.Drawing.Point(260, 12);
             this.btnImportarConvocacao.Name = "btnImportarConvocacao";
             this.btnImportarConvocacao.Size = new System.Drawing.Size(170, 23);
             this.btnImportarConvocacao.TabIndex = 4;
@@ -842,31 +834,29 @@ namespace AeX30.Presentation.View
             this.pg3.Location = new System.Drawing.Point(4, 4);
             this.pg3.Margin = new System.Windows.Forms.Padding(0);
             this.pg3.Name = "pg3";
-            this.pg3.Size = new System.Drawing.Size(712, 389);
+            this.pg3.Size = new System.Drawing.Size(712, 401);
             this.pg3.TabIndex = 1;
             this.pg3.Text = "pg3";
             // 
             // tblPg3
             // 
             this.tblPg3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tblPg3.ColumnCount = 3;
-            this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg3.Controls.Add(this.pnlBottonPfui, 1, 4);
-            this.tblPg3.Controls.Add(this.pnlTopPfui, 1, 1);
-            this.tblPg3.Controls.Add(this.mainPg3, 1, 3);
+            this.tblPg3.ColumnCount = 1;
+            this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblPg3.Controls.Add(this.pnlBottonPfui, 0, 3);
+            this.tblPg3.Controls.Add(this.pnlTopPfui, 0, 0);
+            this.tblPg3.Controls.Add(this.mainPg3, 0, 2);
             this.tblPg3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg3.Location = new System.Drawing.Point(0, 0);
             this.tblPg3.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg3.Name = "tblPg3";
-            this.tblPg3.RowCount = 5;
+            this.tblPg3.RowCount = 4;
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
             this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
-            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg3.Size = new System.Drawing.Size(712, 389);
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg3.Size = new System.Drawing.Size(712, 401);
             this.tblPg3.TabIndex = 0;
             // 
             // pnlBottonPfui
@@ -874,10 +864,10 @@ namespace AeX30.Presentation.View
             this.pnlBottonPfui.Controls.Add(this.lblVigencia);
             this.pnlBottonPfui.Controls.Add(this.btnProximoPfui);
             this.pnlBottonPfui.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPfui.Location = new System.Drawing.Point(17, 338);
+            this.pnlBottonPfui.Location = new System.Drawing.Point(0, 350);
             this.pnlBottonPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPfui.Name = "pnlBottonPfui";
-            this.pnlBottonPfui.Size = new System.Drawing.Size(676, 51);
+            this.pnlBottonPfui.Size = new System.Drawing.Size(712, 51);
             this.pnlBottonPfui.TabIndex = 2;
             // 
             // lblVigencia
@@ -900,7 +890,7 @@ namespace AeX30.Presentation.View
             this.btnProximoPfui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProximoPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProximoPfui.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoPfui.Location = new System.Drawing.Point(490, 13);
+            this.btnProximoPfui.Location = new System.Drawing.Point(513, 13);
             this.btnProximoPfui.Name = "btnProximoPfui";
             this.btnProximoPfui.Size = new System.Drawing.Size(180, 25);
             this.btnProximoPfui.TabIndex = 0;
@@ -915,10 +905,10 @@ namespace AeX30.Presentation.View
             this.pnlTopPfui.Controls.Add(this.lblEtapa2);
             this.pnlTopPfui.Controls.Add(this.btnImportarProposta);
             this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTopPfui.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopPfui.Location = new System.Drawing.Point(0, 0);
             this.pnlTopPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopPfui.Name = "pnlTopPfui";
-            this.pnlTopPfui.Size = new System.Drawing.Size(676, 48);
+            this.pnlTopPfui.Size = new System.Drawing.Size(712, 52);
             this.pnlTopPfui.TabIndex = 0;
             // 
             // lblEtapa2
@@ -927,7 +917,7 @@ namespace AeX30.Presentation.View
             this.lblEtapa2.BackColor = System.Drawing.Color.Transparent;
             this.lblEtapa2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa2.ForeColor = System.Drawing.Color.Gray;
-            this.lblEtapa2.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa2.Location = new System.Drawing.Point(645, 18);
             this.lblEtapa2.Name = "lblEtapa2";
             this.lblEtapa2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblEtapa2.Size = new System.Drawing.Size(48, 12);
@@ -942,7 +932,7 @@ namespace AeX30.Presentation.View
             this.btnImportarProposta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportarProposta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnImportarProposta.ForeColor = System.Drawing.Color.White;
-            this.btnImportarProposta.Location = new System.Drawing.Point(250, 13);
+            this.btnImportarProposta.Location = new System.Drawing.Point(260, 13);
             this.btnImportarProposta.Name = "btnImportarProposta";
             this.btnImportarProposta.Size = new System.Drawing.Size(170, 23);
             this.btnImportarProposta.TabIndex = 4;
@@ -958,10 +948,10 @@ namespace AeX30.Presentation.View
             this.mainPg3.Controls.Add(this.label62);
             this.mainPg3.Controls.Add(this.label64);
             this.mainPg3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPg3.Location = new System.Drawing.Point(17, 74);
+            this.mainPg3.Location = new System.Drawing.Point(0, 66);
             this.mainPg3.Margin = new System.Windows.Forms.Padding(0);
             this.mainPg3.Name = "mainPg3";
-            this.mainPg3.Size = new System.Drawing.Size(676, 264);
+            this.mainPg3.Size = new System.Drawing.Size(712, 284);
             this.mainPg3.TabIndex = 5;
             // 
             // pnlMainPfui
@@ -1098,7 +1088,7 @@ namespace AeX30.Presentation.View
             this.pnlMainPfui.Location = new System.Drawing.Point(0, 0);
             this.pnlMainPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainPfui.Name = "pnlMainPfui";
-            this.pnlMainPfui.Size = new System.Drawing.Size(676, 264);
+            this.pnlMainPfui.Size = new System.Drawing.Size(712, 284);
             this.pnlMainPfui.TabIndex = 1;
             this.pnlMainPfui.Visible = false;
             // 
@@ -2752,31 +2742,29 @@ namespace AeX30.Presentation.View
             this.pg4.Location = new System.Drawing.Point(4, 4);
             this.pg4.Margin = new System.Windows.Forms.Padding(0);
             this.pg4.Name = "pg4";
-            this.pg4.Size = new System.Drawing.Size(712, 389);
+            this.pg4.Size = new System.Drawing.Size(712, 401);
             this.pg4.TabIndex = 2;
             this.pg4.Text = "pg4";
             // 
             // tblPg4
             // 
             this.tblPg4.BackColor = System.Drawing.Color.Gainsboro;
-            this.tblPg4.ColumnCount = 3;
-            this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg4.Controls.Add(this.pnlMainAdicionais, 1, 3);
-            this.tblPg4.Controls.Add(this.pnlBottonAdicionais, 1, 4);
-            this.tblPg4.Controls.Add(this.pnlTopAdicionais, 1, 1);
+            this.tblPg4.ColumnCount = 1;
+            this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblPg4.Controls.Add(this.pnlMainAdicionais, 0, 2);
+            this.tblPg4.Controls.Add(this.pnlBottonAdicionais, 0, 3);
+            this.tblPg4.Controls.Add(this.pnlTopAdicionais, 0, 0);
             this.tblPg4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg4.Location = new System.Drawing.Point(0, 0);
             this.tblPg4.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg4.Name = "tblPg4";
-            this.tblPg4.RowCount = 5;
+            this.tblPg4.RowCount = 4;
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
             this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
-            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg4.Size = new System.Drawing.Size(712, 389);
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg4.Size = new System.Drawing.Size(712, 401);
             this.tblPg4.TabIndex = 9;
             // 
             // pnlMainAdicionais
@@ -2794,16 +2782,16 @@ namespace AeX30.Presentation.View
             this.pnlMainAdicionais.Controls.Add(this.panel27);
             this.pnlMainAdicionais.Controls.Add(this.label142);
             this.pnlMainAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainAdicionais.Location = new System.Drawing.Point(17, 74);
+            this.pnlMainAdicionais.Location = new System.Drawing.Point(0, 66);
             this.pnlMainAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainAdicionais.Name = "pnlMainAdicionais";
-            this.pnlMainAdicionais.Size = new System.Drawing.Size(676, 264);
+            this.pnlMainAdicionais.Size = new System.Drawing.Size(712, 284);
             this.pnlMainAdicionais.TabIndex = 0;
             // 
             // txtMensuradoAcumulado
             // 
             this.txtMensuradoAcumulado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMensuradoAcumulado.Location = new System.Drawing.Point(415, 195);
+            this.txtMensuradoAcumulado.Location = new System.Drawing.Point(447, 194);
             this.txtMensuradoAcumulado.MaxLength = 300;
             this.txtMensuradoAcumulado.Name = "txtMensuradoAcumulado";
             this.txtMensuradoAcumulado.PlaceholderText = "00,00";
@@ -2812,7 +2800,7 @@ namespace AeX30.Presentation.View
             // 
             // txtContratoTermino
             // 
-            this.txtContratoTermino.Location = new System.Drawing.Point(415, 70);
+            this.txtContratoTermino.Location = new System.Drawing.Point(447, 69);
             this.txtContratoTermino.Mask = "00/00/0000";
             this.txtContratoTermino.Name = "txtContratoTermino";
             this.txtContratoTermino.Size = new System.Drawing.Size(100, 23);
@@ -2821,7 +2809,7 @@ namespace AeX30.Presentation.View
             // 
             // txtContratoInicio
             // 
-            this.txtContratoInicio.Location = new System.Drawing.Point(176, 70);
+            this.txtContratoInicio.Location = new System.Drawing.Point(208, 69);
             this.txtContratoInicio.Mask = "00/00/0000";
             this.txtContratoInicio.Name = "txtContratoInicio";
             this.txtContratoInicio.Size = new System.Drawing.Size(100, 23);
@@ -2831,7 +2819,7 @@ namespace AeX30.Presentation.View
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.Black;
-            this.panel22.Location = new System.Drawing.Point(50, 144);
+            this.panel22.Location = new System.Drawing.Point(82, 143);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(550, 1);
             this.panel22.TabIndex = 134;
@@ -2841,7 +2829,7 @@ namespace AeX30.Presentation.View
             this.label83.AutoSize = true;
             this.label83.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label83.ForeColor = System.Drawing.Color.Black;
-            this.label83.Location = new System.Drawing.Point(50, 124);
+            this.label83.Location = new System.Drawing.Point(82, 123);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(46, 13);
             this.label83.TabIndex = 133;
@@ -2852,7 +2840,7 @@ namespace AeX30.Presentation.View
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label82.ForeColor = System.Drawing.Color.Black;
-            this.label82.Location = new System.Drawing.Point(135, 200);
+            this.label82.Location = new System.Drawing.Point(167, 199);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(235, 12);
             this.label82.TabIndex = 132;
@@ -2863,7 +2851,7 @@ namespace AeX30.Presentation.View
             this.label140.AutoSize = true;
             this.label140.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label140.ForeColor = System.Drawing.Color.Black;
-            this.label140.Location = new System.Drawing.Point(314, 75);
+            this.label140.Location = new System.Drawing.Point(346, 74);
             this.label140.Name = "label140";
             this.label140.Size = new System.Drawing.Size(95, 12);
             this.label140.TabIndex = 6;
@@ -2874,7 +2862,7 @@ namespace AeX30.Presentation.View
             this.label141.AutoSize = true;
             this.label141.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label141.ForeColor = System.Drawing.Color.Black;
-            this.label141.Location = new System.Drawing.Point(135, 75);
+            this.label141.Location = new System.Drawing.Point(167, 74);
             this.label141.Name = "label141";
             this.label141.Size = new System.Drawing.Size(35, 12);
             this.label141.TabIndex = 4;
@@ -2883,7 +2871,7 @@ namespace AeX30.Presentation.View
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.Black;
-            this.panel27.Location = new System.Drawing.Point(50, 45);
+            this.panel27.Location = new System.Drawing.Point(82, 44);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(550, 1);
             this.panel27.TabIndex = 3;
@@ -2893,7 +2881,7 @@ namespace AeX30.Presentation.View
             this.label142.AutoSize = true;
             this.label142.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label142.ForeColor = System.Drawing.Color.Black;
-            this.label142.Location = new System.Drawing.Point(50, 25);
+            this.label142.Location = new System.Drawing.Point(82, 24);
             this.label142.Name = "label142";
             this.label142.Size = new System.Drawing.Size(53, 13);
             this.label142.TabIndex = 2;
@@ -2903,10 +2891,10 @@ namespace AeX30.Presentation.View
             // 
             this.pnlBottonAdicionais.Controls.Add(this.btnProximoAdicionais);
             this.pnlBottonAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonAdicionais.Location = new System.Drawing.Point(17, 338);
+            this.pnlBottonAdicionais.Location = new System.Drawing.Point(0, 350);
             this.pnlBottonAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonAdicionais.Name = "pnlBottonAdicionais";
-            this.pnlBottonAdicionais.Size = new System.Drawing.Size(676, 51);
+            this.pnlBottonAdicionais.Size = new System.Drawing.Size(712, 51);
             this.pnlBottonAdicionais.TabIndex = 1;
             // 
             // btnProximoAdicionais
@@ -2915,7 +2903,7 @@ namespace AeX30.Presentation.View
             this.btnProximoAdicionais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProximoAdicionais.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProximoAdicionais.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoAdicionais.Location = new System.Drawing.Point(490, 13);
+            this.btnProximoAdicionais.Location = new System.Drawing.Point(513, 13);
             this.btnProximoAdicionais.Name = "btnProximoAdicionais";
             this.btnProximoAdicionais.Size = new System.Drawing.Size(180, 25);
             this.btnProximoAdicionais.TabIndex = 0;
@@ -2929,10 +2917,10 @@ namespace AeX30.Presentation.View
             this.pnlTopAdicionais.Controls.Add(this.lblEtapa3);
             this.pnlTopAdicionais.Controls.Add(this.label146);
             this.pnlTopAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTopAdicionais.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopAdicionais.Location = new System.Drawing.Point(0, 0);
             this.pnlTopAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopAdicionais.Name = "pnlTopAdicionais";
-            this.pnlTopAdicionais.Size = new System.Drawing.Size(676, 48);
+            this.pnlTopAdicionais.Size = new System.Drawing.Size(712, 52);
             this.pnlTopAdicionais.TabIndex = 2;
             // 
             // lblEtapa3
@@ -2941,7 +2929,7 @@ namespace AeX30.Presentation.View
             this.lblEtapa3.BackColor = System.Drawing.Color.Transparent;
             this.lblEtapa3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa3.ForeColor = System.Drawing.Color.Gray;
-            this.lblEtapa3.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa3.Location = new System.Drawing.Point(645, 18);
             this.lblEtapa3.Name = "lblEtapa3";
             this.lblEtapa3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblEtapa3.Size = new System.Drawing.Size(48, 12);
@@ -2958,7 +2946,7 @@ namespace AeX30.Presentation.View
             this.label146.Location = new System.Drawing.Point(0, 0);
             this.label146.Margin = new System.Windows.Forms.Padding(0);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(676, 48);
+            this.label146.Size = new System.Drawing.Size(712, 52);
             this.label146.TabIndex = 0;
             this.label146.Text = "Dados Adicionais";
             this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2970,31 +2958,29 @@ namespace AeX30.Presentation.View
             this.pg5.Location = new System.Drawing.Point(4, 4);
             this.pg5.Margin = new System.Windows.Forms.Padding(0);
             this.pg5.Name = "pg5";
-            this.pg5.Size = new System.Drawing.Size(712, 389);
+            this.pg5.Size = new System.Drawing.Size(712, 401);
             this.pg5.TabIndex = 5;
             this.pg5.Text = "pg5";
             // 
             // tblPg5
             // 
             this.tblPg5.BackColor = System.Drawing.Color.Gainsboro;
-            this.tblPg5.ColumnCount = 3;
-            this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tblPg5.Controls.Add(this.pnlBottonFinalizar, 1, 4);
-            this.tblPg5.Controls.Add(this.pnlTopFinalizar, 1, 1);
-            this.tblPg5.Controls.Add(this.panel19, 1, 3);
+            this.tblPg5.ColumnCount = 1;
+            this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblPg5.Controls.Add(this.pnlBottonFinalizar, 0, 3);
+            this.tblPg5.Controls.Add(this.pnlTopFinalizar, 0, 0);
+            this.tblPg5.Controls.Add(this.panel19, 0, 2);
             this.tblPg5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg5.Location = new System.Drawing.Point(0, 0);
             this.tblPg5.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg5.Name = "tblPg5";
-            this.tblPg5.RowCount = 5;
+            this.tblPg5.RowCount = 4;
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
             this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
-            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg5.Size = new System.Drawing.Size(712, 389);
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg5.Size = new System.Drawing.Size(712, 401);
             this.tblPg5.TabIndex = 1;
             // 
             // pnlBottonFinalizar
@@ -3002,10 +2988,10 @@ namespace AeX30.Presentation.View
             this.pnlBottonFinalizar.Controls.Add(this.btnNew);
             this.pnlBottonFinalizar.Controls.Add(this.btnSalvarComo);
             this.pnlBottonFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonFinalizar.Location = new System.Drawing.Point(17, 338);
+            this.pnlBottonFinalizar.Location = new System.Drawing.Point(0, 350);
             this.pnlBottonFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonFinalizar.Name = "pnlBottonFinalizar";
-            this.pnlBottonFinalizar.Size = new System.Drawing.Size(676, 51);
+            this.pnlBottonFinalizar.Size = new System.Drawing.Size(712, 51);
             this.pnlBottonFinalizar.TabIndex = 1;
             // 
             // btnNew
@@ -3014,7 +3000,7 @@ namespace AeX30.Presentation.View
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnNew.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNew.Location = new System.Drawing.Point(354, 13);
+            this.btnNew.Location = new System.Drawing.Point(377, 13);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(130, 25);
             this.btnNew.TabIndex = 1;
@@ -3029,7 +3015,7 @@ namespace AeX30.Presentation.View
             this.btnSalvarComo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarComo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalvarComo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSalvarComo.Location = new System.Drawing.Point(490, 13);
+            this.btnSalvarComo.Location = new System.Drawing.Point(513, 13);
             this.btnSalvarComo.Name = "btnSalvarComo";
             this.btnSalvarComo.Size = new System.Drawing.Size(180, 25);
             this.btnSalvarComo.TabIndex = 0;
@@ -3044,10 +3030,10 @@ namespace AeX30.Presentation.View
             this.pnlTopFinalizar.Controls.Add(this.btnModeloPadrao);
             this.pnlTopFinalizar.Controls.Add(this.lblEtapa4);
             this.pnlTopFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTopFinalizar.Location = new System.Drawing.Point(17, 13);
+            this.pnlTopFinalizar.Location = new System.Drawing.Point(0, 0);
             this.pnlTopFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopFinalizar.Name = "pnlTopFinalizar";
-            this.pnlTopFinalizar.Size = new System.Drawing.Size(676, 48);
+            this.pnlTopFinalizar.Size = new System.Drawing.Size(712, 52);
             this.pnlTopFinalizar.TabIndex = 1;
             // 
             // btnModeloPadrao
@@ -3057,7 +3043,7 @@ namespace AeX30.Presentation.View
             this.btnModeloPadrao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModeloPadrao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnModeloPadrao.ForeColor = System.Drawing.Color.White;
-            this.btnModeloPadrao.Location = new System.Drawing.Point(250, 13);
+            this.btnModeloPadrao.Location = new System.Drawing.Point(260, 13);
             this.btnModeloPadrao.Name = "btnModeloPadrao";
             this.btnModeloPadrao.Size = new System.Drawing.Size(170, 23);
             this.btnModeloPadrao.TabIndex = 18;
@@ -3071,7 +3057,7 @@ namespace AeX30.Presentation.View
             this.lblEtapa4.BackColor = System.Drawing.Color.Transparent;
             this.lblEtapa4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEtapa4.ForeColor = System.Drawing.Color.Gray;
-            this.lblEtapa4.Location = new System.Drawing.Point(605, 20);
+            this.lblEtapa4.Location = new System.Drawing.Point(645, 18);
             this.lblEtapa4.Name = "lblEtapa4";
             this.lblEtapa4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblEtapa4.Size = new System.Drawing.Size(48, 12);
@@ -3086,10 +3072,10 @@ namespace AeX30.Presentation.View
             this.panel19.Controls.Add(this.label156);
             this.panel19.Controls.Add(this.label157);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(17, 74);
+            this.panel19.Location = new System.Drawing.Point(0, 66);
             this.panel19.Margin = new System.Windows.Forms.Padding(0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(676, 264);
+            this.panel19.Size = new System.Drawing.Size(712, 284);
             this.panel19.TabIndex = 5;
             // 
             // pnlMainFinalizar
@@ -3101,14 +3087,14 @@ namespace AeX30.Presentation.View
             this.pnlMainFinalizar.Location = new System.Drawing.Point(0, 0);
             this.pnlMainFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainFinalizar.Name = "pnlMainFinalizar";
-            this.pnlMainFinalizar.Size = new System.Drawing.Size(676, 264);
+            this.pnlMainFinalizar.Size = new System.Drawing.Size(712, 284);
             this.pnlMainFinalizar.TabIndex = 4;
             this.pnlMainFinalizar.Visible = false;
             // 
             // txtLogFinalizar
             // 
             this.txtLogFinalizar.BackColor = System.Drawing.Color.White;
-            this.txtLogFinalizar.Location = new System.Drawing.Point(40, 42);
+            this.txtLogFinalizar.Location = new System.Drawing.Point(63, 43);
             this.txtLogFinalizar.MaxLength = 200000;
             this.txtLogFinalizar.Multiline = true;
             this.txtLogFinalizar.Name = "txtLogFinalizar";
@@ -3151,39 +3137,19 @@ namespace AeX30.Presentation.View
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(80, 407);
+            this.panel1.Size = new System.Drawing.Size(80, 419);
             this.panel1.TabIndex = 0;
             // 
             // pnlAppTopPanel
             // 
             this.pnlAppTopPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlAppTopPanel.BackgroundImage")));
-            this.pnlAppTopPanel.Controls.Add(this.btnAppMinimize);
             this.pnlAppTopPanel.Controls.Add(this.btnBack);
-            this.pnlAppTopPanel.Controls.Add(this.btnAppClose);
             this.pnlAppTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAppTopPanel.Location = new System.Drawing.Point(0, 0);
             this.pnlAppTopPanel.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAppTopPanel.Name = "pnlAppTopPanel";
             this.pnlAppTopPanel.Size = new System.Drawing.Size(800, 30);
             this.pnlAppTopPanel.TabIndex = 5;
-            this.pnlAppTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlAppTopPanel_MouseDown);
-            // 
-            // btnAppMinimize
-            // 
-            this.btnAppMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnAppMinimize.FlatAppearance.BorderSize = 0;
-            this.btnAppMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnAppMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnAppMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppMinimize.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAppMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnAppMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnAppMinimize.Image")));
-            this.btnAppMinimize.Location = new System.Drawing.Point(720, 0);
-            this.btnAppMinimize.Name = "btnAppMinimize";
-            this.btnAppMinimize.Size = new System.Drawing.Size(40, 30);
-            this.btnAppMinimize.TabIndex = 3;
-            this.btnAppMinimize.UseVisualStyleBackColor = false;
-            this.btnAppMinimize.Click += new System.EventHandler(this.btnAppMinimize_Click);
             // 
             // btnBack
             // 
@@ -3203,23 +3169,6 @@ namespace AeX30.Presentation.View
             this.btnBack.Visible = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnAppClose
-            // 
-            this.btnAppClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnAppClose.FlatAppearance.BorderSize = 0;
-            this.btnAppClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnAppClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnAppClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAppClose.ForeColor = System.Drawing.Color.White;
-            this.btnAppClose.Image = ((System.Drawing.Image)(resources.GetObject("btnAppClose.Image")));
-            this.btnAppClose.Location = new System.Drawing.Point(760, 0);
-            this.btnAppClose.Name = "btnAppClose";
-            this.btnAppClose.Size = new System.Drawing.Size(40, 30);
-            this.btnAppClose.TabIndex = 2;
-            this.btnAppClose.UseVisualStyleBackColor = false;
-            this.btnAppClose.Click += new System.EventHandler(this.btnAppClose_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
@@ -3227,7 +3176,7 @@ namespace AeX30.Presentation.View
             this.panel4.Controls.Add(this.label98);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 437);
+            this.panel4.Location = new System.Drawing.Point(0, 449);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(800, 13);
@@ -3459,14 +3408,13 @@ namespace AeX30.Presentation.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 462);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlAppTopPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FormMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3537,7 +3485,6 @@ namespace AeX30.Presentation.View
         private System.Windows.Forms.TabPage pg4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlAppTopPanel;
-        private System.Windows.Forms.Button btnAppClose;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tblPg3;
@@ -3759,7 +3706,6 @@ namespace AeX30.Presentation.View
         private System.Windows.Forms.Label label157;
         private System.Windows.Forms.SaveFileDialog saveExcel;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnAppMinimize;
         private System.Windows.Forms.TextBox txtParcela24;
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.TextBox txtParcela23;

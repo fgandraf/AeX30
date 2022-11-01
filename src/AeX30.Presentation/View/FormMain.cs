@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using AeX30.Domain.Entities;
 using AeX30.Services.Services;
 
@@ -9,14 +8,7 @@ namespace AeX30.Presentation.View
 {
     public partial class FormMain : Form
     {
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-
         private string _templatePath;
-
 
         public FormMain()
         {
@@ -28,26 +20,12 @@ namespace AeX30.Presentation.View
             tabControl.ItemSize = new System.Drawing.Size(0, 1);
         }
 
-        private void btnAppClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pnlAppTopPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (tabControl.SelectedIndex == 1)
-            {
-                tabControl.SelectTab(0);
                 btnBack.Hide();
-            }
-            else
-                tabControl.SelectTab(tabControl.SelectedIndex - 1);
+
+            tabControl.SelectTab(tabControl.SelectedIndex - 1);
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -132,17 +110,16 @@ namespace AeX30.Presentation.View
             }
         }
 
-        private void btnAppMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btnNew_Click(object sender, EventArgs e)
         {
             Controls.Clear();
             InitializeComponent();
             FormMain_Load(null, EventArgs.Empty);
         }
+
+
+
+
 
 
 
