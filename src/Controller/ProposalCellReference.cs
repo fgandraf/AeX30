@@ -835,7 +835,7 @@ namespace AeX30.Controller
             "AM165",  // [70]  Etapa 29
             "AM165"   // [71]  Etapa 30
         };
-        private readonly string[] PCI2022a= new string[]
+        private readonly string[] PCI2022a = new string[]
             {
             // IDENTIFICAÇÃO
             "G43",   // [0]  Proponente
@@ -966,6 +966,7 @@ namespace AeX30.Controller
 
                 case "Vigência: 21/10/2021":
                 case "Vigência: 04/11/2021":
+                case "Vigência: 28/03/2022":
                     return PCI2021b;
 
                 case "Vigência: 28/06/2022":
