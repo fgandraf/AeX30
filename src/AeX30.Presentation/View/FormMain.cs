@@ -20,18 +20,9 @@ namespace AeX30.Presentation.View
             tabControl.ItemSize = new System.Drawing.Size(0, 1);
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            if (tabControl.SelectedIndex == 1)
-                btnBack.Hide();
-
-            tabControl.SelectTab(tabControl.SelectedIndex - 1);
-        }
-
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             NextTabControl(sender, e);
-            btnBack.Show();
         }
 
         private void btnImportarConvocacao_Click(object sender, EventArgs e)
@@ -128,6 +119,11 @@ namespace AeX30.Presentation.View
         private void NextTabControl(object sender, EventArgs e)
         {
             tabControl.SelectTab(tabControl.SelectedIndex + 1);
+        }
+
+        private void BackTabControl(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabControl.SelectedIndex - 1);
         }
 
         private void PopulateFromRequest(Request request)
@@ -320,5 +316,9 @@ namespace AeX30.Presentation.View
             return report;
         }
 
+        private void btnBackPag2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

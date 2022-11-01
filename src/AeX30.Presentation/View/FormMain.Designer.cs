@@ -65,6 +65,7 @@ namespace AeX30.Presentation.View
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.pnlBottonConvocacao = new System.Windows.Forms.Panel();
+            this.btnBackPag2 = new System.Windows.Forms.Button();
             this.btnProximoConvocacao = new System.Windows.Forms.Button();
             this.pnlTopConvocacao = new System.Windows.Forms.Panel();
             this.lblEtapa1 = new System.Windows.Forms.Label();
@@ -72,10 +73,11 @@ namespace AeX30.Presentation.View
             this.pg3 = new System.Windows.Forms.TabPage();
             this.tblPg3 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBottonPfui = new System.Windows.Forms.Panel();
-            this.lblVigencia = new System.Windows.Forms.Label();
+            this.btnBackPag3 = new System.Windows.Forms.Button();
             this.btnProximoPfui = new System.Windows.Forms.Button();
             this.pnlTopPfui = new System.Windows.Forms.Panel();
             this.lblEtapa2 = new System.Windows.Forms.Label();
+            this.lblVigencia = new System.Windows.Forms.Label();
             this.btnImportarProposta = new System.Windows.Forms.Button();
             this.mainPg3 = new System.Windows.Forms.Panel();
             this.pnlMainPfui = new System.Windows.Forms.Panel();
@@ -252,6 +254,7 @@ namespace AeX30.Presentation.View
             this.panel27 = new System.Windows.Forms.Panel();
             this.label142 = new System.Windows.Forms.Label();
             this.pnlBottonAdicionais = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnProximoAdicionais = new System.Windows.Forms.Button();
             this.pnlTopAdicionais = new System.Windows.Forms.Panel();
             this.lblEtapa3 = new System.Windows.Forms.Label();
@@ -259,6 +262,7 @@ namespace AeX30.Presentation.View
             this.pg5 = new System.Windows.Forms.TabPage();
             this.tblPg5 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBottonFinalizar = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSalvarComo = new System.Windows.Forms.Button();
             this.pnlTopFinalizar = new System.Windows.Forms.Panel();
@@ -271,7 +275,6 @@ namespace AeX30.Presentation.View
             this.label157 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAppTopPanel = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label98 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -323,7 +326,6 @@ namespace AeX30.Presentation.View
             this.pnlTopFinalizar.SuspendLayout();
             this.panel19.SuspendLayout();
             this.pnlMainFinalizar.SuspendLayout();
-            this.pnlAppTopPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -383,9 +385,8 @@ namespace AeX30.Presentation.View
             this.tblPg1.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg1.Name = "tblPg1";
             this.tblPg1.RowCount = 2;
-            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87F));
-            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
-            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92F));
+            this.tblPg1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tblPg1.Size = new System.Drawing.Size(712, 401);
             this.tblPg1.TabIndex = 0;
             // 
@@ -401,7 +402,7 @@ namespace AeX30.Presentation.View
             this.pnlMainPg1.Location = new System.Drawing.Point(0, 0);
             this.pnlMainPg1.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainPg1.Name = "pnlMainPg1";
-            this.pnlMainPg1.Size = new System.Drawing.Size(712, 348);
+            this.pnlMainPg1.Size = new System.Drawing.Size(712, 368);
             this.pnlMainPg1.TabIndex = 4;
             // 
             // label102
@@ -463,25 +464,26 @@ namespace AeX30.Presentation.View
             // 
             this.pnlBottonPg1.Controls.Add(this.btnIniciar);
             this.pnlBottonPg1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPg1.Location = new System.Drawing.Point(0, 348);
+            this.pnlBottonPg1.Location = new System.Drawing.Point(0, 368);
             this.pnlBottonPg1.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPg1.Name = "pnlBottonPg1";
-            this.pnlBottonPg1.Size = new System.Drawing.Size(712, 53);
+            this.pnlBottonPg1.Size = new System.Drawing.Size(712, 33);
             this.pnlBottonPg1.TabIndex = 1;
             // 
             // btnIniciar
             // 
             this.btnIniciar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnIniciar.FlatAppearance.BorderSize = 0;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIniciar.Location = new System.Drawing.Point(513, 13);
+            this.btnIniciar.Location = new System.Drawing.Point(567, 4);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(180, 25);
+            this.btnIniciar.Size = new System.Drawing.Size(140, 25);
             this.btnIniciar.TabIndex = 0;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            this.btnIniciar.Click += new System.EventHandler(this.NextTabControl);
             // 
             // pg2
             // 
@@ -499,19 +501,17 @@ namespace AeX30.Presentation.View
             this.tblPg2.BackColor = System.Drawing.Color.Gainsboro;
             this.tblPg2.ColumnCount = 1;
             this.tblPg2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPg2.Controls.Add(this.panel3, 0, 2);
-            this.tblPg2.Controls.Add(this.pnlBottonConvocacao, 0, 3);
+            this.tblPg2.Controls.Add(this.panel3, 0, 1);
+            this.tblPg2.Controls.Add(this.pnlBottonConvocacao, 0, 2);
             this.tblPg2.Controls.Add(this.pnlTopConvocacao, 0, 0);
             this.tblPg2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg2.Location = new System.Drawing.Point(0, 0);
             this.tblPg2.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg2.Name = "tblPg2";
-            this.tblPg2.RowCount = 4;
+            this.tblPg2.RowCount = 3;
             this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
-            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
-            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
+            this.tblPg2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tblPg2.Size = new System.Drawing.Size(712, 401);
             this.tblPg2.TabIndex = 0;
             // 
@@ -523,24 +523,26 @@ namespace AeX30.Presentation.View
             this.panel3.Controls.Add(this.label71);
             this.panel3.Controls.Add(this.label72);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 66);
+            this.panel3.Location = new System.Drawing.Point(0, 52);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(712, 284);
+            this.panel3.Size = new System.Drawing.Size(712, 316);
             this.panel3.TabIndex = 7;
             // 
             // pnlMainConvocacao
             // 
             this.pnlMainConvocacao.BackColor = System.Drawing.Color.White;
+            this.pnlMainConvocacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMainConvocacao.Controls.Add(this.panel28);
             this.pnlMainConvocacao.Controls.Add(this.pnlReferencia);
             this.pnlMainConvocacao.Controls.Add(this.label74);
             this.pnlMainConvocacao.Controls.Add(this.label75);
             this.pnlMainConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainConvocacao.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlMainConvocacao.Location = new System.Drawing.Point(0, 0);
             this.pnlMainConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainConvocacao.Name = "pnlMainConvocacao";
-            this.pnlMainConvocacao.Size = new System.Drawing.Size(712, 284);
+            this.pnlMainConvocacao.Size = new System.Drawing.Size(712, 316);
             this.pnlMainConvocacao.TabIndex = 0;
             this.pnlMainConvocacao.Visible = false;
             // 
@@ -763,25 +765,50 @@ namespace AeX30.Presentation.View
             // 
             // pnlBottonConvocacao
             // 
+            this.pnlBottonConvocacao.BackColor = System.Drawing.Color.White;
+            this.pnlBottonConvocacao.Controls.Add(this.btnBackPag2);
             this.pnlBottonConvocacao.Controls.Add(this.btnProximoConvocacao);
             this.pnlBottonConvocacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonConvocacao.Location = new System.Drawing.Point(0, 350);
+            this.pnlBottonConvocacao.Location = new System.Drawing.Point(0, 368);
             this.pnlBottonConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonConvocacao.Name = "pnlBottonConvocacao";
-            this.pnlBottonConvocacao.Size = new System.Drawing.Size(712, 51);
+            this.pnlBottonConvocacao.Size = new System.Drawing.Size(712, 33);
             this.pnlBottonConvocacao.TabIndex = 1;
+            // 
+            // btnBackPag2
+            // 
+            this.btnBackPag2.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackPag2.FlatAppearance.BorderSize = 0;
+            this.btnBackPag2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBackPag2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnBackPag2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackPag2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBackPag2.ForeColor = System.Drawing.Color.DimGray;
+            this.btnBackPag2.Location = new System.Drawing.Point(3, 4);
+            this.btnBackPag2.Name = "btnBackPag2";
+            this.btnBackPag2.Size = new System.Drawing.Size(80, 25);
+            this.btnBackPag2.TabIndex = 1;
+            this.btnBackPag2.Text = "❮❮  Anterior";
+            this.btnBackPag2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackPag2.UseVisualStyleBackColor = false;
+            this.btnBackPag2.Click += new System.EventHandler(this.BackTabControl);
             // 
             // btnProximoConvocacao
             // 
-            this.btnProximoConvocacao.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnProximoConvocacao.BackColor = System.Drawing.Color.Transparent;
+            this.btnProximoConvocacao.FlatAppearance.BorderSize = 0;
+            this.btnProximoConvocacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnProximoConvocacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnProximoConvocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProximoConvocacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProximoConvocacao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoConvocacao.Location = new System.Drawing.Point(513, 13);
+            this.btnProximoConvocacao.ForeColor = System.Drawing.Color.SlateBlue;
+            this.btnProximoConvocacao.Location = new System.Drawing.Point(627, 4);
+            this.btnProximoConvocacao.Margin = new System.Windows.Forms.Padding(0);
             this.btnProximoConvocacao.Name = "btnProximoConvocacao";
-            this.btnProximoConvocacao.Size = new System.Drawing.Size(180, 25);
+            this.btnProximoConvocacao.Size = new System.Drawing.Size(80, 25);
             this.btnProximoConvocacao.TabIndex = 0;
-            this.btnProximoConvocacao.Text = "Próximo";
+            this.btnProximoConvocacao.Text = "Próximo ❯❯";
+            this.btnProximoConvocacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProximoConvocacao.UseVisualStyleBackColor = false;
             this.btnProximoConvocacao.Visible = false;
             this.btnProximoConvocacao.Click += new System.EventHandler(this.NextTabControl);
@@ -843,58 +870,64 @@ namespace AeX30.Presentation.View
             this.tblPg3.BackColor = System.Drawing.Color.Gainsboro;
             this.tblPg3.ColumnCount = 1;
             this.tblPg3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPg3.Controls.Add(this.pnlBottonPfui, 0, 3);
+            this.tblPg3.Controls.Add(this.pnlBottonPfui, 0, 2);
             this.tblPg3.Controls.Add(this.pnlTopPfui, 0, 0);
-            this.tblPg3.Controls.Add(this.mainPg3, 0, 2);
+            this.tblPg3.Controls.Add(this.mainPg3, 0, 1);
             this.tblPg3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg3.Location = new System.Drawing.Point(0, 0);
             this.tblPg3.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg3.Name = "tblPg3";
-            this.tblPg3.RowCount = 4;
+            this.tblPg3.RowCount = 3;
             this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
-            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
-            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
+            this.tblPg3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tblPg3.Size = new System.Drawing.Size(712, 401);
             this.tblPg3.TabIndex = 0;
             // 
             // pnlBottonPfui
             // 
-            this.pnlBottonPfui.Controls.Add(this.lblVigencia);
+            this.pnlBottonPfui.BackColor = System.Drawing.Color.White;
+            this.pnlBottonPfui.Controls.Add(this.btnBackPag3);
             this.pnlBottonPfui.Controls.Add(this.btnProximoPfui);
             this.pnlBottonPfui.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonPfui.Location = new System.Drawing.Point(0, 350);
+            this.pnlBottonPfui.Location = new System.Drawing.Point(0, 368);
             this.pnlBottonPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonPfui.Name = "pnlBottonPfui";
-            this.pnlBottonPfui.Size = new System.Drawing.Size(712, 51);
+            this.pnlBottonPfui.Size = new System.Drawing.Size(712, 33);
             this.pnlBottonPfui.TabIndex = 2;
             // 
-            // lblVigencia
+            // btnBackPag3
             // 
-            this.lblVigencia.AutoSize = true;
-            this.lblVigencia.BackColor = System.Drawing.Color.Transparent;
-            this.lblVigencia.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblVigencia.ForeColor = System.Drawing.Color.Gray;
-            this.lblVigencia.Location = new System.Drawing.Point(26, 20);
-            this.lblVigencia.Name = "lblVigencia";
-            this.lblVigencia.Size = new System.Drawing.Size(55, 12);
-            this.lblVigencia.TabIndex = 22;
-            this.lblVigencia.Text = "Vigência: --";
-            this.lblVigencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblVigencia.Visible = false;
+            this.btnBackPag3.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackPag3.FlatAppearance.BorderSize = 0;
+            this.btnBackPag3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBackPag3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnBackPag3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackPag3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBackPag3.ForeColor = System.Drawing.Color.DimGray;
+            this.btnBackPag3.Location = new System.Drawing.Point(3, 4);
+            this.btnBackPag3.Name = "btnBackPag3";
+            this.btnBackPag3.Size = new System.Drawing.Size(80, 25);
+            this.btnBackPag3.TabIndex = 23;
+            this.btnBackPag3.Text = "❮❮  Anterior";
+            this.btnBackPag3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackPag3.UseVisualStyleBackColor = false;
+            this.btnBackPag3.Click += new System.EventHandler(this.BackTabControl);
             // 
             // btnProximoPfui
             // 
-            this.btnProximoPfui.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnProximoPfui.BackColor = System.Drawing.Color.Transparent;
+            this.btnProximoPfui.FlatAppearance.BorderSize = 0;
             this.btnProximoPfui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProximoPfui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProximoPfui.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoPfui.Location = new System.Drawing.Point(513, 13);
+            this.btnProximoPfui.ForeColor = System.Drawing.Color.SlateBlue;
+            this.btnProximoPfui.Location = new System.Drawing.Point(627, 4);
+            this.btnProximoPfui.Margin = new System.Windows.Forms.Padding(0);
             this.btnProximoPfui.Name = "btnProximoPfui";
-            this.btnProximoPfui.Size = new System.Drawing.Size(180, 25);
+            this.btnProximoPfui.Size = new System.Drawing.Size(80, 25);
             this.btnProximoPfui.TabIndex = 0;
-            this.btnProximoPfui.Text = "Próximo";
+            this.btnProximoPfui.Text = "Próximo ❯❯";
+            this.btnProximoPfui.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProximoPfui.UseVisualStyleBackColor = false;
             this.btnProximoPfui.Visible = false;
             this.btnProximoPfui.Click += new System.EventHandler(this.NextTabControl);
@@ -903,6 +936,7 @@ namespace AeX30.Presentation.View
             // 
             this.pnlTopPfui.BackColor = System.Drawing.Color.White;
             this.pnlTopPfui.Controls.Add(this.lblEtapa2);
+            this.pnlTopPfui.Controls.Add(this.lblVigencia);
             this.pnlTopPfui.Controls.Add(this.btnImportarProposta);
             this.pnlTopPfui.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTopPfui.Location = new System.Drawing.Point(0, 0);
@@ -924,6 +958,20 @@ namespace AeX30.Presentation.View
             this.lblEtapa2.TabIndex = 17;
             this.lblEtapa2.Text = "Etapa: 2/4";
             this.lblEtapa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblVigencia
+            // 
+            this.lblVigencia.AutoSize = true;
+            this.lblVigencia.BackColor = System.Drawing.Color.Transparent;
+            this.lblVigencia.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVigencia.ForeColor = System.Drawing.Color.Gray;
+            this.lblVigencia.Location = new System.Drawing.Point(18, 18);
+            this.lblVigencia.Name = "lblVigencia";
+            this.lblVigencia.Size = new System.Drawing.Size(55, 12);
+            this.lblVigencia.TabIndex = 22;
+            this.lblVigencia.Text = "Vigência: --";
+            this.lblVigencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblVigencia.Visible = false;
             // 
             // btnImportarProposta
             // 
@@ -948,16 +996,17 @@ namespace AeX30.Presentation.View
             this.mainPg3.Controls.Add(this.label62);
             this.mainPg3.Controls.Add(this.label64);
             this.mainPg3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPg3.Location = new System.Drawing.Point(0, 66);
+            this.mainPg3.Location = new System.Drawing.Point(0, 52);
             this.mainPg3.Margin = new System.Windows.Forms.Padding(0);
             this.mainPg3.Name = "mainPg3";
-            this.mainPg3.Size = new System.Drawing.Size(712, 284);
+            this.mainPg3.Size = new System.Drawing.Size(712, 316);
             this.mainPg3.TabIndex = 5;
             // 
             // pnlMainPfui
             // 
             this.pnlMainPfui.AutoScroll = true;
             this.pnlMainPfui.BackColor = System.Drawing.Color.White;
+            this.pnlMainPfui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMainPfui.Controls.Add(this.pnlPFUIParcelas);
             this.pnlMainPfui.Controls.Add(this.label97);
             this.pnlMainPfui.Controls.Add(this.label96);
@@ -1088,7 +1137,7 @@ namespace AeX30.Presentation.View
             this.pnlMainPfui.Location = new System.Drawing.Point(0, 0);
             this.pnlMainPfui.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainPfui.Name = "pnlMainPfui";
-            this.pnlMainPfui.Size = new System.Drawing.Size(712, 284);
+            this.pnlMainPfui.Size = new System.Drawing.Size(712, 316);
             this.pnlMainPfui.TabIndex = 1;
             this.pnlMainPfui.Visible = false;
             // 
@@ -2751,19 +2800,17 @@ namespace AeX30.Presentation.View
             this.tblPg4.BackColor = System.Drawing.Color.Gainsboro;
             this.tblPg4.ColumnCount = 1;
             this.tblPg4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPg4.Controls.Add(this.pnlMainAdicionais, 0, 2);
-            this.tblPg4.Controls.Add(this.pnlBottonAdicionais, 0, 3);
+            this.tblPg4.Controls.Add(this.pnlMainAdicionais, 0, 1);
+            this.tblPg4.Controls.Add(this.pnlBottonAdicionais, 0, 2);
             this.tblPg4.Controls.Add(this.pnlTopAdicionais, 0, 0);
             this.tblPg4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg4.Location = new System.Drawing.Point(0, 0);
             this.tblPg4.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg4.Name = "tblPg4";
-            this.tblPg4.RowCount = 4;
+            this.tblPg4.RowCount = 3;
             this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
-            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
-            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
+            this.tblPg4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tblPg4.Size = new System.Drawing.Size(712, 401);
             this.tblPg4.TabIndex = 9;
             // 
@@ -2771,6 +2818,7 @@ namespace AeX30.Presentation.View
             // 
             this.pnlMainAdicionais.AutoScroll = true;
             this.pnlMainAdicionais.BackColor = System.Drawing.Color.White;
+            this.pnlMainAdicionais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMainAdicionais.Controls.Add(this.txtMensuradoAcumulado);
             this.pnlMainAdicionais.Controls.Add(this.txtContratoTermino);
             this.pnlMainAdicionais.Controls.Add(this.txtContratoInicio);
@@ -2782,10 +2830,10 @@ namespace AeX30.Presentation.View
             this.pnlMainAdicionais.Controls.Add(this.panel27);
             this.pnlMainAdicionais.Controls.Add(this.label142);
             this.pnlMainAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainAdicionais.Location = new System.Drawing.Point(0, 66);
+            this.pnlMainAdicionais.Location = new System.Drawing.Point(0, 52);
             this.pnlMainAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainAdicionais.Name = "pnlMainAdicionais";
-            this.pnlMainAdicionais.Size = new System.Drawing.Size(712, 284);
+            this.pnlMainAdicionais.Size = new System.Drawing.Size(712, 316);
             this.pnlMainAdicionais.TabIndex = 0;
             // 
             // txtMensuradoAcumulado
@@ -2889,25 +2937,48 @@ namespace AeX30.Presentation.View
             // 
             // pnlBottonAdicionais
             // 
+            this.pnlBottonAdicionais.BackColor = System.Drawing.Color.White;
+            this.pnlBottonAdicionais.Controls.Add(this.button2);
             this.pnlBottonAdicionais.Controls.Add(this.btnProximoAdicionais);
             this.pnlBottonAdicionais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonAdicionais.Location = new System.Drawing.Point(0, 350);
+            this.pnlBottonAdicionais.Location = new System.Drawing.Point(0, 368);
             this.pnlBottonAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonAdicionais.Name = "pnlBottonAdicionais";
-            this.pnlBottonAdicionais.Size = new System.Drawing.Size(712, 51);
+            this.pnlBottonAdicionais.Size = new System.Drawing.Size(712, 33);
             this.pnlBottonAdicionais.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.DimGray;
+            this.button2.Location = new System.Drawing.Point(3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 25);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "❮❮  Anterior";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.BackTabControl);
             // 
             // btnProximoAdicionais
             // 
-            this.btnProximoAdicionais.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnProximoAdicionais.BackColor = System.Drawing.Color.Transparent;
+            this.btnProximoAdicionais.FlatAppearance.BorderSize = 0;
             this.btnProximoAdicionais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProximoAdicionais.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProximoAdicionais.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProximoAdicionais.Location = new System.Drawing.Point(513, 13);
+            this.btnProximoAdicionais.ForeColor = System.Drawing.Color.SlateBlue;
+            this.btnProximoAdicionais.Location = new System.Drawing.Point(627, 4);
+            this.btnProximoAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.btnProximoAdicionais.Name = "btnProximoAdicionais";
-            this.btnProximoAdicionais.Size = new System.Drawing.Size(180, 25);
+            this.btnProximoAdicionais.Size = new System.Drawing.Size(80, 25);
             this.btnProximoAdicionais.TabIndex = 0;
-            this.btnProximoAdicionais.Text = "Próximo";
+            this.btnProximoAdicionais.Text = "Próximo ❯❯";
+            this.btnProximoAdicionais.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProximoAdicionais.UseVisualStyleBackColor = false;
             this.btnProximoAdicionais.Click += new System.EventHandler(this.NextTabControl);
             // 
@@ -2967,40 +3038,58 @@ namespace AeX30.Presentation.View
             this.tblPg5.BackColor = System.Drawing.Color.Gainsboro;
             this.tblPg5.ColumnCount = 1;
             this.tblPg5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPg5.Controls.Add(this.pnlBottonFinalizar, 0, 3);
+            this.tblPg5.Controls.Add(this.pnlBottonFinalizar, 0, 2);
             this.tblPg5.Controls.Add(this.pnlTopFinalizar, 0, 0);
-            this.tblPg5.Controls.Add(this.panel19, 0, 2);
+            this.tblPg5.Controls.Add(this.panel19, 0, 1);
             this.tblPg5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPg5.Location = new System.Drawing.Point(0, 0);
             this.tblPg5.Margin = new System.Windows.Forms.Padding(0);
             this.tblPg5.Name = "tblPg5";
-            this.tblPg5.RowCount = 4;
+            this.tblPg5.RowCount = 3;
             this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
-            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
-            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
+            this.tblPg5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tblPg5.Size = new System.Drawing.Size(712, 401);
             this.tblPg5.TabIndex = 1;
             // 
             // pnlBottonFinalizar
             // 
+            this.pnlBottonFinalizar.BackColor = System.Drawing.Color.White;
+            this.pnlBottonFinalizar.Controls.Add(this.button4);
             this.pnlBottonFinalizar.Controls.Add(this.btnNew);
             this.pnlBottonFinalizar.Controls.Add(this.btnSalvarComo);
             this.pnlBottonFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottonFinalizar.Location = new System.Drawing.Point(0, 350);
+            this.pnlBottonFinalizar.Location = new System.Drawing.Point(0, 368);
             this.pnlBottonFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottonFinalizar.Name = "pnlBottonFinalizar";
-            this.pnlBottonFinalizar.Size = new System.Drawing.Size(712, 51);
+            this.pnlBottonFinalizar.Size = new System.Drawing.Size(712, 33);
             this.pnlBottonFinalizar.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.DimGray;
+            this.button4.Location = new System.Drawing.Point(3, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 25);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "❮❮  Anterior";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.BackTabControl);
             // 
             // btnNew
             // 
-            this.btnNew.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnNew.BackColor = System.Drawing.Color.White;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNew.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNew.Location = new System.Drawing.Point(377, 13);
+            this.btnNew.ForeColor = System.Drawing.Color.DimGray;
+            this.btnNew.Location = new System.Drawing.Point(434, 4);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(130, 25);
             this.btnNew.TabIndex = 1;
@@ -3012,14 +3101,16 @@ namespace AeX30.Presentation.View
             // btnSalvarComo
             // 
             this.btnSalvarComo.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvarComo.FlatAppearance.BorderSize = 0;
             this.btnSalvarComo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarComo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvarComo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSalvarComo.Location = new System.Drawing.Point(513, 13);
+            this.btnSalvarComo.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvarComo.Location = new System.Drawing.Point(567, 4);
+            this.btnSalvarComo.Margin = new System.Windows.Forms.Padding(0);
             this.btnSalvarComo.Name = "btnSalvarComo";
-            this.btnSalvarComo.Size = new System.Drawing.Size(180, 25);
+            this.btnSalvarComo.Size = new System.Drawing.Size(140, 25);
             this.btnSalvarComo.TabIndex = 0;
-            this.btnSalvarComo.Text = "Salvar como";
+            this.btnSalvarComo.Text = " Salvar como...";
             this.btnSalvarComo.UseVisualStyleBackColor = false;
             this.btnSalvarComo.Visible = false;
             this.btnSalvarComo.Click += new System.EventHandler(this.btnSalvarComo_Click);
@@ -3072,22 +3163,23 @@ namespace AeX30.Presentation.View
             this.panel19.Controls.Add(this.label156);
             this.panel19.Controls.Add(this.label157);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(0, 66);
+            this.panel19.Location = new System.Drawing.Point(0, 52);
             this.panel19.Margin = new System.Windows.Forms.Padding(0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(712, 284);
+            this.panel19.Size = new System.Drawing.Size(712, 316);
             this.panel19.TabIndex = 5;
             // 
             // pnlMainFinalizar
             // 
             this.pnlMainFinalizar.AutoScroll = true;
             this.pnlMainFinalizar.BackColor = System.Drawing.Color.White;
+            this.pnlMainFinalizar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMainFinalizar.Controls.Add(this.txtLogFinalizar);
             this.pnlMainFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainFinalizar.Location = new System.Drawing.Point(0, 0);
             this.pnlMainFinalizar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainFinalizar.Name = "pnlMainFinalizar";
-            this.pnlMainFinalizar.Size = new System.Drawing.Size(712, 284);
+            this.pnlMainFinalizar.Size = new System.Drawing.Size(712, 316);
             this.pnlMainFinalizar.TabIndex = 4;
             this.pnlMainFinalizar.Visible = false;
             // 
@@ -3143,31 +3235,12 @@ namespace AeX30.Presentation.View
             // pnlAppTopPanel
             // 
             this.pnlAppTopPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlAppTopPanel.BackgroundImage")));
-            this.pnlAppTopPanel.Controls.Add(this.btnBack);
             this.pnlAppTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAppTopPanel.Location = new System.Drawing.Point(0, 0);
             this.pnlAppTopPanel.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAppTopPanel.Name = "pnlAppTopPanel";
             this.pnlAppTopPanel.Size = new System.Drawing.Size(800, 30);
             this.pnlAppTopPanel.TabIndex = 5;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(40, 30);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Visible = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panel4
             // 
@@ -3439,7 +3512,6 @@ namespace AeX30.Presentation.View
             this.pg3.ResumeLayout(false);
             this.tblPg3.ResumeLayout(false);
             this.pnlBottonPfui.ResumeLayout(false);
-            this.pnlBottonPfui.PerformLayout();
             this.pnlTopPfui.ResumeLayout(false);
             this.pnlTopPfui.PerformLayout();
             this.mainPg3.ResumeLayout(false);
@@ -3462,7 +3534,6 @@ namespace AeX30.Presentation.View
             this.panel19.ResumeLayout(false);
             this.pnlMainFinalizar.ResumeLayout(false);
             this.pnlMainFinalizar.PerformLayout();
-            this.pnlAppTopPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -3492,7 +3563,7 @@ namespace AeX30.Presentation.View
         private System.Windows.Forms.Panel pnlMainPfui;
         private System.Windows.Forms.Panel pnlBottonPfui;
         private System.Windows.Forms.TabPage pg2;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnBackPag2;
         private System.Windows.Forms.Button btnProximoPfui;
         private System.Windows.Forms.TableLayoutPanel tblPg2;
         private System.Windows.Forms.Panel pnlBottonConvocacao;
@@ -3741,6 +3812,9 @@ namespace AeX30.Presentation.View
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Label lblVigencia;
+        private System.Windows.Forms.Button btnBackPag3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
     }
 }
 
