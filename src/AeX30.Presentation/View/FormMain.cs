@@ -20,10 +20,6 @@ namespace AeX30.Presentation.View
             tabControl.ItemSize = new System.Drawing.Size(0, 1);
         }
 
-        private void btnIniciar_Click(object sender, EventArgs e)
-        {
-            NextTabControl(sender, e);
-        }
 
         private void btnImportarConvocacao_Click(object sender, EventArgs e)
         {
@@ -42,7 +38,7 @@ namespace AeX30.Presentation.View
                 }
 
                 pnlMainConvocacao.Show();
-                btnProximoConvocacao.Show();
+                btnStartNext.Show();
                 txtRef1.Focus();
             }
         }
@@ -63,7 +59,7 @@ namespace AeX30.Presentation.View
                 }
 
                 pnlMainPfui.Show();
-                btnProximoPfui.Show();
+                btnStartNext.Show();
                 txtPropNome.Focus();
             }
         }
@@ -75,9 +71,19 @@ namespace AeX30.Presentation.View
             {
                 _templatePath = openExcel.FileName;
 
-                txtLogFinalizar.Text = "Caminho do modelo padrão:\r\n" + _templatePath + "\r\n";
+                txtLogFinalizar.AppendText("Caminho do modelo padrão:");
+                txtLogFinalizar.AppendText("\r\n");
+                txtLogFinalizar.AppendText(_templatePath);
+                txtLogFinalizar.AppendText("\r\n");
+                txtLogFinalizar.AppendText("\r\n");
+                txtLogFinalizar.AppendText("Pronto para gravar.");
+                txtLogFinalizar.AppendText("\r\n");
+                txtLogFinalizar.AppendText("\r\n");
+                txtLogFinalizar.AppendText("Aguardando confirmação do usuário...");
+                txtLogFinalizar.AppendText("\r\n");
 
-                txtLogFinalizar.Text += "\r\nPronto para gravar.\r\n\r\nAguardando confirmação do usuário...\r\n";
+
+
                 pnlMainFinalizar.Show();
                 btnSalvarComo.Show();
             }
@@ -111,7 +117,41 @@ namespace AeX30.Presentation.View
 
 
 
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedIndex == 0)
+            {
+                btnStartNext.Text = "Iniciar ❯❯";
+                btnBack.Hide();
+                btnStartNext.Show();
+            }
+            else if (tabControl.SelectedIndex == 1)
+            {
+                btnBack.Show();
+                btnStartNext.Hide();
 
+                if (btnStartNext.Text == "Iniciar ❯❯")
+                    btnStartNext.Text = "Próximo ❯❯";
+            }
+            else if (tabControl.SelectedIndex == 3)
+            {
+                btnStartNext.Show();
+            }
+            else
+            {
+                btnBack.Show();
+                btnStartNext.Hide();
+            }
+
+
+            if ((tabControl.SelectedIndex == 1 && pnlMainConvocacao.Visible == true) ||
+                (tabControl.SelectedIndex == 2 && pnlMainPfui.Visible == true))
+            {
+                btnStartNext.Show();
+            }
+                
+
+        }
 
 
 
@@ -123,6 +163,14 @@ namespace AeX30.Presentation.View
 
         private void BackTabControl(object sender, EventArgs e)
         {
+            //if (tabControl.SelectedIndex == 1)
+            //{
+            //    btnStartNext.Text = "Iniciar ❯❯";
+            //    btnBack.Hide();
+            //}
+           
+            //btnStartNext.Show();
+
             tabControl.SelectTab(tabControl.SelectedIndex - 1);
         }
 
@@ -316,9 +364,6 @@ namespace AeX30.Presentation.View
             return report;
         }
 
-        private void btnBackPag2_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
