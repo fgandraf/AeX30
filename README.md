@@ -1,4 +1,4 @@
-![logo](https://github.com/fgandraf/AeX30/blob/master/assets/Logo.png)
+![logo](/assets/aex30logo.png)
 
 Software assistente desenvolvido para automatizar o processo de preenchimento dos relatórios RAE (Relatório de Acompanhamento de Evolução de Obra) fornecidos pela Caixa Econômica Federal aos Arquitetos e Engenheiros Credenciados.
 
