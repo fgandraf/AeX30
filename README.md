@@ -58,6 +58,9 @@ Por tratar-se de um assistente, o software é bastante intuitivo e autoexplicati
   - #### Escolher o local a ser salvo o Relatório:
     ![12](/assets/screen/screen12.png)
 
+  - #### Tela final:
+    ![12](/assets/screen/screen13.png)
+
 
 ## Observações
 Para verificação do funcionamento do software, é possível utilizar os arquivos de modelo na pasta _Template. Dados sensíveis foram ocultados.
