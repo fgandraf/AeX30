@@ -37,8 +37,6 @@ namespace AeX30.Presentation.View
             this.pnlMainPg1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label102 = new System.Windows.Forms.Label();
-            this.pnlLinhaTitulo = new System.Windows.Forms.Panel();
-            this.label100 = new System.Windows.Forms.Label();
             this.lblPrimeiroParagrafo = new System.Windows.Forms.Label();
             this.pg2 = new System.Windows.Forms.TabPage();
             this.tblPg2 = new System.Windows.Forms.TableLayoutPanel();
@@ -386,8 +384,6 @@ namespace AeX30.Presentation.View
             this.pnlMainPg1.BackColor = System.Drawing.Color.White;
             this.pnlMainPg1.Controls.Add(this.pictureBox1);
             this.pnlMainPg1.Controls.Add(this.label102);
-            this.pnlMainPg1.Controls.Add(this.pnlLinhaTitulo);
-            this.pnlMainPg1.Controls.Add(this.label100);
             this.pnlMainPg1.Controls.Add(this.lblPrimeiroParagrafo);
             this.pnlMainPg1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainPg1.Location = new System.Drawing.Point(0, 0);
@@ -398,10 +394,10 @@ namespace AeX30.Presentation.View
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::AeX30.Presentation.Properties.Resources.aex30logo;
             this.pictureBox1.Location = new System.Drawing.Point(31, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -416,27 +412,6 @@ namespace AeX30.Presentation.View
             this.label102.TabIndex = 7;
             this.label102.Text = "Desenvolvido por Felipe F. Gandra\r\nfgandraf@gmail.com\r\n(14) 99829-0103";
             this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pnlLinhaTitulo
-            // 
-            this.pnlLinhaTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLinhaTitulo.Location = new System.Drawing.Point(31, 78);
-            this.pnlLinhaTitulo.Name = "pnlLinhaTitulo";
-            this.pnlLinhaTitulo.Size = new System.Drawing.Size(230, 1);
-            this.pnlLinhaTitulo.TabIndex = 5;
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.BackColor = System.Drawing.Color.Transparent;
-            this.label100.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label100.ForeColor = System.Drawing.Color.Black;
-            this.label100.Location = new System.Drawing.Point(31, 82);
-            this.label100.Margin = new System.Windows.Forms.Padding(0);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(233, 21);
-            this.label100.TabIndex = 4;
-            this.label100.Text = "Assistente de preenchimento da RAE";
             // 
             // lblPrimeiroParagrafo
             // 
@@ -3634,8 +3609,6 @@ namespace AeX30.Presentation.View
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnlMainPg1;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.Panel pnlLinhaTitulo;
-        private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label lblPrimeiroParagrafo;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
