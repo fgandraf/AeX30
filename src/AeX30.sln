@@ -10,11 +10,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeX30.Services", "AeX30.Services\AeX30.Services.csproj", "{E4AAE190-53BC-4B2A-BEF2-F6E42C96D08C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeX30.Infra", "AeX30.Infra\AeX30.Infra.csproj", "{E80C4AC1-8FE4-4C4A-BDC2-E067BA03DB65}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeX30.UI.UWP", "AeX30.UI\AeX30.UI.UWP\AeX30.UI.UWP.csproj", "{585A2A19-6260-429B-8483-9F8DFBCB0375}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeX30.UI", "AeX30.UI\AeX30.UI\AeX30.UI.csproj", "{0169170C-EC68-49B6-8A19-D2A8317707DC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
