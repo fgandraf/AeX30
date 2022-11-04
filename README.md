@@ -76,7 +76,7 @@ Por tratar-se de um assistente, o software é bastante intuitivo e autoexplicati
 
 ## Observações
 
-Para verificação do funcionamento do software, é possível utilizar os arquivos de modelo na pasta _Template. Dados sensíveis foram ocultados.
+Para verificação do funcionamento do software, é possível utilizar os arquivos de modelo na pasta assets/template. Dados sensíveis foram ocultados.
 
 ## Autor
 
