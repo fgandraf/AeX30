@@ -5,41 +5,34 @@ using AeX30.Infra.Repository;
 namespace AeX30.Services.Services
 {
     public class ProposalService
-    { 
-     
+    {
+        private string[] _cellReference;
+
+
         public Proposal GetProposal(string filePath)
         {
             if (IsValid(filePath))
-            {
-                string footer = FileProperties.GetLeftFooter(filePath);
-                string[] cellReference = new ProposalCellReference().Get(footer);
-                
-                Proposal proposal = new ProposalRepository().GetProposal(filePath, cellReference);
-                
-                proposal.ProponenteCPF = FormatString.CPF(proposal.ProponenteCPF);
-                proposal.ProponenteFone = FormatString.Fone(proposal.ProponenteFone);
-                proposal.ResponsavelCPF = FormatString.CPF(proposal.ResponsavelCPF);
-                proposal.ResponsavelFone = FormatString.Fone(proposal.ResponsavelFone);
-                proposal.ImovelCep = FormatString.CEP(proposal.ImovelCep);
-                proposal.ImovelValorTerreno = FormatString.ValorMonetario(proposal.ImovelValorTerreno);
-                
-                return proposal;
-            }               
-            else
-                return null;
+                return new ProposalRepository().GetProposal(filePath, _cellReference);
+
+            return null;
         }
 
         private bool IsValid(string filePath)
         {
-            string footer = FileProperties.GetLeftFooter(filePath);
-            string sheetName = FileProperties.GetSheetName(filePath);
+            if (File.Exists(filePath))
+            {
+                string footer = FileProperties.GetLeftFooter(filePath);
+                _cellReference = new ProposalCellReference().Get(footer);
+                string sheetName = FileProperties.GetSheetName(filePath);
 
-            bool fileExists = File.Exists(filePath);
-            bool sheetNameIsValid = sheetName == "Proposta" || sheetName == "Proposta_Constr_Individual";
-            bool footerIsValid = footer != "" || footer != null;
-            bool cellReferenceIsValid = new ProposalCellReference().Get(footer) != null;
+                bool sheetNameIsValid = sheetName == "Proposta" || sheetName == "Proposta_Constr_Individual";
+                bool footerIsValid = footer != "" || footer != null;
+                bool cellReferenceIsValid = _cellReference != null;
 
-            return fileExists && sheetNameIsValid && footerIsValid && cellReferenceIsValid;
+                return sheetNameIsValid && footerIsValid && cellReferenceIsValid;
+            }
+
+            return false;
         }
 
     }

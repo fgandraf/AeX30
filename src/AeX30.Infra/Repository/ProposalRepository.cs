@@ -21,7 +21,7 @@ namespace AeX30.Infra.Repository
                 Proposal proposal = new Proposal
                 {
                     Vigencia = sheet.Footer.Left,
-                    Tipo = wbook.GetSheetName(0) == "Proposta" ? "PFUI" : "PCI",
+                    Tipo = wbook.GetSheetName(0),
                     ProponenteNome = sheet.GetRow(new CellReference(cellReference[00]).Row).GetCell(new CellReference(cellReference[00]).Col).ToString().TrimEnd(),
                     ProponenteCPF = sheet.GetRow(new CellReference(cellReference[01]).Row).GetCell(new CellReference(cellReference[01]).Col).ToString(),
                     ProponenteDDD = sheet.GetRow(new CellReference(cellReference[02]).Row).GetCell(new CellReference(cellReference[02]).Col).ToString(),
