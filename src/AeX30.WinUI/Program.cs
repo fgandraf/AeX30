@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace AeX30.Presentation
+namespace AeX30.WinUI
 
 {
     static class Program

@@ -1,5 +1,5 @@
 ﻿
-namespace AeX30.Presentation.View
+namespace AeX30.WinUI.View
 {
     partial class FormMain
     {
@@ -394,7 +394,7 @@ namespace AeX30.Presentation.View
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AeX30.Presentation.Properties.Resources.aex30logo;
+            this.pictureBox1.Image = global::AeX30.WinUI.Properties.Resources.aex30logo;
             this.pictureBox1.Location = new System.Drawing.Point(31, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 86);

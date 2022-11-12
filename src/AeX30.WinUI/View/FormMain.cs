@@ -4,7 +4,7 @@ using AeX30.Domain.Entities;
 using AeX30.Services;
 
 
-namespace AeX30.Presentation.View
+namespace AeX30.WinUI.View
 {
     public partial class FormMain : Form
     {

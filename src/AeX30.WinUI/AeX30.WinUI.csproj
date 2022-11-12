@@ -5,10 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>AeX30</AssemblyName>
-    <RootNamespace>AeX30.Presentation</RootNamespace>
+    <RootNamespace>AeX30.WinUI</RootNamespace>
     <ApplicationIcon>assets\icon.ico</ApplicationIcon>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>AeX30.Presentation.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>AeX30.WinUI.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <Authors>Felipe Gandra</Authors>
     <Version>1.5.0</Version>
