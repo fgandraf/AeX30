@@ -2,7 +2,7 @@
 using System.IO;
 using AeX30.Infra.Repository;
 
-namespace AeX30.Services.Services
+namespace AeX30.Services
 {
     public class ProposalService
     {
@@ -22,7 +22,7 @@ namespace AeX30.Services.Services
             if (File.Exists(filePath))
             {
                 string footer = FileProperties.GetLeftFooter(filePath);
-                _cellReference = new ProposalCellReference().Get(footer);
+                _cellReference = ProposalCellReference.Get(footer);
                 string sheetName = FileProperties.GetSheetName(filePath);
 
                 bool sheetNameIsValid = sheetName == "Proposta" || sheetName == "Proposta_Constr_Individual";
