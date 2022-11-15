@@ -8,10 +8,9 @@ Software assistente desenvolvido para automatizar o processo de preenchimento do
 
 ## Tecnologias
 
-* .NET Core 3.1;
+* .NET 6;
 * Windows Forms;
 * C#;
-* System.IO;
 * NPOI Library.
 
 ## Versão

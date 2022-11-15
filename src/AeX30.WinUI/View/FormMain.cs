@@ -28,14 +28,10 @@ namespace AeX30.WinUI.View
             {
                 Request request = new RequestService().GetRequestNumber(openText.FileName);
 
-                if (request != null)
-                {
-                    PopulateFromRequest(request);
-                }
-                else
-                {
+                if (request is null)
                     MessageBox.Show("Não foi possível ler o arquivo de convocação.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                else
+                    PopulateFromRequest(request);
 
                 pnlMainConvocacao.Show();
                 btnStartNext.Show();
@@ -49,14 +45,10 @@ namespace AeX30.WinUI.View
             {
                 Proposal proposal = new ProposalService().GetProposal(openExcel.FileName);
 
-                if (proposal != null)
-                {
-                    PopulateFromProposal(proposal);
-                }
+                if (proposal is null)
+                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error); 
                 else
-                {
-                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    PopulateFromProposal(proposal);
 
                 pnlMainPfui.Show();
                 btnStartNext.Show();
@@ -71,18 +63,10 @@ namespace AeX30.WinUI.View
             {
                 _templatePath = openExcel.FileName;
 
-                txtLogFinalizar.AppendText("Caminho do modelo padrão:");
-                txtLogFinalizar.AppendText("\r\n");
-                txtLogFinalizar.AppendText(_templatePath);
-                txtLogFinalizar.AppendText("\r\n");
-                txtLogFinalizar.AppendText("\r\n");
-                txtLogFinalizar.AppendText("Pronto para gravar.");
-                txtLogFinalizar.AppendText("\r\n");
-                txtLogFinalizar.AppendText("\r\n");
-                txtLogFinalizar.AppendText("Aguardando confirmação do usuário...");
-                txtLogFinalizar.AppendText("\r\n");
-
-
+                txtLogFinalizar.AppendText("Caminho do modelo padrão:\r\n");
+                txtLogFinalizar.AppendText(_templatePath+ "\r\n\r\n");
+                txtLogFinalizar.AppendText("Pronto para gravar.\r\n\r\n");
+                txtLogFinalizar.AppendText("Aguardando confirmação do usuário...\r\n");
 
                 pnlMainFinalizar.Show();
                 btnSalvarComo.Show();
@@ -163,14 +147,6 @@ namespace AeX30.WinUI.View
 
         private void BackTabControl(object sender, EventArgs e)
         {
-            //if (tabControl.SelectedIndex == 1)
-            //{
-            //    btnStartNext.Text = "Iniciar ❯❯";
-            //    btnBack.Hide();
-            //}
-           
-            //btnStartNext.Show();
-
             tabControl.SelectTab(tabControl.SelectedIndex - 1);
         }
 
