@@ -2,7 +2,7 @@
 using AeX30.Infra.Repository;
 using System.IO;
 
-namespace AeX30.Services
+namespace AeX30.App.Services
 {
     public class RequestService
     {

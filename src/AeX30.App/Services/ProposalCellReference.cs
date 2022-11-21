@@ -1,7 +1,7 @@
 ﻿using System;
-using AeX30.Services.ProposalVersion;
+using AeX30.App.Services.ProposalVersion;
 
-namespace AeX30.Services
+namespace AeX30.App.Services
 {
     public abstract class ProposalCellReference
     {

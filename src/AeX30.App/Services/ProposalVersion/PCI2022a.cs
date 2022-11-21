@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AeX30.Services.ProposalVersion
+namespace AeX30.App.Services.ProposalVersion
 {
     public abstract class PCI2022a
     {

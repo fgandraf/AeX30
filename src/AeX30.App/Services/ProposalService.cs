@@ -2,7 +2,7 @@
 using System.IO;
 using AeX30.Infra.Repository;
 
-namespace AeX30.Services
+namespace AeX30.App.Services
 {
     public class ProposalService
     {
@@ -26,7 +26,7 @@ namespace AeX30.Services
                 string sheetName = FileProperties.GetSheetName(filePath);
 
                 bool sheetNameIsValid = sheetName == "Proposta" || sheetName == "Proposta_Constr_Individual";
-                bool footerIsValid = footer != "" || footer != null;
+                bool footerIsValid = !string.IsNullOrEmpty(footer);
                 bool cellReferenceIsValid = _cellReference != null;
 
                 return sheetNameIsValid && footerIsValid && cellReferenceIsValid;

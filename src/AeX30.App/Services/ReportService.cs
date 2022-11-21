@@ -2,7 +2,7 @@
 using AeX30.Infra.Repository;
 using System.IO;
 
-namespace AeX30.Services
+namespace AeX30.App.Services
 {
     public class ReportService
     {
@@ -24,7 +24,7 @@ namespace AeX30.Services
 
             bool fileExists = File.Exists(filePath);
             bool sheetNameIsValid = sheetName == "RAE";
-            bool footerIsValid = footer != "" || footer != null;
+            bool footerIsValid = !string.IsNullOrEmpty(footer);
 
             return fileExists && sheetNameIsValid && footerIsValid;
         }

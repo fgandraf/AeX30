@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using AeX30.WinUI.View;
 
 namespace AeX30.WinUI
 
@@ -15,7 +16,7 @@ namespace AeX30.WinUI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.FormMain());
+            Application.Run(new FormMain());
         }
     }
 }

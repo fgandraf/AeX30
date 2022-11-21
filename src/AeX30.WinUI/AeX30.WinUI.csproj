@@ -31,8 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AeX30.App\AeX30.App.csproj" />
     <ProjectReference Include="..\AeX30.Domain\AeX30.Domain.csproj" />
-    <ProjectReference Include="..\AeX30.Services\AeX30.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

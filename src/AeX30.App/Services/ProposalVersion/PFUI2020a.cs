@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace AeX30.Services.ProposalVersion
+namespace AeX30.App.Services.ProposalVersion
 {
-    public abstract class PFUI2019
+    public abstract class PFUI2020a
     {
         public static readonly string[] References = new string[]
         {
@@ -30,10 +30,10 @@ namespace AeX30.Services.ProposalVersion
             "AX50",    // [18]  ORI
             "BF50",    // [19]  Comarca
             "BN50",    // [20]  Comarca UF
-           
+
             // SERVIÇOS
             "AR116",   // [21]  Item 17.1
-            "AR118",   // [22]  Item 17.2
+            "AR117",   // [22]  Item 17.2
             "AR130",   // [23]  Item 17.3
             "AR137",   // [24]  Item 17.4
             "AR146",   // [25]  Item 17.5
@@ -54,37 +54,37 @@ namespace AeX30.Services.ProposalVersion
             "AR273",   // [40]  Item 17.20
 
             // CRONOGRAMA FÍSICO FINANCEIRO
-            "AJ311",  // [41]  Pré-Exc.
-            "AL310",  // [42]  Etapa 1
-            "AP310",  // [43]  Etapa 2
-            "AT310",  // [44]  Etapa 3
-            "AX310",  // [45]  Etapa 4
-            "BB310",  // [46]  Etapa 5
-            "BF310",  // [47]  Etapa 6
-            "BJ310",  // [48]  Etapa 7
-            "BN310",  // [48]  Etapa 8
-            "AL350",  // [50]  Etapa 9
-            "AP350",  // [51]  Etapa 10
-            "AT350",  // [52]  Etapa 11
-            "AX350",  // [53]  Etapa 12
-            "BB350",  // [54]  Etapa 13
-            "BF350",  // [55]  Etapa 14
-            "BJ350",  // [56]  Etapa 15
-            "BN350",  // [57]  Etapa 16
-            "AL390",  // [58]  Etapa 17
-            "AP390",  // [59]  Etapa 18
-            "AT390",  // [60]  Etapa 19
-            "AX390",  // [61]  Etapa 20
-            "BB390",  // [62]  Etapa 21
-            "BF390",  // [63]  Etapa 22
-            "BJ390",  // [64]  Etapa 23
-            "BN390",  // [65]  Etapa 24
-            "BN390",  // [66]  Etapa 25
-            "BN390",  // [67]  Etapa 26
-            "BN390",  // [68]  Etapa 27
-            "BN390",  // [69]  Etapa 28
-            "BN390",  // [70]  Etapa 29
-            "BN390"   // [71]  Etapa 30  
+            "AJ312",  // [41]  Pré-Exc.
+            "AL311",  // [42]  Etapa 1
+            "AP311",  // [43]  Etapa 2
+            "AT311",  // [44]  Etapa 3
+            "AX311",  // [45]  Etapa 4
+            "BB311",  // [46]  Etapa 5
+            "BF311",  // [47]  Etapa 6
+            "BJ311",  // [48]  Etapa 7
+            "BN311",  // [48]  Etapa 8
+            "AL351",  // [50]  Etapa 9
+            "AP351",  // [51]  Etapa 10
+            "AT351",  // [52]  Etapa 11
+            "AX351",  // [53]  Etapa 12
+            "BB351",  // [54]  Etapa 13
+            "BF351",  // [55]  Etapa 14
+            "BJ351",  // [56]  Etapa 15
+            "BN351",  // [57]  Etapa 16
+            "AL391",  // [58]  Etapa 17
+            "AP391",  // [59]  Etapa 18
+            "AT391",  // [60]  Etapa 19
+            "AX391",  // [61]  Etapa 20
+            "BB391",  // [62]  Etapa 21
+            "BF391",  // [63]  Etapa 22
+            "BJ391",  // [64]  Etapa 23
+            "BN391",  // [65]  Etapa 24
+            "BN391",  // [66]  Etapa 25
+            "BN391",  // [67]  Etapa 26
+            "BN391",  // [68]  Etapa 27
+            "BN391",  // [69]  Etapa 28
+            "BN391",  // [70]  Etapa 29
+            "BN391"   // [71]  Etapa 30  
         };
     }
 }

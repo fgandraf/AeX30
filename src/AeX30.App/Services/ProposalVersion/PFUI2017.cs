@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace AeX30.Services.ProposalVersion
+namespace AeX30.App.Services.ProposalVersion
 {
-    public abstract class PFUI2018b
+    public abstract class PFUI2017
     {
         public static readonly string[] References = new string[]
         {
@@ -15,7 +15,7 @@ namespace AeX30.Services.ProposalVersion
             "AX42",    // [5]  Nº CAU/CREA/CFT - RTE
             "BD42",    // [6]  UF (RTE)
             "BF42",    // [7]  CPF - RTE
-            "BM42",    // [8]  Telefone - RTE (DDD)
+            "BL42",    // [8]  Telefone - RTE (DDD)
             "BN42",    // [9]  Telefone - RTE
 
             // IDENTIFICAÇÃO DO IMÓVEL PROPOSTO

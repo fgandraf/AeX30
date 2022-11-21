@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using AeX30.Domain.Entities;
-using AeX30.Services;
+using AeX30.App.Services;
 
 
 namespace AeX30.WinUI.View
