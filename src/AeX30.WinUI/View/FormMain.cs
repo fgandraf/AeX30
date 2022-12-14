@@ -46,7 +46,7 @@ namespace AeX30.WinUI.View
                 Proposal proposal = new ProposalService().GetProposal(openExcel.FileName);
 
                 if (proposal is null)
-                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                     PopulateFromProposal(proposal);
 
@@ -64,7 +64,7 @@ namespace AeX30.WinUI.View
                 _templatePath = openExcel.FileName;
 
                 txtLogFinalizar.AppendText("Caminho do modelo padrão:\r\n");
-                txtLogFinalizar.AppendText(_templatePath+ "\r\n\r\n");
+                txtLogFinalizar.AppendText(_templatePath + "\r\n\r\n");
                 txtLogFinalizar.AppendText("Pronto para gravar.\r\n\r\n");
                 txtLogFinalizar.AppendText("Aguardando confirmação do usuário...\r\n");
 
@@ -133,7 +133,7 @@ namespace AeX30.WinUI.View
             {
                 btnStartNext.Show();
             }
-                
+
 
         }
 
@@ -173,7 +173,7 @@ namespace AeX30.WinUI.View
             txtPropDDD.Text = proposal.ProponenteDDD.ToUpper();
             txtPropTelefone.Text = proposal.ProponenteFone.ToUpper();
             txtRTNome.Text = proposal.ResponsavelNome.ToUpper();
-            txtRTCauCrea.Text = proposal.ReponsavelCauCrea.ToUpper();
+            txtRTCauCrea.Text = proposal.ResponsavelCauCrea.ToUpper();
             txtRTUF.Text = proposal.ResponsavelUF.ToUpper();
             txtRTCPF.Text = proposal.ResponsavelCPF.ToUpper();
             txtRTDDD.Text = proposal.ResponsavelDDD.ToUpper();
@@ -253,89 +253,95 @@ namespace AeX30.WinUI.View
 
         private Report PopulateReport()
         {
-            Report report = new Report();
+            var refer = new string[7];
+            refer[1] = txtRef1.Text;
+            refer[2] = txtRef2.Text;
+            refer[3] = txtRef3.Text;
+            refer[4] = txtRef4.Text;
+            refer[5] = txtRef5.Text;
+            refer[6] = txtRef6.Text;
 
-            report.Referencia[1] = txtRef1.Text;
-            report.Referencia[2] = txtRef2.Text;
-            report.Referencia[3] = txtRef3.Text;
-            report.Referencia[4] = txtRef4.Text;
-            report.Referencia[5] = txtRef5.Text;
-            report.Referencia[6] = txtRef6.Text;
-            report.ProponenteNome = txtPropNome.Text;
-            report.ProponenteCPF = txtPropCPF.Text;
-            report.ProponenteDDD = txtPropDDD.Text;
-            report.ProponenteFone = txtPropTelefone.Text;
-            report.ResponsavelNome = txtRTNome.Text;
-            report.ReponsavelCauCrea = txtRTCauCrea.Text;
-            report.ResponsavelUF = txtRTUF.Text;
-            report.ResponsavelCPF = txtRTCPF.Text;
-            report.ResponsavelDDD = txtRTDDD.Text;
-            report.ResponsavelFone = txtRTTelefone.Text;
-            report.ImovelEndereco = txtIdEndereco.Text;
-            report.ImovelComplemento = txtIdComplemento.Text;
-            report.ImovelBairro = txtIdBairro.Text;
-            report.ImovelCep = txtIdCEP.Text;
-            report.ImovelMunicipio = txtIdMunicipio.Text;
-            report.ImovelUF = txtIdUF.Text;
-            report.ImovelValorTerreno = txtTerrenoValorProposto.Text;
-            report.ImovelMatricula = txtTerrenoMatricula.Text;
-            report.ImovelOficio = txtTerrenoOficio.Text;
-            report.ImovelComarca = txtTerrenoComarca.Text;
-            report.ImovelComarcaUF = txtTerrenoUF.Text;
-            report.ServicoItem01 = txt1701.Text;
-            report.ServicoItem02 = txt1702.Text;
-            report.ServicoItem03 = txt1703.Text;
-            report.ServicoItem04 = txt1704.Text;
-            report.ServicoItem05 = txt1705.Text;
-            report.ServicoItem06 = txt1706.Text;
-            report.ServicoItem07 = txt1707.Text;
-            report.ServicoItem08 = txt1708.Text;
-            report.ServicoItem09 = txt1709.Text;
-            report.ServicoItem10 = txt1710.Text;
-            report.ServicoItem11 = txt1711.Text;
-            report.ServicoItem12 = txt1712.Text;
-            report.ServicoItem13 = txt1713.Text;
-            report.ServicoItem14 = txt1714.Text;
-            report.ServicoItem15 = txt1715.Text;
-            report.ServicoItem16 = txt1716.Text;
-            report.ServicoItem17 = txt1717.Text;
-            report.ServicoItem18 = txt1718.Text;
-            report.ServicoItem19 = txt1719.Text;
-            report.ServicoItem20 = txt1720.Text;
-            report.MensuradoAcumulado = txtMensuradoAcumulado.Text;
-            report.ContratoInicio = txtContratoInicio.Text;
-            report.ContratoTermino = txtContratoTermino.Text;
-            report.CronogramaExecutado = txtExecutado.Text;
-            report.CronogramaEtapa1 = txtParcela1.Text;
-            report.CronogramaEtapa2 = txtParcela2.Text;
-            report.CronogramaEtapa3 = txtParcela3.Text;
-            report.CronogramaEtapa4 = txtParcela4.Text;
-            report.CronogramaEtapa5 = txtParcela5.Text;
-            report.CronogramaEtapa6 = txtParcela6.Text;
-            report.CronogramaEtapa7 = txtParcela7.Text;
-            report.CronogramaEtapa8 = txtParcela8.Text;
-            report.CronogramaEtapa9 = txtParcela9.Text;
-            report.CronogramaEtapa10 = txtParcela10.Text;
-            report.CronogramaEtapa11 = txtParcela11.Text;
-            report.CronogramaEtapa12 = txtParcela12.Text;
-            report.CronogramaEtapa13 = txtParcela13.Text;
-            report.CronogramaEtapa14 = txtParcela14.Text;
-            report.CronogramaEtapa15 = txtParcela15.Text;
-            report.CronogramaEtapa16 = txtParcela16.Text;
-            report.CronogramaEtapa17 = txtParcela17.Text;
-            report.CronogramaEtapa18 = txtParcela18.Text;
-            report.CronogramaEtapa19 = txtParcela19.Text;
-            report.CronogramaEtapa20 = txtParcela20.Text;
-            report.CronogramaEtapa21 = txtParcela21.Text;
-            report.CronogramaEtapa22 = txtParcela22.Text;
-            report.CronogramaEtapa23 = txtParcela23.Text;
-            report.CronogramaEtapa24 = txtParcela24.Text;
-            report.CronogramaEtapa25 = txtParcela25.Text;
-            report.CronogramaEtapa26 = txtParcela26.Text;
-            report.CronogramaEtapa27 = txtParcela27.Text;
-            report.CronogramaEtapa28 = txtParcela28.Text;
-            report.CronogramaEtapa29 = txtParcela29.Text;
-            report.CronogramaEtapa30 = txtParcela30.Text;
+
+            Report report = new Report(
+            referencia: refer,
+            mensuradoAcumulado: txtMensuradoAcumulado.Text,
+            contratoInicio: txtContratoInicio.Text,
+            contratoTermino: txtContratoTermino.Text,
+            tipo: string.Empty,
+            vigencia: string.Empty,
+            proponenteNome: txtPropNome.Text,
+            proponenteCPF: txtPropCPF.Text,
+            proponenteDDD: txtPropDDD.Text,
+            proponenteFone: txtPropTelefone.Text,
+            responsavelNome: txtRTNome.Text,
+            responsavelCauCrea: txtRTCauCrea.Text,
+            responsavelUF: txtRTUF.Text,
+            responsavelCPF: txtRTCPF.Text,
+            responsavelDDD: txtRTDDD.Text,
+            responsavelFone: txtRTTelefone.Text,
+            imovelEndereco: txtIdEndereco.Text,
+            imovelComplemento: txtIdComplemento.Text,
+            imovelBairro: txtIdBairro.Text,
+            imovelCep: txtIdCEP.Text,
+            imovelMunicipio: txtIdMunicipio.Text,
+            imovelUF: txtIdUF.Text,
+            imovelValorTerreno: txtTerrenoValorProposto.Text,
+            imovelMatricula: txtTerrenoMatricula.Text,
+            imovelOficio: txtTerrenoOficio.Text,
+            imovelComarca: txtTerrenoComarca.Text,
+            imovelComarcaUF: txtTerrenoUF.Text,
+            servicoItem01: txt1701.Text,
+            servicoItem02: txt1702.Text,
+            servicoItem03: txt1703.Text,
+            servicoItem04: txt1704.Text,
+            servicoItem05: txt1705.Text,
+            servicoItem06: txt1706.Text,
+            servicoItem07: txt1707.Text,
+            servicoItem08: txt1708.Text,
+            servicoItem09: txt1709.Text,
+            servicoItem10: txt1710.Text,
+            servicoItem11: txt1711.Text,
+            servicoItem12: txt1712.Text,
+            servicoItem13: txt1713.Text,
+            servicoItem14: txt1714.Text,
+            servicoItem15: txt1715.Text,
+            servicoItem16: txt1716.Text,
+            servicoItem17: txt1717.Text,
+            servicoItem18: txt1718.Text,
+            servicoItem19: txt1719.Text,
+            servicoItem20: txt1720.Text,
+            cronogramaExecutado: txtExecutado.Text,
+            cronogramaEtapa1: txtParcela1.Text,
+            cronogramaEtapa2: txtParcela2.Text,
+            cronogramaEtapa3: txtParcela3.Text,
+            cronogramaEtapa4: txtParcela4.Text,
+            cronogramaEtapa5: txtParcela5.Text,
+            cronogramaEtapa6: txtParcela6.Text,
+            cronogramaEtapa7: txtParcela7.Text,
+            cronogramaEtapa8: txtParcela8.Text,
+            cronogramaEtapa9: txtParcela9.Text,
+            cronogramaEtapa10: txtParcela10.Text,
+            cronogramaEtapa11: txtParcela11.Text,
+            cronogramaEtapa12: txtParcela12.Text,
+            cronogramaEtapa13: txtParcela13.Text,
+            cronogramaEtapa14: txtParcela14.Text,
+            cronogramaEtapa15: txtParcela15.Text,
+            cronogramaEtapa16: txtParcela16.Text,
+            cronogramaEtapa17: txtParcela17.Text,
+            cronogramaEtapa18: txtParcela18.Text,
+            cronogramaEtapa19: txtParcela19.Text,
+            cronogramaEtapa20: txtParcela20.Text,
+            cronogramaEtapa21: txtParcela21.Text,
+            cronogramaEtapa22: txtParcela22.Text,
+            cronogramaEtapa23: txtParcela23.Text,
+            cronogramaEtapa24: txtParcela24.Text,
+            cronogramaEtapa25: txtParcela25.Text,
+            cronogramaEtapa26: txtParcela26.Text,
+            cronogramaEtapa27: txtParcela27.Text,
+            cronogramaEtapa28: txtParcela28.Text,
+            cronogramaEtapa29: txtParcela29.Text,
+            cronogramaEtapa30: txtParcela30.Text
+                );
 
             return report;
         }

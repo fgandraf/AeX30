@@ -122,7 +122,7 @@ namespace AeX30.Infra.Repository
                 sheet.GetRow(new CellReference(cellReference[9]).Row).GetCell(new CellReference(cellReference[9]).Col).SetCellValue(report.ProponenteDDD);
                 sheet.GetRow(new CellReference(cellReference[10]).Row).GetCell(new CellReference(cellReference[10]).Col).SetCellValue(report.ProponenteFone);
                 sheet.GetRow(new CellReference(cellReference[11]).Row).GetCell(new CellReference(cellReference[11]).Col).SetCellValue(report.ResponsavelNome);
-                sheet.GetRow(new CellReference(cellReference[12]).Row).GetCell(new CellReference(cellReference[12]).Col).SetCellValue(report.ReponsavelCauCrea);
+                sheet.GetRow(new CellReference(cellReference[12]).Row).GetCell(new CellReference(cellReference[12]).Col).SetCellValue(report.ResponsavelCauCrea);
                 sheet.GetRow(new CellReference(cellReference[13]).Row).GetCell(new CellReference(cellReference[13]).Col).SetCellValue(report.ResponsavelUF);
                 sheet.GetRow(new CellReference(cellReference[14]).Row).GetCell(new CellReference(cellReference[14]).Col).SetCellValue(report.ResponsavelCPF);
                 sheet.GetRow(new CellReference(cellReference[15]).Row).GetCell(new CellReference(cellReference[15]).Col).SetCellValue(report.ResponsavelDDD);

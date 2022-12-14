@@ -4,10 +4,10 @@ namespace AeX30.Domain.Entities
 {
     public class Request
     {
-        public Request()
+        public Request(string[] referencia)
         {
-            Referencia = new string[7];
+            Referencia = referencia;
         }
-        public string[] Referencia { get; set; }
+        public string[] Referencia { get; private set; }
     }
 }
