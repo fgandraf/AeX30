@@ -91,9 +91,7 @@ namespace AeX30.Domain.Entities
             get { return _proponenteCPF; }
             set
             {
-                if (value == "")
-                    _proponenteCPF = value;
-                else
+                if (!string.IsNullOrEmpty(value))
                 {
                     value = value.Split(',')[0];
                     value = new Regex(@"[^\d]").Replace(value, "");
@@ -111,9 +109,7 @@ namespace AeX30.Domain.Entities
             get { return _proponenteFone; }
             set
             {
-                if (value == "")
-                    _proponenteFone = value;
-                else
+                if (!string.IsNullOrEmpty(value))
                 {
                     value = new Regex(@"[^\d]").Replace(value, "");
                     long phoneNumber = Convert.ToInt64(value);
@@ -135,9 +131,7 @@ namespace AeX30.Domain.Entities
             get { return _responsavelCPF; }
             set
             {
-                if (value == "")
-                    _responsavelCPF = value;
-                else
+                if (!string.IsNullOrEmpty(value))
                 {
                     value = value.Split(',')[0];
                     value = new Regex(@"[^\d]").Replace(value, "");
@@ -155,9 +149,7 @@ namespace AeX30.Domain.Entities
             get { return _responsavelFone; }
             set
             {
-                if (value == "")
-                    _responsavelFone = value;
-                else
+                if (!string.IsNullOrEmpty(value))
                 {
                     value = new Regex(@"[^\d]").Replace(value, "");
                     long phoneNumber = Convert.ToInt64(value);
@@ -179,9 +171,7 @@ namespace AeX30.Domain.Entities
             get { return _imovelCep; }
             set
             {
-                if (value == "")
-                    _imovelCep = value;
-                else
+                if (!string.IsNullOrEmpty(value))
                 {
                     value = new Regex(@"[^\d]").Replace(value, "");
                     long cepNumber = Convert.ToInt64(value);
@@ -198,9 +188,7 @@ namespace AeX30.Domain.Entities
             get { return _valorTerreno; }
             set
             {
-                if (value == "")
-                    _valorTerreno = value;
-                else
+                if (!string.IsNullOrEmpty(value))
                 {
                     value = new Regex(@"[^\d]").Replace(value, "");
                     long number = Convert.ToInt64(value);

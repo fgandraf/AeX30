@@ -235,7 +235,7 @@ namespace AeX30.WinUI.View
             txtParcela23.Text = proposal.CronogramaEtapa23;
             txtParcela24.Text = proposal.CronogramaEtapa24;
             txtParcela25.Text = proposal.CronogramaEtapa25;
-            txtParcela26.Text = proposal.CronogramaEtapa29;
+            txtParcela26.Text = proposal.CronogramaEtapa26;
             txtParcela27.Text = proposal.CronogramaEtapa27;
             txtParcela28.Text = proposal.CronogramaEtapa28;
             txtParcela29.Text = proposal.CronogramaEtapa29;
