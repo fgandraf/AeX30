@@ -1,5 +1,6 @@
 ﻿using AeX30.App.Services;
 using AeX30.Domain.Entities;
+using AeX30.Domain.ValueObject;
 using System;
 using System.Windows.Forms;
 
@@ -169,15 +170,15 @@ namespace AeX30.WinUI.View
             lblVigencia.Show();
 
             txtPropNome.Text = proposal.ProponenteNome.ToUpper();
-            txtPropCPF.Text = proposal.ProponenteCPF.ToUpper();
+            txtPropCPF.Text = proposal.ProponenteCPF.Number;
             txtPropDDD.Text = proposal.ProponenteDDD.ToUpper();
-            txtPropTelefone.Text = proposal.ProponenteFone.ToUpper();
+            txtPropTelefone.Text = proposal.ProponenteFone.Number;
             txtRTNome.Text = proposal.ResponsavelNome.ToUpper();
             txtRTCauCrea.Text = proposal.ResponsavelCauCrea.ToUpper();
             txtRTUF.Text = proposal.ResponsavelUF.ToUpper();
-            txtRTCPF.Text = proposal.ResponsavelCPF.ToUpper();
+            txtRTCPF.Text = proposal.ResponsavelCPF.Number;
             txtRTDDD.Text = proposal.ResponsavelDDD.ToUpper();
-            txtRTTelefone.Text = proposal.ResponsavelFone.ToUpper();
+            txtRTTelefone.Text = proposal.ResponsavelFone.Number;
             txtIdEndereco.Text = proposal.ImovelEndereco.ToUpper();
             txtIdComplemento.Text = proposal.ImovelComplemento.ToUpper();
             txtIdCEP.Text = proposal.ImovelCep.ToUpper();
@@ -263,9 +264,9 @@ namespace AeX30.WinUI.View
             Request request = new Request(refer);
 
             Proposal proposal = new Proposal(tipo:string.Empty, vigencia:string.Empty, proponenteNome:txtPropNome.Text,
-                proponenteCPF:txtPropCPF.Text, proponenteDDD:txtPropDDD.Text, proponenteFone:txtPropTelefone.Text, 
+                proponenteCPF:new Document(txtPropCPF.Text), proponenteDDD:txtPropDDD.Text, proponenteFone:new PhoneNumber(txtPropTelefone.Text), 
                 responsavelNome:txtRTNome.Text, responsavelCauCrea:txtRTCauCrea.Text, responsavelUF: txtRTUF.Text, 
-                responsavelCPF:txtRTCPF.Text, responsavelDDD:txtRTDDD.Text, responsavelFone:txtRTTelefone.Text,
+                responsavelCPF:new Document(txtRTCPF.Text), responsavelDDD:txtRTDDD.Text, responsavelFone:new PhoneNumber(txtRTTelefone.Text),
                 imovelEndereco:txtIdEndereco.Text, imovelComplemento:txtIdComplemento.Text,imovelCep:txtIdCEP.Text,
                 imovelBairro:txtIdBairro.Text, imovelMunicipio:txtIdMunicipio.Text, imovelUF:txtIdUF.Text,
                 imovelValorTerreno: txtTerrenoValorProposto.Text,

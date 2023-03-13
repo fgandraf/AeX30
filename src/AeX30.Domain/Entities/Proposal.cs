@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AeX30.Domain.ValueObject;
+using System;
 using System.Text.RegularExpressions;
 
 
@@ -7,20 +8,20 @@ namespace AeX30.Domain.Entities
 {
     public class Proposal
     {
-        public Proposal(string tipo, string vigencia, string proponenteNome, string proponenteCPF, string proponenteDDD, string proponenteFone, string responsavelNome, string responsavelCauCrea, string responsavelUF, string responsavelCPF, string responsavelDDD, string responsavelFone, string imovelEndereco, string imovelComplemento, string imovelCep, string imovelBairro, string imovelMunicipio, string imovelUF, string imovelValorTerreno, string imovelMatricula, string imovelOficio, string imovelComarca, string imovelComarcaUF, string servicoItem01, string servicoItem02, string servicoItem03, string servicoItem04, string servicoItem05, string servicoItem06, string servicoItem07, string servicoItem08, string servicoItem09, string servicoItem10, string servicoItem11, string servicoItem12, string servicoItem13, string servicoItem14, string servicoItem15, string servicoItem16, string servicoItem17, string servicoItem18, string servicoItem19, string servicoItem20, string cronogramaExecutado, string cronogramaEtapa1, string cronogramaEtapa2, string cronogramaEtapa3, string cronogramaEtapa4, string cronogramaEtapa5, string cronogramaEtapa6, string cronogramaEtapa7, string cronogramaEtapa8, string cronogramaEtapa9, string cronogramaEtapa10, string cronogramaEtapa11, string cronogramaEtapa12, string cronogramaEtapa13, string cronogramaEtapa14, string cronogramaEtapa15, string cronogramaEtapa16, string cronogramaEtapa17, string cronogramaEtapa18, string cronogramaEtapa19, string cronogramaEtapa20, string cronogramaEtapa21, string cronogramaEtapa22, string cronogramaEtapa23, string cronogramaEtapa24, string cronogramaEtapa25, string cronogramaEtapa26, string cronogramaEtapa27, string cronogramaEtapa28, string cronogramaEtapa29, string cronogramaEtapa30)
+        public Proposal(string tipo, string vigencia, string proponenteNome, Document proponenteCPF, string proponenteDDD, PhoneNumber proponenteFone, string responsavelNome, string responsavelCauCrea, string responsavelUF, Document responsavelCPF, string responsavelDDD, PhoneNumber responsavelFone, string imovelEndereco, string imovelComplemento, string imovelCep, string imovelBairro, string imovelMunicipio, string imovelUF, string imovelValorTerreno, string imovelMatricula, string imovelOficio, string imovelComarca, string imovelComarcaUF, string servicoItem01, string servicoItem02, string servicoItem03, string servicoItem04, string servicoItem05, string servicoItem06, string servicoItem07, string servicoItem08, string servicoItem09, string servicoItem10, string servicoItem11, string servicoItem12, string servicoItem13, string servicoItem14, string servicoItem15, string servicoItem16, string servicoItem17, string servicoItem18, string servicoItem19, string servicoItem20, string cronogramaExecutado, string cronogramaEtapa1, string cronogramaEtapa2, string cronogramaEtapa3, string cronogramaEtapa4, string cronogramaEtapa5, string cronogramaEtapa6, string cronogramaEtapa7, string cronogramaEtapa8, string cronogramaEtapa9, string cronogramaEtapa10, string cronogramaEtapa11, string cronogramaEtapa12, string cronogramaEtapa13, string cronogramaEtapa14, string cronogramaEtapa15, string cronogramaEtapa16, string cronogramaEtapa17, string cronogramaEtapa18, string cronogramaEtapa19, string cronogramaEtapa20, string cronogramaEtapa21, string cronogramaEtapa22, string cronogramaEtapa23, string cronogramaEtapa24, string cronogramaEtapa25, string cronogramaEtapa26, string cronogramaEtapa27, string cronogramaEtapa28, string cronogramaEtapa29, string cronogramaEtapa30)
         {
             Tipo = tipo == "Proposta" ? "PFUI" : "PCI";
             Vigencia = vigencia;
             ProponenteNome = proponenteNome;
-            ProponenteCPF = FormatedCPF(proponenteCPF);
+            ProponenteCPF = proponenteCPF;
             ProponenteDDD = proponenteDDD;
-            ProponenteFone = FormatedPhoneNumber(proponenteFone);
+            ProponenteFone = proponenteFone;
             ResponsavelNome = responsavelNome;
             ResponsavelCauCrea = responsavelCauCrea;
             ResponsavelUF = responsavelUF;
-            ResponsavelCPF = FormatedCPF(responsavelCPF);
+            ResponsavelCPF = responsavelCPF;
             ResponsavelDDD = responsavelDDD;
-            ResponsavelFone = FormatedPhoneNumber(responsavelFone);
+            ResponsavelFone = responsavelFone;
             ImovelEndereco = imovelEndereco;
             ImovelComplemento = imovelComplemento;
             ImovelCep = FormatedZipCode(imovelCep);
@@ -89,15 +90,15 @@ namespace AeX30.Domain.Entities
         public string Tipo { get; private set; }
         public string Vigencia { get; private set; }
         public string ProponenteNome { get; private set; }
-        public string ProponenteCPF { get; private set; }
+        public Document ProponenteCPF { get; private set; }
         public string ProponenteDDD { get; private set; }
-        public string ProponenteFone { get; private set; }
+        public PhoneNumber ProponenteFone { get; private set; }
         public string ResponsavelNome { get; private set; }
         public string ResponsavelCauCrea { get; private set; }
         public string ResponsavelUF { get; private set; }
-        public string ResponsavelCPF { get; private set; }
+        public Document ResponsavelCPF { get; private set; }
         public string ResponsavelDDD { get; private set; }
-        public string ResponsavelFone { get; private set; }
+        public PhoneNumber ResponsavelFone { get; private set; }
         public string ImovelEndereco { get; private set; }
         public string ImovelComplemento { get; private set; }
         public string ImovelCep { get; private set; }
@@ -164,41 +165,7 @@ namespace AeX30.Domain.Entities
 
 
 
-        protected string FormatedCPF(string cpf)
-        {
-            string formatedCpf = string.Empty;
 
-            if (!string.IsNullOrEmpty(cpf))
-            {
-                cpf = cpf.Split(',')[0];
-                cpf = new Regex(@"[^\d]").Replace(cpf, "");
-                long number = Convert.ToInt64(cpf);
-
-                formatedCpf = number.ToString(@"000\.000\.000\-00");
-            }
-
-            return formatedCpf;
-        }
-
-        protected string FormatedPhoneNumber(string phone)
-        {
-            string formatedPhoneNumber = string.Empty;
-
-            if (!string.IsNullOrEmpty(phone))
-            {
-                phone = new Regex(@"[^\d]").Replace(phone, "");
-                long phoneNumber = Convert.ToInt64(phone);
-
-                if (phoneNumber.ToString().Length == 8)
-                    formatedPhoneNumber = phoneNumber.ToString(@"0000\-0000");
-                else if (phoneNumber.ToString().Length == 9)
-                    formatedPhoneNumber = phoneNumber.ToString(@"00000\-0000");
-                else
-                    formatedPhoneNumber = phone;
-            }
-
-            return formatedPhoneNumber;
-        }
 
         protected string FormatedZipCode(string zip)
         {
