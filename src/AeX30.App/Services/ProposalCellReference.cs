@@ -23,6 +23,7 @@ namespace AeX30.App.Services
 
 
                 case "&9Vigência: 22/05/2018":
+                case "Vigência: 22/05/2018":
                     return PFUI2018c.References;
 
 

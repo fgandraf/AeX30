@@ -27,7 +27,7 @@ namespace AeX30.Domain.Entities
             ImovelBairro = imovelBairro;
             ImovelMunicipio = imovelMunicipio;
             ImovelUF = imovelUF;
-            ImovelValorTerreno = FormatedCurrencyValue(imovelValorTerreno);
+            ImovelValorTerreno = imovelValorTerreno;
             ImovelMatricula = imovelMatricula;
             ImovelOficio = imovelOficio;
             ImovelComarca = imovelComarca;
@@ -86,80 +86,80 @@ namespace AeX30.Domain.Entities
         }
 
 
-        public string Tipo { get; protected set; }
-        public string Vigencia { get; protected set; }
-        public string ProponenteNome { get; protected set; }
-        public string ProponenteCPF { get; protected set; }
-        public string ProponenteDDD { get; protected set; }
-        public string ProponenteFone { get; protected set; }
-        public string ResponsavelNome { get; protected set; }
-        public string ResponsavelCauCrea { get; protected set; }
-        public string ResponsavelUF { get; protected set; }
-        public string ResponsavelCPF { get; protected set; }
-        public string ResponsavelDDD { get; protected set; }
-        public string ResponsavelFone { get; protected set; }
-        public string ImovelEndereco { get; protected set; }
-        public string ImovelComplemento { get; protected set; }
-        public string ImovelCep { get; protected set; }
-        public string ImovelBairro { get; protected set; }
-        public string ImovelMunicipio { get; protected set; }
-        public string ImovelUF { get; protected set; }
-        public string ImovelValorTerreno { get; protected set; }
-        public string ImovelMatricula { get; protected set; }
-        public string ImovelOficio { get; protected set; }
-        public string ImovelComarca { get; protected set; }
-        public string ImovelComarcaUF { get; protected set; }
-        public string ServicoItem01 { get; protected set; }
-        public string ServicoItem02 { get; protected set; }
-        public string ServicoItem03 { get; protected set; }
-        public string ServicoItem04 { get; protected set; }
-        public string ServicoItem05 { get; protected set; }
-        public string ServicoItem06 { get; protected set; }
-        public string ServicoItem07 { get; protected set; }
-        public string ServicoItem08 { get; protected set; }
-        public string ServicoItem09 { get; protected set; }
-        public string ServicoItem10 { get; protected set; }
-        public string ServicoItem11 { get; protected set; }
-        public string ServicoItem12 { get; protected set; }
-        public string ServicoItem13 { get; protected set; }
-        public string ServicoItem14 { get; protected set; }
-        public string ServicoItem15 { get; protected set; }
-        public string ServicoItem16 { get; protected set; }
-        public string ServicoItem17 { get; protected set; }
-        public string ServicoItem18 { get; protected set; }
-        public string ServicoItem19 { get; protected set; }
-        public string ServicoItem20 { get; protected set; }
-        public string CronogramaExecutado { get; protected set; }
-        public string CronogramaEtapa1 { get; protected set; }
-        public string CronogramaEtapa2 { get; protected set; }
-        public string CronogramaEtapa3 { get; protected set; }
-        public string CronogramaEtapa4 { get; protected set; }
-        public string CronogramaEtapa5 { get; protected set; }
-        public string CronogramaEtapa6 { get; protected set; }
-        public string CronogramaEtapa7 { get; protected set; }
-        public string CronogramaEtapa8 { get; protected set; }
-        public string CronogramaEtapa9 { get; protected set; }
-        public string CronogramaEtapa10 { get; protected set; }
-        public string CronogramaEtapa11 { get; protected set; }
-        public string CronogramaEtapa12 { get; protected set; }
-        public string CronogramaEtapa13 { get; protected set; }
-        public string CronogramaEtapa14 { get; protected set; }
-        public string CronogramaEtapa15 { get; protected set; }
-        public string CronogramaEtapa16 { get; protected set; }
-        public string CronogramaEtapa17 { get; protected set; }
-        public string CronogramaEtapa18 { get; protected set; }
-        public string CronogramaEtapa19 { get; protected set; }
-        public string CronogramaEtapa20 { get; protected set; }
-        public string CronogramaEtapa21 { get; protected set; }
-        public string CronogramaEtapa22 { get; protected set; }
-        public string CronogramaEtapa23 { get; protected set; }
-        public string CronogramaEtapa24 { get; protected set; }
-        public string CronogramaEtapa25 { get; protected set; }
-        public string CronogramaEtapa26 { get; protected set; }
-        public string CronogramaEtapa27 { get; protected set; }
-        public string CronogramaEtapa28 { get; protected set; }
-        public string CronogramaEtapa29 { get; protected set; }
-        public string CronogramaEtapa30 { get; protected set; }
+        public string Tipo { get; private set; }
+        public string Vigencia { get; private set; }
+        public string ProponenteNome { get; private set; }
+        public string ProponenteCPF { get; private set; }
+        public string ProponenteDDD { get; private set; }
+        public string ProponenteFone { get; private set; }
+        public string ResponsavelNome { get; private set; }
+        public string ResponsavelCauCrea { get; private set; }
+        public string ResponsavelUF { get; private set; }
+        public string ResponsavelCPF { get; private set; }
+        public string ResponsavelDDD { get; private set; }
+        public string ResponsavelFone { get; private set; }
+        public string ImovelEndereco { get; private set; }
+        public string ImovelComplemento { get; private set; }
+        public string ImovelCep { get; private set; }
+        public string ImovelBairro { get; private set; }
+        public string ImovelMunicipio { get; private set; }
+        public string ImovelUF { get; private set; }
+        public string ImovelValorTerreno { get; private set; }
+        public string ImovelMatricula { get; private set; }
+        public string ImovelOficio { get; private set; }
+        public string ImovelComarca { get; private set; }
+        public string ImovelComarcaUF { get; private set; }
+        public string ServicoItem01 { get; private set; }
+        public string ServicoItem02 { get; private set; }
+        public string ServicoItem03 { get; private set; }
+        public string ServicoItem04 { get; private set; }
+        public string ServicoItem05 { get; private set; }
+        public string ServicoItem06 { get; private set; }
+        public string ServicoItem07 { get; private set; }
+        public string ServicoItem08 { get; private set; }
+        public string ServicoItem09 { get; private set; }
+        public string ServicoItem10 { get; private set; }
+        public string ServicoItem11 { get; private set; }
+        public string ServicoItem12 { get; private set; }
+        public string ServicoItem13 { get; private set; }
+        public string ServicoItem14 { get; private set; }
+        public string ServicoItem15 { get; private set; }
+        public string ServicoItem16 { get; private set; }
+        public string ServicoItem17 { get; private set; }
+        public string ServicoItem18 { get; private set; }
+        public string ServicoItem19 { get; private set; }
+        public string ServicoItem20 { get; private set; }
+        public string CronogramaExecutado { get; private set; }
+        public string CronogramaEtapa1 { get; private set; }
+        public string CronogramaEtapa2 { get; private set; }
+        public string CronogramaEtapa3 { get; private set; }
+        public string CronogramaEtapa4 { get; private set; }
+        public string CronogramaEtapa5 { get; private set; }
+        public string CronogramaEtapa6 { get; private set; }
+        public string CronogramaEtapa7 { get; private set; }
+        public string CronogramaEtapa8 { get; private set; }
+        public string CronogramaEtapa9 { get; private set; }
+        public string CronogramaEtapa10 { get; private set; }
+        public string CronogramaEtapa11 { get; private set; }
+        public string CronogramaEtapa12 { get; private set; }
+        public string CronogramaEtapa13 { get; private set; }
+        public string CronogramaEtapa14 { get; private set; }
+        public string CronogramaEtapa15 { get; private set; }
+        public string CronogramaEtapa16 { get; private set; }
+        public string CronogramaEtapa17 { get; private set; }
+        public string CronogramaEtapa18 { get; private set; }
+        public string CronogramaEtapa19 { get; private set; }
+        public string CronogramaEtapa20 { get; private set; }
+        public string CronogramaEtapa21 { get; private set; }
+        public string CronogramaEtapa22 { get; private set; }
+        public string CronogramaEtapa23 { get; private set; }
+        public string CronogramaEtapa24 { get; private set; }
+        public string CronogramaEtapa25 { get; private set; }
+        public string CronogramaEtapa26 { get; private set; }
+        public string CronogramaEtapa27 { get; private set; }
+        public string CronogramaEtapa28 { get; private set; }
+        public string CronogramaEtapa29 { get; private set; }
+        public string CronogramaEtapa30 { get; private set; }
 
 
 
@@ -215,19 +215,19 @@ namespace AeX30.Domain.Entities
             return formatedZipCode;
         }
 
-        protected string FormatedCurrencyValue(string currency)
+        public string FormatedCurrencyValue(string currency)
         {
             string formatedCurrency = string.Empty;
 
             if (!string.IsNullOrEmpty(currency))
             {
-                currency = new Regex(@"[^\d]").Replace(currency, "");
+                currency = new Regex(@"^\d$[,][.]").Replace(currency, "");
                 long number = Convert.ToInt64(currency);
 
                 formatedCurrency = $"{number:N2}";
             }
-
             return formatedCurrency;
+
         }
 
 
