@@ -113,7 +113,7 @@ namespace AeX30.Infra.Repository
                 {
                     wbook = new HSSFWorkbook(templateFile);
                     ISheet sheet = wbook.GetSheet("RAE");
-                    for (int i = 0; i < 80; i++)
+                    for (int i = 0; i < values.Length; i++)
                         sheet.GetRow(new CellReference(cellReference[i]).Row).GetCell(new CellReference(cellReference[i]).Col).SetCellValue(values[i]);
                 }
 
