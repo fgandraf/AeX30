@@ -181,11 +181,11 @@ namespace AeX30.WinUI.View
             txtRTTelefone.Text = proposal.ResponsavelFone.Number;
             txtIdEndereco.Text = proposal.ImovelEndereco.ToUpper();
             txtIdComplemento.Text = proposal.ImovelComplemento.ToUpper();
-            txtIdCEP.Text = proposal.ImovelCep.ToUpper();
+            txtIdCEP.Text = proposal.ImovelCep.Number;
             txtIdBairro.Text = proposal.ImovelBairro.ToUpper();
             txtIdMunicipio.Text = proposal.ImovelMunicipio.ToUpper();
             txtIdUF.Text = proposal.ImovelUF.ToUpper();
-            txtTerrenoValorProposto.Text = proposal.FormatedCurrencyValue(proposal.ImovelValorTerreno);
+            txtTerrenoValorProposto.Text = proposal.ImovelValorTerreno.Number;
             txtTerrenoMatricula.Text = proposal.ImovelMatricula.ToUpper();
             txtTerrenoOficio.Text = proposal.ImovelOficio.ToUpper();
             txtTerrenoComarca.Text = proposal.ImovelComarca.ToUpper();
@@ -264,12 +264,12 @@ namespace AeX30.WinUI.View
             Request request = new Request(refer);
 
             Proposal proposal = new Proposal(tipo:string.Empty, vigencia:string.Empty, proponenteNome:txtPropNome.Text,
-                proponenteCPF:new Document(txtPropCPF.Text), proponenteDDD:txtPropDDD.Text, proponenteFone:new PhoneNumber(txtPropTelefone.Text), 
+                proponenteCPF:new Cpf(txtPropCPF.Text), proponenteDDD:txtPropDDD.Text, proponenteFone:new PhoneNumber(txtPropTelefone.Text), 
                 responsavelNome:txtRTNome.Text, responsavelCauCrea:txtRTCauCrea.Text, responsavelUF: txtRTUF.Text, 
-                responsavelCPF:new Document(txtRTCPF.Text), responsavelDDD:txtRTDDD.Text, responsavelFone:new PhoneNumber(txtRTTelefone.Text),
-                imovelEndereco:txtIdEndereco.Text, imovelComplemento:txtIdComplemento.Text,imovelCep:txtIdCEP.Text,
+                responsavelCPF:new Cpf(txtRTCPF.Text), responsavelDDD:txtRTDDD.Text, responsavelFone:new PhoneNumber(txtRTTelefone.Text),
+                imovelEndereco:txtIdEndereco.Text, imovelComplemento:txtIdComplemento.Text,imovelCep:new ZipCode(txtIdCEP.Text),
                 imovelBairro:txtIdBairro.Text, imovelMunicipio:txtIdMunicipio.Text, imovelUF:txtIdUF.Text,
-                imovelValorTerreno: txtTerrenoValorProposto.Text,
+                imovelValorTerreno: new Money(txtTerrenoValorProposto.Text),
                 imovelMatricula: txtTerrenoMatricula.Text, imovelOficio:txtTerrenoOficio.Text, 
                 imovelComarca:txtTerrenoComarca.Text, imovelComarcaUF:txtTerrenoUF.Text,
                 servicoItem01: txt1701.Text, servicoItem02:txt1702.Text, servicoItem03: txt1703.Text, 

@@ -1,12 +1,11 @@
-﻿
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using System;
 
 namespace AeX30.Domain.ValueObject
 {
-    public class Document
+    public class Cpf
     {
-        public Document(string document) //CPF Only
+        public Cpf(string document)
         {
             string formatedDocument = string.Empty;
 
