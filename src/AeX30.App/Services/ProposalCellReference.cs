@@ -60,6 +60,9 @@ namespace AeX30.App.Services
                 case "Vigência: 28/06/2022":
                     return PCI2022a.References;
 
+                case "Vigência: 11/08/2023":
+                    return PCI2023.References;
+
                 default:
                     return null;
             }
