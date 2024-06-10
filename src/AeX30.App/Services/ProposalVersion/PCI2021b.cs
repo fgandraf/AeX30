@@ -54,38 +54,38 @@ namespace AeX30.App.Services.ProposalVersion
             "X114",   // [40]  Item 20
 
             // CRONOGRAMA FÍSICO FINANCEIRO
-            "AM140",  // [41]  Pré-Exc.
-            "AM141",  // [42]  Etapa 1
-            "AM142",  // [43]  Etapa 2
-            "AM143",  // [44]  Etapa 3
-            "AM144",  // [45]  Etapa 4
-            "AM145",  // [46]  Etapa 5
-            "AM146",  // [47]  Etapa 6
-            "AM147",  // [48]  Etapa 7
-            "AM148",  // [49]  Etapa 8
-            "AM149",  // [50]  Etapa 9
-            "AM150",  // [51]  Etapa 10
-            "AM151",  // [52]  Etapa 11
-            "AM152",  // [53]  Etapa 12
-            "AM153",  // [54]  Etapa 13
-            "AM154",  // [55]  Etapa 14
-            "AM155",  // [56]  Etapa 15
-            "AM156",  // [57]  Etapa 16
-            "AM157",  // [58]  Etapa 17
-            "AM158",  // [59]  Etapa 18
-            "AM159",  // [60]  Etapa 19
-            "AM160",  // [61]  Etapa 20
-            "AM161",  // [62]  Etapa 21
-            "AM162",  // [63]  Etapa 22
-            "AM163",  // [64]  Etapa 23
-            "AM164",  // [65]  Etapa 24
+            "AO140",  // [41]  Pré-Exc.
+            "AO141",  // [42]  Etapa 1
+            "AO142",  // [43]  Etapa 2
+            "AO143",  // [44]  Etapa 3
+            "AO144",  // [45]  Etapa 4
+            "AO145",  // [46]  Etapa 5
+            "AO146",  // [47]  Etapa 6
+            "AO147",  // [48]  Etapa 7
+            "AO148",  // [49]  Etapa 8
+            "AO149",  // [50]  Etapa 9
+            "AO150",  // [51]  Etapa 10
+            "AO151",  // [52]  Etapa 11
+            "AO152",  // [53]  Etapa 12
+            "AO153",  // [54]  Etapa 13
+            "AO154",  // [55]  Etapa 14
+            "AO155",  // [56]  Etapa 15
+            "AO156",  // [57]  Etapa 16
+            "AO157",  // [58]  Etapa 17
+            "AO158",  // [59]  Etapa 18
+            "AO159",  // [60]  Etapa 19
+            "AO160",  // [61]  Etapa 20
+            "AO161",  // [62]  Etapa 21
+            "AO162",  // [63]  Etapa 22
+            "AO163",  // [64]  Etapa 23
+            "AO164",  // [65]  Etapa 24
 
-            "AM165",  // [66]  Etapa 25
-            "AM165",  // [67]  Etapa 26
-            "AM165",  // [68]  Etapa 27
-            "AM165",  // [69]  Etapa 28
-            "AM165",  // [70]  Etapa 29
-            "AM165"   // [71]  Etapa 30
+            "AO165",  // [66]  Etapa 25
+            "AO165",  // [67]  Etapa 26
+            "AO165",  // [68]  Etapa 27
+            "AO165",  // [69]  Etapa 28
+            "AO165",  // [70]  Etapa 29
+            "AO165"   // [71]  Etapa 30
         };
     }
 }
