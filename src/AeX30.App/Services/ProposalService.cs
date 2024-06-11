@@ -6,34 +6,44 @@ namespace AeX30.App.Services
 {
     public class ProposalService
     {
+        
+        public bool IsValid { get; private set; }
         private string[] _cellReference;
+        private string _filePath;
+        private ProposalRepository _proposalRepository;
 
-
-        public Proposal GetProposal(string filePath)
+        public ProposalService(string filePath)
         {
-            if (IsValid(filePath))
-                return new ProposalRepository().GetProposal(filePath, _cellReference);
-
-            return null;
+            _filePath = filePath;
+            _proposalRepository = new ProposalRepository();
+            Validate();
         }
 
-        private bool IsValid(string filePath)
+        public void Validate()
         {
-            if (File.Exists(filePath))
+            if (File.Exists(_filePath))
             {
-                string footer = FileProperties.GetLeftFooter(filePath);
+                string footer = _proposalRepository.GetLeftFooter(_filePath);
                 _cellReference = ProposalCellReference.Get(footer);
-                string sheetName = FileProperties.GetSheetName(filePath);
+                string sheetName = _proposalRepository.GetSheetName(_filePath);
 
                 bool sheetNameIsValid = sheetName == "Proposta" || sheetName == "Proposta_Constr_Individual";
                 bool footerIsValid = !string.IsNullOrEmpty(footer);
                 bool cellReferenceIsValid = _cellReference != null;
 
-                return sheetNameIsValid && footerIsValid && cellReferenceIsValid;
+                IsValid = sheetNameIsValid && footerIsValid && cellReferenceIsValid;
             }
-
-            return false;
         }
+
+        public Proposal GetProposal()
+        {
+            if (IsValid)
+                return _proposalRepository.GetProposal(_filePath, _cellReference);
+
+            return null;
+        }
+
+        
 
     }
 }

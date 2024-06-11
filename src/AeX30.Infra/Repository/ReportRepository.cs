@@ -1,7 +1,5 @@
 ﻿using AeX30.Domain.Entities;
-using NPOI.HSSF.UserModel;
-using NPOI.SS.UserModel;
-using NPOI.SS.Util;
+using OfficeOpenXml;
 using System;
 using System.IO;
 
@@ -65,67 +63,80 @@ namespace AeX30.Infra.Repository
             /*contrato INICIO:-----*/    "AH63",
             /*contrato TERMINO:----*/    "AS63",
 
-            /*cron. EXECUTADO:-----*/    "AK71",
-            /*cron. PARC 1:--------*/    "AK72",
-            /*cron. PARC 2:--------*/    "AK73",
-            /*cron. PARC 3:--------*/    "AK74",
-            /*cron. PARC 4:--------*/    "AK75",
-            /*cron. PARC 5:--------*/    "AK76",
-            /*cron. PARC 6:--------*/    "AK77",
-            /*cron. PARC 7:--------*/    "AK78",
-            /*cron. PARC 8:--------*/    "AK79",
-            /*cron. PARC 9:--------*/    "AK80",
-            /*cron. PARC 10:-------*/    "AK81",
-            /*cron. PARC 11:-------*/    "AK82",
-            /*cron. PARC 12:-------*/    "AK83",
-            /*cron. PARC 13:-------*/    "AK84",
-            /*cron. PARC 14:-------*/    "AK85",
-            /*cron. PARC 15:-------*/    "AK86",
-            /*cron. PARC 16:-------*/    "AK87",
-            /*cron. PARC 17:-------*/    "AK88",
-            /*cron. PARC 18:-------*/    "AK89",
-            /*cron. PARC 19:-------*/    "AK90",
-            /*cron. PARC 20:-------*/    "AK91",
-            /*cron. PARC 21:-------*/    "AK92",
-            /*cron. PARC 22:-------*/    "AK93",
-            /*cron. PARC 23:-------*/    "AK94",
-            /*cron. PARC 24:-------*/    "AK95",
-            /*cron. PARC 25:-------*/    "AK96",
-            /*cron. PARC 26:-------*/    "AK97",
-            /*cron. PARC 27:-------*/    "AK98",
-            /*cron. PARC 28:-------*/    "AK99",
-            /*cron. PARC 29:-------*/    "AK100",
-            /*cron. PARC 30:-------*/    "AK101",
-            /*cron. PARC 31:-------*/    "AK102",
-            /*cron. PARC 32:-------*/    "AK103",
-            /*cron. PARC 33:-------*/    "AK104",
-            /*cron. PARC 34:-------*/    "AK105",
-            /*cron. PARC 35:-------*/    "AK106",
-            /*cron. PARC 36:-------*/    "AK107",
+            /*cron. PARC 1:--------*/    "AG71",
+            /*cron. EXECUTADO:-----*/    "AG72",
+            /*cron. PARC 2:--------*/    "AG73",
+            /*cron. PARC 3:--------*/    "AG74",
+            /*cron. PARC 4:--------*/    "AG75",
+            /*cron. PARC 5:--------*/    "AG76",
+            /*cron. PARC 6:--------*/    "AG77",
+            /*cron. PARC 7:--------*/    "AG78",
+            /*cron. PARC 8:--------*/    "AG79",
+            /*cron. PARC 9:--------*/    "AG80",
+            /*cron. PARC 10:-------*/    "AG81",
+            /*cron. PARC 11:-------*/    "AG82",
+            /*cron. PARC 12:-------*/    "AG83",
+            /*cron. PARC 13:-------*/    "AG84",
+            /*cron. PARC 14:-------*/    "AG85",
+            /*cron. PARC 15:-------*/    "AG86",
+            /*cron. PARC 16:-------*/    "AG87",
+            /*cron. PARC 17:-------*/    "AG88",
+            /*cron. PARC 18:-------*/    "AG89",
+            /*cron. PARC 19:-------*/    "AG90",
+            /*cron. PARC 20:-------*/    "AG91",
+            /*cron. PARC 21:-------*/    "AG92",
+            /*cron. PARC 22:-------*/    "AG93",
+            /*cron. PARC 23:-------*/    "AG94",
+            /*cron. PARC 24:-------*/    "AG95",
+            /*cron. PARC 25:-------*/    "AG96",
+            /*cron. PARC 26:-------*/    "AG97",
+            /*cron. PARC 27:-------*/    "AG98",
+            /*cron. PARC 28:-------*/    "AG99",
+            /*cron. PARC 29:-------*/    "AG100",
+            /*cron. PARC 30:-------*/    "AG101",
+            /*cron. PARC 31:-------*/    "AG102",
+            /*cron. PARC 32:-------*/    "AG103",
+            /*cron. PARC 33:-------*/    "AG104",
+            /*cron. PARC 34:-------*/    "AG105",
+            /*cron. PARC 35:-------*/    "AG106",
+            /*cron. PARC 36:-------*/    "AG107",
 
         };
             dynamic[] values = report.Get();
-            HSSFWorkbook wbook = new HSSFWorkbook();
 
-            try
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            using (var package = new ExcelPackage(new FileInfo(pathTemplate)))
             {
-                using (FileStream templateFile = new FileStream(pathTemplate, FileMode.Open, FileAccess.Read))
+                var worksheet = package.Workbook.Worksheets["RAE"];
+
+                try
                 {
-                    wbook = new HSSFWorkbook(templateFile);
-                    ISheet sheet = wbook.GetSheet("RAE");
                     for (int i = 0; i < values.Length; i++)
-                        sheet.GetRow(new CellReference(cellReference[i]).Row).GetCell(new CellReference(cellReference[i]).Col).SetCellValue(values[i]);
-                }
+                    {
+                        if (cellReference[i].StartsWith("AG") && Convert.ToDouble(values[i]) == 0.00)
+                            continue;
 
-                using (FileStream reportFile = new FileStream(pathDestin, FileMode.Create, FileAccess.Write))
-                {
-                    wbook.ForceFormulaRecalculation = true;
-                    wbook.Write(reportFile);
+                        var cell = worksheet.Cells[cellReference[i]];
+
+                        if (values[i] is double || values[i] is int)
+                        {
+                            cell.Value = Convert.ToDouble(values[i]);
+                            cell.Style.Numberformat.Format = "0.00"; // Define um formato de número, se necessário
+                        }
+                        else
+                        {
+                            cell.Value = values[i];
+                        }
+                    }
+
+                    worksheet.Calculate();
+
+                    package.SaveAs(new FileInfo(pathDestin));
                 }
-            }
-            catch (Exception ex)
-            {
-                throw ex.InnerException;
+                catch (Exception ex)
+                {
+                    throw ex.InnerException;
+                }
             }
         }
     }

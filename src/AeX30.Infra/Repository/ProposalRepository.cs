@@ -1,113 +1,127 @@
-﻿using NPOI.HSSF.UserModel;
-using NPOI.SS.UserModel;
-using NPOI.SS.Util;
-using System.IO;
-using System;
-using AeX30.Domain.Entities;
+﻿using AeX30.Domain.Entities;
 using AeX30.Domain.ValueObject;
+using OfficeOpenXml;
+using System;
+using System.IO;
 
 namespace AeX30.Infra.Repository
 {
-
     public class ProposalRepository
     {
         public Proposal GetProposal(string filePath, string[] cellReference)
         {
             try
             {
-                FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-                HSSFWorkbook wbook = new HSSFWorkbook(file);
-                ISheet sheet = wbook.GetSheetAt(0);
+                using (var package = new ExcelPackage(new FileInfo(filePath)))
+                {
+                    var sheet = package.Workbook.Worksheets[0];
 
-                Proposal proposal = new Proposal(
-                    tipo: wbook.GetSheetName(0),
-                    vigencia: sheet.Footer.Left,
-                    proponenteNome: sheet.GetRow(new CellReference(cellReference[00]).Row).GetCell(new CellReference(cellReference[00]).Col).ToString().TrimEnd(),
-                    proponenteCPF: new Cpf(sheet.GetRow(new CellReference(cellReference[01]).Row).GetCell(new CellReference(cellReference[01]).Col).ToString()),
-                    proponenteDDD: sheet.GetRow(new CellReference(cellReference[02]).Row).GetCell(new CellReference(cellReference[02]).Col).ToString(),
-                    proponenteFone: new PhoneNumber(sheet.GetRow(new CellReference(cellReference[03]).Row).GetCell(new CellReference(cellReference[03]).Col).ToString()),
-                    responsavelNome: sheet.GetRow(new CellReference(cellReference[04]).Row).GetCell(new CellReference(cellReference[04]).Col).ToString(),
-                    responsavelCauCrea: sheet.GetRow(new CellReference(cellReference[05]).Row).GetCell(new CellReference(cellReference[05]).Col).ToString(),
-                    responsavelUF: sheet.GetRow(new CellReference(cellReference[06]).Row).GetCell(new CellReference(cellReference[06]).Col).ToString(),
-                    responsavelCPF: new Cpf(sheet.GetRow(new CellReference(cellReference[07]).Row).GetCell(new CellReference(cellReference[07]).Col).ToString()),
-                    responsavelDDD: sheet.GetRow(new CellReference(cellReference[08]).Row).GetCell(new CellReference(cellReference[08]).Col).ToString(),
-                    responsavelFone: new PhoneNumber(sheet.GetRow(new CellReference(cellReference[09]).Row).GetCell(new CellReference(cellReference[09]).Col).ToString()),
-                    imovelEndereco: sheet.GetRow(new CellReference(cellReference[10]).Row).GetCell(new CellReference(cellReference[10]).Col).ToString(),
-                    imovelComplemento: sheet.GetRow(new CellReference(cellReference[11]).Row).GetCell(new CellReference(cellReference[11]).Col).ToString(),
-                    imovelCep: new ZipCode(sheet.GetRow(new CellReference(cellReference[12]).Row).GetCell(new CellReference(cellReference[12]).Col).ToString()),
-                    imovelBairro: sheet.GetRow(new CellReference(cellReference[13]).Row).GetCell(new CellReference(cellReference[13]).Col).ToString(),
-                    imovelMunicipio: sheet.GetRow(new CellReference(cellReference[14]).Row).GetCell(new CellReference(cellReference[14]).Col).ToString(),
-                    imovelUF: sheet.GetRow(new CellReference(cellReference[15]).Row).GetCell(new CellReference(cellReference[15]).Col).ToString(),
-                    
+                    Proposal proposal = new Proposal(
+                        tipo: sheet.Name,
+                        vigencia: sheet.HeaderFooter.OddFooter.LeftAlignedText,
+                        proponenteNome: sheet.Cells[cellReference[0]].Text.Trim(),
+                        proponenteCPF: new Cpf(sheet.Cells[cellReference[1]].Text),
+                        proponenteDDD: sheet.Cells[cellReference[2]].Text,
+                        proponenteFone: new PhoneNumber(sheet.Cells[cellReference[3]].Text),
+                        responsavelNome: sheet.Cells[cellReference[4]].Text,
+                        responsavelCauCrea: sheet.Cells[cellReference[5]].Text,
+                        responsavelUF: sheet.Cells[cellReference[6]].Text,
+                        responsavelCPF: new Cpf(sheet.Cells[cellReference[7]].Text),
+                        responsavelDDD: sheet.Cells[cellReference[8]].Text,
+                        responsavelFone: new PhoneNumber(sheet.Cells[cellReference[9]].Text),
+                        imovelEndereco: sheet.Cells[cellReference[10]].Text,
+                        imovelComplemento: sheet.Cells[cellReference[11]].Text,
+                        imovelCep: new ZipCode(sheet.Cells[cellReference[12]].Text),
+                        imovelBairro: sheet.Cells[cellReference[13]].Text,
+                        imovelMunicipio: sheet.Cells[cellReference[14]].Text,
+                        imovelUF: sheet.Cells[cellReference[15]].Text,
+                        imovelValorTerreno: new Money(sheet.Cells[cellReference[16]].GetValue<double>().ToString()),
+                        imovelMatricula: sheet.Cells[cellReference[17]].Text,
+                        imovelOficio: sheet.Cells[cellReference[18]].Text,
+                        imovelComarca: sheet.Name == "Proposta" ? sheet.Cells[cellReference[19]].Text : "",
+                        imovelComarcaUF: sheet.Name == "Proposta" ? sheet.Cells[cellReference[20]].Text : "",
+                        servicoItem01: sheet.Cells[cellReference[21]].GetValue<double>().ToString(),
+                        servicoItem02: sheet.Cells[cellReference[22]].GetValue<double>().ToString(),
+                        servicoItem03: sheet.Cells[cellReference[23]].GetValue<double>().ToString(),
+                        servicoItem04: sheet.Cells[cellReference[24]].GetValue<double>().ToString(),
+                        servicoItem05: sheet.Cells[cellReference[25]].GetValue<double>().ToString(),
+                        servicoItem06: sheet.Cells[cellReference[26]].GetValue<double>().ToString(),
+                        servicoItem07: sheet.Cells[cellReference[27]].GetValue<double>().ToString(),
+                        servicoItem08: sheet.Cells[cellReference[28]].GetValue<double>().ToString(),
+                        servicoItem09: sheet.Cells[cellReference[29]].GetValue<double>().ToString(),
+                        servicoItem10: sheet.Cells[cellReference[30]].GetValue<double>().ToString(),
+                        servicoItem11: sheet.Cells[cellReference[31]].GetValue<double>().ToString(),
+                        servicoItem12: sheet.Cells[cellReference[32]].GetValue<double>().ToString(),
+                        servicoItem13: sheet.Cells[cellReference[33]].GetValue<double>().ToString(),
+                        servicoItem14: sheet.Cells[cellReference[34]].GetValue<double>().ToString(),
+                        servicoItem15: sheet.Cells[cellReference[35]].GetValue<double>().ToString(),
+                        servicoItem16: sheet.Cells[cellReference[36]].GetValue<double>().ToString(),
+                        servicoItem17: sheet.Cells[cellReference[37]].GetValue<double>().ToString(),
+                        servicoItem18: sheet.Cells[cellReference[38]].GetValue<double>().ToString(),
+                        servicoItem19: sheet.Cells[cellReference[39]].GetValue<double>().ToString(),
+                        servicoItem20: sheet.Cells[cellReference[40]].GetValue<double>().ToString(),
+                        cronogramaExecutado: sheet.Cells[cellReference[41]].GetValue<double>().ToString(),
+                        
+                        
+                        cronogramaEtapa1: sheet.Cells[cellReference[42]].GetValue<double>().ToString(),
+                        cronogramaEtapa2: sheet.Cells[cellReference[43]].GetValue<double>().ToString(),
+                        cronogramaEtapa3: sheet.Cells[cellReference[44]].GetValue<double>().ToString(),
+                        cronogramaEtapa4: sheet.Cells[cellReference[45]].GetValue<double>().ToString(),
+                        cronogramaEtapa5: sheet.Cells[cellReference[46]].GetValue<double>().ToString(),
+                        cronogramaEtapa6: sheet.Cells[cellReference[47]].GetValue<double>().ToString(),
+                        cronogramaEtapa7: sheet.Cells[cellReference[48]].GetValue<double>().ToString(),
+                        cronogramaEtapa8: sheet.Cells[cellReference[49]].GetValue<double>().ToString(),
+                        cronogramaEtapa9: sheet.Cells[cellReference[50]].GetValue<double>().ToString(),
+                        cronogramaEtapa10: sheet.Cells[cellReference[51]].GetValue<double>().ToString(),
+                        cronogramaEtapa11: sheet.Cells[cellReference[52]].GetValue<double>().ToString(),
+                        cronogramaEtapa12: sheet.Cells[cellReference[53]].GetValue<double>().ToString(),
+                        cronogramaEtapa13: sheet.Cells[cellReference[54]].GetValue<double>().ToString(),
+                        cronogramaEtapa14: sheet.Cells[cellReference[55]].GetValue<double>().ToString(),
+                        cronogramaEtapa15: sheet.Cells[cellReference[56]].GetValue<double>().ToString(),
+                        cronogramaEtapa16: sheet.Cells[cellReference[57]].GetValue<double>().ToString(),
+                        cronogramaEtapa17: sheet.Cells[cellReference[58]].GetValue<double>().ToString(),
+                        cronogramaEtapa18: sheet.Cells[cellReference[59]].GetValue<double>().ToString(),
+                        cronogramaEtapa19: sheet.Cells[cellReference[60]].GetValue<double>().ToString(),
+                        cronogramaEtapa20: sheet.Cells[cellReference[61]].GetValue<double>().ToString(),
+                        cronogramaEtapa21: sheet.Cells[cellReference[62]].GetValue<double>().ToString(),
+                        cronogramaEtapa22: sheet.Cells[cellReference[63]].GetValue<double>().ToString(),
+                        cronogramaEtapa23: sheet.Cells[cellReference[64]].GetValue<double>().ToString(),
+                        cronogramaEtapa24: sheet.Cells[cellReference[65]].GetValue<double>().ToString(),
+                        cronogramaEtapa25: sheet.Cells[cellReference[66]].GetValue<double>().ToString(),
+                        cronogramaEtapa26: sheet.Cells[cellReference[67]].GetValue<double>().ToString(),
+                        cronogramaEtapa27: sheet.Cells[cellReference[68]].GetValue<double>().ToString(),
+                        cronogramaEtapa28: sheet.Cells[cellReference[69]].GetValue<double>().ToString(),
+                        cronogramaEtapa29: sheet.Cells[cellReference[70]].GetValue<double>().ToString(),
+                        cronogramaEtapa30: sheet.Cells[cellReference[71]].GetValue<double>().ToString()
+                    );
 
-
-                    imovelValorTerreno: new Money(sheet.GetRow(new CellReference(cellReference[16]).Row).GetCell(new CellReference(cellReference[16]).Col).NumericCellValue.ToString()),
-                    
-
-
-                    imovelMatricula: sheet.GetRow(new CellReference(cellReference[17]).Row).GetCell(new CellReference(cellReference[17]).Col).ToString(),
-                    imovelOficio: sheet.GetRow(new CellReference(cellReference[18]).Row).GetCell(new CellReference(cellReference[18]).Col).ToString(),
-                    imovelComarca: wbook.GetSheetName(0) == "Proposta" ? sheet.GetRow(new CellReference(cellReference[19]).Row).GetCell(new CellReference(cellReference[19]).Col).ToString() : "",
-                    imovelComarcaUF: wbook.GetSheetName(0) == "Proposta" ? sheet.GetRow(new CellReference(cellReference[20]).Row).GetCell(new CellReference(cellReference[20]).Col).ToString() : "",
-                    servicoItem01: sheet.GetRow(new CellReference(cellReference[21]).Row).GetCell(new CellReference(cellReference[21]).Col).NumericCellValue.ToString(),
-                    servicoItem02: sheet.GetRow(new CellReference(cellReference[22]).Row).GetCell(new CellReference(cellReference[22]).Col).NumericCellValue.ToString(),
-                    servicoItem03: sheet.GetRow(new CellReference(cellReference[23]).Row).GetCell(new CellReference(cellReference[23]).Col).NumericCellValue.ToString(),
-                    servicoItem04: sheet.GetRow(new CellReference(cellReference[24]).Row).GetCell(new CellReference(cellReference[24]).Col).NumericCellValue.ToString(),
-                    servicoItem05: sheet.GetRow(new CellReference(cellReference[25]).Row).GetCell(new CellReference(cellReference[25]).Col).NumericCellValue.ToString(),
-                    servicoItem06: sheet.GetRow(new CellReference(cellReference[26]).Row).GetCell(new CellReference(cellReference[26]).Col).NumericCellValue.ToString(),
-                    servicoItem07: sheet.GetRow(new CellReference(cellReference[27]).Row).GetCell(new CellReference(cellReference[27]).Col).NumericCellValue.ToString(),
-                    servicoItem08: sheet.GetRow(new CellReference(cellReference[28]).Row).GetCell(new CellReference(cellReference[28]).Col).NumericCellValue.ToString(),
-                    servicoItem09: sheet.GetRow(new CellReference(cellReference[29]).Row).GetCell(new CellReference(cellReference[29]).Col).NumericCellValue.ToString(),
-                    servicoItem10: sheet.GetRow(new CellReference(cellReference[30]).Row).GetCell(new CellReference(cellReference[30]).Col).NumericCellValue.ToString(),
-                    servicoItem11: sheet.GetRow(new CellReference(cellReference[31]).Row).GetCell(new CellReference(cellReference[31]).Col).NumericCellValue.ToString(),
-                    servicoItem12: sheet.GetRow(new CellReference(cellReference[32]).Row).GetCell(new CellReference(cellReference[32]).Col).NumericCellValue.ToString(),
-                    servicoItem13: sheet.GetRow(new CellReference(cellReference[33]).Row).GetCell(new CellReference(cellReference[33]).Col).NumericCellValue.ToString(),
-                    servicoItem14: sheet.GetRow(new CellReference(cellReference[34]).Row).GetCell(new CellReference(cellReference[34]).Col).NumericCellValue.ToString(),
-                    servicoItem15: sheet.GetRow(new CellReference(cellReference[35]).Row).GetCell(new CellReference(cellReference[35]).Col).NumericCellValue.ToString(),
-                    servicoItem16: sheet.GetRow(new CellReference(cellReference[36]).Row).GetCell(new CellReference(cellReference[36]).Col).NumericCellValue.ToString(),
-                    servicoItem17: sheet.GetRow(new CellReference(cellReference[37]).Row).GetCell(new CellReference(cellReference[37]).Col).NumericCellValue.ToString(),
-                    servicoItem18: sheet.GetRow(new CellReference(cellReference[38]).Row).GetCell(new CellReference(cellReference[38]).Col).NumericCellValue.ToString(),
-                    servicoItem19: sheet.GetRow(new CellReference(cellReference[39]).Row).GetCell(new CellReference(cellReference[39]).Col).NumericCellValue.ToString(),
-                    servicoItem20: sheet.GetRow(new CellReference(cellReference[40]).Row).GetCell(new CellReference(cellReference[40]).Col).NumericCellValue.ToString(),
-                    cronogramaExecutado: sheet.GetRow(new CellReference(cellReference[41]).Row).GetCell(new CellReference(cellReference[41]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa1: sheet.GetRow(new CellReference(cellReference[42]).Row).GetCell(new CellReference(cellReference[42]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa2: sheet.GetRow(new CellReference(cellReference[43]).Row).GetCell(new CellReference(cellReference[43]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa3: sheet.GetRow(new CellReference(cellReference[44]).Row).GetCell(new CellReference(cellReference[44]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa4: sheet.GetRow(new CellReference(cellReference[45]).Row).GetCell(new CellReference(cellReference[45]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa5: sheet.GetRow(new CellReference(cellReference[46]).Row).GetCell(new CellReference(cellReference[46]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa6: sheet.GetRow(new CellReference(cellReference[47]).Row).GetCell(new CellReference(cellReference[47]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa7: sheet.GetRow(new CellReference(cellReference[48]).Row).GetCell(new CellReference(cellReference[48]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa8: sheet.GetRow(new CellReference(cellReference[49]).Row).GetCell(new CellReference(cellReference[49]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa9: sheet.GetRow(new CellReference(cellReference[50]).Row).GetCell(new CellReference(cellReference[50]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa10: sheet.GetRow(new CellReference(cellReference[51]).Row).GetCell(new CellReference(cellReference[52]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa11: sheet.GetRow(new CellReference(cellReference[52]).Row).GetCell(new CellReference(cellReference[52]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa12: sheet.GetRow(new CellReference(cellReference[53]).Row).GetCell(new CellReference(cellReference[53]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa13: sheet.GetRow(new CellReference(cellReference[54]).Row).GetCell(new CellReference(cellReference[54]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa14: sheet.GetRow(new CellReference(cellReference[55]).Row).GetCell(new CellReference(cellReference[55]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa15: sheet.GetRow(new CellReference(cellReference[56]).Row).GetCell(new CellReference(cellReference[56]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa16: sheet.GetRow(new CellReference(cellReference[57]).Row).GetCell(new CellReference(cellReference[57]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa17: sheet.GetRow(new CellReference(cellReference[58]).Row).GetCell(new CellReference(cellReference[58]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa18: sheet.GetRow(new CellReference(cellReference[59]).Row).GetCell(new CellReference(cellReference[59]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa19: sheet.GetRow(new CellReference(cellReference[60]).Row).GetCell(new CellReference(cellReference[60]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa20: sheet.GetRow(new CellReference(cellReference[61]).Row).GetCell(new CellReference(cellReference[61]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa21: sheet.GetRow(new CellReference(cellReference[62]).Row).GetCell(new CellReference(cellReference[62]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa22: sheet.GetRow(new CellReference(cellReference[63]).Row).GetCell(new CellReference(cellReference[63]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa23: sheet.GetRow(new CellReference(cellReference[64]).Row).GetCell(new CellReference(cellReference[64]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa24: sheet.GetRow(new CellReference(cellReference[65]).Row).GetCell(new CellReference(cellReference[65]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa25: sheet.GetRow(new CellReference(cellReference[66]).Row).GetCell(new CellReference(cellReference[66]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa26: sheet.GetRow(new CellReference(cellReference[67]).Row).GetCell(new CellReference(cellReference[67]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa27: sheet.GetRow(new CellReference(cellReference[68]).Row).GetCell(new CellReference(cellReference[68]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa28: sheet.GetRow(new CellReference(cellReference[69]).Row).GetCell(new CellReference(cellReference[69]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa29: sheet.GetRow(new CellReference(cellReference[70]).Row).GetCell(new CellReference(cellReference[70]).Col).NumericCellValue.ToString(),
-                    cronogramaEtapa30: sheet.GetRow(new CellReference(cellReference[71]).Row).GetCell(new CellReference(cellReference[71]).Col).NumericCellValue.ToString()
-                );
-                return proposal;
+                    return proposal;
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+        }
 
+        public string GetSheetName(string filePath)
+        {
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                return worksheet.Name;
+            }
+        }
+
+        public string GetLeftFooter(string filePath)
+        {
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                var leftFooter = worksheet.HeaderFooter.OddFooter.LeftAlignedText;
+
+                return leftFooter;
+            }
         }
 
     }

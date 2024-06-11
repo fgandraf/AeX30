@@ -6,7 +6,13 @@ namespace AeX30.App.Services
 {
     public class ReportService
     {
-        public static bool SetReport(string templatePath, string saveAsPath, Report report)
+        private ProposalRepository _proposalRepository;
+
+        public ReportService()
+            => _proposalRepository = new ProposalRepository();
+
+
+        public bool SetReport(string templatePath, string saveAsPath, Report report)
         {
             if (IsValid(templatePath))
             {
@@ -17,10 +23,10 @@ namespace AeX30.App.Services
                 return false;
         }
 
-        private static bool IsValid(string filePath)
+        private bool IsValid(string filePath)
         {
-            string footer = FileProperties.GetLeftFooter(filePath);
-            string sheetName = FileProperties.GetSheetName(filePath);
+            string footer = _proposalRepository.GetLeftFooter(filePath);
+            string sheetName = _proposalRepository.GetSheetName(filePath);
 
             bool fileExists = File.Exists(filePath);
             bool sheetNameIsValid = sheetName == "RAE";
@@ -31,10 +37,3 @@ namespace AeX30.App.Services
 
     }
 }
-
-
-
-
-
-
-

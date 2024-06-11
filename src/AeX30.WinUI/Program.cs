@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using AeX30.WinUI.View;
+using OfficeOpenXml;
 
 namespace AeX30.WinUI
 
@@ -13,6 +14,8 @@ namespace AeX30.WinUI
         [STAThread]
         static void Main()
         {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

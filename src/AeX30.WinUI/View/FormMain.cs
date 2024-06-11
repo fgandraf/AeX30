@@ -1,6 +1,7 @@
 ﻿using AeX30.App.Services;
 using AeX30.Domain.Entities;
 using AeX30.Domain.ValueObject;
+using AeX30.Infra.Repository;
 using System;
 using System.Windows.Forms;
 
@@ -12,27 +13,33 @@ namespace AeX30.WinUI.View
         private string _templatePath;
 
         public FormMain()
-        {
-            InitializeComponent();
-        }
+            => InitializeComponent();
 
         private void FormMain_Load(object sender, EventArgs e)
-        {
-            tabControl.ItemSize = new System.Drawing.Size(0, 1);
-        }
+            => tabControl.ItemSize = new System.Drawing.Size(0, 1);
+
+        private void NextTabControl(object sender, EventArgs e)
+            => tabControl.SelectTab(tabControl.SelectedIndex + 1);
+
+        private void BackTabControl(object sender, EventArgs e)
+            => tabControl.SelectTab(tabControl.SelectedIndex - 1);
+
+
+
+
+
 
 
         private void btnImportarConvocacao_Click(object sender, EventArgs e)
         {
-
             if (openText.ShowDialog() == DialogResult.OK)
             {
-                Request request = new RequestService().GetRequestNumber(openText.FileName);
+                var request = new RequestService().GetRequestNumber(openText.FileName);
 
                 if (request is null)
                     MessageBox.Show("Não foi possível ler o arquivo de convocação.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    PopulateFromRequest(request);
+                    ShowRequestOnScreen(request);
 
                 pnlMainConvocacao.Show();
                 btnStartNext.Show();
@@ -40,22 +47,28 @@ namespace AeX30.WinUI.View
             }
         }
 
+
         private void btnImportarProposta_Click(object sender, EventArgs e)
         {
             if (openExcel.ShowDialog() == DialogResult.OK)
             {
-                Proposal proposal = new ProposalService().GetProposal(openExcel.FileName);
-
-                if (proposal is null)
-                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PFUI/PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                    PopulateFromProposal(proposal);
-
                 pnlMainPfui.Show();
                 btnStartNext.Show();
                 txtPropNome.Focus();
+
+                var service = new ProposalService(openExcel.FileName);
+                
+                if (!service.IsValid)
+                {
+                    MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                    
+                var proposal = service.GetProposal();
+                ShowProposalOnScreen(proposal);
             }
         }
+
 
         private void btnModeloPadrao_Click(object sender, EventArgs e)
         {
@@ -80,15 +93,16 @@ namespace AeX30.WinUI.View
 
             if (saveExcel.ShowDialog() == DialogResult.OK)
             {
-                if (ReportService.SetReport(_templatePath, saveExcel.FileName, PopulateReport()))
+                var report = BuildReport();
+                var success = new ReportService().SetReport(_templatePath, saveExcel.FileName, report);
+
+                if (success)
                 {
                     txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
                     btnNew.Show();
                 }
                 else
-                {
                     txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nNão foi possível escrever o relatório!";
-                }
             }
         }
 
@@ -98,8 +112,6 @@ namespace AeX30.WinUI.View
             InitializeComponent();
             FormMain_Load(null, EventArgs.Empty);
         }
-
-
 
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,23 +147,9 @@ namespace AeX30.WinUI.View
                 btnStartNext.Show();
             }
 
-
         }
 
-
-
-
-        private void NextTabControl(object sender, EventArgs e)
-        {
-            tabControl.SelectTab(tabControl.SelectedIndex + 1);
-        }
-
-        private void BackTabControl(object sender, EventArgs e)
-        {
-            tabControl.SelectTab(tabControl.SelectedIndex - 1);
-        }
-
-        private void PopulateFromRequest(Request request)
+        private void ShowRequestOnScreen(Request request)
         {
             txtRef1.Text = request.Reference[1];
             txtRef2.Text = request.Reference[2];
@@ -161,7 +159,7 @@ namespace AeX30.WinUI.View
             txtRef6.Text = request.Reference[6];
         }
 
-        private void PopulateFromProposal(Proposal proposal)
+        private void ShowProposalOnScreen(Proposal proposal)
         {
             if (proposal.Tipo == "PFUI")
                 lblVigencia.Text = $"Ꙩ PFUI | {proposal.Vigencia}";
@@ -249,10 +247,10 @@ namespace AeX30.WinUI.View
             string nome = proponente[0].Substring(0, 1).ToUpper() + proponente[0].Substring(1);
             string sobrenome = proponente[proponente.Length - 1].Substring(0, 1).ToUpper() + proponente[proponente.Length - 1].Substring(1);
 
-            return $"RAE_{nome}-{sobrenome}.xls";
+            return $"RAE_{nome}-{sobrenome}.xlsx";
         }
 
-        private Report PopulateReport()
+        private Report BuildReport()
         {
             var refer = new string[7];
             refer[1] = txtRef1.Text;
@@ -261,44 +259,99 @@ namespace AeX30.WinUI.View
             refer[4] = txtRef4.Text;
             refer[5] = txtRef5.Text;
             refer[6] = txtRef6.Text;
-            Request request = new Request(refer);
+            var request = new Request(refer);
 
-            Proposal proposal = new Proposal(tipo:string.Empty, vigencia:string.Empty, proponenteNome:txtPropNome.Text,
-                proponenteCPF:new Cpf(txtPropCPF.Text), proponenteDDD:txtPropDDD.Text, proponenteFone:new PhoneNumber(txtPropTelefone.Text), 
-                responsavelNome:txtRTNome.Text, responsavelCauCrea:txtRTCauCrea.Text, responsavelUF: txtRTUF.Text, 
-                responsavelCPF:new Cpf(txtRTCPF.Text), responsavelDDD:txtRTDDD.Text, responsavelFone:new PhoneNumber(txtRTTelefone.Text),
-                imovelEndereco:txtIdEndereco.Text, imovelComplemento:txtIdComplemento.Text,imovelCep:new ZipCode(txtIdCEP.Text),
-                imovelBairro:txtIdBairro.Text, imovelMunicipio:txtIdMunicipio.Text, imovelUF:txtIdUF.Text,
+            var proposal = new Proposal(
+                tipo: string.Empty,
+                vigencia: string.Empty,
+                proponenteNome: txtPropNome.Text,
+                proponenteCPF: new Cpf(txtPropCPF.Text),
+                proponenteDDD: txtPropDDD.Text,
+                proponenteFone: new PhoneNumber(txtPropTelefone.Text),
+                responsavelNome: txtRTNome.Text,
+                responsavelCauCrea: txtRTCauCrea.Text,
+                responsavelUF: txtRTUF.Text,
+                responsavelCPF: new Cpf(txtRTCPF.Text),
+                responsavelDDD: txtRTDDD.Text,
+                responsavelFone: new PhoneNumber(txtRTTelefone.Text),
+                imovelEndereco: txtIdEndereco.Text,
+                imovelComplemento: txtIdComplemento.Text,
+                imovelCep: new ZipCode(txtIdCEP.Text),
+                imovelBairro: txtIdBairro.Text,
+                imovelMunicipio: txtIdMunicipio.Text,
+                imovelUF: txtIdUF.Text,
                 imovelValorTerreno: new Money(txtTerrenoValorProposto.Text),
-                imovelMatricula: txtTerrenoMatricula.Text, imovelOficio:txtTerrenoOficio.Text, 
-                imovelComarca:txtTerrenoComarca.Text, imovelComarcaUF:txtTerrenoUF.Text,
-                servicoItem01: txt1701.Text, servicoItem02:txt1702.Text, servicoItem03: txt1703.Text, 
-                servicoItem04:txt1704.Text, servicoItem05:txt1705.Text, servicoItem06: txt1706.Text,
-                servicoItem07: txt1707.Text, servicoItem08: txt1708.Text, servicoItem09: txt1709.Text, 
-                servicoItem10: txt1710.Text, servicoItem11: txt1711.Text, servicoItem12: txt1712.Text,
-                servicoItem13: txt1713.Text, servicoItem14: txt1714.Text, servicoItem15: txt1715.Text,
-                servicoItem16: txt1716.Text, servicoItem17: txt1717.Text, servicoItem18: txt1718.Text,
-                servicoItem19: txt1719.Text, servicoItem20: txt1720.Text, cronogramaExecutado: txtExecutado.Text,
-                cronogramaEtapa1: txtParcela1.Text, cronogramaEtapa2: txtParcela2.Text, cronogramaEtapa3: txtParcela3.Text,
-                cronogramaEtapa4: txtParcela4.Text, cronogramaEtapa5: txtParcela5.Text,
-                cronogramaEtapa6: txtParcela6.Text, cronogramaEtapa7: txtParcela7.Text, cronogramaEtapa8: txtParcela8.Text,
-                cronogramaEtapa9: txtParcela9.Text, cronogramaEtapa10: txtParcela10.Text,
-                cronogramaEtapa11: txtParcela11.Text, cronogramaEtapa12: txtParcela12.Text, cronogramaEtapa13: txtParcela13.Text,
-                cronogramaEtapa14: txtParcela14.Text, cronogramaEtapa15: txtParcela15.Text,
-                cronogramaEtapa16: txtParcela16.Text, cronogramaEtapa17: txtParcela17.Text, cronogramaEtapa18: txtParcela18.Text,
-                cronogramaEtapa19: txtParcela19.Text, cronogramaEtapa20: txtParcela20.Text,
-                cronogramaEtapa21: txtParcela21.Text, cronogramaEtapa22: txtParcela22.Text, cronogramaEtapa23: txtParcela23.Text,
-                cronogramaEtapa24: txtParcela24.Text, cronogramaEtapa25: txtParcela25.Text,
-                cronogramaEtapa26: txtParcela26.Text, cronogramaEtapa27: txtParcela27.Text, cronogramaEtapa28: txtParcela28.Text,
-                cronogramaEtapa29: txtParcela29.Text, cronogramaEtapa30: txtParcela30.Text
+                imovelMatricula: txtTerrenoMatricula.Text,
+                imovelOficio: txtTerrenoOficio.Text,
+                imovelComarca: txtTerrenoComarca.Text,
+                imovelComarcaUF: txtTerrenoUF.Text,
+                servicoItem01: txt1701.Text,
+                servicoItem02: txt1702.Text,
+                servicoItem03: txt1703.Text,
+                servicoItem04: txt1704.Text,
+                servicoItem05: txt1705.Text,
+                servicoItem06: txt1706.Text,
+                servicoItem07: txt1707.Text,
+                servicoItem08: txt1708.Text,
+                servicoItem09: txt1709.Text,
+                servicoItem10: txt1710.Text,
+                servicoItem11: txt1711.Text,
+                servicoItem12: txt1712.Text,
+                servicoItem13: txt1713.Text,
+                servicoItem14: txt1714.Text,
+                servicoItem15: txt1715.Text,
+                servicoItem16: txt1716.Text,
+                servicoItem17: txt1717.Text,
+                servicoItem18: txt1718.Text,
+                servicoItem19: txt1719.Text,
+                servicoItem20: txt1720.Text,
+                cronogramaExecutado: txtExecutado.Text,
+                cronogramaEtapa1: txtParcela1.Text,
+                cronogramaEtapa2: txtParcela2.Text,
+                cronogramaEtapa3: txtParcela3.Text,
+                cronogramaEtapa4: txtParcela4.Text,
+                cronogramaEtapa5: txtParcela5.Text,
+                cronogramaEtapa6: txtParcela6.Text,
+                cronogramaEtapa7: txtParcela7.Text,
+                cronogramaEtapa8: txtParcela8.Text,
+                cronogramaEtapa9: txtParcela9.Text,
+                cronogramaEtapa10: txtParcela10.Text,
+                cronogramaEtapa11: txtParcela11.Text,
+                cronogramaEtapa12: txtParcela12.Text,
+                cronogramaEtapa13: txtParcela13.Text,
+                cronogramaEtapa14: txtParcela14.Text,
+                cronogramaEtapa15: txtParcela15.Text,
+                cronogramaEtapa16: txtParcela16.Text,
+                cronogramaEtapa17: txtParcela17.Text,
+                cronogramaEtapa18: txtParcela18.Text,
+                cronogramaEtapa19: txtParcela19.Text,
+                cronogramaEtapa20: txtParcela20.Text,
+                cronogramaEtapa21: txtParcela21.Text,
+                cronogramaEtapa22: txtParcela22.Text,
+                cronogramaEtapa23: txtParcela23.Text,
+                cronogramaEtapa24: txtParcela24.Text,
+                cronogramaEtapa25: txtParcela25.Text,
+                cronogramaEtapa26: txtParcela26.Text,
+                cronogramaEtapa27: txtParcela27.Text,
+                cronogramaEtapa28: txtParcela28.Text,
+                cronogramaEtapa29: txtParcela29.Text,
+                cronogramaEtapa30: txtParcela30.Text
                 );
 
-            Report report = new Report(request, proposal, txtMensuradoAcumulado.Text,
-                txtContratoInicio.Text, txtContratoTermino.Text);
+            var report = new Report(
+                request,
+                proposal,
+                txtMensuradoAcumulado.Text,
+                txtContratoInicio.Text,
+                txtContratoTermino.Text
+                );
 
             return report;
         }
 
+        private void openExcel_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
 
+        }
     }
 }
