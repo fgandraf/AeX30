@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AeX30.Domain\AeX30.Domain.csproj" />
-    <ProjectReference Include="..\AeX30.Infra\AeX30.Infra.csproj" />
   </ItemGroup>
 
 </Project>

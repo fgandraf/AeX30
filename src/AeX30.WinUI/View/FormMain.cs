@@ -88,7 +88,7 @@ namespace AeX30.WinUI.View
             saveExcel.FileName = report.SuggestedFileName();
             if (saveExcel.ShowDialog() == DialogResult.OK)
             {
-                var success = ReportService.SetReport(_templatePath, saveExcel.FileName, report);
+                var success = ReportService.SaveReport(_templatePath, saveExcel.FileName, report);
 
                 if (!success)
                 {
