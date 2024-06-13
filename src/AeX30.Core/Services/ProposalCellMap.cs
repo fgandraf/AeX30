@@ -1,5 +1,5 @@
 ﻿
-namespace AeX30.App.Services
+namespace AeX30.Core.Services
 {
     public abstract class ProposalCellMap
     {

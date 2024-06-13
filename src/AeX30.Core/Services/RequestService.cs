@@ -1,8 +1,8 @@
-﻿using AeX30.Domain.Entities;
+﻿using AeX30.Core.Entities;
 using System.IO;
 using System.Linq;
 
-namespace AeX30.App.Services
+namespace AeX30.Core.Services
 {
     public class RequestService
     {

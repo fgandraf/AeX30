@@ -1,9 +1,9 @@
-﻿using AeX30.Domain.Entities;
+﻿using AeX30.Core.Entities;
 using OfficeOpenXml;
 using System;
 using System.IO;
 
-namespace AeX30.App.Services
+namespace AeX30.Core.Services
 {
     public class ReportService
     {

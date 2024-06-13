@@ -1,14 +1,15 @@
-﻿using AeX30.Domain.Entities;
+﻿using AeX30.Core.Entities;
 using System.IO;
-using AeX30.Domain.ValueObject;
+using AeX30.Core.ValueObject;
 using System;
 using OfficeOpenXml;
+using AeX30.Core.Interfaces;
 
-namespace AeX30.App.Services
+namespace AeX30.Core.Services
 {
-    public class ProposalService
+    public class ProposalService : IProposalService
     {
-        public static Proposal LoadFromFile(string filePath)
+        public Proposal LoadFromFile(string filePath)
         {
             var footer = LoadLeftFooter(filePath);
             var sheetName = LoadSheetName(filePath);
@@ -109,7 +110,7 @@ namespace AeX30.App.Services
             }
         }
 
-        private static string LoadLeftFooter(string filePath)
+        private string LoadLeftFooter(string filePath)
         {
             if (!File.Exists(filePath))
                 return string.Empty;
@@ -119,7 +120,7 @@ namespace AeX30.App.Services
             return worksheet.HeaderFooter.OddFooter.LeftAlignedText;
         }
 
-        private static string LoadSheetName(string filePath)
+        private string LoadSheetName(string filePath)
         {
             if (!File.Exists(filePath))
                 return string.Empty;
@@ -129,7 +130,7 @@ namespace AeX30.App.Services
             return worksheet.Name;
         }
 
-        private static bool ValidateLoadingFile(string filePath, string sheetName, string footer, string[] cellReference)
+        private bool ValidateLoadingFile(string filePath, string sheetName, string footer, string[] cellReference)
         {
             if (!File.Exists(filePath))
                 return false;

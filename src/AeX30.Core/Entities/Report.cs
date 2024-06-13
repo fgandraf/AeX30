@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AeX30.Domain.Entities
+namespace AeX30.Core.Entities
 {
     public class Report
     {

@@ -1,6 +1,6 @@
-﻿using AeX30.App.Services;
-using AeX30.Domain.Entities;
-using AeX30.Domain.ValueObject;
+﻿using AeX30.Core.Services;
+using AeX30.Core.Entities;
+using AeX30.Core.ValueObject;
 using System;
 using System.Windows.Forms;
 
@@ -52,7 +52,8 @@ namespace AeX30.WinUI.View
                 btnStartNext.Show();
                 txtPropNome.Focus();
 
-                var proposal = ProposalService.LoadFromFile(openExcel.FileName);
+                var service = new ProposalService();
+                var proposal = service.LoadFromFile(openExcel.FileName);
 
                 if (proposal is null)
                 {

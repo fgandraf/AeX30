@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System;
 
-namespace AeX30.Domain.ValueObject
+namespace AeX30.Core.ValueObject
 {
     public class ZipCode
     {

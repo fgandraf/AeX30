@@ -1,10 +1,8 @@
-﻿using AeX30.Domain.ValueObject;
-using System;
-using System.Text.RegularExpressions;
+﻿using AeX30.Core.ValueObject;
 
 
 
-namespace AeX30.Domain.Entities
+namespace AeX30.Core.Entities
 {
     public class Proposal
     {
