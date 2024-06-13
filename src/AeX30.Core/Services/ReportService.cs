@@ -18,13 +18,13 @@ namespace AeX30.Core.Services
             if (!isValid)
                 return false;
 
-            var cellReference = ReportCellMap.Get();
+            var reportCellMap = ReportCellMap.Get();
             var values = ConvertReportToDynamic(report);
 
             using var package = new ExcelPackage(new FileInfo(templatePath));
             var worksheet = package.Workbook.Worksheets["RAE"];
 
-            PopulateWorksheet(worksheet, cellReference, values);
+            PopulateWorksheet(worksheet, reportCellMap, values);
 
             worksheet.Calculate();
 
