@@ -324,8 +324,7 @@ namespace AeX30.WinUI.View
             // openExcel
             // 
             openExcel.Filter = "Planilhas do Excel | *.xlsx";
-            openExcel.Title = "Abrir planilha PFUI";
-            openExcel.FileOk += openExcel_FileOk;
+            openExcel.Title = "Abrir planilha";
             // 
             // tabControl
             // 

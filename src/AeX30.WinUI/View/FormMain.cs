@@ -1,7 +1,6 @@
 ﻿using AeX30.App.Services;
 using AeX30.Domain.Entities;
 using AeX30.Domain.ValueObject;
-using AeX30.Infra.Repository;
 using System;
 using System.Windows.Forms;
 
@@ -25,28 +24,25 @@ namespace AeX30.WinUI.View
             => tabControl.SelectTab(tabControl.SelectedIndex - 1);
 
 
-
-
-
-
-
         private void btnImportarConvocacao_Click(object sender, EventArgs e)
         {
             if (openText.ShowDialog() == DialogResult.OK)
             {
-                var request = new RequestService().GetRequestNumber(openText.FileName);
-
-                if (request is null)
-                    MessageBox.Show("Não foi possível ler o arquivo de convocação.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    ShowRequestOnScreen(request);
-
                 pnlMainConvocacao.Show();
                 btnStartNext.Show();
                 txtRef1.Focus();
+
+                var request = RequestService.LoadFromFile(openText.FileName);
+
+                if (request is null)
+                {
+                    MessageBox.Show("Não foi possível ler o arquivo de convocação.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                ShowRequestOnScreen(request);
             }
         }
-
 
         private void btnImportarProposta_Click(object sender, EventArgs e)
         {
@@ -71,12 +67,11 @@ namespace AeX30.WinUI.View
 
         private void btnModeloPadrao_Click(object sender, EventArgs e)
         {
-            openExcel.Title = "Abrir planilha modelo de RAE";
             if (openExcel.ShowDialog() == DialogResult.OK)
             {
                 _templatePath = openExcel.FileName;
 
-                txtLogFinalizar.AppendText("Caminho do modelo padrão:\r\n");
+                txtLogFinalizar.AppendText("Caminho do modelo padrão:\r\n\r\n");
                 txtLogFinalizar.AppendText(_templatePath + "\r\n\r\n");
                 txtLogFinalizar.AppendText("Pronto para gravar.\r\n\r\n");
                 txtLogFinalizar.AppendText("Aguardando confirmação do usuário...\r\n");
@@ -88,20 +83,21 @@ namespace AeX30.WinUI.View
 
         private void btnSalvarComo_Click(object sender, EventArgs e)
         {
-            saveExcel.FileName = SuggestedFileName();
+            var report = BuildReport();
 
+            saveExcel.FileName = report.SuggestedFileName();
             if (saveExcel.ShowDialog() == DialogResult.OK)
             {
-                var report = BuildReport();
-                var success = new ReportService().SetReport(_templatePath, saveExcel.FileName, report);
+                var success = ReportService.SetReport(_templatePath, saveExcel.FileName, report);
 
-                if (success)
+                if (!success)
                 {
-                    txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
-                    btnNew.Show();
-                }
-                else
                     txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nNão foi possível escrever o relatório!";
+                    return;
+                }
+
+                txtLogFinalizar.Text += "\r\n--------------------------------\r\n\r\nConcluído!";
+                btnNew.Show();                    
             }
         }
 
@@ -160,7 +156,6 @@ namespace AeX30.WinUI.View
 
         private void ShowProposalOnScreen(Proposal proposal)
         {
-
             lblVigencia.Text = $"Ꙩ PCI | {proposal.Vigencia}";
             lblVigencia.Show();
 
@@ -236,15 +231,6 @@ namespace AeX30.WinUI.View
             txtParcela28.Text = proposal.CronogramaEtapa28;
             txtParcela29.Text = proposal.CronogramaEtapa29;
             txtParcela30.Text = proposal.CronogramaEtapa30;
-        }
-
-        private string SuggestedFileName()
-        {
-            string[] proponente = txtPropNome.Text.ToLower().Split(' ');
-            string nome = proponente[0].Substring(0, 1).ToUpper() + proponente[0].Substring(1);
-            string sobrenome = proponente[proponente.Length - 1].Substring(0, 1).ToUpper() + proponente[proponente.Length - 1].Substring(1);
-
-            return $"RAE_{nome}-{sobrenome}.xlsx";
         }
 
         private Report BuildReport()
@@ -344,11 +330,6 @@ namespace AeX30.WinUI.View
                 );
 
             return report;
-        }
-
-        private void openExcel_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
         }
     }
 }
