@@ -1,7 +1,7 @@
 ﻿
 namespace AeX30.App.Services
 {
-    public abstract class ProposalCellReference
+    public abstract class ProposalCellMap
     {
         public static string[] Get(string footer)
         {

@@ -56,15 +56,14 @@ namespace AeX30.WinUI.View
                 btnStartNext.Show();
                 txtPropNome.Focus();
 
-                var service = new ProposalService(openExcel.FileName);
-                
-                if (!service.IsValid)
+                var proposal = ProposalService.LoadFromFile(openExcel.FileName);
+
+                if (proposal is null)
                 {
                     MessageBox.Show("Arquivo incompatível ou versão não suportada!\r\n\r\n", "Planilha PCI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                    
-                var proposal = service.GetProposal();
+
                 ShowProposalOnScreen(proposal);
             }
         }
@@ -161,10 +160,8 @@ namespace AeX30.WinUI.View
 
         private void ShowProposalOnScreen(Proposal proposal)
         {
-            if (proposal.Tipo == "PFUI")
-                lblVigencia.Text = $"Ꙩ PFUI | {proposal.Vigencia}";
-            else
-                lblVigencia.Text = $"Ꙩ PCI | {proposal.Vigencia}";
+
+            lblVigencia.Text = $"Ꙩ PCI | {proposal.Vigencia}";
             lblVigencia.Show();
 
             txtPropNome.Text = proposal.ProponenteNome.ToUpper();

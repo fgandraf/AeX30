@@ -1,16 +1,12 @@
 ﻿using AeX30.Domain.Entities;
 using AeX30.Infra.Repository;
+using OfficeOpenXml;
 using System.IO;
 
 namespace AeX30.App.Services
 {
     public class ReportService
     {
-        private ProposalRepository _proposalRepository;
-
-        public ReportService()
-            => _proposalRepository = new ProposalRepository();
-
 
         public bool SetReport(string templatePath, string saveAsPath, Report report)
         {
@@ -25,8 +21,21 @@ namespace AeX30.App.Services
 
         private bool IsValid(string filePath)
         {
-            string footer = _proposalRepository.GetLeftFooter(filePath);
-            string sheetName = _proposalRepository.GetSheetName(filePath);
+
+            string footer;
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                footer = worksheet.HeaderFooter.OddFooter.LeftAlignedText;
+            }
+
+            string sheetName;
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                sheetName = worksheet.Name;
+            }
+
 
             bool fileExists = File.Exists(filePath);
             bool sheetNameIsValid = sheetName == "RAE";
