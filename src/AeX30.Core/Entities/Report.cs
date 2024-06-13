@@ -4,14 +4,23 @@ namespace AeX30.Core.Entities
 {
     public class Report
     {
+        public Request Request { get; private set; }
+        public Proposal Proposal { get; private set; }
+        public string MensuradoAcumulado { get; private set; }
+        public string ContratoInicio { get; private set; }
+        public string ContratoTermino { get; private set; }
+
+
         public Report(Request referencia, Proposal proposal, string mensuradoAcumulado, string contratoInicio, string contratoTermino)
         {
-            this.Request = referencia;
-            this.Proposal = proposal;
+            Request = referencia;
+            Proposal = proposal;
             MensuradoAcumulado = mensuradoAcumulado;
             ContratoInicio = contratoInicio;
             ContratoTermino = contratoTermino;
         }
+
+
 
         public dynamic[] Get()
         {
@@ -111,11 +120,5 @@ namespace AeX30.Core.Entities
             return $"RAE_{nome}-{sobrenome}.xlsx";
         }
 
-
-        public Request Request { get; private set; }
-        public Proposal Proposal { get; private set; }
-        public string MensuradoAcumulado { get; private set; }
-        public string ContratoInicio { get; private set; }
-        public string ContratoTermino { get; private set; }
     }
 }

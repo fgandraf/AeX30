@@ -1,29 +1,38 @@
 ﻿using AeX30.Core.Entities;
+using AeX30.Core.Interfaces;
 using OfficeOpenXml;
 using System;
 using System.IO;
 
 namespace AeX30.Core.Services
 {
-    public class ReportService
+    public class ReportService : IReportService
     {
-
-        public static bool SaveReport(string templatePath, string saveAsPath, Report report)
+        public bool SaveReport(string templatePath, string saveAsPath, Report report)
         {
             var footer = LoadLeftFooter(templatePath);
             var sheetName = LoadSheetName(templatePath);
 
-            var isValid = ValidateLoadingFile(templatePath,footer, sheetName);
+            var isValid = ValidateTemplate(templatePath,footer, sheetName);
 
             if (!isValid)
                 return false;
 
-            SetReport(templatePath, saveAsPath, report);
-            return true;    
+            var cellReference = ReportCellMap.Get();
+            var values = ConvertReportToDynamic(report);
+
+            using var package = new ExcelPackage(new FileInfo(templatePath));
+            var worksheet = package.Workbook.Worksheets["RAE"];
+
+            PopulateWorksheet(worksheet, cellReference, values);
+
+            worksheet.Calculate();
+
+            package.SaveAs(new FileInfo(saveAsPath));
+            return true;
         }
 
-
-        private static string LoadLeftFooter(string filePath)
+        private string LoadLeftFooter(string filePath)
         {
             if (!File.Exists(filePath))
                 return string.Empty;
@@ -33,7 +42,7 @@ namespace AeX30.Core.Services
             return worksheet.HeaderFooter.OddFooter.LeftAlignedText;
         }
 
-        private static string LoadSheetName(string filePath)
+        private string LoadSheetName(string filePath)
         {
             if (!File.Exists(filePath))
                 return string.Empty;
@@ -43,7 +52,7 @@ namespace AeX30.Core.Services
             return worksheet.Name;
         }
 
-        private static bool ValidateLoadingFile(string filePath, string footer, string sheetName)
+        private bool ValidateTemplate(string filePath, string footer, string sheetName)
         {
             bool fileExists = File.Exists(filePath);
             bool sheetNameIsValid = sheetName == "RAE";
@@ -52,133 +61,113 @@ namespace AeX30.Core.Services
             return fileExists && sheetNameIsValid && footerIsValid;
         }
 
-
-
-        private static void SetReport(string templatePath, string saveAsPath, Report report)
-        {
-            string[] cellReference = new string[]
-        {
-            /*auto. de serv.:------*/    "AB35", "AD35", "AF35", "AJ35", "AL35", "AM35",
-            
-            /*prop. NOME:----------*/    "G43",
-            /*prop. CPF:-----------*/    "AJ43",
-            /*prop. DDD:-----------*/    "AP43",
-            /*prop. TELEFONE:------*/    "AR43",
-            
-            /*rt. NOME:------------*/    "G46",
-            /*rt. CAU_CREA:--------*/    "Z46",
-            /*rt. UF:--------------*/    "AH46",
-            /*rt. CPF:-------------*/    "AJ46",
-            /*rt. DDD:-------------*/    "AP46",
-            /*rt. TELEFONE:--------*/    "AR46",
-
-            /*end. ENDEREÇO:-------*/    "G49",
-            /*end. COMPLEMENTO:----*/    "AJ49",
-            /*end. BAIRRO:---------*/    "G51",
-            /*end. CEP:------------*/    "V51",
-            /*end. MUNICIPIO:------*/    "AA51",
-            /*end. UF:-------------*/    "AS51",
-            
-            /*imov. VALOR TERRENO:-*/    "G53",
-            /*imov. MATRICULA:-----*/    "Q53",
-            /*imov. OFICIO:--------*/    "AA53",
-            /*imov. COMARCA:-------*/    "AJ53",
-            /*imov. UF:------------*/    "AS53",
-           
-            /*17.01(%):------------*/    "S68",
-            /*17.02(%):------------*/    "S69",
-            /*17.03(%):------------*/    "S70",
-            /*17.04(%):------------*/    "S71",
-            /*17.05(%):------------*/    "S72",
-            /*17.06(%):------------*/    "S73",
-            /*17.07(%):------------*/    "S74",
-            /*17.08(%):------------*/    "S75",
-            /*17.09(%):------------*/    "S76",
-            /*17.10(%):------------*/    "S77",
-            /*17.11(%):------------*/    "S78",
-            /*17.12(%):------------*/    "S79",
-            /*17.13(%):------------*/    "S80",
-            /*17.14(%):------------*/    "S81",
-            /*17.15(%):------------*/    "S82",
-            /*17.16(%):------------*/    "S83",
-            /*17.17(%):------------*/    "S84",
-            /*17.18(%):------------*/    "S85",
-            /*17.19(%):------------*/    "S86",
-            /*17.20(%):------------*/    "S87",
-            /*ACUMULADO(%):--------*/    "Y89",
-
-            /*contrato INICIO:-----*/    "AH63",
-            /*contrato TERMINO:----*/    "AS63",
-
-            /*cron. PARC 1:--------*/    "AG71",
-            /*cron. EXECUTADO:-----*/    "AG72",
-            /*cron. PARC 2:--------*/    "AG73",
-            /*cron. PARC 3:--------*/    "AG74",
-            /*cron. PARC 4:--------*/    "AG75",
-            /*cron. PARC 5:--------*/    "AG76",
-            /*cron. PARC 6:--------*/    "AG77",
-            /*cron. PARC 7:--------*/    "AG78",
-            /*cron. PARC 8:--------*/    "AG79",
-            /*cron. PARC 9:--------*/    "AG80",
-            /*cron. PARC 10:-------*/    "AG81",
-            /*cron. PARC 11:-------*/    "AG82",
-            /*cron. PARC 12:-------*/    "AG83",
-            /*cron. PARC 13:-------*/    "AG84",
-            /*cron. PARC 14:-------*/    "AG85",
-            /*cron. PARC 15:-------*/    "AG86",
-            /*cron. PARC 16:-------*/    "AG87",
-            /*cron. PARC 17:-------*/    "AG88",
-            /*cron. PARC 18:-------*/    "AG89",
-            /*cron. PARC 19:-------*/    "AG90",
-            /*cron. PARC 20:-------*/    "AG91",
-            /*cron. PARC 21:-------*/    "AG92",
-            /*cron. PARC 22:-------*/    "AG93",
-            /*cron. PARC 23:-------*/    "AG94",
-            /*cron. PARC 24:-------*/    "AG95",
-            /*cron. PARC 25:-------*/    "AG96",
-            /*cron. PARC 26:-------*/    "AG97",
-            /*cron. PARC 27:-------*/    "AG98",
-            /*cron. PARC 28:-------*/    "AG99",
-            /*cron. PARC 29:-------*/    "AG100",
-            /*cron. PARC 30:-------*/    "AG101",
-            /*cron. PARC 31:-------*/    "AG102",
-            /*cron. PARC 32:-------*/    "AG103",
-            /*cron. PARC 33:-------*/    "AG104",
-            /*cron. PARC 34:-------*/    "AG105",
-            /*cron. PARC 35:-------*/    "AG106",
-            /*cron. PARC 36:-------*/    "AG107",
-
-        };
-            dynamic[] values = report.Get();
-
-            using var package = new ExcelPackage(new FileInfo(templatePath));
-            var worksheet = package.Workbook.Worksheets["RAE"];
-
-            try
+        private dynamic[] ConvertReportToDynamic(Report report)
             {
-                for (int i = 0; i < values.Length; i++)
-                {
-                    if (cellReference[i].StartsWith("AG") && Convert.ToDouble(values[i]) == 0.00)
-                        continue;
+                dynamic[] values = {
+                    report.Request.Reference[1],
+                    report.Request.Reference[2],
+                    Convert.ToInt32(report.Request.Reference[3]),
+                    report.Request.Reference[4],
+                    report.Request.Reference[5],
+                    report.Request.Reference[6],
+                    report.Proposal.ProponenteNome,
+                    report.Proposal.ProponenteCPF.Number,
+                    report.Proposal.ProponenteDDD,
+                    report.Proposal.ProponenteFone.Number,
+                    report.Proposal.ResponsavelNome,
+                    report.Proposal.ResponsavelCauCrea,
+                    report.Proposal.ResponsavelUF,
+                    report.Proposal.ResponsavelCPF.Number,
+                    report.Proposal.ResponsavelDDD,
+                    report.Proposal.ResponsavelFone.Number,
+                    report.Proposal.ImovelEndereco,
+                    report.Proposal.ImovelComplemento,
+                    report.Proposal.ImovelBairro,
+                    report.Proposal.ImovelCep.Number,
+                    report.Proposal.ImovelMunicipio,
+                    report.Proposal.ImovelUF,
+                    report.Proposal.ImovelValorTerreno.Number,
+                    report.Proposal.ImovelMatricula,
+                    report.Proposal.ImovelOficio,
+                    report.Proposal.ImovelComarca,
+                    report.Proposal.ImovelComarcaUF,
+                    Convert.ToDouble(report.Proposal.ServicoItem01),
+                    Convert.ToDouble(report.Proposal.ServicoItem02),
+                    Convert.ToDouble(report.Proposal.ServicoItem03),
+                    Convert.ToDouble(report.Proposal.ServicoItem04),
+                    Convert.ToDouble(report.Proposal.ServicoItem05),
+                    Convert.ToDouble(report.Proposal.ServicoItem06),
+                    Convert.ToDouble(report.Proposal.ServicoItem07),
+                    Convert.ToDouble(report.Proposal.ServicoItem08),
+                    Convert.ToDouble(report.Proposal.ServicoItem09),
+                    Convert.ToDouble(report.Proposal.ServicoItem10),
+                    Convert.ToDouble(report.Proposal.ServicoItem11),
+                    Convert.ToDouble(report.Proposal.ServicoItem12),
+                    Convert.ToDouble(report.Proposal.ServicoItem13),
+                    Convert.ToDouble(report.Proposal.ServicoItem14),
+                    Convert.ToDouble(report.Proposal.ServicoItem15),
+                    Convert.ToDouble(report.Proposal.ServicoItem16),
+                    Convert.ToDouble(report.Proposal.ServicoItem17),
+                    Convert.ToDouble(report.Proposal.ServicoItem18),
+                    Convert.ToDouble(report.Proposal.ServicoItem19),
+                    Convert.ToDouble(report.Proposal.ServicoItem20),
+                    report.MensuradoAcumulado == "" ? 0.00 : report.MensuradoAcumulado,
+                    report.ContratoInicio == "  /  /" ? "" : Convert.ToDateTime(report.ContratoInicio),
+                    report.ContratoTermino == "  /  /" ? "" : Convert.ToDateTime(report.ContratoTermino),
+                    Convert.ToDouble(report.Proposal.CronogramaExecutado),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa1),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa2),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa3),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa4),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa5),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa6),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa7),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa8),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa9),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa10),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa11),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa12),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa13),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa14),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa15),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa16),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa17),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa18),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa19),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa20),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa21),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa22),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa23),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa24),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa25),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa26),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa27),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa28),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa29),
+                    Convert.ToDouble(report.Proposal.CronogramaEtapa30)
+                };
 
-                    var cell = worksheet.Cells[cellReference[i]];
-
-                    if (values[i] is double || values[i] is int)
-                    {
-                        cell.Value = Convert.ToDouble(values[i]);
-                        cell.Style.Numberformat.Format = "0.00"; // Define um formato de número, se necessário
-                    }
-                    else
-                        cell.Value = values[i];
-                }
-
-                worksheet.Calculate();
-
-                package.SaveAs(new FileInfo(saveAsPath));
+                return values;
             }
-            catch (Exception ex)
+
+        private void PopulateWorksheet(ExcelWorksheet worksheet, string[] cellReference, dynamic[] values)
+        {
+            for (int i = 0; i < values.Length; i++)
             {
-                throw ex.InnerException;
+                if (cellReference[i].StartsWith("AG") && Convert.ToDouble(values[i]) == 0.00)
+                    continue;
+
+                var cell = worksheet.Cells[cellReference[i]];
+
+                if (values[i] is double || values[i] is int)
+                {
+                    cell.Value = Convert.ToDouble(values[i]);
+                    cell.Style.Numberformat.Format = "0.00";
+                }
+                else
+                {
+                    cell.Value = values[i];
+                }
             }
         }
 

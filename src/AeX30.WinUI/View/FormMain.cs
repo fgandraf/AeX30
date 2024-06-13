@@ -1,8 +1,8 @@
-﻿using AeX30.Core.Services;
-using AeX30.Core.Entities;
+﻿using AeX30.Core.Entities;
 using AeX30.Core.ValueObject;
 using System;
 using System.Windows.Forms;
+using AeX30.Core.Interfaces;
 
 
 namespace AeX30.WinUI.View
@@ -10,9 +10,18 @@ namespace AeX30.WinUI.View
     public partial class FormMain : Form
     {
         private string _templatePath;
+        private IRequestService _requestService;
+        private IProposalService _proposalService;
+        private IReportService _reportService;
 
-        public FormMain()
-            => InitializeComponent();
+
+        public FormMain(IRequestService requestService, IProposalService proposalService, IReportService reportService)
+        {
+            _requestService = requestService;
+            _proposalService = proposalService;
+            _reportService = reportService;
+            InitializeComponent();
+        }
 
         private void FormMain_Load(object sender, EventArgs e)
             => tabControl.ItemSize = new System.Drawing.Size(0, 1);
@@ -23,7 +32,6 @@ namespace AeX30.WinUI.View
         private void BackTabControl(object sender, EventArgs e)
             => tabControl.SelectTab(tabControl.SelectedIndex - 1);
 
-
         private void btnImportarConvocacao_Click(object sender, EventArgs e)
         {
             if (openText.ShowDialog() == DialogResult.OK)
@@ -32,7 +40,7 @@ namespace AeX30.WinUI.View
                 btnStartNext.Show();
                 txtRef1.Focus();
 
-                var request = RequestService.LoadFromFile(openText.FileName);
+                var request = _requestService.LoadFromFile(openText.FileName);
 
                 if (request is null)
                 {
@@ -52,8 +60,7 @@ namespace AeX30.WinUI.View
                 btnStartNext.Show();
                 txtPropNome.Focus();
 
-                var service = new ProposalService();
-                var proposal = service.LoadFromFile(openExcel.FileName);
+                var proposal = _proposalService.LoadFromFile(openExcel.FileName);
 
                 if (proposal is null)
                 {
@@ -64,7 +71,6 @@ namespace AeX30.WinUI.View
                 ShowProposalOnScreen(proposal);
             }
         }
-
 
         private void btnModeloPadrao_Click(object sender, EventArgs e)
         {
@@ -89,7 +95,7 @@ namespace AeX30.WinUI.View
             saveExcel.FileName = report.SuggestedFileName();
             if (saveExcel.ShowDialog() == DialogResult.OK)
             {
-                var success = ReportService.SaveReport(_templatePath, saveExcel.FileName, report);
+                var success = _reportService.SaveReport(_templatePath, saveExcel.FileName, report);
 
                 if (!success)
                 {
@@ -112,30 +118,36 @@ namespace AeX30.WinUI.View
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl.SelectedIndex == 0)
+            switch(tabControl.SelectedIndex)
             {
-                btnStartNext.Text = "Iniciar ❯❯";
-                btnBack.Hide();
-                btnStartNext.Show();
-            }
-            else if (tabControl.SelectedIndex == 1)
-            {
-                btnBack.Show();
-                btnStartNext.Hide();
+                case 0:
+                    {
+                        btnStartNext.Text = "Iniciar ❯❯";
+                        btnBack.Hide();
+                        btnStartNext.Show();
+                        break;
+                    }
+                case 1:
+                    {
+                        btnBack.Show();
+                        btnStartNext.Hide();
 
-                if (btnStartNext.Text == "Iniciar ❯❯")
-                    btnStartNext.Text = "Próximo ❯❯";
+                        if (btnStartNext.Text == "Iniciar ❯❯")
+                            btnStartNext.Text = "Próximo ❯❯";
+                        break;
+                    }
+                case 3:
+                    {
+                        btnStartNext.Show();
+                        break;
+                    }
+                default:
+                    {
+                        btnBack.Show();
+                        btnStartNext.Hide();
+                        break;
+                    }
             }
-            else if (tabControl.SelectedIndex == 3)
-            {
-                btnStartNext.Show();
-            }
-            else
-            {
-                btnBack.Show();
-                btnStartNext.Hide();
-            }
-
 
             if ((tabControl.SelectedIndex == 1 && pnlMainConvocacao.Visible == true) ||
                 (tabControl.SelectedIndex == 2 && pnlMainPfui.Visible == true))

@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using AeX30.Core.Services;
 using AeX30.WinUI.View;
 using OfficeOpenXml;
 
@@ -19,7 +20,14 @@ namespace AeX30.WinUI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            
+            Application.Run(
+                new FormMain(
+                    new RequestService(), 
+                    new ProposalService(), 
+                    new ReportService()
+                    )
+                );
         }
     }
 }

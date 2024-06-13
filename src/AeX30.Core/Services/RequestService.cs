@@ -1,12 +1,13 @@
 ﻿using AeX30.Core.Entities;
+using AeX30.Core.Interfaces;
 using System.IO;
 using System.Linq;
 
 namespace AeX30.Core.Services
 {
-    public class RequestService
+    public class RequestService : IRequestService
     {
-        public static Request LoadFromFile(string filePath)
+        public Request LoadFromFile(string filePath)
         {
             bool fileExists = File.Exists(filePath);
             bool fileNameValid = new FileInfo(filePath).Name == "CONVOCACAO PRESTACAO SERVICO.TXT";
