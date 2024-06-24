@@ -23,7 +23,7 @@ namespace AeX30.Core.Services
             /*rt. TELEFONE:--------*/    "AR46",
 
             /*end. ENDEREÇO:-------*/    "G49",
-            /*end. COMPLEMENTO:----*/    "AJ49",
+            /*end. COMPLEMENTO:----*/    "AL49",
             /*end. BAIRRO:---------*/    "G51",
             /*end. CEP:------------*/    "V51",
             /*end. MUNICIPIO:------*/    "AA51",

@@ -323,7 +323,7 @@ namespace AeX30.WinUI.View
             // 
             // openExcel
             // 
-            openExcel.Filter = "Planilhas do Excel | *.xlsx";
+            openExcel.Filter = "Planilhas do Excel | *.xlsx| Planilhas do Excel | *.xlsm";
             openExcel.Title = "Abrir planilha";
             // 
             // tabControl
@@ -3435,7 +3435,7 @@ namespace AeX30.WinUI.View
             // 
             // saveExcel
             // 
-            saveExcel.Filter = "Planilhas do Excel | *.xlsx";
+            saveExcel.Filter = "Planilhas do Excel | *.xlsm";
             saveExcel.Title = "Salvar RAE";
             // 
             // FormMain

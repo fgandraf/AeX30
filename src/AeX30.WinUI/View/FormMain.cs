@@ -54,6 +54,7 @@ namespace AeX30.WinUI.View
 
         private void btnImportarProposta_Click(object sender, EventArgs e)
         {
+            openExcel.Filter = "Planilhas do Excel | *.xlsx";
             if (openExcel.ShowDialog() == DialogResult.OK)
             {
                 pnlMainPfui.Show();
@@ -74,6 +75,7 @@ namespace AeX30.WinUI.View
 
         private void btnModeloPadrao_Click(object sender, EventArgs e)
         {
+            openExcel.Filter = "Planilhas do Excel | *.xlsm";
             if (openExcel.ShowDialog() == DialogResult.OK)
             {
                 _templatePath = openExcel.FileName;
