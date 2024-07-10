@@ -1,13 +1,10 @@
 ﻿using AeX30.Core.Entities;
-using System.IO;
 using AeX30.Core.ValueObject;
-using System;
 using OfficeOpenXml;
-using AeX30.Core.Interfaces;
 
-namespace AeX30.Core.Services
+namespace AeX30.Services
 {
-    public class ProposalService : IProposalService
+    public class XlsXProposal
     {
         public Proposal LoadFromFile(string filePath)
         {

@@ -1,9 +1,7 @@
 ﻿using AeX30.Core.Entities;
 using AeX30.Core.Interfaces;
-using System.IO;
-using System.Linq;
 
-namespace AeX30.Core.Services
+namespace AeX30.Services
 {
     public class RequestService : IRequestService
     {

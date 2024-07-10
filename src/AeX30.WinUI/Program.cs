@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Forms;
-using AeX30.Core.Services;
+using AeX30.Services;
 using AeX30.WinUI.View;
 using OfficeOpenXml;
 
@@ -24,7 +24,6 @@ namespace AeX30.WinUI
             Application.Run(
                 new FormMain(
                     new RequestService(), 
-                    new ProposalService(), 
                     new ReportService()
                     )
                 );

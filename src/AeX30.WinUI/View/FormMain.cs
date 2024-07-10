@@ -3,6 +3,7 @@ using AeX30.Core.ValueObject;
 using System;
 using System.Windows.Forms;
 using AeX30.Core.Interfaces;
+using AeX30.Services;
 
 
 namespace AeX30.WinUI.View
@@ -11,14 +12,12 @@ namespace AeX30.WinUI.View
     {
         private string _templatePath;
         private IRequestService _requestService;
-        private IProposalService _proposalService;
         private IReportService _reportService;
 
 
-        public FormMain(IRequestService requestService, IProposalService proposalService, IReportService reportService)
+        public FormMain(IRequestService requestService, IReportService reportService)
         {
             _requestService = requestService;
-            _proposalService = proposalService;
             _reportService = reportService;
             InitializeComponent();
         }
@@ -54,14 +53,14 @@ namespace AeX30.WinUI.View
 
         private void btnImportarProposta_Click(object sender, EventArgs e)
         {
-            openExcel.Filter = "Planilhas do Excel | *.xlsx";
+            openExcel.Filter = "Planilhas do Excel | *.xlsx;*.xls";
             if (openExcel.ShowDialog() == DialogResult.OK)
             {
                 pnlMainPfui.Show();
                 btnStartNext.Show();
                 txtPropNome.Focus();
 
-                var proposal = _proposalService.LoadFromFile(openExcel.FileName);
+                var proposal = ProposalService.LoadFromFile(openExcel.FileName);
 
                 if (proposal is null)
                 {

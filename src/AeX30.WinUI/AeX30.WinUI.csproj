@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>AeX30</AssemblyName>
     <RootNamespace>AeX30.WinUI</RootNamespace>
@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AeX30.Core\AeX30.Core.csproj" />
+    <ProjectReference Include="..\AeX30.Service\AeX30.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

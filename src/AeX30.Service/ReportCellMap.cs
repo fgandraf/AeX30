@@ -1,5 +1,5 @@
 ﻿
-namespace AeX30.Core.Services
+namespace AeX30.Services
 {
     public abstract class ReportCellMap
     {

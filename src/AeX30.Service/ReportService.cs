@@ -1,10 +1,8 @@
 ﻿using AeX30.Core.Entities;
 using AeX30.Core.Interfaces;
 using OfficeOpenXml;
-using System;
-using System.IO;
 
-namespace AeX30.Core.Services
+namespace AeX30.Services
 {
     public class ReportService : IReportService
     {
