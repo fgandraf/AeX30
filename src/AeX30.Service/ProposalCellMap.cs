@@ -27,6 +27,9 @@ namespace AeX30.Services
                 case "Vigência: 10/11/2023":
                     return _pci2023;
 
+                case "Vigência: 20/06/2024":
+                    return _pci2024;
+
                 default:
                     return null;
             }
@@ -367,6 +370,90 @@ namespace AeX30.Services
             "AO168",  // [69]  Etapa 28
             "AO168",  // [70]  Etapa 29
             "AO168"   // [71]  Etapa 30
+        };
+
+        public static readonly string[] _pci2024 = new string[]
+        {
+            // IDENTIFICAÇÃO
+            "G44",   // [0]  Proponente
+            "AK44",  // [1]  CPF Prop.
+            "AQ44",  // [2]  Telefone Prop. (DDD)
+            "AS44",  // [3]  Telefone Prop.
+            "G50",   // [4]  RT pela Execuçao da Obra - RTE"
+            "AB50",  // [5]  Nº CAU/CREA/CFT - RTE
+            "AI50",  // [6]  UF (RTE)
+            "AK50",  // [7]  CPF - RTE
+            "AQ50",  // [8]  Telefone - RTE (DDD)
+            "AS50",  // [9]  Telefone - RTE
+
+            // IDENTIFICAÇÃO DO IMÓVEL PROPOSTO
+            "G54",   // [10]  Endereço
+            "AJ54",  // [11]  Complemento
+            "V56",   // [12]  CEP
+            "G56",   // [13]  Bairro
+            "AA56",  // [14]  Município
+            "AV56",  // [15]  UF
+            "AR72",  // [16]  Valor do terreno
+            "G58",   // [17]  Matrícula
+            "M58",   // [18]  ORI
+            "-",     // [19]  Comarca
+            "-",     // [20]  Comarca UF
+           
+            // SERVIÇOS
+            "X101",    // [21]  Item 1
+            "X102",   // [22]  Item 2
+            "X103",   // [23]  Item 3
+            "X104",   // [24]  Item 4
+            "X105",   // [25]  Item 5
+            "X106",   // [26]  Item 6
+            "X107",   // [27]  Item 7
+            "X108",   // [28]  Item 8
+            "X109",   // [29]  Item 9
+            "X110",   // [30]  Item 10
+            "X111",   // [31]  Item 11
+            "X112",   // [32]  Item 13 (Pintura)
+            "X113",   // [33]  Item 12 (Piso)
+            "X114",   // [34]  Item 14
+            "X115",   // [35]  Item 15
+            "X116",   // [36]  Item 16
+            "X117",   // [37]  Item 17
+            "X118",   // [38]  Item 18
+            "X119",   // [39]  Item 19
+            "X120",   // [40]  Item 20
+
+            // CRONOGRAMA FÍSICO FINANCEIRO
+            "X145",  // [41]  Pré-Exc.
+            "X146",  // [42]  Etapa 1
+            "X147",  // [43]  Etapa 2
+            "X148",  // [44]  Etapa 3
+            "X149",  // [45]  Etapa 4
+            "X150",  // [46]  Etapa 5
+            "X151",  // [47]  Etapa 6
+            "X152",  // [48]  Etapa 7
+            "X153",  // [49]  Etapa 8
+            "X154",  // [50]  Etapa 9
+            "X155",  // [51]  Etapa 10
+            "X156",  // [52]  Etapa 11
+            "X157",  // [53]  Etapa 12
+            "X158",  // [54]  Etapa 13
+            "X159",  // [55]  Etapa 14
+            "X160",  // [56]  Etapa 15
+            "X161",  // [57]  Etapa 16
+            "X162",  // [58]  Etapa 17
+            "X163",  // [59]  Etapa 18
+            "X164",  // [60]  Etapa 19
+            "X165",  // [61]  Etapa 20
+            "X166",  // [62]  Etapa 21
+            "X167",  // [63]  Etapa 22
+            "X168",  // [64]  Etapa 23
+            "X169",  // [65]  Etapa 24
+              
+            "X169",  // [66]  Etapa 25
+            "X169",  // [67]  Etapa 26
+            "X169",  // [68]  Etapa 27
+            "X169",  // [69]  Etapa 28
+            "X169",  // [70]  Etapa 29
+            "X169"   // [71]  Etapa 30
         };
 
     }
